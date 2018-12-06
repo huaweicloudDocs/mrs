@@ -1,0 +1,128 @@
+# ALM-12052 TCP临时端口使用率超过阈值<a name="ZH-CN_TOPIC_0093195101"></a>
+
+## 告警解释<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section41396267"></a>
+
+系统每30秒周期性检测TCP临时端口使用率，并把实际使用率和阈值（系统默认阈值80%）进行比较，当检测到TCP临时端口使用率连续多次（默认值为5）超过阈值时产生该告警。
+
+用户可通过“系统设置 \> 阈值配置 \> 主机 \> 网络状态 \> TCP临时端口使用率 \> TCP临时端口使用率”修改阈值。
+
+平滑次数为1，TCP临时端口使用率小于或等于阈值时，告警恢复；平滑次数大于1，TCP临时端口使用率小于或等于阈值的90%时，告警恢复。
+
+## 告警属性<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section37022085"></a>
+
+<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_table52321376"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row39266406"><th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.1.4.1.1"><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p26462316"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p26462316"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p26462316"></a>告警ID</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.1.4.1.2"><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p63072822"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p63072822"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p63072822"></a>告警级别</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.1.4.1.3"><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p8624940"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p8624940"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p8624940"></a>可自动清除</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row27531576"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p15465151"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p15465151"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p15465151"></a>12052</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p44717739"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p44717739"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p44717739"></a>严重</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p65367140"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p65367140"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p65367140"></a>是</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## 告警参数<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section64763312"></a>
+
+<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_table60246993"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row16742709"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p13982213"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p13982213"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p13982213"></a>参数名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p58817486"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p58817486"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p58817486"></a>参数含义</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row66595895"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p25558376"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p25558376"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p25558376"></a>ServiceName</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p56962570"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p56962570"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p56962570"></a>产生告警的服务名称。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row42901084"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p52435818"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p52435818"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p52435818"></a>RoleName</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p19442876"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p19442876"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p19442876"></a>产生告警的角色名称。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row40768163"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p13886870"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p13886870"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p13886870"></a>HostName</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p51094723"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p51094723"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p51094723"></a>产生告警的主机名。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_row57199326"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p2633810"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p2633810"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p2633810"></a>Trigger Condition</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p12012051"><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p12012051"></a><a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_p12012051"></a>系统当前指标取值满足自定义的告警设置条件。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## 对系统的影响<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section45998902"></a>
+
+主机上业务无法发起对外建立连接，业务中断。
+
+## 可能原因<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section11336934"></a>
+
+-   临时端口不满足当前业务需求。
+-   系统环境异常。
+
+## 处理步骤<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section34923547"></a>
+
+**扩大临时端口范围。**
+
+1.  打开MRS Manager页面，在实时告警列表中，单击此告警。在“告警详情”区域，获取告警所在主机IP地址。
+2.  使用PuTTY工具，以**omm**用户登录告警所在主机。
+3.  执行**cat /proc/sys/net/ipv4/ip\_local\_port\_range |cut -f 1**命令，获得开始端口值，执行****cat /proc/sys/net/ipv4/ip\_local\_port\_range**  |cut -f 2**命令，获得结束端口值，相减得到临时端口总数，若临时端口总数小于28232，说明操作系统随机端口范围太小，需要联系系统管理员扩大端口范围。
+4.  执行命令**ss -ant 2\>/dev/null | grep -v LISTEN | awk 'NR \> 2 \{print $4\}'|cut -d ':' -f 2 | awk '$1 \>"开始端口值" \{print $1\}' | sort -u | wc -l**，计算临时端口使用数。
+5.  使用公式计算临时端口使用率，临时端口使用率=（临时端口使用数/临时端口总数）\*100，确认临时端口使用率是否超过阈值。
+    -   是，执行[7](#zh-cn_topic_0087154420_zh-cn_topic_0087039394_li62811777151245)。
+    -   否，执行[6](#zh-cn_topic_0087154420_zh-cn_topic_0087039394_li5574623151245)。
+
+6.  <a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_li5574623151245"></a>等待5分钟，检查该告警是否恢复。
+    -   是，处理完毕。
+    -   否，执行[7](#zh-cn_topic_0087154420_zh-cn_topic_0087039394_li62811777151245)。
+
+
+**检查系统环境是否异常。**
+
+1.  <a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_li62811777151245"></a>执行以下命令导入临时文件，并查看“port\_result.txt“文件中高使用率端口。
+
+    **netstat -tnp \> $BIGDATA\_HOME/tmp/port\_result.txt**
+
+    ```
+    netstat -tnp 
+    
+    Active Internet connections (w/o servers)
+    
+    Proto Recv Send LocalAddress ForeignAddress State PID/ProgramName tcp   0   0 10-120-85-154:45433  10-120-8:25009 CLOSE_WAIT 94237/java 
+    tcp   0   0 10-120-85-154:45434  10-120-8:25009 CLOSE_WAIT 94237/java 
+    tcp   0   0 10-120-85-154:45435  10-120-8:25009 CLOSE_WAIT 94237/java 
+    ...
+    ```
+
+2.  执行如下命令，查看占用大量端口的进程。
+
+    **ps -ef |grep** _PID_
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >-   PID为[7](#zh-cn_topic_0087154420_zh-cn_topic_0087039394_li62811777151245)查询出所属端口的进程号。  
+    >-   可以执行如下命令，收集系统所有进程信息，查看占用大量端口的进程。  
+    >    **ps -ef \> $BIGDATA\_HOME/tmp/ps\_result.txt**  
+
+3.  请系统管理员确认后，清除大量占用端口的进程，等待5分钟，检查该告警是否恢复。
+    -   是，处理完毕。
+    -   否，**执行[10](#zh-cn_topic_0087154420_li26319743111949)**
+
+4.  <a name="zh-cn_topic_0087154420_li26319743111949"></a>**收集故障信息。**
+    1.  在MRS Manager界面，单击“系统设置 \> 日志导出”。
+    2.  请联系公有云运维人员，并发送已收集的故障日志信息。
+
+
+## 参考信息<a name="zh-cn_topic_0087154420_zh-cn_topic_0087039394_section45876468"></a>
+
+无。
+
