@@ -19,7 +19,7 @@ URL中的参数说明如[表1](#zh-cn_topic_0043477063_table2083638111650)所示
 </thead>
 <tbody><tr id="zh-cn_topic_0043477063_row47865497111650"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0043477063_p12035466111719"><a name="zh-cn_topic_0043477063_p12035466111719"></a><a name="zh-cn_topic_0043477063_p12035466111719"></a>Endpoint</p>
 </td>
-<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0043477063_p35348718111719"><a name="zh-cn_topic_0043477063_p35348718111719"></a><a name="zh-cn_topic_0043477063_p35348718111719"></a>指定承载REST服务端点的服务器域名或IP，从<a href="http://developer.huaweicloud.com/dev/endpoint" target="_blank" rel="noopener noreferrer">终端节点及区域说明</a>获取。</p>
+<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0043477063_p35348718111719"><a name="zh-cn_topic_0043477063_p35348718111719"></a><a name="zh-cn_topic_0043477063_p35348718111719"></a>指定承载REST服务端点的服务器域名或IP，从<a href="https://developer.huaweicloud.com/endpoint?MRS" target="_blank" rel="noopener noreferrer">终端节点及区域说明</a>获取。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0043477063_row52843923111650"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0043477063_p61816971111719"><a name="zh-cn_topic_0043477063_p61816971111719"></a><a name="zh-cn_topic_0043477063_p61816971111719"></a>uri</p>
@@ -67,7 +67,7 @@ REST API请求/响应对可以分为五个部分：
 </tr>
 <tr id="row40397318135646"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p50957329135646"><a name="p50957329135646"></a><a name="p50957329135646"></a>Endpoint</p>
 </td>
-<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p33902960135646"><a name="p33902960135646"></a><a name="p33902960135646"></a>指定承载REST服务端点的服务器域名或IP，从<a href="http://developer.huaweicloud.com/dev/endpoint" target="_blank" rel="noopener noreferrer">终端节点及区域说明</a>获取。</p>
+<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p33902960135646"><a name="p33902960135646"></a><a name="p33902960135646"></a>指定承载REST服务端点的服务器域名或IP，从<a href="https://developer.huaweicloud.com/endpoint?MRS" target="_blank" rel="noopener noreferrer">终端节点及区域说明</a>获取。</p>
 </td>
 </tr>
 <tr id="row1377075135915"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p44434271135915"><a name="p44434271135915"></a><a name="p44434271135915"></a>resource-path</p>
@@ -163,7 +163,7 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 </td>
 <td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.2 "><p id="a0cb62c6f303e49d8898af85a6c83785d"><a name="a0cb62c6f303e49d8898af85a6c83785d"></a><a name="a0cb62c6f303e49d8898af85a6c83785d"></a>签名认证信息。</p>
 <p id="af4b9d51334e04157bacb25dbe881e65c"><a name="af4b9d51334e04157bacb25dbe881e65c"></a><a name="af4b9d51334e04157bacb25dbe881e65c"></a>该值来源于请求签名结果。</p>
-<p id="ac33cb31eaf60498086ea2ba390a81e99"><a name="ac33cb31eaf60498086ea2ba390a81e99"></a><a name="ac33cb31eaf60498086ea2ba390a81e99"></a>请参考<a href="请求签名流程.md">请求签名流程</a>。</p>
+<p id="ac33cb31eaf60498086ea2ba390a81e99"><a name="ac33cb31eaf60498086ea2ba390a81e99"></a><a name="ac33cb31eaf60498086ea2ba390a81e99"></a>请参考<a href="获取请求认证.md#li15980726144052">请求签名流程</a>。</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p id="a335f6ca4e84b4b65b60d6a8c946d4c38"><a name="a335f6ca4e84b4b65b60d6a8c946d4c38"></a><a name="a335f6ca4e84b4b65b60d6a8c946d4c38"></a>使用AK/SK认证时必选。</p>
 </td>
@@ -226,6 +226,15 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p id="p24697451113240"><a name="p24697451113240"></a><a name="p24697451113240"></a>否</p>
 </td>
 <td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.4 "><p id="p54336490113240"><a name="p54336490113240"></a><a name="p54336490113240"></a>en-us</p>
+</td>
+</tr>
+<tr id="row1305912154611"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p id="p59561232104612"><a name="p59561232104612"></a><a name="p59561232104612"></a>X-Domain-Id</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.2 "><p id="p33051712144616"><a name="p33051712144616"></a><a name="p33051712144616"></a>账号ID</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p id="p2305312124612"><a name="p2305312124612"></a><a name="p2305312124612"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.4 "><p id="p193051912134613"><a name="p193051912134613"></a><a name="p193051912134613"></a>-</p>
 </td>
 </tr>
 </tbody>
@@ -306,6 +315,6 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 
 -   REST客户端
 
-    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。针对Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。针对Chrome，请参见[Postman Interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo)。
+    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。针对Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。针对Chrome，请参见[Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)。
 
 
