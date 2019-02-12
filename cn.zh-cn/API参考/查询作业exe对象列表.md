@@ -10,6 +10,10 @@
 
     GET /v1.1/\{project\_id\}/job-exes
 
+    ```
+    GET/v1.1/{project_id}/job-exes?page_size=10&current_page=1&state=3&job_name=myfirstjob
+    ```
+
 -   参数说明
 
     **表 1**  URI参数说明
@@ -30,50 +34,6 @@
     <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p57847563144556"><a name="p57847563144556"></a><a name="p57847563144556"></a>项目编号。获取方法，请参见<a href="获取项目编号.md">获取项目编号</a>。</p>
     </td>
     </tr>
-    <tr id="row35752174172358"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p8897384172437"><a name="p8897384172437"></a><a name="p8897384172437"></a>cluster_id</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p25096105172358"><a name="p25096105172358"></a><a name="p25096105172358"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p19518602172358"><a name="p19518602172358"></a><a name="p19518602172358"></a>集群编号。</p>
-    </td>
-    </tr>
-    <tr id="row38478540172358"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p10762543172358"><a name="p10762543172358"></a><a name="p10762543172358"></a>id</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p66459692172358"><a name="p66459692172358"></a><a name="p66459692172358"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p14525961172358"><a name="p14525961172358"></a><a name="p14525961172358"></a>作业执行对象的编号。</p>
-    </td>
-    </tr>
-    <tr id="row37407495194754"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p15101241163039"><a name="p15101241163039"></a><a name="p15101241163039"></a>page_size</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p18389069163039"><a name="p18389069163039"></a><a name="p18389069163039"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p43193283194011"><a name="p43193283194011"></a><a name="p43193283194011"></a>分页查询每页返回的最大作业数量。</p>
-    <p id="p29751386163039"><a name="p29751386163039"></a><a name="p29751386163039"></a>取值范围：[1～100]</p>
-    </td>
-    </tr>
-    <tr id="row35367419193832"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p46188714193832"><a name="p46188714193832"></a><a name="p46188714193832"></a>current_page</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p440986719390"><a name="p440986719390"></a><a name="p440986719390"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p47634477193832"><a name="p47634477193832"></a><a name="p47634477193832"></a>当前查询页码。</p>
-    </td>
-    </tr>
-    <tr id="row693784194754"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p56196540194754"><a name="p56196540194754"></a><a name="p56196540194754"></a>job_name</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p3914081919390"><a name="p3914081919390"></a><a name="p3914081919390"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p4074171193913"><a name="p4074171193913"></a><a name="p4074171193913"></a>作业名称。</p>
-    </td>
-    </tr>
-    <tr id="row56520805193848"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p14782481193848"><a name="p14782481193848"></a><a name="p14782481193848"></a>state</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p2369909219390"><a name="p2369909219390"></a><a name="p2369909219390"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p57659102193943"><a name="p57659102193943"></a><a name="p57659102193943"></a>作业状态编码：</p>
-    <a name="ul29263952193948"></a><a name="ul29263952193948"></a><ul id="ul29263952193948"><li>-1：Terminated<span id="ph23950039172554"><a name="ph23950039172554"></a><a name="ph23950039172554"></a>表示已终止的作业状态</span></li><li>2：Running<span id="ph54215248172549"><a name="ph54215248172549"></a><a name="ph54215248172549"></a>表示运行中的作业状态</span></li><li>3：Completed<span id="ph10697548172546"><a name="ph10697548172546"></a><a name="ph10697548172546"></a>表示已完成的作业状态</span></li><li>4：Abnormal<span id="ph1654186172542"><a name="ph1654186172542"></a><a name="ph1654186172542"></a>表示异常的作业状态</span></li></ul>
-    </td>
-    </tr>
     </tbody>
     </table>
 
@@ -82,15 +42,73 @@
 
 **请求参数**
 
-无。
+请求参数如[表2](#table744681812241)所示。
+
+**表 2**  请求参数说明
+
+<a name="table744681812241"></a>
+<table><thead align="left"><tr id="row1646381812415"><th class="cellrowborder" valign="top" width="33.33%" id="mcps1.2.4.1.1"><p id="p9469121862417"><a name="p9469121862417"></a><a name="p9469121862417"></a>名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="16.98%" id="mcps1.2.4.1.2"><p id="p164737189243"><a name="p164737189243"></a><a name="p164737189243"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="49.69%" id="mcps1.2.4.1.3"><p id="p1147781811247"><a name="p1147781811247"></a><a name="p1147781811247"></a>说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row549931872410"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p1350313183249"><a name="p1350313183249"></a><a name="p1350313183249"></a>cluster_id</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p9512718122420"><a name="p9512718122420"></a><a name="p9512718122420"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p175165184247"><a name="p175165184247"></a><a name="p175165184247"></a>集群编号。</p>
+</td>
+</tr>
+<tr id="row3518111872417"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p175226185244"><a name="p175226185244"></a><a name="p175226185244"></a>id</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p1052614185249"><a name="p1052614185249"></a><a name="p1052614185249"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p1253014182247"><a name="p1253014182247"></a><a name="p1253014182247"></a>作业执行对象的编号。</p>
+</td>
+</tr>
+<tr id="row195321018132411"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p18536718122413"><a name="p18536718122413"></a><a name="p18536718122413"></a>page_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p1154013189244"><a name="p1154013189244"></a><a name="p1154013189244"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p8543191819246"><a name="p8543191819246"></a><a name="p8543191819246"></a>分页查询每页返回的最大作业数量。</p>
+<p id="p20545151819243"><a name="p20545151819243"></a><a name="p20545151819243"></a>取值范围：[1～100]</p>
+</td>
+</tr>
+<tr id="row854641812412"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p6548111802411"><a name="p6548111802411"></a><a name="p6548111802411"></a>current_page</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p11552131802411"><a name="p11552131802411"></a><a name="p11552131802411"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p4556518152415"><a name="p4556518152415"></a><a name="p4556518152415"></a>当前查询页码。</p>
+</td>
+</tr>
+<tr id="row16558111818244"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p656351812245"><a name="p656351812245"></a><a name="p656351812245"></a>job_name</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p17567181816245"><a name="p17567181816245"></a><a name="p17567181816245"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p157011187243"><a name="p157011187243"></a><a name="p157011187243"></a>作业名称。</p>
+</td>
+</tr>
+<tr id="row115721118152410"><td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.1 "><p id="p1157581872418"><a name="p1157581872418"></a><a name="p1157581872418"></a>state</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.98%" headers="mcps1.2.4.1.2 "><p id="p10579618192411"><a name="p10579618192411"></a><a name="p10579618192411"></a>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="49.69%" headers="mcps1.2.4.1.3 "><p id="p1158391852414"><a name="p1158391852414"></a><a name="p1158391852414"></a>作业状态编码：</p>
+<a name="ul15591818132418"></a><a name="ul15591818132418"></a><ul id="ul15591818132418"><li>-1：Terminated<span id="ph165971518102417"><a name="ph165971518102417"></a><a name="ph165971518102417"></a>表示已终止的作业状态</span></li><li>2：Running<span id="ph560841816242"><a name="ph560841816242"></a><a name="ph560841816242"></a>表示运行中的作业状态</span></li><li>3：Completed<span id="ph15613818142413"><a name="ph15613818142413"></a><a name="ph15613818142413"></a>表示已完成的作业状态</span></li><li>4：Abnormal<span id="ph10620171822414"><a name="ph10620171822414"></a><a name="ph10620171822414"></a>表示异常的作业状态</span></li></ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 ## 响应消息<a name="section38599577193858"></a>
 
 **响应参数**
 
-响应参数如[表2](#table5154210817547)所示。
+响应参数如[表3](#table5154210817547)所示。
 
-**表 2**  响应参数说明
+**表 3**  响应参数说明
 
 <a name="table5154210817547"></a>
 <table><thead align="left"><tr id="row5182537317547"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p32664405195759"><a name="p32664405195759"></a><a name="p32664405195759"></a>参数名</p>
@@ -118,13 +136,13 @@
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.5.1.3 "><p id="p2387674618911"><a name="p2387674618911"></a><a name="p2387674618911"></a>Array</p>
 </td>
-<td class="cellrowborder" valign="top" width="45%" headers="mcps1.2.5.1.4 "><p id="p5376380218911"><a name="p5376380218911"></a><a name="p5376380218911"></a>作业列表参数，请参见<a href="#ZH-CN_TOPIC_0109962607__table3315199519550">表3</a>。</p>
+<td class="cellrowborder" valign="top" width="45%" headers="mcps1.2.5.1.4 "><p id="p5376380218911"><a name="p5376380218911"></a><a name="p5376380218911"></a>作业列表参数，请参见<a href="#table3315199519550">表4</a>。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**表 3**  job\_executions参数说明
+**表 4**  job\_executions参数说明
 
 <a name="table3315199519550"></a>
 <table><thead align="left"><tr id="row578377519550"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.5.1.1"><p id="p38420820195833"><a name="p38420820195833"></a><a name="p38420820195833"></a>参数名</p>
@@ -496,9 +514,9 @@
 
 ## 状态码<a name="section7365446163631"></a>
 
-状态码如[表4](#table1584477916050)所示。
+状态码如[表5](#table1584477916050)所示。
 
-**表 4**  状态码
+**表 5**  状态码
 
 <a name="table1584477916050"></a>
 <table><thead align="left"><tr id="row1339492016050"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.3.1.1"><p id="p3411176516050"><a name="p3411176516050"></a><a name="p3411176516050"></a>状态码</p>
