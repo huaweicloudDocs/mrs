@@ -8,7 +8,8 @@
 该任务指导用户在MRS集群中打开Hue的WebUI。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->Internet Explorer浏览器可能存在功能问题，建议更换兼容的浏览器访问Hue WebUI，例如Google Chrome浏览器50版本。  
+>-   Internet Explorer浏览器可能存在兼容性问题，建议更换兼容的浏览器访问Hue WebUI，例如Google Chrome浏览器50版本。  
+>-   MRS 1.8.1之前且未启用Kerberos认证的集群，访问Hue的WebUI请参考[访问开源组件UI界面](访问开源组件UI界面.md)。  
 
 ## 对系统的影响<a name="zh-cn_topic_0049949144_section61564112104752"></a>
 

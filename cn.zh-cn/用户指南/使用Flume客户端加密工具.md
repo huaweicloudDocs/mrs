@@ -26,6 +26,9 @@
     **cat password.property**
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果加密参数是用于Flume Server，那么需要到相应的Flume Server所在节点执行加密。加密脚本路径为“/opt/Bigdata/FusionInsight/FusionInsight-Flume-1.6.0/flume/bin/genPwFile.sh“，需要使用omm用户执行加密脚本进行加密。  
+    >如果加密参数是用于Flume Server，那么需要到相应的Flume Server所在节点执行加密。需要使用omm用户执行加密脚本进行加密。  
+    >-   针对MRS 1.8.0之前版本加密路径为“/opt/Bigdata/FusionInsight/FusionInsight-Flume-1.6.0/flume/bin/genPwFile.sh“。  
+    >-   针对MRS 1.8.0及MRS 1.8.1版本加密路径为“/opt/Bigdata/MRS\_XXX/FusionInsight-Flume-1.6.0/flume/bin/genPwFile.sh“，其中XXX为MRS的版本号。  
+    >-   针对MRS 1.8.2及之后版本加密路径为“/opt/Bigdata/MRS\_XXX/install/FusionInsight-Flume-1.6.0/flume/bin/genPwFile.sh“，其中XXX为MRS的版本号。  
 
 

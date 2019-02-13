@@ -11,7 +11,14 @@ Loader作为批量数据导出的组件，可以通过关系型数据库导入�
 ## 操作步骤<a name="zh-cn_topic_0074531420_section25349260165149"></a>
 
 1.  从mysql官网下载mysql jdbc驱动程序“mysql-connector-java-5.1.21.jar“。
-2.  将“mysql-connector-java-5.1.21.jar“上传至MRS master 主备节点loader安装目录“/opt/Bigdata/FusionInsight/FusionInsight-Sqoop-1.99.7/FusionInsight-Sqoop-1.99.7/server/jdbc“下。
+2.  将“mysql-connector-java-5.1.21.jar“上传至MRS master 主备节点loader安装目录
+    -   针对MRS 1.8.0之前版本，上传至“/opt/Bigdata/FusionInsight/FusionInsight-Sqoop-1.99.7/FusionInsight-Sqoop-1.99.7/server/jdbc“
+    -   针对MRS 1.8.0和MRS 1.8.1版本，上传至“/opt/Bigdata/MRS\_XXX/FusionInsight-Sqoop-1.99.7/FusionInsight-Sqoop-1.99.7/server/jdbc“
+    -   针对MRS 1.8.2及之后版本，上传至“/opt/Bigdata/MRS\_XXX/install/FusionInsight-Sqoop-1.99.7/FusionInsight-Sqoop-1.99.7/server/jdbc/“
+
+        其中“XXX“为MRS版本号，请根据实际情况修改。
+
+
 3.  修改“mysql-connector-java-5.1.21.jar“包属主为“omm:wheel“。
 4.  修改配置文件“jdbc.properties“。
 
