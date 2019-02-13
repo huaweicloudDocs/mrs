@@ -36,9 +36,16 @@
 
     **storm jar** _**拓扑包路径 拓扑Main方法的类名称 拓扑名称**_
 
-    例如，提交客户端的样例拓扑：
+    -   MRS 1.8.0之前的版本拓扑包路径为**/opt/client/Storm/storm-xxx/examples/storm-starter/storm-starter-topologies-xxx.jar**，xxx代表storm的版本号。
+    -   MRS 1.8.0和MRS 1.8.1版本的拓扑包路径为**/opt/Bigdata/MRS/FusionInsight-Storm-xxx/adapter/client/controller/storm-examples/lib/storm-starter-xxx-mrs-xxx.jar**，Storm-xxx和storm-starter-xxx中的xxx代表storm的版本号，mrs-xxx中的xxx代表MRS的版本号。
+    -   MRS 1.8.2及之后版本的拓扑包路径为**/opt/Bigdata/MRS\_XXX/install/FusionInsight-Storm-xxx/adapter/client/controller/storm-examples/lib/storm-starter-xxx-mrs-xx.jar**，Storm-xxx和storm-starter-xxx中的xxx代表storm的版本号，MRS-XXX中的XXX代表MRS的版本号。mrs-xx中的xx代表MRS的大版本号，如MRS 1.8.2版本集群此处为**mrs-1.8.0**，如MRS 2.0.0版本集群此处为mrs-2.0。
 
-    **storm jar /opt/client/Storm/storm-1.0.2/examples/storm-starter/storm-starter-topologies-1.0.2.jar org.apache.storm.starter.WordCountTopology topo1**
+    例如：
+
+    -   提交storm 1.0.2版本客户端的样例拓扑：**storm jar /opt/client/Storm/storm-1.0.2/examples/storm-starter/storm-starter-topologies-1.0.2.jar org.apache.storm.starter.WordCountTopology topo1**
+
+    -   提交storm 1.2.1版本且MRS版本为1.8.0的客户端的样例拓扑：**storm jar  **/opt/Bigdata/MRS/FusionInsight-Storm-1.2.1/adapter/client/controller/storm-examples/lib/storm-starter-1.2.1-mrs-1.8.0.jar**  org.apache.storm.starter.WordCountTopology topo1**
+    -   提交storm 1.2.1版本且MRS版本为1.8.2的客户端样例拓扑：**storm jar /opt/Bigdata/MRS\_1.8.2/install/FusionInsight-Storm-1.2.1/adapter/client/controller/storm-examples/lib/storm-starter-1.2.1-mrs-1.8.0.jar org.apache.storm.starter.WordCountTopology topo1**
 
     界面提示以下信息表示提交成功：
 
@@ -48,7 +55,7 @@
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   如果需要拓扑支持采样消息，则还需要增加参数“topology.debug“和“topology.eventlogger.executors“。例如，  
-    >    **storm jar /opt/client/Storm/storm-1.0.2/examples/storm-starter/storm-starter-topologies-1.0.2.jar org.apache.storm.starter.WordCountTopology topo1 -c topology.debug=true -c topology.eventlogger.executors=1**。  
+    >    ****storm jar  **/opt/Bigdata/MRS/FusionInsight-Storm-1.2.1/adapter/client/controller/storm-examples/lib/storm-starter-1.2.1-mrs-1.8.0.jar**  org.apache.storm.starter.WordCountTopology topo1**  -c topology.debug=true -c topology.eventlogger.executors=1**。  
     >-   拓扑如何处理数据是拓扑自身行为。样例拓扑随机生成字符并分隔字符串，需要查看处理情况时，请启用采样功能并参见[查看拓扑处理数据日志](查看Storm拓扑日志.md#zh-cn_topic_0053981410_section3146436417554)。  
 
 7.  执行以下命令，查看Storm中的拓扑。启用Kerberos认证的集群，只有属于“stormadmin“或“storm“的用户可以查看所有拓扑。

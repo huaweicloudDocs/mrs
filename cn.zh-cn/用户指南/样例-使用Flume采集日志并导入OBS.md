@@ -105,7 +105,7 @@ Flume支持将采集的日志信息导入到OBS。
 
     -   “spoolDir“
     -   “trackerDir“
-    -   “hdfs.path“，其中的AK和SK需要替换成实际值，SK是加密后的内容。
+    -   “hdfs.path“，其中的AK和SK需要替换成实际值，SK是加密后的内容。obs-nemon-sink为OBS桶名，obs-sink为文件名。
 
 4.  Flume客户端将自动加载“properties.properties“的内容。
 

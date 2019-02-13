@@ -14,7 +14,7 @@ Flume监控指定OBS目录，并将文件上传到HDFS。
 ## 操作步骤<a name="zh-cn_topic_0076120434_section13552161172344"></a>
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->非安全集群不需要执行步骤2-4。  
+>普通集群不需要执行步骤2-4。  
 
 1.  从HDFS集群客户端拷贝**core-site.xml**、**hdfs-site.xml**文件到Flume客户端节点，“Flume客户端安装目录/fusioninsight-flume-1.6.0/conf“目录中，并在Manager界面上的Flume服务配置中上传这两个文件。
 
@@ -40,6 +40,8 @@ Flume监控指定OBS目录，并将文件上传到HDFS。
     ```
     -Djava.security.krb5.conf=Flume客户端安装目录/fusioninsight-flume-1.6.0/conf/krb5.conf 
     ```
+
+    例如：**"-XX:+UseCMSCompactAtFullCollection -Djava.security.krb5.conf=_Flume客户端安装目录_/fusioninsight-flume-1.6.0/conf/krb5.conf"**
 
     请根据实际情况，修改“Flume客户端安装目录“，然后保存并退出配置文件。
 
