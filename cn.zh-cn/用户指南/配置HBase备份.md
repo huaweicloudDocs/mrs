@@ -33,7 +33,11 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
 1.  <a name="li34792759154955"></a>登录主集群的MRS Manager。
 2.  选择“服务管理 \> HBase \> 服务配置”，设置“参数类别”为“全部配置”，进入HBase配置界面。
-3.  选择“RegionServer \> Replication”，查看“hbase.replication”配置项的值是否为“true”。如果参数值为“false”，配置“hbase.replication”为“true”。
+3.  <a name="li66750118154955"></a>选择“RegionServer \> Replication”，查看“hbase.replication”配置项的值是否为“true”。如果参数值为“false”，配置“hbase.replication”为“true”。
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >MRS 2.0及其以后版本中该配置已被移除，需跳过步骤[3](#li66750118154955)。  
+
 4.  （可选）如[表1](#table6909942154955)所示，为HBase备份操作过程中的可选配置项，您可以根据描述来进行参数配置，或者使用缺省提供的值。
 
     **表 1**  可选配置项
@@ -108,18 +112,25 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
 **启用主集群备份功能来同步Bulkload方式写入的数据**
 
-1.  是否启用Bulkload写数据备份功能？
+1.  <a name="li65160752154955"></a>是否启用Bulkload写数据备份功能？
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >当使用了HBase 的bulkload导入数据的特性时且需要同步这些数据时，需要开启批量写数据备份功能。  
 
     是，执行[6](#li57688977154955)。
 
-    否，执行[9](#li6210082154955)。
+    否，执行[10](#li6210082154955)。
 
 2.  <a name="li57688977154955"></a>选择“服务管理 \> HBase \> 服务配置”，设置“参数类别”为“全部配置”，进入HBase配置界面。
 3.  搜索并修改“hbase.replication.bulkload.enabled”参数，将配置项的值修改为“true”，启用Bulkload写数据备份功能。
 4.  搜索并修改“hbase.replication.cluster.id”参数，表示标识主集群HBase的id，用于备集群连接主集群。参数值支持大小写字母、数字和下划线（\_），长度不超过30。
+5.  <a name="li3244131341713"></a>搜索并修改“hbase.replication.conf.dir”参数，表示标识备集群中所使用主集群客户端的hbase配置，用于启用bulkload数据备份功能时的数据备份。参数值为路径名。
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >1. 当启用bulkload数据备份功能时，需在备集群的所有RegionServer节点上手动放置主集群中hbase相应客户端配置文件\(core-site.xml, hdfs-site.xml, hbase-site.xml\)，放置配置文件的实际路径为$\{hbase.replication.conf.dir\}/$\{hbase.replication.cluster.id\}。例如备集群的hbase.replication.conf.dir配置为"/home"，主集群的hbase.replication.cluster.id配置为"replication1"，则配置文件放置在备集群中实际的路径为"/home/replication1"。并修改对应目录及文件相应权限，例如可执行如下命令"chown -R omm:wheel /home/replication1"。  
+    >2. 客户端配置文件可从主集群中的的客户端中获取，例如，路径为"/opt/client/HBase/hbase/conf"。更新配置文件的方法请参见[更新客户端](更新客户端.md)。  
+    >3. MRS 2.0之前的版本无需配置此参数，可跳过步骤[9](#li3244131341713)。  
+
 
 **重启HBase服务并安装客户端。**
 
@@ -161,7 +172,7 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
     执行**list**命令查看主集群中已经存在的表，使用**scan ‘tableName’**命令查看表中是否已经有历史数据
 
-    -   是，存在表且需要同步数据，执行[14](#li4226821210491)。
+    -   是，存在表且需要同步数据，执行[15](#li4226821210491)。
     -   否，不需要同步数据，任务结束。
 
 3.  <a name="li4226821210491"></a>配置HBase备份时不支持自动同步表中的历史数据，需要对主集群的历史数据进行备份，然后再手动同步历史数据到备集群中。
@@ -203,26 +214,33 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
 1.  <a name="li46664485154955"></a>在HBase shell中执行如下命令，创建主集群HBase与备集群HBase之间的备份同步关系。
 
-    **add\_peer** '_备集群ID','备集群ZooKeeper地址信息_'，**\{HDFS\_CONFS =\> true\}**
+    **add\_peer** '_备集群ID',_ _CLUSTER\_KEY  =\>_  '_备集群ZooKeeper地址信息_'’
 
     -   备集群ID表示主集群识别备集群使用的id，建议使用字母与数字。
     -   备集群ZooKeeper地址信息包含ZooKeeper业务IP地址、侦听客户端连接的端口和备集群的HBase在ZooKeeper上的根目录。
-    -   **\{HDFS\_CONFS =\> true\}**表示将主集群的默认HDFS配置信息同步到对应集群，用于备集群的HBase访问主集群的HDFS。如果不启用Bulkload批量写数据备份，可以不使用此参数。
+    -   例如，添加包含BulkLoad数据的主备集群备份关系，执行：**add\_peer** **'1',**CLUSTER\_KEY =\>**** **'192.168.40.2,192.168.40.3,192.168.40.4:2181:/hbase'**
 
-        例如，添加包含BulkLoad数据的主备集群备份关系，执行：**add\_peer '1','192.168.40.2,192.168.40.3,192.168.40.4:2181:/hbase',\{HDFS\_CONFS =\> true\}**
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>MRS 1.6.2及之前的版本该端口默认为24002，详见[开源组件端口列表](开源组件端口列表.md)  
+>MRS 2.0之前的版本若添加包含BulkLoad数据的主备集群备份关系，需执行：  
+>**add\_peer  '1','192.168.40.2,192.168.40.3,192.168.40.4:2181:/hbase',\{HDFS\_CONF =\> true\}**  
+>**\{HDFS\_CONFS =\> true\}**  表示将主集群的默认HDFS配置信息同步到对应集群，用于备集群的HBase访问主集群的HDFS。如果不启用Bulkload批量写数据备份，可以不使用此参数。  
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >MRS 1.6.2及之前的版本该端口默认为24002，详见[开源组件端口列表](开源组件端口列表.md)  
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >1.  单击“服务管理 \> ZooKeeper \> 实例”，获取ZooKeeper业务IP地址。  
-        >2.  单击“服务管理 \> ZooKeeper \> 服务配置”，“参数类别”选择”全部配置“，搜索获取clientPort,即为侦听客户端连接的端口。  
-        >3.  执行**list\_peers**命令判断主备备份关系添加结果，当界面提示以下信息表示成功。  
-        >    ```  
-        >    hbase(main):003:0> list_peers  
-        >    PEER_ID CLUSTER_KEY STATE TABLE_CFS  
-        >    1 192.168.0.13,192.168.0.177,192.168.0.25:24002:/hbase ENABLED  
-        >    ```  
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>1.  单击“服务管理 \> ZooKeeper \> 实例”，获取ZooKeeper业务IP地址。  
+>2.  单击“服务管理 \> ZooKeeper \> 服务配置”，“参数类别”选择”全部配置“，搜索获取clientPort,即为侦听客户端连接的端口。  
+>3.  执行**list\_peers**命令判断主备备份关系添加结果，当界面提示以下信息表示成功。  
+>    ```  
+>    hbase(main):003:0> list_peers  
+>    PEER_ID CLUSTER_KEY ENDPOINT_CLASSNAME STATE REPLICATE_ALL NAMESPACES TABLE_CFS BANDWIDTH SERIAL  
+>    1 192.168.0.13,192.168.0.177,192.168.0.25:2181:/hbase ENABLED  true   0 false  
+>    ```  
+>    MRS 2.0之前的版本，执行"list\_peers"命令后，界面提示以下信息表示成功。  
+>    ```  
+>    hbase(main):003:0> list_peers  
+>    PEER_ID CLUSTER_KEY STATE TABLE_CFS  
+>    1 192.168.0.13,192.168.0.177,192.168.0.25:2181:/hbase ENABLED  
+>    ```  
 
 
 
@@ -257,10 +275,10 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
     在备集群的HBase shell中，执行**list\_namespace**命令 ，查询命名空间。
 
-    -   是，存在同名的命令空间，执行[19](#li15192291154955)。
+    -   是，存在同名的命令空间，执行[20](#li15192291154955)。
     -   否，不存在同名的命令空间，需先在备集群的HBase shell中，执行
 
-        **create\_namespace 'ns1'**创建同名的命名空间，然后执行[19](#li15192291154955)。
+        **create\_namespace 'ns1'**创建同名的命名空间，然后执行[20](#li15192291154955)。
 
 
 2.  <a name="li15192291154955"></a>在主集群的HBase shell中，执行以下命令，启用主集群表的数据实时备份功能，确保后续主集群中修改的数据能够实时同步到备集群中。
@@ -298,8 +316,8 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
     **主备集群发生倒换**
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >1.  当备集群需要被倒换为主集群时，请参见[1](#li34792759154955)~[10](#li33254619154955)和[15](#li46664485154955)~[20](#li3638114154955)重新配置主备关系。  
-    >2.  勿需执行“同步集群表数据”操作，即[11](#li12641483154955)~[14](#li4226821210491)。  
+    >1.  当备集群需要被倒换为主集群时，请参见[1](#li34792759154955)\~[11](#li33254619154955)和[16](#li46664485154955)\~[21](#li3638114154955)重新配置主备关系。  
+    >2.  勿需执行“同步集群表数据”操作，即[12](#li12641483154955)\~[15](#li4226821210491)。  
 
 
 ## 相关命令<a name="section7753034154955"></a>
@@ -317,14 +335,19 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 </thead>
 <tbody><tr id="row10434430154955"><td class="cellrowborder" valign="top" width="15.661566156615661%" headers="mcps1.2.4.1.1 "><p id="p39882522154955"><a name="p39882522154955"></a><a name="p39882522154955"></a>建立主备关系</p>
 </td>
-<td class="cellrowborder" valign="top" width="41.7941794179418%" headers="mcps1.2.4.1.2 "><p id="p9258883154955"><a name="p9258883154955"></a><a name="p9258883154955"></a><strong id="b16221088154955"><a name="b16221088154955"></a><a name="b16221088154955"></a>add_peer</strong>&nbsp;<em id="i11772064154955"><a name="i11772064154955"></a><a name="i11772064154955"></a>'备集群ID','备集群地址信息'</em></p>
-<p id="p38839718154955"><a name="p38839718154955"></a><a name="p38839718154955"></a>示例：</p>
-<p id="p14013146154955"><a name="p14013146154955"></a><a name="p14013146154955"></a><strong id="b59009453154955"><a name="b59009453154955"></a><a name="b59009453154955"></a>add_peer '1','zk1,zk2,zk3:2181:/hbase'</strong></p>
-<p id="p61323032154955"><a name="p61323032154955"></a><a name="p61323032154955"></a><strong id="b15036380154955"><a name="b15036380154955"></a><a name="b15036380154955"></a>add_peer  '1','zk1,zk2,zk3:2181:/hbase1'</strong></p>
-<p id="p667395116528"><a name="p667395116528"></a><a name="p667395116528"></a>注：MRS 1.7及其以后版本中zookeeper端口更改为2181,需注意调整。</p>
-<p id="p9987292154955"><a name="p9987292154955"></a><a name="p9987292154955"></a><strong id="b22776770154955"><a name="b22776770154955"></a><a name="b22776770154955"></a>add_peer '1','zk1,zk2,zk3:2181:/hbase1',{HDFS_CONFS  =&gt; true}</strong></p>
+<td class="cellrowborder" valign="top" width="41.7941794179418%" headers="mcps1.2.4.1.2 "><p id="p178961476238"><a name="p178961476238"></a><a name="p178961476238"></a><strong id="b2090110712237"><a name="b2090110712237"></a><a name="b2090110712237"></a>add_peer</strong>&nbsp;<em id="i6317135405414"><a name="i6317135405414"></a><a name="i6317135405414"></a>'备集群ID',<span id="ph17317175412549"><a name="ph17317175412549"></a><a name="ph17317175412549"></a>CLUSTER_KEY =&gt;</span></em><em id="i14318135485414"><a name="i14318135485414"></a><a name="i14318135485414"></a>'备集群地址信息'</em></p>
+<p id="p1990811762311"><a name="p1990811762311"></a><a name="p1990811762311"></a>示例：</p>
+<p id="p990914714230"><a name="p990914714230"></a><a name="p990914714230"></a><strong id="b12182814195517"><a name="b12182814195517"></a><a name="b12182814195517"></a>add_peer '1',<span id="ph17182914165512"><a name="ph17182914165512"></a><a name="ph17182914165512"></a>CLUSTER_KEY =&gt;</span></strong> <strong id="b685316772419"><a name="b685316772419"></a><a name="b685316772419"></a>'zk1,zk2,zk3:2181:/hbase'</strong></p>
+<p id="p179165712231"><a name="p179165712231"></a><a name="p179165712231"></a><strong id="b9860151935511"><a name="b9860151935511"></a><a name="b9860151935511"></a>add_peer  '1',<span id="ph118607199556"><a name="ph118607199556"></a><a name="ph118607199556"></a>CLUSTER_KEY =&gt;</span></strong> <strong id="b84316200242"><a name="b84316200242"></a><a name="b84316200242"></a>'zk1,zk2,zk3:2181:/hbase1'</strong></p>
+<p id="p1292615715230"><a name="p1292615715230"></a><a name="p1292615715230"></a>MRS 2.0之前的版本建立主备关系命令如下：</p>
+<p id="p9994133411135"><a name="p9994133411135"></a><a name="p9994133411135"></a><strong id="b1299417343139"><a name="b1299417343139"></a><a name="b1299417343139"></a>add_peer</strong>&nbsp;<em id="i4996123451316"><a name="i4996123451316"></a><a name="i4996123451316"></a>'备集群ID', '备集群地址信息'</em></p>
+<p id="p1799914347139"><a name="p1799914347139"></a><a name="p1799914347139"></a>示例：</p>
+<p id="p1711335101319"><a name="p1711335101319"></a><a name="p1711335101319"></a><strong id="b111133501310"><a name="b111133501310"></a><a name="b111133501310"></a>add_peer '1', 'zk1,zk2,zk3:2181:/hbase'</strong></p>
+<p id="p1561135151311"><a name="p1561135151311"></a><a name="p1561135151311"></a><strong id="b9843541319"><a name="b9843541319"></a><a name="b9843541319"></a>add_peer  '1', 'zk1,zk2,zk3:2181:/hbase1'</strong></p>
+<p id="p1111133561315"><a name="p1111133561315"></a><a name="p1111133561315"></a>注：MRS 1.7及其以后版本中zookeeper端口更改为2181,需注意调整。</p>
 </td>
-<td class="cellrowborder" valign="top" width="42.544254425442546%" headers="mcps1.2.4.1.3 "><p id="p32979070154955"><a name="p32979070154955"></a><a name="p32979070154955"></a>建立主集群与备集群的关系，让其互相对应。如果启用Bulkload批量写数据备份，则命令为<strong id="b28376174154955"><a name="b28376174154955"></a><a name="b28376174154955"></a>add_peer</strong>&nbsp;<em id="i54058974154955"><a name="i54058974154955"></a><a name="i54058974154955"></a>'备集群ID','备集群地址信息'</em><strong id="b16768719154955"><a name="b16768719154955"></a><a name="b16768719154955"></a>,{HDFS_CONFS  =&gt; true}</strong>。</p>
+<td class="cellrowborder" valign="top" width="42.544254425442546%" headers="mcps1.2.4.1.3 "><p id="p32979070154955"><a name="p32979070154955"></a><a name="p32979070154955"></a><span id="ph871165516171"><a name="ph871165516171"></a><a name="ph871165516171"></a>建立主集群与备集群的关系，让其互相对应。如果启用Bulkload批量写数据备份，</span>则命令为<strong id="b98122582415"><a name="b98122582415"></a><a name="b98122582415"></a>add_peer</strong>&nbsp;<em id="i927614405555"><a name="i927614405555"></a><a name="i927614405555"></a>'备集群ID',<em id="i12751740145518"><a name="i12751740145518"></a><a name="i12751740145518"></a>CLUSTER_KEY =&gt;</em></em> '<em id="i1127694025519"><a name="i1127694025519"></a><a name="i1127694025519"></a>备集群地址信息'<span id="ph1127614045512"><a name="ph1127614045512"></a><a name="ph1127614045512"></a>，</span></em><span id="ph1319132519245"><a name="ph1319132519245"></a><a name="ph1319132519245"></a>并配置参数</span><em id="i132318252247"><a name="i132318252247"></a><a name="i132318252247"></a><span id="ph13263258249"><a name="ph13263258249"></a><a name="ph13263258249"></a>"hbase.replication.conf.dir"</span></em><span id="ph12852522412"><a name="ph12852522412"></a><a name="ph12852522412"></a>，同时手动拷贝主集群的hbase相应客户端配置文件到</span><span id="ph1529192519240"><a name="ph1529192519240"></a><a name="ph1529192519240"></a>备集群的所有RegionServer节点</span><strong id="b53232512244"><a name="b53232512244"></a><a name="b53232512244"></a></strong><span id="ph113416250242"><a name="ph113416250242"></a><a name="ph113416250242"></a>，详情请参考<a href="#li65160752154955">5</a>~<a href="#li33254619154955">11</a></span>。</p>
+<p id="p1640102532413"><a name="p1640102532413"></a><a name="p1640102532413"></a>MRS 2.0之前的版本，当启用Bulkload批量写数据备份，则命令为: <strong id="b154232592418"><a name="b154232592418"></a><a name="b154232592418"></a>add_peer <em id="i043132511248"><a name="i043132511248"></a><a name="i043132511248"></a>'备集群ID',<em id="i8469253242"><a name="i8469253242"></a><a name="i8469253242"></a>'备集群地址信息'</em></em>,{HDFS_CONF =&gt; true}。</strong></p>
 </td>
 </tr>
 <tr id="row16700746154955"><td class="cellrowborder" valign="top" width="15.661566156615661%" headers="mcps1.2.4.1.1 "><p id="p10583211154955"><a name="p10583211154955"></a><a name="p10583211154955"></a>移除主备关系</p>
@@ -387,6 +410,7 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 <td class="cellrowborder" valign="top" width="42.544254425442546%" headers="mcps1.2.4.1.3 "><p id="p9616324154955"><a name="p9616324154955"></a><a name="p9616324154955"></a>启用包含Bulkload数据的备份，在主集群修改HDFS参数时，新的参数值默认不会从主集群自动同步到备集群，需要手动执行命令同步。受影响的参数如下：</p>
 <a name="ul19438053154955"></a><a name="ul19438053154955"></a><ul id="ul19438053154955"><li>“fs.defaultFS”</li><li>“dfs.client.failover.proxy.provider.hacluster”</li><li>“dfs.client.failover.connection.retries.on.timeouts”</li><li>“dfs.client.failover.connection.retries”</li></ul>
 <p id="p34748846154955"><a name="p34748846154955"></a><a name="p34748846154955"></a>例如，“fs.defaultFS”修改为“hdfs://hacluster_sale”，同步HDFS配置到id为1的备集群时执行：<strong id="b44304164154955"><a name="b44304164154955"></a><a name="b44304164154955"></a>set_replication_hdfs_confs '1', {'fs.defaultFS' =&gt; 'hdfs://hacluster_sale'}</strong></p>
+<p id="p2172155419011"><a name="p2172155419011"></a><a name="p2172155419011"></a>MRS 2.0及其之后的版本该命令已被移除，如需同步，则需手动把主集群中更改的客户端配置拷贝到备集群中，详情请参考<a href="#li3244131341713">9</a>的说明。</p>
 </td>
 </tr>
 </tbody>

@@ -102,6 +102,6 @@
 2.  在“元数据“页签，可查看作业的元数据。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >单击![](figures/zh-cn_image_0056734293.jpg)可打开作业运行时的日志。  
+    >单击![](figures/icon_mrs_dbjoblog.jpg)可打开作业运行时的日志。  
 
 

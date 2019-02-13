@@ -13,20 +13,32 @@ Flume支持将采集的日志信息导入到Kafka。
 ## 操作步骤<a name="zh-cn_topic_0068225666_section13552161172344"></a>
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->非安全集群不需要执行步骤1-6，直接从步骤7开始即可。  
+>普通集群不需要执行步骤1-6，直接从步骤7开始即可。  
 
 1.  将Master1节点上的认证服务器配置文件，复制到安装Flume客户端的节点，保存到Flume客户端中“Flume客户端安装目录/fusioninsight-flume-1.6.0/conf“目录。
+    -   针对MRS 1.8.0之前版本，文件完整路径为“/opt/Bigdata/FusionInsight/etc/1\_X\_KerberosClient/kdc.conf“
+    -   针对MRS 1.8.0和MRS 1.8.1版本，文件完整路径为“/opt/Bigdata/MRS\_XXX/etc/1\_X\_KerberosClient/ kdc.conf“
+    -   针对MRS 1.8.2及之后版本，文件完整路径为“/opt/Bigdata/MRS\_Current/1\_X\_KerberosClient/etc/kdc.conf“
 
-    文件完整路径为“/opt/Bigdata/FusionInsight/etc/1\_X\_KerberosClient/kdc.conf“，其中“X“为随机生成的数字，请根据实际情况修改。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+        其中“XXX“为MRS版本号，“X“为随机生成的数字，请根据实际情况修改。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+
 
 2.  登录MRS Manager，选择“服务管理  \>  Flume  \>  实例管理“，查看任一部署Flume角色节点的“业务IP地址“。
 3.  将此节点上的用户认证文件，复制到安装Flume客户端的节点，保存到Flume客户端中“Flume客户端安装目录/fusioninsight-flume-1.6.0/conf“目录。
+    -   针对MRS 1.8.0之前版本，文件完整路径为“/opt/Bigdata/FusionInsight/FusionInsight-Flume-1.6.0/flume/conf/flume.keytab“
+    -   针对MRS 1.8.0和MRS 1.8.1版本，文件完整路径为“/opt/Bigdata/MRS\_XXX/FusionInsight-Flume-1.6.0/flume/conf/flume.keytab“
+    -   针对MRS 1.8.2及之后版本，文件完整路径为“/opt/Bigdata/MRS\_XXX/install/FusionInsight-Flume-1.6.0/flume/conf/flume.keytab“
 
-    文件完整路径为“/opt/Bigdata/FusionInsight/FusionInsight-Flume-1.6.0/flume/conf/flume.keytab“。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+        其中“XXX“为MRS版本号，请根据实际情况修改。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+
 
 4.  将此节点上的配置文件“jaas.conf“，复制到安装Flume客户端的节点，保存到Flume客户端中“conf“目录。
+    -   针对MRS 1.8.0之前版本，文件完整路径为“/opt/Bigdata/FusionInsight/etc/1\_X\_Flume/jaas.conf“
+    -   针对MRS 1.8.0和MRS 1.8.1版本，文件完整路径为“/opt/Bigdata/MRS\_XXX/etc/1\_X\_Flume/jaas.conf“
+    -   针对MRS 1.8.2及之后版本，文件完整路径为“/opt/Bigdata/MRS\_Current/1\_X\_Flume/etc/jaas.conf“
 
-    文件完整路径为“/opt/Bigdata/FusionInsight/etc/1\_X\_Flume/jaas.conf“，其中“X“为随机生成的数字，请根据实际情况修改。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+        其中“XXX“为MRS版本号，“X“为随机生成的数字，请根据实际情况修改。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+
 
 5.  登录安装Flume客户端节点，切换到客户端安装目录，执行以下命令修改文件：
 
@@ -43,6 +55,8 @@ Flume支持将采集的日志信息导入到Kafka。
     ```
     -Djava.security.krb5.conf=Flume客户端安装目录/fusioninsight-flume-1.6.0/conf/kdc.conf -Djava.security.auth.login.config=Flume客户端安装目录/fusioninsight-flume-1.6.0/conf/jaas.conf -Dzookeeper.request.timeout=120000
     ```
+
+    例如：**"-XX:+UseCMSCompactAtFullCollection -Djava.security.krb5.conf=_Flume客户端安装目录_/fusioninsight-flume-1.6.0/conf/kdc.conf -Djava.security.auth.login.config=_Flume客户端安装目录_/fusioninsight-flume-1.6.0/conf/jaas.conf -Dzookeeper.request.timeout=120000"**
 
     请根据实际情况，修改“Flume客户端安装目录“，然后保存并退出。
 
@@ -115,14 +129,25 @@ Flume支持将采集的日志信息导入到Kafka。
 
     -   kafka.bootstrap.servers
 
-        默认情况下，安全集群对应端口21007，非安全集群对应端口9092。
+        默认情况下，安全集群对应端口21007，普通集群对应端口9092。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >MRS 1.6.2及以下版本，非安全集群对应端口21005.详见[开源组件端口列表](开源组件端口列表.md#ZH-CN_TOPIC_0106326167)  
+        >MRS 1.6.2及以下版本，普通集群对应端口21005.详见[开源组件端口列表](开源组件端口列表.md#ZH-CN_TOPIC_0106326167)  
+
+    -   kafka.security.protocol
+
+        安全集群请配置为SASL\_PLAINTEXT，普通集群请配置为PLAINTEXT。
 
     -   “kafka.kerberos.domain.name“
 
-        此参数的值为Kafka集群中“kerberos.domain.name”对应的值。具体可到Borker实例所在节点上查看“/opt/Bigdata/FusionInsight/etc/1\_8\_Broker/server.properties”文件中配置项“kerberos.domain.name”对应的值，仅安全集群需要配置。
+        普通集群无需配置此参数，对应的值需要配置为空。安全集群对应此参数的值为Kafka集群中“kerberos.domain.name”对应的值。
+
+        -   针对MRS 1.8.0之前版本，具体可到Borker实例所在节点上查看“/opt/Bigdata/FusionInsight/etc/1\_8X\_Broker/server.properties“
+        -   针对MRS 1.8.0和MRS 1.8.1版本，具体可到Borker实例所在节点上查看“/opt/Bigdata/MRS\_XXX/etc/1\_X\_Broker/server.properties“
+        -   针对MRS 1.8.2及之后版本，具体可到Borker实例所在节点上查看“/opt/Bigdata/MRS\_Current/1\_X\_Broker/etc/server.properties“
+
+            其中“XXX“为MRS版本号，“X“为随机生成的数字，请根据实际情况修改。同时文件需要以Flume客户端安装用户身份保存，例如**root**用户。
+
 
 
 9.  Flume客户端将自动加载“properties.properties“的内容。

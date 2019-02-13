@@ -8,6 +8,9 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 
 ## Web站点一览<a name="zh-cn_topic_0069869151_section11481629144654"></a>
 
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>混合集群的站点地址请根据站点类型参考分析集群和流式集群的的站点地址。  
+
 **表 1**  未启用Kerberos认证的集群
 
 <a name="zh-cn_topic_0069869151_table15477438145833"></a>

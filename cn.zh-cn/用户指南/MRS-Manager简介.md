@@ -243,7 +243,7 @@ MRS通过MRS Manager管理大数据组件，例如Hadoop生态体系中的组件
 </td>
 <td class="cellrowborder" valign="top" width="39.31393139313931%" headers="mcps1.2.4.1.2 "><p id="p4152714105524"><a name="p4152714105524"></a><a name="p4152714105524"></a>表示公有云上的数据分析云服务，简称为MRS，包括Hive、Spark、Yarn、HDFS和ZooKeeper等组件。</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.14351435143514%" headers="mcps1.2.4.1.3 "><p id="p825567105524"><a name="p825567105524"></a><a name="p825567105524"></a>仅代表Hadoop生态体系中的MapReduce组件。</p>
+<td class="cellrowborder" valign="top" width="35.14351435143514%" headers="mcps1.2.4.1.3 "><p id="p825567105524"><a name="p825567105524"></a><a name="p825567105524"></a>为租户集群中的大数据组件提供的统一管理平台。</p>
 </td>
 </tr>
 </tbody>

@@ -154,7 +154,7 @@ Loader页面支持创建、查看、编辑和删除作业。
 ## 删除作业<a name="zh-cn_topic_0071084974_section49823441102034"></a>
 
 1.  访问Loader页面。
-2.  在指定作业所在行，单击![](figures/zh-cn_image_0071777221.jpg)。
+2.  在指定作业所在行，单击![](figures/icon_mrs_deleteloaderjob.jpg)。
 
     您还可以勾选一个或多个作业，单击作业列表右上方的“删除作业“。
 

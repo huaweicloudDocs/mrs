@@ -84,7 +84,7 @@ Mapreduce JobHistoryServer堆内存使用率过高，会影响Mapreduce 服务�
 
 2.  <a name="zh-cn_topic_0087154425_li40881691175629"></a>收集故障信息。
     1.  在MRS Manager界面，单击“系统设置 \> 日志导出”。
-    2.  请联系公有云运维人员，并发送已收集的故障日志信息。
+    2.  请联系运维人员，并发送已收集的故障日志信息。
 
 
 ## 参考信息<a name="zh-cn_topic_0087154425_zh-cn_topic_0087039367_section22217739"></a>
