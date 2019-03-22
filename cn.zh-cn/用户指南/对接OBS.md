@@ -1,4 +1,4 @@
-# 访问OBS方法<a name="ZH-CN_TOPIC_0133461181"></a>
+# 对接OBS<a name="ZH-CN_TOPIC_0133461181"></a>
 
 本章节提供MRS访问OBS的方法指导。
 
