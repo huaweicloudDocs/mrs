@@ -48,7 +48,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="p1553419411912"><a name="p1553419411912"></a><a name="p1553419411912"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p553411413913"><a name="p553411413913"></a><a name="p553411413913"></a>s1.xlarge</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p553411413913"><a name="p553411413913"></a><a name="p553411413913"></a>s1.xlarge.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="p612815911919"><a name="p612815911919"></a><a name="p612815911919"></a>XEN</p>
 </td>
@@ -57,7 +57,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p13824125111919"><a name="p13824125111919"></a><a name="p13824125111919"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p168244514915"><a name="p168244514915"></a><a name="p168244514915"></a>s1.4xlarge</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p168244514915"><a name="p168244514915"></a><a name="p168244514915"></a>s1.4xlarge.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p17814459790"><a name="p17814459790"></a><a name="p17814459790"></a>XEN</p>
 </td>
@@ -66,7 +66,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p174841952997"><a name="p174841952997"></a><a name="p174841952997"></a>128</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p184840524912"><a name="p184840524912"></a><a name="p184840524912"></a>s1.8xlarge</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p184840524912"><a name="p184840524912"></a><a name="p184840524912"></a>s1.8xlarge.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1950414018107"><a name="p1950414018107"></a><a name="p1950414018107"></a>XEN</p>
 </td>
@@ -81,7 +81,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="p927205782811"><a name="p927205782811"></a><a name="p927205782811"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p1327265712812"><a name="p1327265712812"></a><a name="p1327265712812"></a>s2.xlarge.4</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p1327265712812"><a name="p1327265712812"></a><a name="p1327265712812"></a>s2.xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="p6272145722810"><a name="p6272145722810"></a><a name="p6272145722810"></a>KVM</p>
 </td>
@@ -90,7 +90,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p8434437132910"><a name="p8434437132910"></a><a name="p8434437132910"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1150661153213"><a name="p1150661153213"></a><a name="p1150661153213"></a>s2.2xlarge.2</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1150661153213"><a name="p1150661153213"></a><a name="p1150661153213"></a>s2.2xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1443493716290"><a name="p1443493716290"></a><a name="p1443493716290"></a>KVM</p>
 </td>
@@ -99,7 +99,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p0827124013293"><a name="p0827124013293"></a><a name="p0827124013293"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p14505161193220"><a name="p14505161193220"></a><a name="p14505161193220"></a>s2.4xlarge.2</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p14505161193220"><a name="p14505161193220"></a><a name="p14505161193220"></a>s2.4xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p782704042913"><a name="p782704042913"></a><a name="p782704042913"></a>KVM</p>
 </td>
@@ -108,7 +108,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p149801148102918"><a name="p149801148102918"></a><a name="p149801148102918"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p050214112321"><a name="p050214112321"></a><a name="p050214112321"></a>s2.4xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p050214112321"><a name="p050214112321"></a><a name="p050214112321"></a>s2.4xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1980948162912"><a name="p1980948162912"></a><a name="p1980948162912"></a>KVM</p>
 </td>
@@ -117,7 +117,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1265294302911"><a name="p1265294302911"></a><a name="p1265294302911"></a>128</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p711501763110"><a name="p711501763110"></a><a name="p711501763110"></a>s2.8xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p711501763110"><a name="p711501763110"></a><a name="p711501763110"></a>s2.8xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p10653543192920"><a name="p10653543192920"></a><a name="p10653543192920"></a>KVM</p>
 </td>
@@ -128,7 +128,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="p192694512113"><a name="p192694512113"></a><a name="p192694512113"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p182748510114"><a name="p182748510114"></a><a name="p182748510114"></a>s3.2xlarge.2</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p182748510114"><a name="p182748510114"></a><a name="p182748510114"></a>s3.2xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="p32787510117"><a name="p32787510117"></a><a name="p32787510117"></a>KVM</p>
 </td>
@@ -137,7 +137,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p132901651817"><a name="p132901651817"></a><a name="p132901651817"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1429320519115"><a name="p1429320519115"></a><a name="p1429320519115"></a>s3.4xlarge.2</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1429320519115"><a name="p1429320519115"></a><a name="p1429320519115"></a>s3.4xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p152968511111"><a name="p152968511111"></a><a name="p152968511111"></a>KVM</p>
 </td>
@@ -146,7 +146,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p93482512115"><a name="p93482512115"></a><a name="p93482512115"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p6353105114118"><a name="p6353105114118"></a><a name="p6353105114118"></a>s3.xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p6353105114118"><a name="p6353105114118"></a><a name="p6353105114118"></a>s3.xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p163577511015"><a name="p163577511015"></a><a name="p163577511015"></a>KVM</p>
 </td>
@@ -155,7 +155,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p138815120119"><a name="p138815120119"></a><a name="p138815120119"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p143951351811"><a name="p143951351811"></a><a name="p143951351811"></a>s3.4xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p143951351811"><a name="p143951351811"></a><a name="p143951351811"></a>s3.4xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p43981518110"><a name="p43981518110"></a><a name="p43981518110"></a>KVM</p>
 </td>
@@ -167,7 +167,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="p09209585583"><a name="p09209585583"></a><a name="p09209585583"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p5921115812583"><a name="p5921115812583"></a><a name="p5921115812583"></a>c2.2xlarge</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p5921115812583"><a name="p5921115812583"></a><a name="p5921115812583"></a>c2.2xlarge.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="p1292285815813"><a name="p1292285815813"></a><a name="p1292285815813"></a>XEN</p>
 </td>
@@ -176,7 +176,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1992865825811"><a name="p1992865825811"></a><a name="p1992865825811"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p59301758125810"><a name="p59301758125810"></a><a name="p59301758125810"></a>c2.4xlarge</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p59301758125810"><a name="p59301758125810"></a><a name="p59301758125810"></a>c2.4xlarge.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p179311858145812"><a name="p179311858145812"></a><a name="p179311858145812"></a>XEN</p>
 </td>
@@ -205,7 +205,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="19.191919191919194%" headers="mcps1.2.6.1.3 "><p id="p66396173204624"><a name="p66396173204624"></a><a name="p66396173204624"></a>8</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.2.6.1.4 "><p id="p9380900204624"><a name="p9380900204624"></a><a name="p9380900204624"></a>c3.xlarge.2</p>
+<td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.2.6.1.4 "><p id="p9380900204624"><a name="p9380900204624"></a><a name="p9380900204624"></a>c3.xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="12.121212121212121%" headers="mcps1.2.6.1.5 "><p id="p714614176327"><a name="p714614176327"></a><a name="p714614176327"></a>KVM</p>
 </td>
@@ -214,7 +214,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1036104612367"><a name="p1036104612367"></a><a name="p1036104612367"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p8361104613610"><a name="p8361104613610"></a><a name="p8361104613610"></a>c3.4xlarge.2</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p8361104613610"><a name="p8361104613610"></a><a name="p8361104613610"></a>c3.4xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p9361114613616"><a name="p9361114613616"></a><a name="p9361114613616"></a>KVM</p>
 </td>
@@ -223,7 +223,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p15964478204624"><a name="p15964478204624"></a><a name="p15964478204624"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p18054373204624"><a name="p18054373204624"></a><a name="p18054373204624"></a>c3.xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p18054373204624"><a name="p18054373204624"></a><a name="p18054373204624"></a>c3.xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1160181710322"><a name="p1160181710322"></a><a name="p1160181710322"></a>KVM</p>
 </td>
@@ -232,7 +232,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1259733204624"><a name="p1259733204624"></a><a name="p1259733204624"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p34929558204624"><a name="p34929558204624"></a><a name="p34929558204624"></a>c3.2xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p34929558204624"><a name="p34929558204624"></a><a name="p34929558204624"></a>c3.2xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p11163171763213"><a name="p11163171763213"></a><a name="p11163171763213"></a>KVM</p>
 </td>
@@ -241,7 +241,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p31674728204624"><a name="p31674728204624"></a><a name="p31674728204624"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p15516174204624"><a name="p15516174204624"></a><a name="p15516174204624"></a>c3.4xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p15516174204624"><a name="p15516174204624"></a><a name="p15516174204624"></a>c3.4xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p14657219153217"><a name="p14657219153217"></a><a name="p14657219153217"></a>KVM</p>
 </td>
@@ -250,7 +250,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p128123211279"><a name="p128123211279"></a><a name="p128123211279"></a>128</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p374558192715"><a name="p374558192715"></a><a name="p374558192715"></a>c3.8xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p374558192715"><a name="p374558192715"></a><a name="p374558192715"></a>c3.8xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p14281153262720"><a name="p14281153262720"></a><a name="p14281153262720"></a>KVM</p>
 </td>
@@ -259,7 +259,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p37569478204624"><a name="p37569478204624"></a><a name="p37569478204624"></a>256</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p23228883204624"><a name="p23228883204624"></a><a name="p23228883204624"></a>c3.15xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p23228883204624"><a name="p23228883204624"></a><a name="p23228883204624"></a>c3.15xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p16664419133218"><a name="p16664419133218"></a><a name="p16664419133218"></a>KVM</p>
 </td>
@@ -292,7 +292,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="11%" headers="mcps1.2.8.1.3 "><p id="p0750164314813"><a name="p0750164314813"></a><a name="p0750164314813"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.8.1.4 "><p id="p1175054394818"><a name="p1175054394818"></a><a name="p1175054394818"></a>d2.2xlarge.8</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.8.1.4 "><p id="p1175054394818"><a name="p1175054394818"></a><a name="p1175054394818"></a>d2.2xlarge.8.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="11%" headers="mcps1.2.8.1.5 "><p id="p1875013430483"><a name="p1875013430483"></a><a name="p1875013430483"></a>KVM</p>
 </td>
@@ -306,7 +306,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.2 "><p id="p18434144113294"><a name="p18434144113294"></a><a name="p18434144113294"></a>128</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.3 "><p id="p196727215299"><a name="p196727215299"></a><a name="p196727215299"></a>d2.4xlarge.8</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.3 "><p id="p196727215299"><a name="p196727215299"></a><a name="p196727215299"></a>d2.4xlarge.8.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.4 "><p id="p10967117172915"><a name="p10967117172915"></a><a name="p10967117172915"></a>KVM</p>
 </td>
@@ -317,7 +317,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.2 "><p id="p13434174116295"><a name="p13434174116295"></a><a name="p13434174116295"></a>256</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.3 "><p id="p1667222172917"><a name="p1667222172917"></a><a name="p1667222172917"></a>d2.8xlarge.8</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.3 "><p id="p1667222172917"><a name="p1667222172917"></a><a name="p1667222172917"></a>d2.8xlarge.8.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.4 "><p id="p10756133715250"><a name="p10756133715250"></a><a name="p10756133715250"></a>KVM</p>
 </td>
@@ -348,7 +348,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" width="19.191919191919194%" headers="mcps1.2.6.1.3 "><p id="p796082910391"><a name="p796082910391"></a><a name="p796082910391"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.2.6.1.4 "><p id="p19609298391"><a name="p19609298391"></a><a name="p19609298391"></a>c3ne.2xlarge.2</p>
+<td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.2.6.1.4 "><p id="p19609298391"><a name="p19609298391"></a><a name="p19609298391"></a>c3ne.2xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" width="12.121212121212121%" headers="mcps1.2.6.1.5 "><p id="p79601729193912"><a name="p79601729193912"></a><a name="p79601729193912"></a>KVM</p>
 </td>
@@ -357,7 +357,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p8366857194320"><a name="p8366857194320"></a><a name="p8366857194320"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p236645714431"><a name="p236645714431"></a><a name="p236645714431"></a>c3ne.xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p236645714431"><a name="p236645714431"></a><a name="p236645714431"></a>c3ne.xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1366195712438"><a name="p1366195712438"></a><a name="p1366195712438"></a>KVM</p>
 </td>
@@ -366,7 +366,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1133444771614"><a name="p1133444771614"></a><a name="p1133444771614"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p649832715135"><a name="p649832715135"></a><a name="p649832715135"></a>c3ne.2xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p649832715135"><a name="p649832715135"></a><a name="p649832715135"></a>c3ne.2xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p3500627141315"><a name="p3500627141315"></a><a name="p3500627141315"></a>KVM</p>
 </td>
@@ -375,7 +375,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p10331174719160"><a name="p10331174719160"></a><a name="p10331174719160"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p2095019446162"><a name="p2095019446162"></a><a name="p2095019446162"></a>c3ne.4xlarge.2</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p2095019446162"><a name="p2095019446162"></a><a name="p2095019446162"></a>c3ne.4xlarge.2.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p550712761320"><a name="p550712761320"></a><a name="p550712761320"></a>KVM</p>
 </td>
@@ -384,7 +384,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p83309476165"><a name="p83309476165"></a><a name="p83309476165"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p16950134421617"><a name="p16950134421617"></a><a name="p16950134421617"></a>c3ne.4xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p16950134421617"><a name="p16950134421617"></a><a name="p16950134421617"></a>c3ne.4xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p25131927161318"><a name="p25131927161318"></a><a name="p25131927161318"></a>KVM</p>
 </td>
@@ -393,7 +393,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p143271447121619"><a name="p143271447121619"></a><a name="p143271447121619"></a>128</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p109491644121618"><a name="p109491644121618"></a><a name="p109491644121618"></a>c3ne.8xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p109491644121618"><a name="p109491644121618"></a><a name="p109491644121618"></a>c3ne.8xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p12522102751311"><a name="p12522102751311"></a><a name="p12522102751311"></a>KVM</p>
 </td>
@@ -402,7 +402,7 @@ AB.C.D
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p232584751612"><a name="p232584751612"></a><a name="p232584751612"></a>256</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p17947144411168"><a name="p17947144411168"></a><a name="p17947144411168"></a>c3ne.15xlarge.4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p17947144411168"><a name="p17947144411168"></a><a name="p17947144411168"></a>c3ne.15xlarge.4.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p19528627131314"><a name="p19528627131314"></a><a name="p19528627131314"></a>KVM</p>
 </td>

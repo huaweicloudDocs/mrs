@@ -46,7 +46,7 @@
     >-   如果希望下次继续使用已输入的HiveQL语句，请单击![](figures/icon_mrs_dbsave.jpg)保存。  
     >-   格式化HiveQL语句，请单击![](figures/icon_mrs_dbedit.jpg)选择“格式化“。  
     >-   删除已输入的HiveQL语句，请单击![](figures/icon_mrs_dbedit.jpg)选择“清除“。  
-    >-   清空已输入的语句并执行一个新的语句，请单击  ![](figures/icon_mrs_dbedit.jpg)  选择“新查询“。  
+    >-   清空已输入的语句并执行一个新的语句，请单击![](figures/icon_mrs_dbedit.jpg)  选择“新查询“。  
 
 
 ## 查看执行结果<a name="section3491749914539"></a>

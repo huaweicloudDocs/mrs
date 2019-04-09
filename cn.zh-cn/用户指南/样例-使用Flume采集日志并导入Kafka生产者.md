@@ -140,7 +140,7 @@ Flume支持将采集的日志信息导入到Kafka。
 
     -   “kafka.kerberos.domain.name“
 
-        普通集群无需配置此参数，对应的值需要配置为空。安全集群对应此参数的值为Kafka集群中“kerberos.domain.name”对应的值。
+        普通集群无需配置此参数。安全集群对应此参数的值为Kafka集群中“kerberos.domain.name”对应的值。
 
         -   针对MRS 1.8.0之前版本，具体可到Borker实例所在节点上查看“/opt/Bigdata/FusionInsight/etc/1\_8X\_Broker/server.properties“
         -   针对MRS 1.8.0和MRS 1.8.1版本，具体可到Borker实例所在节点上查看“/opt/Bigdata/MRS\_XXX/etc/1\_X\_Broker/server.properties“

@@ -8,4 +8,6 @@
 
 -   **[管理Kafka主题中的消息](管理Kafka主题中的消息.md)**  
 
+-   **[基于binlog的MySQL数据同步到MRS集群中](基于binlog的MySQL数据同步到MRS集群中.md)**  
+
 

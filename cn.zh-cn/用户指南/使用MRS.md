@@ -26,6 +26,10 @@
 
 -   **[使用Loader](使用Loader.md)**  
 
--   **[访问OBS方法](访问OBS方法.md)**  
+-   **[使用Presto](使用Presto.md)**  
+
+-   **[使用KafkaManager](使用KafkaManager.md)**  
+
+-   **[对接OBS](对接OBS.md)**  
 
 

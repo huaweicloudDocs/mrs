@@ -33,7 +33,14 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row63058177145833"><td class="cellrowborder" rowspan="6" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p7438721145833"><a name="zh-cn_topic_0069869151_p7438721145833"></a><a name="zh-cn_topic_0069869151_p7438721145833"></a>分析集群</p>
+<tr id="zh-cn_topic_0069869151_row14881111883617"><td class="cellrowborder" rowspan="8" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p13881131813620"><a name="zh-cn_topic_0069869151_p13881131813620"></a><a name="zh-cn_topic_0069869151_p13881131813620"></a>分析集群</p>
+<p id="zh-cn_topic_0069869151_p16281718163610"><a name="zh-cn_topic_0069869151_p16281718163610"></a><a name="zh-cn_topic_0069869151_p16281718163610"></a></p>
+<p id="zh-cn_topic_0069869151_p166971417153620"><a name="zh-cn_topic_0069869151_p166971417153620"></a><a name="zh-cn_topic_0069869151_p166971417153620"></a></p>
+<p id="zh-cn_topic_0069869151_p13139217133610"><a name="zh-cn_topic_0069869151_p13139217133610"></a><a name="zh-cn_topic_0069869151_p13139217133610"></a></p>
+<p id="zh-cn_topic_0069869151_p17527191615366"><a name="zh-cn_topic_0069869151_p17527191615366"></a><a name="zh-cn_topic_0069869151_p17527191615366"></a></p>
+<p id="zh-cn_topic_0069869151_p15929215203617"><a name="zh-cn_topic_0069869151_p15929215203617"></a><a name="zh-cn_topic_0069869151_p15929215203617"></a></p>
+<p id="zh-cn_topic_0069869151_p429744133415"><a name="zh-cn_topic_0069869151_p429744133415"></a><a name="zh-cn_topic_0069869151_p429744133415"></a></p>
+<p id="zh-cn_topic_0069869151_p196911725220"><a name="zh-cn_topic_0069869151_p196911725220"></a><a name="zh-cn_topic_0069869151_p196911725220"></a></p>
 </td>
 <td class="cellrowborder" valign="top" width="31.990000000000002%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p65665509145833"><a name="zh-cn_topic_0069869151_p65665509145833"></a><a name="zh-cn_topic_0069869151_p65665509145833"></a>HDFS NameNode</p>
 </td>
@@ -44,7 +51,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row4021035315137"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p1518535215137"><a name="zh-cn_topic_0069869151_p1518535215137"></a><a name="zh-cn_topic_0069869151_p1518535215137"></a>HBase HMaster</p>
+<tr id="zh-cn_topic_0069869151_row628118184366"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p1518535215137"><a name="zh-cn_topic_0069869151_p1518535215137"></a><a name="zh-cn_topic_0069869151_p1518535215137"></a>HBase HMaster</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0069869151_ul5506250120"></a><a name="zh-cn_topic_0069869151_ul5506250120"></a><ul id="zh-cn_topic_0069869151_ul5506250120"><li>适用于MRS 1.6.3及以前版本<p id="zh-cn_topic_0069869151_p11302138161210"><a name="zh-cn_topic_0069869151_p11302138161210"></a><a name="zh-cn_topic_0069869151_p11302138161210"></a>https://主HMaster角色实例IP地址:21301/master-status</p>
 </li></ul>
@@ -53,7 +60,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row218196015137"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p2165523115137"><a name="zh-cn_topic_0069869151_p2165523115137"></a><a name="zh-cn_topic_0069869151_p2165523115137"></a>MapReduce JobHistoryServer</p>
+<tr id="zh-cn_topic_0069869151_row12697217153611"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p2165523115137"><a name="zh-cn_topic_0069869151_p2165523115137"></a><a name="zh-cn_topic_0069869151_p2165523115137"></a>MapReduce JobHistoryServer</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0069869151_ul92611191215"></a><a name="zh-cn_topic_0069869151_ul92611191215"></a><ul id="zh-cn_topic_0069869151_ul92611191215"><li>适用于MRS 1.6.3及以前版本<p id="zh-cn_topic_0069869151_p10175191417128"><a name="zh-cn_topic_0069869151_p10175191417128"></a><a name="zh-cn_topic_0069869151_p10175191417128"></a>http://JobHistoryServer角色实例IP地址:26012/jobhistory</p>
 </li></ul>
@@ -62,7 +69,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row1563977415137"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p310642615137"><a name="zh-cn_topic_0069869151_p310642615137"></a><a name="zh-cn_topic_0069869151_p310642615137"></a>YARN ResourceManager</p>
+<tr id="zh-cn_topic_0069869151_row121391717153617"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p310642615137"><a name="zh-cn_topic_0069869151_p310642615137"></a><a name="zh-cn_topic_0069869151_p310642615137"></a>YARN ResourceManager</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0069869151_ul5844191714129"></a><a name="zh-cn_topic_0069869151_ul5844191714129"></a><ul id="zh-cn_topic_0069869151_ul5844191714129"><li>适用于MRS 1.6.3及以前版本<p id="zh-cn_topic_0069869151_p16907519171218"><a name="zh-cn_topic_0069869151_p16907519171218"></a><a name="zh-cn_topic_0069869151_p16907519171218"></a>http://主ResourceManager角色实例IP地址:26000/cluster</p>
 </li></ul>
@@ -71,7 +78,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row2724320415137"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p3175929015137"><a name="zh-cn_topic_0069869151_p3175929015137"></a><a name="zh-cn_topic_0069869151_p3175929015137"></a>Spark JobHistory</p>
+<tr id="zh-cn_topic_0069869151_row1152713169367"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p3175929015137"><a name="zh-cn_topic_0069869151_p3175929015137"></a><a name="zh-cn_topic_0069869151_p3175929015137"></a>Spark JobHistory</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0069869151_ul66509078232947"></a><a name="zh-cn_topic_0069869151_ul66509078232947"></a><ul id="zh-cn_topic_0069869151_ul66509078232947"><li>适用于MRS 1.6.3及以前版本<p id="zh-cn_topic_0069869151_p6547420716718"><a name="zh-cn_topic_0069869151_p6547420716718"></a><a name="zh-cn_topic_0069869151_p6547420716718"></a>http://JobHistory角色实例IP地址:22500/</p>
 </li><li>适用于MRS 1.6.3以后MRS 1.8.0之前的版本<p id="zh-cn_topic_0069869151_p10653155831016"><a name="zh-cn_topic_0069869151_p10653155831016"></a><a name="zh-cn_topic_0069869151_p10653155831016"></a>http://JobHistory角色实例IP地址:18080/</p>
@@ -79,7 +86,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row2356032515137"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p2758346615137"><a name="zh-cn_topic_0069869151_p2758346615137"></a><a name="zh-cn_topic_0069869151_p2758346615137"></a>Hue</p>
+<tr id="zh-cn_topic_0069869151_row39291157368"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p2758346615137"><a name="zh-cn_topic_0069869151_p2758346615137"></a><a name="zh-cn_topic_0069869151_p2758346615137"></a>Hue</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><a name="zh-cn_topic_0069869151_ul7737102661710"></a><a name="zh-cn_topic_0069869151_ul7737102661710"></a><ul id="zh-cn_topic_0069869151_ul7737102661710"><li>适用于MRS 1.6.3及以前版本<p id="zh-cn_topic_0069869151_p167901358178"><a name="zh-cn_topic_0069869151_p167901358178"></a><a name="zh-cn_topic_0069869151_p167901358178"></a>https://Hue浮动IP地址:21200</p>
 </li></ul>
@@ -91,7 +98,20 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </div></div>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row2475311015137"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p5884492515137"><a name="zh-cn_topic_0069869151_p5884492515137"></a><a name="zh-cn_topic_0069869151_p5884492515137"></a>流处理集群</p>
+<tr id="zh-cn_topic_0069869151_row16297241133414"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p185194943416"><a name="zh-cn_topic_0069869151_p185194943416"></a><a name="zh-cn_topic_0069869151_p185194943416"></a>Tez</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p20519493344"><a name="zh-cn_topic_0069869151_p20519493344"></a><a name="zh-cn_topic_0069869151_p20519493344"></a>适用于MRS 2.0.0及以后版本（MRS 2.0.0及以后版本支持Tez组件）</p>
+<p id="zh-cn_topic_0069869151_p5511849153414"><a name="zh-cn_topic_0069869151_p5511849153414"></a><a name="zh-cn_topic_0069869151_p5511849153414"></a>选择“服务管理 &gt; Tez &gt; Tez WebUI &gt; TezUI”</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0069869151_row1796816775210"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p18381822165211"><a name="zh-cn_topic_0069869151_p18381822165211"></a><a name="zh-cn_topic_0069869151_p18381822165211"></a>Presto</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p93488196524"><a name="zh-cn_topic_0069869151_p93488196524"></a><a name="zh-cn_topic_0069869151_p93488196524"></a>适用于MRS 1.8.3及MRS 2.0.0以后版本（MRS 1.8.3及MRS 2.0.0以后版本支持Presto组件）</p>
+<p id="zh-cn_topic_0069869151_p1934891925217"><a name="zh-cn_topic_0069869151_p1934891925217"></a><a name="zh-cn_topic_0069869151_p1934891925217"></a>选择“服务管理 &gt; Presto &gt; Presto WebUI &gt; Coordinator (主)”</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0069869151_row2475311015137"><td class="cellrowborder" rowspan="2" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p5884492515137"><a name="zh-cn_topic_0069869151_p5884492515137"></a><a name="zh-cn_topic_0069869151_p5884492515137"></a>流处理集群</p>
+<p id="zh-cn_topic_0069869151_p1322572955510"><a name="zh-cn_topic_0069869151_p1322572955510"></a><a name="zh-cn_topic_0069869151_p1322572955510"></a></p>
 </td>
 <td class="cellrowborder" valign="top" width="31.990000000000002%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p170958315137"><a name="zh-cn_topic_0069869151_p170958315137"></a><a name="zh-cn_topic_0069869151_p170958315137"></a>Storm</p>
 </td>
@@ -99,6 +119,12 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 <a name="zh-cn_topic_0069869151_ul1090514149112"></a><a name="zh-cn_topic_0069869151_ul1090514149112"></a><ul id="zh-cn_topic_0069869151_ul1090514149112"><li>适用于MRS 1.8.0及以后版本<p id="zh-cn_topic_0069869151_p44851318815"><a name="zh-cn_topic_0069869151_p44851318815"></a><a name="zh-cn_topic_0069869151_p44851318815"></a>选择“服务管理 &gt; Storm &gt; Storm WebUI &gt; UI”</p>
 </li></ul>
+</td>
+</tr>
+<tr id="zh-cn_topic_0069869151_row1722512297558"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p102254291554"><a name="zh-cn_topic_0069869151_p102254291554"></a><a name="zh-cn_topic_0069869151_p102254291554"></a>KafkaManager</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p194981858105519"><a name="zh-cn_topic_0069869151_p194981858105519"></a><a name="zh-cn_topic_0069869151_p194981858105519"></a>适用于MRS 1.8.3及MRS 2.0.0以后版本（MRS 1.8.3及MRS 2.0.0以后版本支持KafkaManager组件）</p>
+<p id="zh-cn_topic_0069869151_p174984581558"><a name="zh-cn_topic_0069869151_p174984581558"></a><a name="zh-cn_topic_0069869151_p174984581558"></a>选择“服务管理 &gt; KafkaManager &gt; KafkaManager WebUI &gt; KafkaManager”</p>
 </td>
 </tr>
 </tbody>
@@ -124,7 +150,8 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row6246307915927"><td class="cellrowborder" rowspan="6" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p2634466415927"><a name="zh-cn_topic_0069869151_p2634466415927"></a><a name="zh-cn_topic_0069869151_p2634466415927"></a>分析集群</p>
+<tr id="zh-cn_topic_0069869151_row6246307915927"><td class="cellrowborder" rowspan="8" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p2634466415927"><a name="zh-cn_topic_0069869151_p2634466415927"></a><a name="zh-cn_topic_0069869151_p2634466415927"></a>分析集群</p>
+<p id="zh-cn_topic_0069869151_p748717441036"><a name="zh-cn_topic_0069869151_p748717441036"></a><a name="zh-cn_topic_0069869151_p748717441036"></a></p>
 </td>
 <td class="cellrowborder" valign="top" width="31.990000000000002%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p5354307815927"><a name="zh-cn_topic_0069869151_p5354307815927"></a><a name="zh-cn_topic_0069869151_p5354307815927"></a>HDFS NameNode</p>
 </td>
@@ -157,11 +184,30 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 <p id="zh-cn_topic_0069869151_p38775106163333"><a name="zh-cn_topic_0069869151_p38775106163333"></a><a name="zh-cn_topic_0069869151_p38775106163333"></a>Loader页面是基于开放源代码Sqoop WebUI的图形化数据迁移管理工具，由Hue WebUI承载。</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0069869151_row569352615927"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p5852244715927"><a name="zh-cn_topic_0069869151_p5852244715927"></a><a name="zh-cn_topic_0069869151_p5852244715927"></a>流处理集群</p>
+<tr id="zh-cn_topic_0069869151_row49218181361"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p131653193364"><a name="zh-cn_topic_0069869151_p131653193364"></a><a name="zh-cn_topic_0069869151_p131653193364"></a>Tez</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p3165191912362"><a name="zh-cn_topic_0069869151_p3165191912362"></a><a name="zh-cn_topic_0069869151_p3165191912362"></a>适用于MRS 2.0.0及以后版本（MRS 2.0.0及以后版本支持Tez组件）</p>
+<p id="zh-cn_topic_0069869151_p31651419173617"><a name="zh-cn_topic_0069869151_p31651419173617"></a><a name="zh-cn_topic_0069869151_p31651419173617"></a>选择“服务管理 &gt; Tez &gt; Tez WebUI &gt; TezUI”</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0069869151_row1848713441137"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p1680015453315"><a name="zh-cn_topic_0069869151_p1680015453315"></a><a name="zh-cn_topic_0069869151_p1680015453315"></a>Presto</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p168001845038"><a name="zh-cn_topic_0069869151_p168001845038"></a><a name="zh-cn_topic_0069869151_p168001845038"></a>适用于MRS 1.8.3及MRS 2.0.0以后版本（MRS 1.8.3及MRS 2.0.0以后版本支持Presto组件）</p>
+<p id="zh-cn_topic_0069869151_p28001345837"><a name="zh-cn_topic_0069869151_p28001345837"></a><a name="zh-cn_topic_0069869151_p28001345837"></a>选择“服务管理 &gt; Presto &gt; Presto WebUI &gt; Coordinator (主)”</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0069869151_row569352615927"><td class="cellrowborder" rowspan="2" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p5852244715927"><a name="zh-cn_topic_0069869151_p5852244715927"></a><a name="zh-cn_topic_0069869151_p5852244715927"></a>流处理集群</p>
+<p id="zh-cn_topic_0069869151_p290222914319"><a name="zh-cn_topic_0069869151_p290222914319"></a><a name="zh-cn_topic_0069869151_p290222914319"></a></p>
 </td>
 <td class="cellrowborder" valign="top" width="31.990000000000002%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p4269776515927"><a name="zh-cn_topic_0069869151_p4269776515927"></a><a name="zh-cn_topic_0069869151_p4269776515927"></a>Storm</p>
 </td>
 <td class="cellrowborder" valign="top" width="48.010000000000005%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0069869151_p57063425151027"><a name="zh-cn_topic_0069869151_p57063425151027"></a><a name="zh-cn_topic_0069869151_p57063425151027"></a>选择“服务管理 &gt; Storm &gt; Storm WebUI &gt; UI”</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0069869151_row11901182920313"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0069869151_p12124143115314"><a name="zh-cn_topic_0069869151_p12124143115314"></a><a name="zh-cn_topic_0069869151_p12124143115314"></a>KafkaManager</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0069869151_p1612410319316"><a name="zh-cn_topic_0069869151_p1612410319316"></a><a name="zh-cn_topic_0069869151_p1612410319316"></a>适用于MRS 1.8.3及MRS 2.0.0以后版本（MRS 1.8.3及MRS 2.0.0以后版本支持KafkaManager组件）</p>
+<p id="zh-cn_topic_0069869151_p161247311330"><a name="zh-cn_topic_0069869151_p161247311330"></a><a name="zh-cn_topic_0069869151_p161247311330"></a>选择“服务管理 &gt; KafkaManager &gt; KafkaManager WebUI &gt; KafkaManager”</p>
 </td>
 </tr>
 </tbody>

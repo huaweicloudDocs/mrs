@@ -37,9 +37,9 @@
     <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p205608722217"><a name="p205608722217"></a><a name="p205608722217"></a>选择已申请的支持专属云的区域。</p>
     </td>
     </tr>
-    <tr id="row356810713229"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p115737713229"><a name="p115737713229"></a><a name="p115737713229"></a>可用分区</p>
+    <tr id="row356810713229"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p115737713229"><a name="p115737713229"></a><a name="p115737713229"></a>可用区</p>
     </td>
-    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p057918792216"><a name="p057918792216"></a><a name="p057918792216"></a>可用区域是使用独立电源和网络资源的物理区域。通过内部网络互联，再以物理方式进行隔离，提高了应用程序的可用性。建议您在不同的可用区域下创建集群。</p>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p057918792216"><a name="p057918792216"></a><a name="p057918792216"></a>可用区是使用独立电源和网络资源的物理区域。通过内部网络互联，再以物理方式进行隔离，提高了应用程序的可用性。建议您在不同的可用区下创建集群。</p>
     </td>
     </tr>
     <tr id="row136252079225"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p1632137202218"><a name="p1632137202218"></a><a name="p1632137202218"></a>集群名称</p>
@@ -51,7 +51,13 @@
     </tr>
     <tr id="row16491571227"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p2065916742212"><a name="p2065916742212"></a><a name="p2065916742212"></a>集群版本</p>
     </td>
-    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p11302191119226"><a name="p11302191119226"></a><a name="p11302191119226"></a>目前支持MRS 1.6.3、MRS 1.7.2、MRS 1.8.2、MRS 2.0.0版本。默认值为当前最新版本。</p>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p11302191119226"><a name="p11302191119226"></a><a name="p11302191119226"></a>目前支持MRS 1.6.3、MRS 1.7.2、MRS 1.8.2、MRS 1.8.3、MRS 2.0.0版本。默认值为当前最新版本。</p>
+    </td>
+    </tr>
+    <tr id="row466895613508"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p311414344464"><a name="p311414344464"></a><a name="p311414344464"></a>企业项目</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p1114434124610"><a name="p1114434124610"></a><a name="p1114434124610"></a>选择集群所属的企业项目，如需使用企业项目，请先通过“企业管理 &gt; 企业项目管理”服务创建。</p>
+    <p id="p1011543414467"><a name="p1011543414467"></a><a name="p1011543414467"></a><span>企业项目所在的企业管理控制台以面向企业资源管理为出发点，帮助企业以公司、部门、项目等分级管理方式实现企业云上的人员、资源、权限、财务的管理</span><span>。</span></p>
     </td>
     </tr>
     <tr id="row1668817713222"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p17692775227"><a name="p17692775227"></a><a name="p17692775227"></a>Kerberos认证</p>
@@ -95,10 +101,10 @@
     <tr id="row17162816227"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p18240812214"><a name="p18240812214"></a><a name="p18240812214"></a>组件选择</p>
     </td>
     <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p530128172211"><a name="p530128172211"></a><a name="p530128172211"></a>MRS配套的组件如下：</p>
-    <div class="p" id="p642514534268"><a name="p642514534268"></a><a name="p642514534268"></a>分析集群组件<a name="ul1933148102219"></a><a name="ul1933148102219"></a><ul id="ul1933148102219"><li>Hadoop：分布式系统基础架构</li><li>Spark：内存分布式系统框架</li><li>Hive：建立在Hadoop上的数据仓库框架</li><li>HBase：分布式列数据库</li><li>Tez：提供有向无环图的分布式计算框架（MRS 2.0.0及之后版本支持Tez组件）</li><li>Hue：提供Hadoop UI能力，让用户通过浏览器分析处理Hadoop集群数据</li><li>Loader：基于开源sqoop 1.99.7开发，专为Apache Hadoop和结构化数据库（如关系型数据库）设计的高效传输大量数据的工具。<p id="p1987178152216"><a name="p1987178152216"></a><a name="p1987178152216"></a>Hadoop为必选组件，且Spark与Hive组件需要配套使用。请根据业务选择搭配组件。</p>
+    <div class="p" id="p642514534268"><a name="p642514534268"></a><a name="p642514534268"></a>分析集群组件<a name="ul1933148102219"></a><a name="ul1933148102219"></a><ul id="ul1933148102219"><li>Presto：开源、分布式SQL查询引擎（MRS 1.8.3及MRS 2.0.0之后版本支持）</li><li>Hadoop：分布式系统基础架构</li><li>Spark：内存分布式系统框架</li><li>Hive：建立在Hadoop上的数据仓库框架</li><li>HBase：分布式列数据库</li><li>Tez：提供有向无环图的分布式计算框架（MRS 2.0.0及之后版本支持）</li><li>Hue：提供Hadoop UI能力，让用户通过浏览器分析处理Hadoop集群数据</li><li>Loader：基于开源sqoop 1.99.7开发，专为Apache Hadoop和结构化数据库（如关系型数据库）设计的高效传输大量数据的工具。<p id="p1987178152216"><a name="p1987178152216"></a><a name="p1987178152216"></a>Hadoop为必选组件，且Spark与Hive组件需要配套使用。请根据业务选择搭配组件。</p>
     </li></ul>
     </div>
-    <div class="p" id="p19440175332611"><a name="p19440175332611"></a><a name="p19440175332611"></a>流式集群组件<a name="ul3892814225"></a><a name="ul3892814225"></a><ul id="ul3892814225"><li>Kafka：提供分布式消息订阅的系统。</li><li>Storm：提供分布式实时计算的系统。</li><li>Flume：提供分布式、高可用、高可靠的海量日志采集、聚合和传输系统。</li></ul>
+    <div class="p" id="p19440175332611"><a name="p19440175332611"></a><a name="p19440175332611"></a>流式集群组件<a name="ul3892814225"></a><a name="ul3892814225"></a><ul id="ul3892814225"><li>Kafka：提供分布式消息订阅的系统。</li><li>KafkaManager：提供Kafka集群监控管理工具。（MRS 1.8.3及MRS 2.0.0之后版本支持）</li><li>Storm：提供分布式实时计算的系统。</li><li>Flume：提供分布式、高可用、高可靠的海量日志采集、聚合和传输系统。</li></ul>
     </div>
     </td>
     </tr>
@@ -166,10 +172,18 @@
     </li></ul>
     </td>
     </tr>
+    <tr id="row1941681322418"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p741621362413"><a name="p741621362413"></a><a name="p741621362413"></a>磁盘LVM管理</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p3918134513149"><a name="p3918134513149"></a><a name="p3918134513149"></a>仅当创建流式Core节点时，该参数在流式Core节点对应的操作列有效。单击该参数以开启或关闭磁盘LVM管理，该参数后括号内显示该功能的当前状态。</p>
+    <p id="p949735561015"><a name="p949735561015"></a><a name="p949735561015"></a>启用逻辑卷管理(LVM)时，会将节点中所有磁盘以逻辑卷的方式挂载，能够更加合理的规划磁盘，避免磁盘不均匀的问题，提升系统的稳定性。</p>
+    <p id="p8640598193"><a name="p8640598193"></a><a name="p8640598193"></a>磁盘LVM管理功能仅在MRS 1.8.3版本及MRS 2.0.0之后版本支持。</p>
+    </td>
+    </tr>
     <tr id="row7533133584813"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p87019484486"><a name="p87019484486"></a><a name="p87019484486"></a>配置Task节点（可选配置）</p>
     </td>
     <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p3701164814819"><a name="p3701164814819"></a><a name="p3701164814819"></a>单击“配置Task节点”，配置Task节点信息。</p>
-    <a name="ul10307628907"></a><a name="ul10307628907"></a><ul id="ul10307628907"><li>若<span class="parmname" id="parmname188968276563"><a name="parmname188968276563"></a><a name="parmname188968276563"></a>“包年/包月”</span>集群需要使用弹性伸缩功能，请选择需要的<span class="parmname" id="parmname111181211311"><a name="parmname111181211311"></a><a name="parmname111181211311"></a>“实例规格”</span>并设置<span class="parmname" id="parmname5853191716310"><a name="parmname5853191716310"></a><a name="parmname5853191716310"></a>“实例数量”</span>为<span class="parmvalue" id="parmvalue86122416317"><a name="parmvalue86122416317"></a><a name="parmvalue86122416317"></a>“0”</span>指定弹性伸缩功能开启时增加的Task节点规格，并单击“Task”所在行“关闭”后的 <a name="image76901810202211"></a><a name="image76901810202211"></a><span><img id="image76901810202211" src="figures/icon_mrs_clip.gif"></span>，进入“弹性伸缩”页面，配置弹性伸缩策略，详细操作请参见 <a href="弹性伸缩集群.md">弹性伸缩集群</a>。当<span class="parmname" id="parmname58281854133"><a name="parmname58281854133"></a><a name="parmname58281854133"></a>“实例数量”</span>大于<span class="parmvalue" id="parmvalue183665414319"><a name="parmvalue183665414319"></a><a name="parmvalue183665414319"></a>“0”</span>时，不支持使用弹性伸缩功能。</li><li>若<span class="parmname" id="parmname12425841819"><a name="parmname12425841819"></a><a name="parmname12425841819"></a>“按需计费”</span>集群需要使用弹性伸缩功能，单击“Task”所在行“关闭”后的 <a name="image592673013233"></a><a name="image592673013233"></a><span><img id="image592673013233" src="figures/icon_mrs_clip.gif"></span>，进入“弹性伸缩”页面，可启用弹性伸缩策略，详细操作请参见 <a href="弹性伸缩集群.md">弹性伸缩集群</a>。</li></ul>
+    <a name="ul10307628907"></a><a name="ul10307628907"></a><ul id="ul10307628907"><li>若<span class="parmname" id="parmname188968276563"><a name="parmname188968276563"></a><a name="parmname188968276563"></a>“包年/包月”</span>集群需要使用弹性伸缩功能，请选择需要的<span class="parmname" id="parmname111181211311"><a name="parmname111181211311"></a><a name="parmname111181211311"></a>“实例规格”</span>并设置<span class="parmname" id="parmname5853191716310"><a name="parmname5853191716310"></a><a name="parmname5853191716310"></a>“实例数量”</span>为<span class="parmvalue" id="parmvalue86122416317"><a name="parmvalue86122416317"></a><a name="parmvalue86122416317"></a>“0”</span>指定弹性伸缩功能开启时增加的Task节点规格，并单击Task节点所在行操作列的“弹性伸缩”，进入“弹性伸缩”配置页面，配置弹性伸缩策略，详细操作请参见 <a href="弹性伸缩集群.md">弹性伸缩集群</a>。当<span class="parmname" id="parmname58281854133"><a name="parmname58281854133"></a><a name="parmname58281854133"></a>“实例数量”</span>大于<span class="parmvalue" id="parmvalue183665414319"><a name="parmvalue183665414319"></a><a name="parmvalue183665414319"></a>“0”</span>时，不支持使用弹性伸缩功能。</li><li>若<span class="parmname" id="parmname12425841819"><a name="parmname12425841819"></a><a name="parmname12425841819"></a>“按需计费”</span>集群需要使用弹性伸缩功能，单击Task节点所在行“操作列的“弹性伸缩”，进入“弹性伸缩”配置页面，可启用弹性伸缩策略，详细操作请参见 <a href="弹性伸缩集群.md">弹性伸缩集群</a>。<p id="p879414215323"><a name="p879414215323"></a><a name="p879414215323"></a>说明：Task节点所在行“操作列的“弹性伸缩”参数用于配置弹性伸缩策略，该参数后括号显示弹性伸缩功能开启时的默认节点数量范围或弹性伸缩功能为已关闭状态。</p>
+    </li></ul>
     </td>
     </tr>
     <tr id="row047112564457"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p44711156164517"><a name="p44711156164517"></a><a name="p44711156164517"></a>资源池类型</p>
