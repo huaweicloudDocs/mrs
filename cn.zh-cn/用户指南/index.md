@@ -59,7 +59,7 @@
         -   [脚本样例](脚本样例.md)
 
 
--   [远程操作指导]
+-   [远程操作指导](远程操作指导.md)
     -   [简介](简介.md)
     -   [登录Master节点]
         -   [登录弹性云服务器（VNC方式）](登录弹性云服务器（VNC方式）.md)
@@ -345,6 +345,7 @@
         -   [查看Kafka主题](查看Kafka主题.md)
         -   [管理Kafka用户权限](管理Kafka用户权限.md)
         -   [管理Kafka主题中的消息](管理Kafka主题中的消息.md)
+        -   [基于binlog的MySQL数据同步到MRS集群中](基于binlog的MySQL数据同步到MRS集群中.md)
 
     -   [使用Storm]
         -   [使用客户端提交Storm拓扑](使用客户端提交Storm拓扑.md)
@@ -379,7 +380,17 @@
         -   [准备MySQL数据库连接的驱动](准备MySQL数据库连接的驱动.md)
         -   [样例：通过Loader将数据从OBS导入HDFS](样例-通过Loader将数据从OBS导入HDFS.md)
 
-    -   [访问OBS方法](访问OBS方法.md)
+    -   [使用Presto]
+        -   [访问Presto的WebUI](访问Presto的WebUI.md)
+        -   [使用客户端执行查询语句](使用客户端执行查询语句.md)
+
+    -   [使用KafkaManager]
+        -   [KafkaManager介绍](KafkaManager介绍.md)
+        -   [访问KafkaManager的WebUI](访问KafkaManager的WebUI.md)
+        -   [管理Kafka集群](管理Kafka集群.md)
+        -   [Kafka集群监控管理](Kafka集群监控管理.md)
+
+    -   [对接OBS](对接OBS.md)
 
 -   [数据迁移]
     -   [准备工作](准备工作.md)
@@ -394,4 +405,3 @@
     -   [MRS 1.7.1.6补丁说明](MRS-1-7-1-6补丁说明.md)
 
 -   [MRS所使用的弹性云服务器规格](MRS所使用的弹性云服务器规格.md)
-
