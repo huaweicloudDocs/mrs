@@ -1,4 +1,4 @@
-# 修改LDAP管理员和LDAP用户密码（含OMS LDAP）<a name="ZH-CN_TOPIC_0042008031"></a>
+# 修改LDAP管理员和LDAP用户密码<a name="ZH-CN_TOPIC_0042008031"></a>
 
 ## 操作场景<a name="section446724189518"></a>
 
