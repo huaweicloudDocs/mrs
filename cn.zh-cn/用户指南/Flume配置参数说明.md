@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Flume配置参数说明<a name="ZH-CN_TOPIC_0173178694"></a>
 
 ## 基本介绍<a name="sc054f7820b7a44bf8ff441600796e7a7"></a>
@@ -16,6 +17,26 @@
     **表 1**  Avro Source常用配置
 
     <a name="tb4f2cc56cf3945f7bba26f90f1afaa79"></a>
+=======
+# Flume配置参数说明<a name="ZH-CN_TOPIC_0173178694"></a>
+
+## 基本介绍<a name="sc054f7820b7a44bf8ff441600796e7a7"></a>
+
+使用Flume需要配置Source、Channel和Sink，各模块配置参数说明可通过本节内容了解。
+
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>部分配置可能需要填写加密后的信息，请参见[使用Flume客户端加密工具](使用Flume客户端加密工具.md)。  
+
+## 常用Source配置<a name="s4ad4b577d4164449b1fb6fa42d20f60f"></a>
+
+-   **Avro Source**
+
+    Avro Source监听Avro端口，接收外部Avro客户端数据并放入配置的Channel中。常用配置如[下表](#tb4f2cc56cf3945f7bba26f90f1afaa79)所示：
+
+    **表 1**  Avro Source常用配置
+
+    <a name="tb4f2cc56cf3945f7bba26f90f1afaa79"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="r95b12f9e77fe4f10932363bf4cf676cb"><th class="cellrowborder" valign="top" width="30.209999999999997%" id="mcps1.2.4.1.1"><p id="a79d3283c14df4c8ab76e4594c07d91fe"><a name="a79d3283c14df4c8ab76e4594c07d91fe"></a><a name="a79d3283c14df4c8ab76e4594c07d91fe"></a><strong id="ac38afe043f8740c2b3e42f06cb2c76ef"><a name="ac38afe043f8740c2b3e42f06cb2c76ef"></a><a name="ac38afe043f8740c2b3e42f06cb2c76ef"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a074fca8ccf6043aa8fa6ef79a4826302"><a name="a074fca8ccf6043aa8fa6ef79a4826302"></a><a name="a074fca8ccf6043aa8fa6ef79a4826302"></a><strong id="a34efd686ac3044008e17bddea0994a95"><a name="a34efd686ac3044008e17bddea0994a95"></a><a name="a34efd686ac3044008e17bddea0994a95"></a>默认值</strong></p>
@@ -107,6 +128,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **Spooling Source**
@@ -116,6 +138,17 @@
     **表 2**  Spooling Source常用配置
 
     <a name="tdcd54cc71aac48129774ab69dce3bc28"></a>
+=======
+    </table>
+
+-   **Spooling Source**
+
+    Spooling Source监控并传输目录下新增的文件，可实现准实时数据传输。常用配置如[表 2 Spooling Source常用配置](#tdcd54cc71aac48129774ab69dce3bc28)所示：
+
+    **表 2**  Spooling Source常用配置
+
+    <a name="tdcd54cc71aac48129774ab69dce3bc28"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="rc0a7ef03beb246d9961d0ba76362669c"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="abb31cf27f6e84c60acb0cbb29a7b385c"><a name="abb31cf27f6e84c60acb0cbb29a7b385c"></a><a name="abb31cf27f6e84c60acb0cbb29a7b385c"></a><strong id="a8adfbbaebc0b435f8515edccd6155c50"><a name="a8adfbbaebc0b435f8515edccd6155c50"></a><a name="a8adfbbaebc0b435f8515edccd6155c50"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a189f4169f1e14db38faf0a7101b621bd"><a name="a189f4169f1e14db38faf0a7101b621bd"></a><a name="a189f4169f1e14db38faf0a7101b621bd"></a><strong id="ab506c459c9644c408823c70bfbb664fe"><a name="ab506c459c9644c408823c70bfbb664fe"></a><a name="ab506c459c9644c408823c70bfbb664fe"></a>默认值</strong></p>
@@ -238,6 +271,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -250,6 +284,20 @@
     **表 3**  Kafka Source常用配置
 
     <a name="t1f7ac743f0b646f8844b243a746b6a4d"></a>
+=======
+    </table>
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >Spooling Source在按行读取过程中，会忽略掉每一个Event的最后一个换行符，该换行符所占用的数据量指标不会被Flume统计。  
+
+-   **Kafka Source**
+
+    Kafka Source从Kafka的topic中消费数据，可以设置多个Source消费同一个topic的数据，每个Source会消费topic的不同partitions。常用配置如[表 3 Kafka Source常用配置](#t1f7ac743f0b646f8844b243a746b6a4d)所示：
+
+    **表 3**  Kafka Source常用配置
+
+    <a name="t1f7ac743f0b646f8844b243a746b6a4d"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="rf5739e1e01e648adb3c7ac3c79acf300"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="addf5b78cd82d4f15b70fe78dbd2bb595"><a name="addf5b78cd82d4f15b70fe78dbd2bb595"></a><a name="addf5b78cd82d4f15b70fe78dbd2bb595"></a><strong id="a52fd5301e7e9441fb2976b87178eec75"><a name="a52fd5301e7e9441fb2976b87178eec75"></a><a name="a52fd5301e7e9441fb2976b87178eec75"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a6ba5c809799744499f380e0ba370bee2"><a name="a6ba5c809799744499f380e0ba370bee2"></a><a name="a6ba5c809799744499f380e0ba370bee2"></a><strong id="a92d4975627bf4eb3a31aadd6351c4173"><a name="a92d4975627bf4eb3a31aadd6351c4173"></a><a name="a92d4975627bf4eb3a31aadd6351c4173"></a>默认值</strong></p>
@@ -360,6 +408,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **Taildir Source**
@@ -369,6 +418,17 @@
     **表 4**  Taildir Source常用配置
 
     <a name="t2c85090722c4451682fad2657a7bdc35"></a>
+=======
+    </table>
+
+-   **Taildir Source**
+
+    Taildir Source监控目录下文件的变化并自动读取文件内容，可实现实时数据传输，常用配置如[下表](#t2c85090722c4451682fad2657a7bdc35)所示：
+
+    **表 4**  Taildir Source常用配置
+
+    <a name="t2c85090722c4451682fad2657a7bdc35"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="r04e6e8a6c378446da7da5086ed88d715"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="a20af2b72d6b04711a71b34480ec06ec6"><a name="a20af2b72d6b04711a71b34480ec06ec6"></a><a name="a20af2b72d6b04711a71b34480ec06ec6"></a><strong id="ae90645de27514b14a28d2efb4e4aee26"><a name="ae90645de27514b14a28d2efb4e4aee26"></a><a name="ae90645de27514b14a28d2efb4e4aee26"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a7d0a1297bc744fea9f884e3a99f3297b"><a name="a7d0a1297bc744fea9f884e3a99f3297b"></a><a name="a7d0a1297bc744fea9f884e3a99f3297b"></a><strong id="ac5490e8aa9894f648abc04f4caf07d13"><a name="ac5490e8aa9894f648abc04f4caf07d13"></a><a name="ac5490e8aa9894f648abc04f4caf07d13"></a>默认值</strong></p>
@@ -469,6 +529,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **Http Source**
@@ -478,6 +539,17 @@
     **表 5**  Http Source常用配置
 
     <a name="t033eef1276424185b1cfd10a7d4e024f"></a>
+=======
+    </table>
+
+-   **Http Source**
+
+    Http Source接收外部HTTP客户端发送过来的数据，并放入配置的Channel中，常用配置如[下表](#t033eef1276424185b1cfd10a7d4e024f)所示：
+
+    **表 5**  Http Source常用配置
+
+    <a name="t033eef1276424185b1cfd10a7d4e024f"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="rbfd2b8ae09464420a872393daca8a1a0"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="a5899ba527015427cb3a770191efde138"><a name="a5899ba527015427cb3a770191efde138"></a><a name="a5899ba527015427cb3a770191efde138"></a><strong id="ae987d4b4ae2c424ea02473fd3fcebd04"><a name="ae987d4b4ae2c424ea02473fd3fcebd04"></a><a name="ae987d4b4ae2c424ea02473fd3fcebd04"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="ae5d4f302edd4472c8beeb9e228f340ea"><a name="ae5d4f302edd4472c8beeb9e228f340ea"></a><a name="ae5d4f302edd4472c8beeb9e228f340ea"></a><strong id="ade302d53a6fd44fc88788382826e53f7"><a name="ade302d53a6fd44fc88788382826e53f7"></a><a name="ade302d53a6fd44fc88788382826e53f7"></a>默认值</strong></p>
@@ -551,6 +623,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **OBS Source**
@@ -560,6 +633,17 @@
     **表 6**  OBS Source常用配置
 
     <a name="taeca225e09f94b74ae3f907e9077707d"></a>
+=======
+    </table>
+
+-   **OBS Source**
+
+    OBS Source监控并传输指定桶下新增的文件，可实现准实时数据传输。常用配置如[下表](#taeca225e09f94b74ae3f907e9077707d)所示：
+
+    **表 6**  OBS Source常用配置
+
+    <a name="taeca225e09f94b74ae3f907e9077707d"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="r02d85be5b2be44fcafd5b0ea476685dc"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="a7fb9074c85074e8e99af6623640543d5"><a name="a7fb9074c85074e8e99af6623640543d5"></a><a name="a7fb9074c85074e8e99af6623640543d5"></a><strong id="ad49c39e77014400cb3226d91b3e3429a"><a name="ad49c39e77014400cb3226d91b3e3429a"></a><a name="ad49c39e77014400cb3226d91b3e3429a"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a07be6918e6d74124ae5f8ddd18e90718"><a name="a07be6918e6d74124ae5f8ddd18e90718"></a><a name="a07be6918e6d74124ae5f8ddd18e90718"></a><strong id="a51ad246e6c3d483ca97b26abb571f073"><a name="a51ad246e6c3d483ca97b26abb571f073"></a><a name="a51ad246e6c3d483ca97b26abb571f073"></a>默认值</strong></p>
@@ -691,6 +775,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 
@@ -703,6 +788,20 @@
     **表 7**  Memory Channel常用配置
 
     <a name="tc1421df5bc6c415ca490e671ea935f85"></a>
+=======
+    </table>
+
+
+## 常用Channel配置<a name="s252653025d9a4363a2d6f53fa9c1c20d"></a>
+
+-   **Memory Channel**
+
+    Memory Channel使用内存作为缓存区，Events存放在内存队列中。常用配置如[下表](#tc1421df5bc6c415ca490e671ea935f85)所示：
+
+    **表 7**  Memory Channel常用配置
+
+    <a name="tc1421df5bc6c415ca490e671ea935f85"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="ra791bc5ce68641fc9257a2a04e53342a"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0066459131_p194642081758"><a name="zh-cn_topic_0066459131_p194642081758"></a><a name="zh-cn_topic_0066459131_p194642081758"></a><strong id="zh-cn_topic_0066459131_b245323111758"><a name="zh-cn_topic_0066459131_b245323111758"></a><a name="zh-cn_topic_0066459131_b245323111758"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0066459131_p294379441758"><a name="zh-cn_topic_0066459131_p294379441758"></a><a name="zh-cn_topic_0066459131_p294379441758"></a><strong id="zh-cn_topic_0066459131_b330970441758"><a name="zh-cn_topic_0066459131_b330970441758"></a><a name="zh-cn_topic_0066459131_b330970441758"></a>默认值</strong></p>
@@ -740,6 +839,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **File Channel**
@@ -749,6 +849,17 @@
     **表 8**  File Channel常用配置
 
     <a name="td180d6190e86420d8779010b90877938"></a>
+=======
+    </table>
+
+-   **File Channel**
+
+    File Channel使用本地磁盘作为缓存区，Events存放在设置的“dataDirs“配置项文件夹中。常用配置如[下表](#td180d6190e86420d8779010b90877938)所示：
+
+    **表 8**  File Channel常用配置
+
+    <a name="td180d6190e86420d8779010b90877938"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="rba03767d0a94493f8d32691885da14cb"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0066459131_p498158311758"><a name="zh-cn_topic_0066459131_p498158311758"></a><a name="zh-cn_topic_0066459131_p498158311758"></a><strong id="zh-cn_topic_0066459131_b428177941758"><a name="zh-cn_topic_0066459131_b428177941758"></a><a name="zh-cn_topic_0066459131_b428177941758"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0066459131_p98456381758"><a name="zh-cn_topic_0066459131_p98456381758"></a><a name="zh-cn_topic_0066459131_p98456381758"></a><strong id="zh-cn_topic_0066459131_b85505001758"><a name="zh-cn_topic_0066459131_b85505001758"></a><a name="zh-cn_topic_0066459131_b85505001758"></a>默认值</strong></p>
@@ -814,6 +925,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **Kafka Channel**
@@ -823,6 +935,17 @@
     **表 9**  Kafka Channel 常用配置
 
     <a name="ta58e4ea5e98446418e498b81cf0c75b7"></a>
+=======
+    </table>
+
+-   **Kafka Channel**
+
+    Kafka Channel使用kafka集群缓存数据，Kafka提供高可用、多副本，以防Flume或Kafka Broker崩溃，Channel中的数据会立即被Sink消费。常用配置如[表 10 Kafka Channel 常用配置](#ta58e4ea5e98446418e498b81cf0c75b7)所示 
+
+    **表 9**  Kafka Channel 常用配置
+
+    <a name="ta58e4ea5e98446418e498b81cf0c75b7"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="rff4c69fc6ac048a3b6106d552dab78a4"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0066459131_p105045311758"><a name="zh-cn_topic_0066459131_p105045311758"></a><a name="zh-cn_topic_0066459131_p105045311758"></a><strong id="a61555af3d5db41c3a25e5f9712d831b2"><a name="a61555af3d5db41c3a25e5f9712d831b2"></a><a name="a61555af3d5db41c3a25e5f9712d831b2"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0066459131_p73927981758"><a name="zh-cn_topic_0066459131_p73927981758"></a><a name="zh-cn_topic_0066459131_p73927981758"></a><strong id="a8433a23373cd4422a387a594213956f7"><a name="a8433a23373cd4422a387a594213956f7"></a><a name="a8433a23373cd4422a387a594213956f7"></a>默认值</strong></p>
@@ -895,6 +1018,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 
@@ -907,6 +1031,20 @@
     **表 10**  HDFS Sink常用配置
 
     <a name="t3f4509459f734167afdd0cb20857d2ef"></a>
+=======
+    </table>
+
+
+## 常用Sink配置<a name="s7d014458bd014b1891c713d57d369f2f"></a>
+
+-   **HDFS Sink**
+
+    HDFS Sink将数据写入HDFS。常用配置如[下表](#t3f4509459f734167afdd0cb20857d2ef)所示：
+
+    **表 10**  HDFS Sink常用配置
+
+    <a name="t3f4509459f734167afdd0cb20857d2ef"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="r428a381b672745aab7c2ea64ea8babd5"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="a8d2bca0510a541b3a5ccb21798bff2b6"><a name="a8d2bca0510a541b3a5ccb21798bff2b6"></a><a name="a8d2bca0510a541b3a5ccb21798bff2b6"></a><strong id="a150cb57dda5f4e1d8009e004848c318a"><a name="a150cb57dda5f4e1d8009e004848c318a"></a><a name="a150cb57dda5f4e1d8009e004848c318a"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="acc7f6e47f19c44d3a7b7419ff82c8ea9"><a name="acc7f6e47f19c44d3a7b7419ff82c8ea9"></a><a name="acc7f6e47f19c44d3a7b7419ff82c8ea9"></a><strong id="a9648039eec824b63bb3c04fba6030c3f"><a name="a9648039eec824b63bb3c04fba6030c3f"></a><a name="a9648039eec824b63bb3c04fba6030c3f"></a>默认值</strong></p>
@@ -1024,6 +1162,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **Avro Sink**
@@ -1033,6 +1172,17 @@
     **表 11**  Avro Sink常用配置
 
     <a name="tcf9863ee677d41a6882b71987541fa33"></a>
+=======
+    </table>
+
+-   **Avro Sink**
+
+    Avro Sink把events转化为Avro events并发送到配置的主机的监听端口。常用配置如[下表](#tcf9863ee677d41a6882b71987541fa33)所示
+
+    **表 11**  Avro Sink常用配置
+
+    <a name="tcf9863ee677d41a6882b71987541fa33"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="re19fc9b53efa43969c188df75afc7df6"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0066459131_p660555417533"><a name="zh-cn_topic_0066459131_p660555417533"></a><a name="zh-cn_topic_0066459131_p660555417533"></a><strong id="a4b3ef20be65c4f7ebf1fd6714a5f6dea"><a name="a4b3ef20be65c4f7ebf1fd6714a5f6dea"></a><a name="a4b3ef20be65c4f7ebf1fd6714a5f6dea"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="acfed75dc45a742b08b9ce5abbc177936"><a name="acfed75dc45a742b08b9ce5abbc177936"></a><a name="acfed75dc45a742b08b9ce5abbc177936"></a><strong id="a13c9e1819de04f8abda5c649c4c55f67"><a name="a13c9e1819de04f8abda5c649c4c55f67"></a><a name="a13c9e1819de04f8abda5c649c4c55f67"></a>默认值</strong></p>
@@ -1126,6 +1276,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **HBase Sink**
@@ -1135,6 +1286,17 @@
     **表 12**  HBase Sink常用配置
 
     <a name="tf429beac69444e93a744abfe1d0fb744"></a>
+=======
+    </table>
+
+-   **HBase Sink**
+
+    HBase Sink将数据写入到HBase中。常用配置如[下表](#tf429beac69444e93a744abfe1d0fb744)所示：
+
+    **表 12**  HBase Sink常用配置
+
+    <a name="tf429beac69444e93a744abfe1d0fb744"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="ra970fcbddbeb4ec5bc23c81b686b33da"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="a769b4777d8634bb0869894c50860b3d4"><a name="a769b4777d8634bb0869894c50860b3d4"></a><a name="a769b4777d8634bb0869894c50860b3d4"></a><strong id="a6d37fa300354467b83dbea427bfd65eb"><a name="a6d37fa300354467b83dbea427bfd65eb"></a><a name="a6d37fa300354467b83dbea427bfd65eb"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a84061bc2d39a4d5ab068eb59bd84f457"><a name="a84061bc2d39a4d5ab068eb59bd84f457"></a><a name="a84061bc2d39a4d5ab068eb59bd84f457"></a><strong id="a1bff2d21e37b485a9c5716f48441601f"><a name="a1bff2d21e37b485a9c5716f48441601f"></a><a name="a1bff2d21e37b485a9c5716f48441601f"></a>默认值</strong></p>
@@ -1200,6 +1362,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **Kafka Sink**
@@ -1209,6 +1372,17 @@
     **表 13**  Kafka Sink常用配置
 
     <a name="tf898876f2a2f45629655554005c3f0a8"></a>
+=======
+    </table>
+
+-   **Kafka Sink**
+
+    Kafka Sink将数据写入到Kafka中。常用配置如[下表](#tf898876f2a2f45629655554005c3f0a8)所示：
+
+    **表 13**  Kafka Sink常用配置
+
+    <a name="tf898876f2a2f45629655554005c3f0a8"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="r83705dd984674f549a81a591a3ab58f3"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0066459131_p565891217533"><a name="zh-cn_topic_0066459131_p565891217533"></a><a name="zh-cn_topic_0066459131_p565891217533"></a><strong id="zh-cn_topic_0066459131_b808530817533"><a name="zh-cn_topic_0066459131_b808530817533"></a><a name="zh-cn_topic_0066459131_b808530817533"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="ad21340b406434c1889a8fc44e2f65e68"><a name="ad21340b406434c1889a8fc44e2f65e68"></a><a name="ad21340b406434c1889a8fc44e2f65e68"></a><strong id="a79d80603c4394a3b893f8b989164481f"><a name="a79d80603c4394a3b893f8b989164481f"></a><a name="a79d80603c4394a3b893f8b989164481f"></a>默认值</strong></p>
@@ -1281,6 +1455,7 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 -   **OBS Sink**
@@ -1290,6 +1465,17 @@
     **表 14**  OBS Sink常用配置
 
     <a name="t2d3f80bf5e8743beacc95c731fdc7277"></a>
+=======
+    </table>
+
+-   **OBS Sink**
+
+    OBS Sink将数据写入OBS。由于和HDFS使用了相同的文件系统接口，因此，配置参数也大致相同。常用配置如[下表](#t2d3f80bf5e8743beacc95c731fdc7277)所示：
+
+    **表 14**  OBS Sink常用配置
+
+    <a name="t2d3f80bf5e8743beacc95c731fdc7277"></a>
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
     <table><thead align="left"><tr id="r1a69af13573e4cbea3d207213d0504f1"><th class="cellrowborder" valign="top" width="30%" id="mcps1.2.4.1.1"><p id="a0837cb27bed0494ea26ffaf55c402a9a"><a name="a0837cb27bed0494ea26ffaf55c402a9a"></a><a name="a0837cb27bed0494ea26ffaf55c402a9a"></a><strong id="a4d82613917bf4c40801913c4b56811ae"><a name="a4d82613917bf4c40801913c4b56811ae"></a><a name="a4d82613917bf4c40801913c4b56811ae"></a>参数</strong></p>
     </th>
     <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p id="a25c3dd32a1204a2eaf7b35ee0d918bca"><a name="a25c3dd32a1204a2eaf7b35ee0d918bca"></a><a name="a25c3dd32a1204a2eaf7b35ee0d918bca"></a><strong id="a9b692091406a4b52b290e7bc035ef27a"><a name="a9b692091406a4b52b290e7bc035ef27a"></a><a name="a9b692091406a4b52b290e7bc035ef27a"></a>默认值</strong></p>
@@ -1400,6 +1586,12 @@
     </td>
     </tr>
     </tbody>
+<<<<<<< HEAD
     </table>
 
 
+=======
+    </table>
+
+
+>>>>>>> 28b1cbfc3ee0812dcb5ff14820b20d48c5262909
