@@ -7,7 +7,7 @@
 安全集群默认已经开放Presto组件Hive Catalog授权，权限配置如下：
 
 1.  参考[访问MRS Manager](访问MRS-Manager.md)页面登录MRS Manager页面。
-2.  选择“系统设置 \> 角色管理”，配置拥有Hive数据库/表权限的角色并未用户绑定该角色。
+2.  选择“系统设置 \> 角色管理”，配置拥有Hive数据库/表权限的角色并为用户绑定该角色。
 
 ## 普通集群配置Presto组件权限<a name="section1790764493916"></a>
 

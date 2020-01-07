@@ -106,21 +106,22 @@
     </div>
     </td>
     </tr>
-    <tr id="row1499361733815"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p09151334184818"><a name="p09151334184818"></a><a name="p09151334184818"></a>Hive使用外部数据源存储元数据</p>
+    <tr id="row1499361733815"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p09151334184818"><a name="p09151334184818"></a><a name="p09151334184818"></a>使用外部数据源存储元数据</p>
     </td>
-    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p491518342484"><a name="p491518342484"></a><a name="p491518342484"></a>是否使用外部数据源存储Hive元数据。通过单击<a name="image182024311178"></a><a name="image182024311178"></a><span><img id="image182024311178" src="figures/icon_mrs_disable_hec.png"></span>开启该功能，当该功能开启时，若集群异常或删除时将不影响Hive元数据，适用于存储计算分离的场景。</p>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p491518342484"><a name="p491518342484"></a><a name="p491518342484"></a>是否使用外部数据源存储元数据。通过单击<a name="image182024311178"></a><a name="image182024311178"></a><span><img id="image182024311178" src="figures/icon_mrs_disable_hec.png"></span>开启该功能，当该功能开启时，若集群异常或删除时将不影响元数据，适用于存储计算分离的场景。</p>
     <p id="p1929716115717"><a name="p1929716115717"></a><a name="p1929716115717"></a>MRS 2.0.5及之后版本支持该功能。</p>
     </td>
     </tr>
     <tr id="row12599181833817"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p1321713413482"><a name="p1321713413482"></a><a name="p1321713413482"></a>数据连接类型</p>
     </td>
-    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p93371537165616"><a name="p93371537165616"></a><a name="p93371537165616"></a>当“Hive使用外部数据源存储元数据”功能开启时，该参数有效。用于表示外部数据源的类型。</p>
-    <a name="ul162477143598"></a><a name="ul162477143598"></a><ul id="ul162477143598"><li>RDS服务POSTGRES数据库</li><li>本地数据库</li></ul>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p93371537165616"><a name="p93371537165616"></a><a name="p93371537165616"></a>当“使用外部数据源存储元数据”功能开启时，该参数有效。用于表示外部数据源的类型。</p>
+    <a name="ul162477143598"></a><a name="ul162477143598"></a><ul id="ul162477143598"><li>Hive组件支持的数据连接类型：<a name="ul1504631667"></a><a name="ul1504631667"></a><ul id="ul1504631667"><li>RDS服务PostgreSQL数据库</li><li>本地数据库</li></ul>
+    </li></ul>
     </td>
     </tr>
     <tr id="row14173141983815"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p12108183315483"><a name="p12108183315483"></a><a name="p12108183315483"></a>数据连接实例</p>
     </td>
-    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p3108173364815"><a name="p3108173364815"></a><a name="p3108173364815"></a>当“数据连接类型”选择“RDS服务POSTGRES数据库”时，该参数有效。用于表示MRS集群与RDS服务POSTGRES数据库连接的名称，该实例必选先创建才能在此处引用。可单击“创建数据连接”进行创建，具体请参考<a href="管理数据连接.md">管理数据连接</a>。</p>
+    <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p3108173364815"><a name="p3108173364815"></a><a name="p3108173364815"></a>当“数据连接类型”选择“RDS服务PostgreSQL数据库”时，该参数有效。用于表示MRS集群与RDS服务数据库连接的名称，该实例必选先创建才能在此处引用。可单击“创建数据连接”进行创建，具体请参考<a href="管理数据连接.md">管理数据连接</a>。</p>
     </td>
     </tr>
     <tr id="row8114286224"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p41213832219"><a name="p41213832219"></a><a name="p41213832219"></a>虚拟私有云</p>
@@ -195,7 +196,7 @@
     <p id="p949735561015"><a name="p949735561015"></a><a name="p949735561015"></a>启用逻辑卷管理(LVM)时，会将节点中所有磁盘以逻辑卷的方式挂载，能够更加合理的规划磁盘，避免磁盘不均匀的问题，提升系统的稳定性。</p>
     </td>
     </tr>
-    <tr id="row7533133584813"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p87019484486"><a name="p87019484486"></a><a name="p87019484486"></a>配置Task节点（可选配置）</p>
+    <tr id="row7533133584813"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p87019484486"><a name="p87019484486"></a><a name="p87019484486"></a>添加按需Task节点（可选配置）</p>
     </td>
     <td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p3701164814819"><a name="p3701164814819"></a><a name="p3701164814819"></a>单击“添加按需Task节点”，配置Task节点信息。</p>
     <p id="p14516161011118"><a name="p14516161011118"></a><a name="p14516161011118"></a>单击Task节点所在行“操作列的“弹性伸缩”，进入“弹性伸缩”配置页面，可启用弹性伸缩策略，详细操作请参见 <a href="配置弹性伸缩规则.md">配置弹性伸缩规则</a>。</p>

@@ -228,7 +228,7 @@ MRS集群创建成功后，默认在集群所有节点的“/opt/client“目录
 
         **kinit MRS集群用户**
 
-        例如，kinit admin。
+        例如，kinit hiveuser。
 
     4.  直接执行Hive组件的客户端命令。
 
@@ -238,72 +238,88 @@ MRS集群创建成功后，默认在集群所有节点的“/opt/client“目录
 
     **内部表的操作：**
 
-    1. 根据[表1](#zh-cn_topic_0037446806_table27353390)创建用户信息表user\_info并添加相关数据。
+    1.  根据[表1](#zh-cn_topic_0037446806_table27353390)创建用户信息表user\_info并添加相关数据。
 
-    create table user\_info\(id string,name string,gender string,age int,addr string\);
+        ```
+        create table user_info(id string,name string,gender string,age int,addr string);
+        insert into table user_info(id,name,gender,age,addr) values("12005000201","A","男","19","A城市");
+        ......（其他语句相同）
+        ```
 
-    insert into table user\_info\(id,name,gender,age,addr\) values\("12005000201","A","男","19","A城市"\);
+    2.  在用户信息表user\_info中新增用户的学历、职称信息。
 
-    ......（其他语句相同）
+        以增加编号为12005000201的用户的学历、职称信息为例，其他用户类似。
 
-    2. 在用户信息表user\_info中新增用户的学历、职称信息。
+        ```
+        alter table user_info add columns(education string,technical string);
+        ```
 
-    以增加编号为12005000201的用户的学历、职称信息为例，其他用户类似。
+    3.  根据用户编号查询用户姓名和地址。
 
-    alter table user\_info add columns\(education string,technical string\);
+        以查询编号为12005000201的用户姓名和地址为例，其他用户类似。
 
-    3.根据用户编号查询用户姓名和地址。
+        ```
+        select name,addr from user_info where id='12005000201';
+        ```
 
-    以查询编号为12005000201的用户姓名和地址为例，其他用户类似。
+    4.  删除用户信息表。
 
-    select name,addr from user\_info where id='12005000201';
-
-    4.删除用户信息表。
-
-    drop table user\_info;
+        ```
+        drop table user_info;
+        ```
 
     **外部分区表的操作：**
 
     创建外部分区表并导入数据：
 
-    1.创建外部表数据存储路径：
+    1.  创建外部表数据存储路径：
 
-    hdfs dfs -mkdir /hive/user\_info
+        ```
+        hdfs dfs -mkdir /hive/user_info
+        ```
 
-    2.建表：
+    2.  建表：
 
-    create external table user\_info\(id string,name string,gender string,age int,addr string\) partitioned by\(year string\) row format delimited fields terminated by ' ' lines terminated by '\\n' stored as textfile location '/hive/user\_info';
+        ```
+        create external table user_info(id string,name string,gender string,age int,addr string) partitioned by(year string) row format delimited fields terminated by ' ' lines terminated by '\n' stored as textfile location '/hive/user_info';
+        ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >fields terminated指明分隔的字符,如按空格分隔，' '。  
-    >lines terminated 指明分行的字符，如按换行分隔，'\\n'。  
-    >/hive/user\_info为数据文件的路径。  
+        >![](public_sys-resources/icon-note.gif) **说明：**   
+        >fields terminated指明分隔的字符,如按空格分隔，' '。  
+        >lines terminated 指明分行的字符，如按换行分隔，'\\n'。  
+        >/hive/user\_info为数据文件的路径。  
 
-    3.导入数据。
+    3.  导入数据。
+        1.  使用insert语句插入数据。
 
-    3.1.使用insert语句插入数据。
+            insert into user\_info partition\(year="2018"\) values \("12005000201","A","男","19","A城市"\);
 
-    insert into user\_info partition\(year="2018"\) values \("12005000201","A","男","19","A城市"\);
+        2.  使用load data命令导入文件数据。
+            1.  根据[表1](#zh-cn_topic_0037446806_table27353390)数据创建文件。如，文件名为txt.log，以空格拆分字段，以换行符作为行分隔符。
+            2.  上传文件至hdfs。
 
-    3.2使用load data命令导入文件数据。
+                ```
+                hdfs dfs -put txt.log /tmp
+                ```
 
-    3.2.1.根据[表1](#zh-cn_topic_0037446806_table27353390)数据创建文件。如，文件名为txt.log，以空格拆分字段，以换行符作为行分隔符。
+            3.  加载数据到表中。
 
-    3.2.2.上传文件至hdfs。
+                ```
+                load data inpath '/tmp/txt.log' into table user_info partition (year='2011');
+                ```
 
-    hdfs dfs -put txt.log /tmp
 
-    3.2.3.加载数据到表中。
+    4.  查询导入数据。
 
-    load data inpath '/tmp/txt.log' into table user\_info partition \(year='2011'\);
+        ```
+        select * from user_info;
+        ```
 
-    4.查询导入数据。
+    5.  删除用户信息表。
 
-    select \* from user\_info;
-
-    5..删除用户信息表。
-
-    drop table user\_info;
+        ```
+        drop table user_info;
+        ```
 
 7.  删除集群。
 

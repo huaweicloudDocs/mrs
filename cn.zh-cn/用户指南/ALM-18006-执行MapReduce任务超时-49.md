@@ -86,7 +86,7 @@
         -   是，执行[2.d](#zh-cn_topic_0093195065_zh-cn_topic_0035998739_clean)。
         -   否，执行[4](#zh-cn_topic_0093195065_zh-cn_topic_0035998739_li2467805152133)。
 
-    4.  <a name="zh-cn_topic_0093195065_zh-cn_topic_0035998739_clean"></a>在告警列表中，单击该告警“操作”列下面的![](figures/icon_mrs_almOpretion-18.png)，手动清除告警。操作结束。
+    4.  <a name="zh-cn_topic_0093195065_zh-cn_topic_0035998739_clean"></a>在告警列表中，单击该告警“操作”列下面的![](figures/icon_mrs_almOpretion-24.png)，手动清除告警。操作结束。
 
 3.  <a name="zh-cn_topic_0093195065_zh-cn_topic_0035998739_li12092809151957"></a>调整超时阈值。
 

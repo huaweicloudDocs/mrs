@@ -23,7 +23,9 @@
 5.  单击“添加“，进入“添加作业“页面。
 6.  配置作业信息。
     -   若集群为MRS 1.8.7、MRS 1.8.10版本或MRS 2.0.1之后版本，“作业类型“选择“SparkSubmit“，请参考[表1](#tf38a01bf69f34c29a25317555fc32b92)配置SparkSubmit作业其他参数信息。
-    -   **表 1**  作业配置信息
+    -   若集群为MRS 1.8.7之前版本或者MRS 2.0.1版本，“作业类型“选择“Spark“，请参考[表2](#table19597131417176)配置Spark作业信息。
+
+        **表 1**  作业配置信息
 
         <a name="tf38a01bf69f34c29a25317555fc32b92"></a>
         <table><thead align="left"><tr id="rfd2a08fd0ba94517ba01e4ded7454cac"><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.3.1.1"><p id="af11d9c3dce6c499d8eec0a138b99d392"><a name="af11d9c3dce6c499d8eec0a138b99d392"></a><a name="af11d9c3dce6c499d8eec0a138b99d392"></a>参数</p>

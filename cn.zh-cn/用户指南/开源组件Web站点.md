@@ -32,6 +32,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 </div></div>
 </li><li>适用于MRS 1.8.0及以后版本<p id="a19b35fbaf07f462b872d69c6a58e6735"><a name="a19b35fbaf07f462b872d69c6a58e6735"></a><a name="a19b35fbaf07f462b872d69c6a58e6735"></a>https://&lt;弹性公网IP&gt;:9022/mrsmanager?locale=zh-cn</p>
 </li></ul>
+<p id="p156152394554"><a name="p156152394554"></a><a name="p156152394554"></a>具体请参见<a href="访问MRS-Manager.md">访问MRS Manager</a>和<a href="访问支持Kerberos认证的Manager.md">访问支持Kerberos认证的Manager</a>。</p>
 </td>
 </tr>
 <tr id="rfc423b5208b84039a912108b70f0785d"><td class="cellrowborder" rowspan="8" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="ae3054eb5a86148deb2cd2063f17d0e07"><a name="ae3054eb5a86148deb2cd2063f17d0e07"></a><a name="ae3054eb5a86148deb2cd2063f17d0e07"></a>分析集群</p>
@@ -139,6 +140,7 @@ MRS集群默认在集群的Master节点或Core节点创建并托管了不同组�
 <td class="cellrowborder" valign="top" width="48.010000000000005%" headers="mcps1.2.4.1.3 "><a name="ue04b57bdddc046d4844efabd8f1fea6a"></a><a name="ue04b57bdddc046d4844efabd8f1fea6a"></a><ul id="ue04b57bdddc046d4844efabd8f1fea6a"><li>适用于MRS 1.8.0以前版本<p id="a1a7e441704b643ba90115ebad4e19242"><a name="a1a7e441704b643ba90115ebad4e19242"></a><a name="a1a7e441704b643ba90115ebad4e19242"></a>https://MRS Manager浮动IP地址:28443/web</p>
 </li><li>适用于MRS 1.8.0及以后版本<p id="a37ccd0159687490c9d3412d4ee7625ef"><a name="a37ccd0159687490c9d3412d4ee7625ef"></a><a name="a37ccd0159687490c9d3412d4ee7625ef"></a>https://&lt;弹性公网IP&gt;:9022/mrsmanager?locale=zh-cn</p>
 </li></ul>
+<p id="p4870113310566"><a name="p4870113310566"></a><a name="p4870113310566"></a>具体请参见<a href="访问MRS-Manager.md">访问MRS Manager</a>和<a href="访问支持Kerberos认证的Manager.md">访问支持Kerberos认证的Manager</a>。</p>
 </td>
 </tr>
 <tr id="r0d4fe89f88484262b0f657cbbbb3f7ac"><td class="cellrowborder" rowspan="8" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="a6b620d70a4384cefbe80825bf4037e61"><a name="a6b620d70a4384cefbe80825bf4037e61"></a><a name="a6b620d70a4384cefbe80825bf4037e61"></a>分析集群</p>

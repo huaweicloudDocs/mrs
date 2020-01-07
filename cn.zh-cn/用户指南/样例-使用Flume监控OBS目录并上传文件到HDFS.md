@@ -16,7 +16,7 @@ Flume监控指定OBS目录，并将文件上传到HDFS。
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >普通集群不需要执行步骤2-4。  
 
-1.  从HDFS集群客户端拷贝**core-site.xml**、**hdfs-site.xml**文件到Flume客户端节点，“Flume客户端安装目录/fusioninsight-flume-1.6.0/conf“目录中，并在MRS界面上的Flume服务配置中上传这两个文件。
+1.  从HDFS集群客户端拷贝**core-site.xml**、**hdfs-site.xml**文件到Flume客户端节点，“Flume客户端安装目录/fusioninsight-flume-1.6.0/conf“目录中。
 
     通常可以在HDFS客户端安装目录“/HDFS/hadoop/etc/hadoop/“下找到**core-site.xml**、**hdfs-site.xml**文件。
 

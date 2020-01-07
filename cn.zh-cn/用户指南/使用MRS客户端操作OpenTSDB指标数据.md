@@ -1,6 +1,6 @@
 # 使用MRS客户端操作OpenTSDB指标数据<a name="ZH-CN_TOPIC_0176678775"></a>
 
-用户可以根据业务需要，在MRS集群的客户端中进行交互式操作。启用Kerberos认证的集群，需要操作的用户属于“opentsdb”组。
+用户可以根据业务需要，在MRS集群的客户端中进行交互式操作。启用Kerberos认证的集群，需要操作的用户属于“opentsdb，hbase，opentsdbgroup和supergroup”组且拥有HBase权限。
 
 ## 前提条件<a name="section482010192610"></a>
 

@@ -53,8 +53,7 @@
     ```
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   如果需要拓扑支持采样消息，则还需要增加参数“topology.debug“和“topology.eventlogger.executors“。例如，  
-    >    ****storm jar  **/opt/Bigdata/MRS\_XXX/install/FusionInsight-Storm-1.2.1/adapter/client/controller/storm-examples/lib/storm-starter-1.2.1-mrs-XXX.jar**  org.apache.storm.starter.WordCountTopology topo1**  -c topology.debug=true -c topology.eventlogger.executors=1**。  
+    >-   如果需要拓扑支持采样消息，则还需要增加参数“topology.debug“和“topology.eventlogger.executors“。  
     >-   拓扑如何处理数据是拓扑自身行为。样例拓扑随机生成字符并分隔字符串，需要查看处理情况时，请启用采样功能并参见[查看拓扑处理数据日志](查看Storm拓扑日志.md#s0ffb38030e2a49ccb229939a92913f29)。  
 
 7.  执行以下命令，查看Storm中的拓扑。启用Kerberos认证的集群，只有属于“stormadmin“或“storm“的用户可以查看所有拓扑。

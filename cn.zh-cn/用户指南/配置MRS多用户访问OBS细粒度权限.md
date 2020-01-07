@@ -1,6 +1,6 @@
 # 配置MRS多用户访问OBS细粒度权限<a name="ZH-CN_TOPIC_0192402680"></a>
 
-开启细粒度权限时，用户通过该指导配置访问OBS权限，实现不同的MRS用户对OBS桶下的不同目录有不同的权限。MRS 2.0.5及之后版本支持该功能。
+开启细粒度权限时，用户通过该指导配置访问OBS权限，实现MRS用户对OBS桶下的目录权限控制。MRS 2.0.5及之后版本支持该功能。
 
 在以下场景运行作业时，提交作业的用户名为内置用户名，无法实现MRS多用户访问OBS：
 
@@ -15,9 +15,9 @@
 
 ## 步骤一：给集群配置有OBS访问权限的委托<a name="section1123491716318"></a>
 
-1.  请参考[使用ECS委托自动获取AK/SK访问OBS](使用ECS委托自动获取AK-SK访问OBS.md)配置OBS访问权限的委托。
+1.  请参考[ECS委托方式访问OBS](ECS委托方式访问OBS.md)配置OBS访问权限的委托。
 
-    配置的委托对该集群上所有用户及用户组（包括内置用户）生效，如需对集群上的用户及用户组访问OBS的权限进行控制请继续执行后续步骤。
+    配置的委托对该集群上所有用户（包括内置用户）及用户组生效，如需对集群上的用户及用户组访问OBS的权限进行控制请继续执行后续步骤。
 
 
 ## 步骤二：在IAM服务创建策略及委托<a name="section116983395523"></a>
@@ -193,7 +193,7 @@
         </tr>
         <tr id="row490116542458"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p968835475"><a name="p968835475"></a><a name="p968835475"></a>委托的账号</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p468831474"><a name="p468831474"></a><a name="p468831474"></a>填写本用户的华为云账号，即华为云使用手机号开通的账号，不能是联邦用户或者IAM用户。</p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p468831474"><a name="p468831474"></a><a name="p468831474"></a>填写本用户的云账号，即使用手机号开通的账号，不能是联邦用户或者IAM用户。</p>
         </td>
         </tr>
         <tr id="row9901165414513"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p11681332474"><a name="p11681332474"></a><a name="p11681332474"></a>持续时间</p>
@@ -244,13 +244,13 @@
     <tr id="row0546183020219"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p11344711233"><a name="p11344711233"></a><a name="p11344711233"></a>类型</p>
     </td>
     <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><a name="ul63444112033"></a><a name="ul63444112033"></a><ul id="ul63444112033"><li>User：在用户级别进行映射</li><li>Group：用户组级别进行映射</li></ul>
-    <div class="note" id="note58651071765"><a name="note58651071765"></a><a name="note58651071765"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul13363161317615"></a><a name="ul13363161317615"></a><ul id="ul13363161317615"><li>用户级别的映射优先级大于用户组级别的映射。若选择Group，建议在“MRS用户名（组）”一栏，填写用户的主组名称。</li><li>请避免同个用户名（组）出现在多个映射记录上的情况。</li></ul>
+    <div class="note" id="note58651071765"><a name="note58651071765"></a><a name="note58651071765"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul13363161317615"></a><a name="ul13363161317615"></a><ul id="ul13363161317615"><li>用户级别的映射优先级大于用户组级别的映射。若选择Group，建议在“MRS用户（组）”一栏，填写用户的主组名称。</li><li>请避免同个用户名（组）出现在多个映射记录上的情况。</li></ul>
     </div></div>
     </td>
     </tr>
-    <tr id="row154673019211"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p5344211731"><a name="p5344211731"></a><a name="p5344211731"></a>MRS 用户名（组）</p>
+    <tr id="row154673019211"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p5344211731"><a name="p5344211731"></a><a name="p5344211731"></a>MRS 用户（组）</p>
     </td>
-    <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p173443111535"><a name="p173443111535"></a><a name="p173443111535"></a>MRS中的用户（组），以英文逗号进行分隔。</p>
+    <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p173443111535"><a name="p173443111535"></a><a name="p173443111535"></a>MRS中的用户（组）的名称，以英文逗号进行分隔。</p>
     <div class="note" id="note20444175712226"><a name="note20444175712226"></a><a name="note20444175712226"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul98411133014"></a><a name="ul98411133014"></a><ul id="ul98411133014"><li>对于没有配置在OBS权限控制的用户，且没有配置AK、SK时，将以MRS_ECS_DEFAULT_AGENCY中的<a href="https://support.huaweicloud.com/usermanual-permissions/zh-cn_topic_0063498930.html" target="_blank" rel="noopener noreferrer">OBS Operator</a>的权限访问OBS。对于组件内置用户不建议绑定在委托中。</li><li>如需对组件内置用户在以下场景提交作业时配置委托，要求如下：<a name="ul8782537203412"></a><a name="ul8782537203412"></a><ul id="ul8782537203412"><li>如需对spark-beeline的操作进行权限控制，安全集群时配置用户名<span class="parmvalue" id="parmvalue192621810153611"><a name="parmvalue192621810153611"></a><a name="parmvalue192621810153611"></a>“spark”</span>，普通集群时配置用户名<span class="parmvalue" id="parmvalue1636992493620"><a name="parmvalue1636992493620"></a><a name="parmvalue1636992493620"></a>“omm”</span>。</li><li>如需对hbase shell的操作进行权限控制，安全集群时配置用户名<span class="parmvalue" id="parmvalue98565485385"><a name="parmvalue98565485385"></a><a name="parmvalue98565485385"></a>“hbase”</span>，普通集群时配置用户名<span class="parmvalue" id="parmvalue2085614843814"><a name="parmvalue2085614843814"></a><a name="parmvalue2085614843814"></a>“omm”</span>。</li><li>如需对Presto的操作进行权限控制，安全集群时配置用户名<span class="parmvalue" id="parmvalue1731912174396"><a name="parmvalue1731912174396"></a><a name="parmvalue1731912174396"></a>“omm”</span>、<span class="parmvalue" id="parmvalue19575967405"><a name="parmvalue19575967405"></a><a name="parmvalue19575967405"></a>“hive”</span>和登录客户端的用户名，普通集群时配置用户名<span class="parmvalue" id="parmvalue19319191717399"><a name="parmvalue19319191717399"></a><a name="parmvalue19319191717399"></a>“omm”</span>和登录客户端的用户名。</li><li>如需使用Hive在beeline模式下创建表时，配置内置用户<span class="parmvalue" id="parmvalue793855512327"><a name="parmvalue793855512327"></a><a name="parmvalue793855512327"></a>“hive”</span>。</li></ul>
     </li></ul>
     </div></div>
