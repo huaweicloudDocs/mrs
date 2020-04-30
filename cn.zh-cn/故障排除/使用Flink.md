@@ -8,4 +8,6 @@
 
 -   **[使用不同用户，执行yarn-session创建集群失败](使用不同用户-执行yarn-session创建集群失败.md)**  
 
+-   **[Flink业务程序无法读取NFS盘上的文件](Flink业务程序无法读取NFS盘上的文件.md)**  
+
 

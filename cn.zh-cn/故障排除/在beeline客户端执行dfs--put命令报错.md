@@ -14,7 +14,7 @@ Permission denied. Principal [name=admin, type=USER] does not have following pri
 
 ## 原因分析<a name="zh-cn_topic_0167275857_section1645144113716"></a>
 
-当前登陆的用户不具备操作此命令的权限。
+当前登录的用户不具备操作此命令的权限。
 
 ## 解决方案<a name="zh-cn_topic_0167275857_sc78d3c2086d0445c87cf8b87ff6096dd"></a>
 

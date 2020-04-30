@@ -18,6 +18,7 @@
     -   [新安装的集群HBase启动失败](新安装的集群HBase启动失败.md)
     -   [acl表目录丢失导致HBase启动失败](acl表目录丢失导致HBase启动失败.md)
     -   [集群上下电之后HBase启动失败](集群上下电之后HBase启动失败.md)
+    -   [HBase异常](HBase异常.md)
 
 -   [使用Hive]
     -   [Hive各个日志里都存放了什么信息？](Hive各个日志里都存放了什么信息.md)
@@ -62,6 +63,7 @@
     -   [Hive任务失败，报没有HDFS目录的权限](Hive任务失败-报没有HDFS目录的权限.md)
     -   [Load数据到Hive表失败](Load数据到Hive表失败.md)
     -   [参考Hive JDBC代码用例开发的业务应用运行失败](参考Hive-JDBC代码用例开发的业务应用运行失败.md)
+    -   [HiveServer和HiveHCat进程故障](HiveServer和HiveHCat进程故障.md)
 
 -   [使用Spark]
     -   [Spark应用下修改split值时报错](Spark应用下修改split值时报错.md)
@@ -75,6 +77,7 @@
     -   [JDK版本不匹配启动spark-sql，spark-shell失败](JDK版本不匹配启动spark-sql-spark-shell失败.md)
     -   [Yarn-client模式提交ApplicationMaster尝试启动两次失败](Yarn-client模式提交ApplicationMaster尝试启动两次失败.md)
     -   [提交Spark任务时，连接ResourceManager异常](提交Spark任务时-连接ResourceManager异常.md)
+    -   [DaYu调度spark作业失败](DaYu调度spark作业失败.md)
 
 -   [使用Kafka]
     -   [运行Kafka获取topic报错](运行Kafka获取topic报错.md)
@@ -104,6 +107,13 @@
     -   [Kafka安全使用说明](Kafka安全使用说明.md)
     -   [如何获取Kafka Consumer Offset信息](如何获取Kafka-Consumer-Offset信息.md)
     -   [如何针对Topic进行配置增加和删除](如何针对Topic进行配置增加和删除.md)
+    -   [如何读取“\_\_consumer\_offsets”内部topic的内容](如何读取-__consumer_offsets-内部topic的内容.md)
+    -   [如何配置客户端shell命令的日志](如何配置客户端shell命令的日志.md)
+    -   [如何获取Topic的分布信息](如何获取Topic的分布信息.md)
+    -   [Kafka高可靠使用说明](Kafka高可靠使用说明.md)
+    -   [使用Kafka Shell命令无法操作Kafka集群](使用Kafka-Shell命令无法操作Kafka集群.md)
+    -   [Kafka生产者写入单条记录过长问题](Kafka生产者写入单条记录过长问题.md)
+    -   [Kakfa消费者读取单条记录过长问题](Kakfa消费者读取单条记录过长问题.md)
 
 -   [使用Storm]
     -   [Storm组件的Storm UI页面中events超链接地址无效](Storm组件的Storm-UI页面中events超链接地址无效.md)
@@ -129,6 +139,8 @@
     -   [Hue上有job在运行](Hue上有job在运行.md)
     -   [使用IE浏览器在Hue中执行HQL失败](使用IE浏览器在Hue中执行HQL失败.md)
     -   [Hue（主）无法打开web网页](Hue（主）无法打开web网页.md)
+    -   [Hue WebUI访问失败](Hue-WebUI访问失败.md)
+    -   [Hue界面无法加载HBase表](Hue界面无法加载HBase表.md)
 
 -   [使用HDFS]
     -   [修改集群HDFS服务的NameNode RPC端口后，NameNode都变为备状态](修改集群HDFS服务的NameNode-RPC端口后-NameNode都变为备状态.md)
@@ -159,6 +171,7 @@
     -   [节点内DataNode磁盘使用率不均衡处理指导](节点内DataNode磁盘使用率不均衡处理指导.md)
     -   [执行balance常见问题定位方法](执行balance常见问题定位方法.md)
     -   [HDFS显示磁盘空间不足，其实还有10%磁盘空间](HDFS显示磁盘空间不足-其实还有10-磁盘空间.md)
+    -   [普通集群在Core节点安装hdfs客户端，使用时报错](普通集群在Core节点安装hdfs客户端-使用时报错.md)
 
 -   [使用Yarn]
     -   [启动Yarn后发现一堆job](启动Yarn后发现一堆job.md)
@@ -180,22 +193,36 @@
     -   [安装客户端修改配置后执行命令错误，提示IllegalConfigurationException: Error while parsing YAML configuration file](安装客户端修改配置后执行命令错误-提示IllegalConfigurationException-Error-while-parsing-YAML-configuration-file.md)
     -   [创建Flink集群时执行yarn-session.sh命令失败](创建Flink集群时执行yarn-session-sh命令失败.md)
     -   [使用不同用户，执行yarn-session创建集群失败](使用不同用户-执行yarn-session创建集群失败.md)
+    -   [Flink业务程序无法读取NFS盘上的文件](Flink业务程序无法读取NFS盘上的文件.md)
 
 -   [使用Impala]
     -   [用户连接impala-shell失败](用户连接impala-shell失败.md)
+
+-   [使用Presto]
+    -   [配置sql-standard-with-group创建schema失败报Access Denied](配置sql-standard-with-group创建schema失败报Access-Denied.md)
+
+-   [使用Alluixo]
+    -   [Alluixo在HA模式下出现Does not contain a valid host:port authority报错](Alluixo在HA模式下出现Does-not-contain-a-valid-host-port-authority报错.md)
+
+-   [使用ZooKeeper]
+    -   [MRS集群如何访问zookeeper](MRS集群如何访问zookeeper.md)
 
 -   [管理数据]
     -   [缩容Task节点失败](缩容Task节点失败.md)
     -   [如何处理集群内部OBS证书过期](如何处理集群内部OBS证书过期.md)
     -   [MRS集群添加新磁盘](MRS集群添加新磁盘.md)
+    -   [MRS集群更换磁盘](MRS集群更换磁盘.md)
     -   [MRS备份失败](MRS备份失败.md)
+    -   [Core节点出现df显示的容量和du显示的容量不一致](Core节点出现df显示的容量和du显示的容量不一致.md)
 
 -   [连接网络]
     -   [如何解除关联子网](如何解除关联子网.md)
     -   [外网能否连接MRS](外网能否连接MRS.md)
+    -   [使用AK/SK获取MRS集群主机列表接口时提示用户无权限“User do not have right to access cluster”](使用AK-SK获取MRS集群主机列表接口时提示用户无权限-User-do-not-have-right-to-access-cluster.md)
+    -   [Mac如何访问MRS Manager](Mac如何访问MRS-Manager.md)
 
--   [用户体验]
-    -   [MRS服务的开发指南中没有Loader的手册](MRS服务的开发指南中没有Loader的手册.md)
+-   [集群管理]
+    -   [忘记admin密码，如何重置或修改？](忘记admin密码-如何重置或修改.md)
 
 -   [集群异常]
     -   [升级Python后，无法登录MRS Manager页面](升级Python后-无法登录MRS-Manager页面.md)
@@ -203,5 +230,6 @@
     -   [调用API接口创建集群失败](调用API接口创建集群失败.md)
     -   [如何定位进程被kill](如何定位进程被kill.md)
     -   [配置跨集群互信失败](配置跨集群互信失败.md)
+    -   [MRS 集群使用pip3安装python包提示网络不可达](MRS-集群使用pip3安装python包提示网络不可达.md)
 
 

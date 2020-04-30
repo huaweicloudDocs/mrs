@@ -10,7 +10,7 @@ Failed to submit application_1475400939788_0033 to YARN : org.apache.hadoop.secu
 
 ## 原因分析<a name="zh-cn_topic_0167275254_section861663118293"></a>
 
-当前登陆的用户无YARN队列提交权限。
+当前登录的用户无YARN队列提交权限。
 
 ## 解决方案<a name="zh-cn_topic_0167275254_sbd66bb813b7140758912b4ea6df91b63"></a>
 

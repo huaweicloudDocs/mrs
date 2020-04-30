@@ -84,4 +84,6 @@
 
 -   **[参考Hive JDBC代码用例开发的业务应用运行失败](参考Hive-JDBC代码用例开发的业务应用运行失败.md)**  
 
+-   **[HiveServer和HiveHCat进程故障](HiveServer和HiveHCat进程故障.md)**  
+
 

@@ -32,5 +32,5 @@
 
     ![](figures/zh-cn_image_0167276089.png)
 
-3.  登陆MRS Manager页面重启备DBServer节点。
+3.  登录MRS Manager页面重启备DBServer节点。
 

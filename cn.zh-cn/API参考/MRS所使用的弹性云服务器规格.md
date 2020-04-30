@@ -129,15 +129,24 @@ AB.C.D
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p10653543192920"><a name="p10653543192920"></a><a name="p10653543192920"></a>KVM</p>
 </td>
 </tr>
-<tr id="row164571325903"><td class="cellrowborder" rowspan="4" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="p10188451512"><a name="p10188451512"></a><a name="p10188451512"></a>S3型</p>
+<tr id="row164571325903"><td class="cellrowborder" rowspan="5" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="p10188451512"><a name="p10188451512"></a><a name="p10188451512"></a>S3型</p>
 </td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="p72667511316"><a name="p72667511316"></a><a name="p72667511316"></a>8</p>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="p12290019135718"><a name="p12290019135718"></a><a name="p12290019135718"></a>4</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="p192694512113"><a name="p192694512113"></a><a name="p192694512113"></a>16</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="p3290319145717"><a name="p3290319145717"></a><a name="p3290319145717"></a>8</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p182748510114"><a name="p182748510114"></a><a name="p182748510114"></a>s3.2xlarge.2.linux.bigdata</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="p17290111916570"><a name="p17290111916570"></a><a name="p17290111916570"></a>s3.xlarge.2.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="p32787510117"><a name="p32787510117"></a><a name="p32787510117"></a>KVM</p>
+<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="p72901319135714"><a name="p72901319135714"></a><a name="p72901319135714"></a>KVM</p>
+</td>
+</tr>
+<tr id="row26343155716"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1015110875710"><a name="p1015110875710"></a><a name="p1015110875710"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p915118165716"><a name="p915118165716"></a><a name="p915118165716"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p4151986574"><a name="p4151986574"></a><a name="p4151986574"></a>s3.2xlarge.2.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1115115813573"><a name="p1115115813573"></a><a name="p1115115813573"></a>KVM</p>
 </td>
 </tr>
 <tr id="row136049301908"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p19286451118"><a name="p19286451118"></a><a name="p19286451118"></a>16</p>

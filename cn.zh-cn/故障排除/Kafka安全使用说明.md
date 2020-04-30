@@ -145,23 +145,26 @@ Kafka支持安全访问，因此可以针对Topic进行ACL设置，从而控制�
     6.  使用“kafka-acl.sh”进行用户授权常用命令如下：
         -   查看某Topic权限控制列表：
 
-            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:24002/kafka \> --list --topic <Topic名称\>**
+            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:2181/kafka \> --list --topic <Topic名称\>**
 
         -   添加给某用户Producer权限：
 
-            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:24002/kafka \> --add --allow-principal User:<用户名\> --producer --topic <Topic名称\>**
+            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:2181/kafka \> --add --allow-principal User:<用户名\> --producer --topic <Topic名称\>**
 
         -   删除某用户Producer权限：
 
-            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:24002/kafka \> --remove --allow-principal User:<用户名\> --producer --topic <Topic名称\>**
+            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:2181/kafka \> --remove --allow-principal User:<用户名\> --producer --topic <Topic名称\>**
 
         -   添加给某用户Consumer权限：
 
-            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:24002/kafka \> --add --allow-principal User:<用户名\> --consumer --topic <Topic名称\> --group <消费者组名称\>**
+            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:2181/kafka \> --add --allow-principal User:<用户名\> --consumer --topic <Topic名称\> --group <消费者组名称\>**
 
         -   删除某用户Consumer权限：
 
-            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:24002/kafka \> --remove --allow-principal User:<用户名\> --consumer --topic <Topic名称\> --group <消费者组名称\>**
+            **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:2181/kafka \> --remove --allow-principal User:<用户名\> --consumer --topic <Topic名称\> --group <消费者组名称\>**
+
+            >![](public_sys-resources/icon-note.gif) **说明：**   
+            >MRS 1.6.3及之前版本，无论集群是否开启Kerberos认证ZooKeeper默认端口号均为24002。MRS 1.6.3及之后版本，无论集群是否开启Kerberos认证ZooKeeper默认端口号均为2181。  
 
 
 

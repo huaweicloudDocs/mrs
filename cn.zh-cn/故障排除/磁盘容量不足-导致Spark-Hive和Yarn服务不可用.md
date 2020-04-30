@@ -16,7 +16,7 @@
 
 ## 处理步骤<a name="section520813413313"></a>
 
-针对磁盘容量不足产生的告警处理步骤，请参考[ALM-12017 磁盘容量不足](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0131.html)。
+针对磁盘容量不足产生的告警处理步骤，请参考[ALM-12017 磁盘容量不足](https://support.huaweicloud.com/usermanual-mrs/alm_12017.html)。
 
 ## 建议与总结<a name="section8898183420"></a>
 
@@ -24,7 +24,7 @@
 
 ## 参考信息<a name="section18208334123312"></a>
 
-HDFS磁盘空间使用率超过阈值处理步骤，请参考[ALM-14001 HDFS磁盘空间使用率超过阈值](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0148.html)。
+HDFS磁盘空间使用率超过阈值处理步骤，请参考[ALM-14001 HDFS磁盘空间使用率超过阈值](https://support.huaweicloud.com/usermanual-mrs/alm_14001.html)。
 
 为MRS集群添加新磁盘，请参考[MRS集群添加新磁盘](https://support.huaweicloud.com/trouble-mrs/mrs_03_0032.html)。
 

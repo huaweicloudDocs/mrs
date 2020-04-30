@@ -9,7 +9,7 @@ desc描述表过长时，如何让描述显示完整？
 1.  启动Hive的beeline时，设置参数maxWidth=20000即可，例如：
 
     ```
-    [root@192-168-1-18 logs]# beeline --maxWidth=2000
+    [root@192-168-1-18 logs]# beeline --maxWidth=20000
     scan complete in 3ms
     Connecting to 
     ……

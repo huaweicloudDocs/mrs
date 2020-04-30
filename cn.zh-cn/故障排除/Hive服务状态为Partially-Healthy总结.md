@@ -6,5 +6,5 @@ HBase服务不可用会导致Hive服务的健康状态变为Partially Healthy（
 
 ## 解决方案<a name="zh-cn_topic_0167275017_section13400932164610"></a>
 
-HBase服务不可用请参考[ALM-19000 HBase服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0167.html)。
+HBase服务不可用请参考[ALM-19000 HBase服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_19000.html)。
 

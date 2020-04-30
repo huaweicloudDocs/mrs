@@ -10,9 +10,9 @@
 
 ## 解决方案<a name="zh-cn_topic_0167276439_section158078165245"></a>
 
--   DBservice服务不可用请参考[ALM-27001 DBService服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0172.html)。
--   HDFS服务不可用请参考[ALM-14000 HDFS服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0147.html)。
--   ZooKeeper服务不可用请参考[ALM-13000 ZooKeeper服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0144.html)。
--   LDAP/KrbServer服务不可用请参考[ALM-25000 LdapServer服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0169.html)/[ALM-25500 KrbServer服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0171.html)。
--   MetaStore实例不可用请参考[ALM-16004 Hive服务不可用](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0162.html)。
+-   DBservice服务不可用请参考[ALM-27001 DBService服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_27001.html)。
+-   HDFS服务不可用请参考[ALM-14000 HDFS服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_14000.html)。
+-   ZooKeeper服务不可用请参考[ALM-13000 ZooKeeper服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_13000.html)。
+-   LDAP/KrbServer服务不可用请参考[ALM-25000 LdapServer服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_25000.html)/[ALM-25500 KrbServer服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_25500.html)。
+-   MetaStore实例不可用请参考[ALM-16004 Hive服务不可用](https://support.huaweicloud.com/usermanual-mrs/alm_16004.html)。
 

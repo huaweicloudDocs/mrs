@@ -4,9 +4,6 @@
 
 重启HDFS后，HDFS的状态是Bad，且NameNode实例状态常常异常，并且花很久没有退出安全模式。
 
-**图 1**  HDFS服务状态<a name="zh-cn_topic_0167275870_fig1380134143118"></a>  
-![](figures/HDFS服务状态.png "HDFS服务状态")
-
 ## 原因分析<a name="zh-cn_topic_0167275870_s44cfc435afe549c9a194adf24752a69c"></a>
 
 1.  在NameNode运行日志（/var/log/Bigdata/hdfs/nn/hadoop-omm-namendoe-XXX.log）中搜索“WARN”，可以看到有大量时间在垃圾回收，如下例中耗时较长63s。
@@ -26,7 +23,7 @@
 
 3.  打开MRS Manager页面，查看NameNode的GC\_OPTS参数配置如下：
 
-    **图 2**  查看NameNode的GC\_OPTS参数配置<a name="zh-cn_topic_0167275870_fig128017425374"></a>  
+    **图 1**  查看NameNode的GC\_OPTS参数配置<a name="zh-cn_topic_0167275870_fig128017425374"></a>  
     ![](figures/查看NameNode的GC_OPTS参数配置.png "查看NameNode的GC_OPTS参数配置")
 
 4.  NameNode内存配置和数据量对应关系参考[表1](#zh-cn_topic_0167275870_table6905268173524)。

@@ -17,14 +17,20 @@
 1.  登录MRS集群页面，在“现有集群“中，单击对应的集群名称，进入集群详情页面。
 2.  单击“集群管理页面“后的“点击查看“，登录到MRS Manager页面。
 3.  在MRS Manager页面，选择“服务管理“-\>“Yarn“服务-\>“实例“。
-4.  启动Core节点的NodeManager。
+4.  勾选Core节点的NodeManager实例，选择“更多 \> 启动实例”。
 
     ![](figures/zh-cn_image_0135528830.png)
 
-5.  然后在集群列表页面退服Task节点。等退服成功后，若不想用Core节点的NodeManager再将其停止。
+5.  在集群列表页面缩容Task节点。
+    1.  单击集群名称进入集群详情页面，选择“节点管理”。
+    2.  在Task节点组所在行的“操作”列单击“缩容”。
 
-    ![](figures/zh-cn_image_0135491126.png)
+        **图 1**  缩容Task<a name="zh-cn_topic_0135491044_fig1189822915587"></a>  
+        ![](figures/缩容Task.png "缩容Task")
 
+    3.  单击“确定”并在弹出框选择“是”。
+
+6.  等缩容成功后，若不想用Core节点的NodeManager再将其停止。
 
 ## 建议与总结<a name="zh-cn_topic_0135491044_section8898183420"></a>
 

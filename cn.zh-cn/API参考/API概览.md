@@ -94,7 +94,7 @@ MRS提供的符合RESTful API的设计规范的接口，如[表1](#table19188625
 </tr>
 <tr id="row183711192539"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p5312115695311"><a name="p5312115695311"></a><a name="p5312115695311"></a><a href="终止作业.md">终止作业</a></p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p931245665312"><a name="p931245665312"></a><a name="p931245665312"></a>PUT /v2/{project_id}/clusters/{cluster_id}/job-executions/{job_execution_id}</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p931245665312"><a name="p931245665312"></a><a name="p931245665312"></a>POST /v2/{project_id}/clusters/{cluster_id}/job-executions/{job_execution_id}/kill</p>
 </td>
 </tr>
 <tr id="row13876191945315"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p15314205685319"><a name="p15314205685319"></a><a name="p15314205685319"></a><a href="批量删除作业.md">批量删除作业</a></p>
@@ -105,23 +105,6 @@ MRS提供的符合RESTful API的设计规范的接口，如[表1](#table19188625
 <tr id="row169891626195318"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p7314115615320"><a name="p7314115615320"></a><a name="p7314115615320"></a><a href="获取SQL结果.md">获取SQL结果</a></p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p53148566530"><a name="p53148566530"></a><a name="p53148566530"></a>GET /v2/{project_id}/clusters/{cluster_id}/job-executions/{job_execution_id}/sql-result</p>
-</td>
-</tr>
-<tr id="row1349974520582"><td class="cellrowborder" rowspan="3" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="p115971579016"><a name="p115971579016"></a><a name="p115971579016"></a>SQL接口（V2）</p>
-</td>
-<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.4.1.2 "><p id="p549919451582"><a name="p549919451582"></a><a name="p549919451582"></a><a href="提交SQL语句.md">提交SQL语句</a></p>
-</td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.4.1.3 "><p id="p13499104575815"><a name="p13499104575815"></a><a name="p13499104575815"></a>POST  /v2/{project_id}/clusters/{cluster_id}/sql-execution</p>
-</td>
-</tr>
-<tr id="row106823519585"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p16829519583"><a name="p16829519583"></a><a name="p16829519583"></a><a href="查询SQL结果.md">查询SQL结果</a></p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p1775520566412"><a name="p1775520566412"></a><a name="p1775520566412"></a>GET  /v2/{project_id}/clusters/{cluster_id}/sql-execution/{sql_id}</p>
-</td>
-</tr>
-<tr id="row62963525583"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p4296145210587"><a name="p4296145210587"></a><a name="p4296145210587"></a><a href="取消SQL执行任务.md">取消SQL执行任务</a></p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p172961152145810"><a name="p172961152145810"></a><a name="p172961152145810"></a>POST  /v2/{project_id}/clusters/{cluster_id}/sql-execution/{sql_id}/cancel</p>
 </td>
 </tr>
 <tr id="row841247510304"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="p1454235624212"><a name="p1454235624212"></a><a name="p1454235624212"></a>弹性伸缩接口</p>

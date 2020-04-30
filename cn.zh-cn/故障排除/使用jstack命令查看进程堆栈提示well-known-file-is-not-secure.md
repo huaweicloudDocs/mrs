@@ -19,7 +19,7 @@
 
 1.  通过storm原生页面查看：MRS Manager \> 服务管理
 
-    ![](figures/zh-cn_image_0167275686.png)
+    ![](figures/zh-cn_image_0221461329.png)
 
 2.  选择要查看的拓扑。
 
@@ -39,7 +39,7 @@
 1.  登录MRD Manager页面，选择“服务管理 \> Storm \> 服务配置”，“参数类别“选择“全部配置“。
 2.  在左侧导航栏选择“supervisor \> 自定义”，添加一个变量supervisor.run.worker.as.user=false。
 
-    ![](figures/zh-cn_image_0167274853.png)
+    ![](figures/zh-cn_image_0221461486.png)
 
 3.  单击“保存配置”，勾选“重新启动受影响的服务或实例。”并单击“确定”重启服务。
 4.  重新提交拓扑。

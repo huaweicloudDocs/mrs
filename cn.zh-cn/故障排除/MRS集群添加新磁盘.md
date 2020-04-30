@@ -38,7 +38,7 @@ MRS HBase服务不可用。
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >挂载点目录根据节点DataNode已有的实例编号递增，例如：使用df –h命令查到当前已有的编号为/srv/BigData/hadoop/data1，则新增挂载点为/srv/BigData/hadoop/data2。初始化Linux数据盘新建挂载点时，将新建挂载点命名为/srv/BigData/hadoop/data2，并将新建分区挂载到该挂载点下。例如  
     >```  
-    >mkdir /srv/BigData/hadoop/data  
+    >mkdir /srv/BigData/hadoop/data2  
     >mount /dev/xvdb1 /srv/BigData/hadoop/data2  
     >```  
 
@@ -85,6 +85,9 @@ MRS HBase服务不可用。
     3.  单击 "保存配置"，并勾选 "重启角色实例" 后根据提示重启实例。
     4.  查看扩容是否成功，依次选择 "服务管理 \> Kafka \> 实例 \> 扩容的Broker节点 "，查看实时监控项 "Broker磁盘容量大小" 中配置的总磁盘容量是否提升。
 
+
+>![](public_sys-resources/icon-caution.gif) **注意：**   
+>集群的节点扩容磁盘之后，若再扩容集群节点时需要在新扩容的节点上参考该页面处理步骤执行添加磁盘的操作，否则会有数据丢失的风险 。  
 
 ## 建议与总结<a name="zh-cn_topic_0160818829_section8898183420"></a>
 

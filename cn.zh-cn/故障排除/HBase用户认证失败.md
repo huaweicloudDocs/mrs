@@ -25,16 +25,12 @@ HBase用户认证失败
 1.  以root登录集群Master1节点。
 2.  执行如下命令，查看MRS服务认证的jar包。
 
-    **/opt/share/local\_policy/local\_policy.jar**
+    **ll /opt/share/local\_policy/local\_policy.jar**
 
-    **/opt/Bigdata/jdk1.8.0\_172/jre/lib/security/local\_policy.jar**
+    **ll /opt/Bigdata/jdk\{version\}/jre/lib/security/local\_policy.jar**
 
-3.  执行**wget** **-P $path**命令，将步骤2中的jar包下载到本地。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >$path为需要下载的本地路径。例如，/opt/share/local\_policy/local\_policy.jar  
-
-4.  将下载的jar包替换到本地JDK目录/opt/huawei/Bigdata/jdk/jre/lib/security。
+3.  将步骤2中的jar包下载到本地。
+4.  将下载的jar包替换到本地JDK目录/opt/Bigdata/jdk/jre/lib/security。
 5.  执行**cd /opt/client/HBase/hbase/bin**  命令，进入到HBase的bin目录。
 6.  执行**sh  start-hbase.sh**命令，重启HBase组件。
 

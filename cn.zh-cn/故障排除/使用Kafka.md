@@ -54,4 +54,18 @@
 
 -   **[如何针对Topic进行配置增加和删除](如何针对Topic进行配置增加和删除.md)**  
 
+-   **[如何读取“\_\_consumer\_offsets”内部topic的内容](如何读取-__consumer_offsets-内部topic的内容.md)**  
+
+-   **[如何配置客户端shell命令的日志](如何配置客户端shell命令的日志.md)**  
+
+-   **[如何获取Topic的分布信息](如何获取Topic的分布信息.md)**  
+
+-   **[Kafka高可靠使用说明](Kafka高可靠使用说明.md)**  
+
+-   **[使用Kafka Shell命令无法操作Kafka集群](使用Kafka-Shell命令无法操作Kafka集群.md)**  
+
+-   **[Kafka生产者写入单条记录过长问题](Kafka生产者写入单条记录过长问题.md)**  
+
+-   **[Kakfa消费者读取单条记录过长问题](Kakfa消费者读取单条记录过长问题.md)**  
+
 

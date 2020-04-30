@@ -15,7 +15,7 @@ Error: Error while processing statement: FAILED: Execution Error, return code 1 
 
 ## 原因分析<a name="zh-cn_topic_0167275844_section1645144113716"></a>
 
-当前登陆的用户不具有Hive的admin角色的权限。
+当前登录的用户不具有Hive的admin角色的权限。
 
 ## 解决方案<a name="zh-cn_topic_0167275844_sf8f53c018c784bab9ca84e6d32b5d35d"></a>
 

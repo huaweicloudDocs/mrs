@@ -59,9 +59,9 @@ unclean.leader.election.enable
 
         例如：
 
-        **kafka-topics.sh --alter --topic test1 --zookeeper 192.168.100.100:24002/kafka  --config retention.ms=86400000**
+        **kafka-topics.sh --alter --topic test1 --zookeeper 192.168.100.100:2181/kafka  --config retention.ms=86400000**
 
-        **kafka-topics.sh --alter --topic test1 --zookeeper 192.168.100.100:24002/kafka --delete-config retention.ms**
+        **kafka-topics.sh --alter --topic test1 --zookeeper 192.168.100.100:2181/kafka --delete-config retention.ms**
 
     7.  执行以下命令，查询topic信息。
 

@@ -6,4 +6,8 @@
 
 -   **[Hue（主）无法打开web网页](Hue（主）无法打开web网页.md)**  
 
+-   **[Hue WebUI访问失败](Hue-WebUI访问失败.md)**  
+
+-   **[Hue界面无法加载HBase表](Hue界面无法加载HBase表.md)**  
+
 

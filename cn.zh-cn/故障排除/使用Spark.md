@@ -22,4 +22,6 @@
 
 -   **[提交Spark任务时，连接ResourceManager异常](提交Spark任务时-连接ResourceManager异常.md)**  
 
+-   **[DaYu调度spark作业失败](DaYu调度spark作业失败.md)**  
+
 
