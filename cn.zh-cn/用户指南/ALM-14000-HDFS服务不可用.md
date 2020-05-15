@@ -69,7 +69,7 @@
     1.  登录MRS集群详情页面，在“组件管理”页签，查看ZooKeeper服务的健康状态是否为“良好”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面在“服务管理”页签查看。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面在“服务管理”页签查看。  
 
         -   是，执行[1.b](#zh-cn_topic_0191813870_cn_58_42_000001_4_mmccppss_ss2)。
         -   否，执行[2.a](#zh-cn_topic_0191813870_cn_58_42_000001_4_mmccppss_ss4)。
@@ -86,7 +86,7 @@
     1.  <a name="zh-cn_topic_0191813870_cn_58_42_000001_4_mmccppss_ss4"></a>登录MRS集群详情页面，在“告警管理”页面查看所有NameService服务是否存在异常告警。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面在“告警管理”页签查看告警信息。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面在“告警管理”页签查看告警信息。  
 
         -   是，执行[2.b](#zh-cn_topic_0191813870_cn_58_42_000001_4_mmccppss_ss5)。
         -   否，执行[3](#zh-cn_topic_0191813870_li572522141314)。

@@ -74,7 +74,7 @@
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  选择“ZooKeeper”查看ZooKeeper的健康状态是否正常。
         -   是，执行[1.d](#zh-cn_topic_0191813961_li173182016530)。
@@ -101,7 +101,7 @@
     1.  <a name="zh-cn_topic_0191813961_li103551920123512"></a>登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  在告警列表中，查看是否有“ALM-14000 HDFS服务不可用”告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813961_li167011853195320)。
@@ -116,7 +116,7 @@
     1.  <a name="zh-cn_topic_0191813961_li1554455818353"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  选择“DBService”查看DBService的健康状态是否正常。
         -   是，执行[3.a](#zh-cn_topic_0191813961_li1554455818353)。
@@ -130,7 +130,7 @@
     1.  <a name="zh-cn_topic_0191813961_li14598145163614"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  选择“Mapreduce”查看Mapreduce的健康状态是否正常。
         -   是，执行[5.a](#zh-cn_topic_0191813961_li984194223716)。
@@ -144,7 +144,7 @@
     1.  <a name="zh-cn_topic_0191813961_li984194223716"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  选择“Yarn”查看Yarn的健康状态是否正常。
         -   是，执行[5.d](#zh-cn_topic_0191813961_li11673173775413)。
@@ -167,7 +167,7 @@
     1.  <a name="zh-cn_topic_0191813961_li13825217113813"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  单击“Loader”。
     3.  单击“实例”，显示Sqoop实例列表。

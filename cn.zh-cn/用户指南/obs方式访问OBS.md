@@ -1,6 +1,11 @@
 # obs方式访问OBS<a name="ZH-CN_TOPIC_0173178881"></a>
 
-MRS2.0.0之后的版本，支持使用obs的方式对接OBS服务，当前主要支持的服务为Hadoop、Hive、Spark、HBase、Presto、Flink。
+MRS1.9.2及之后的版本支持使用**obs://**的方式对接OBS服务，当前主要支持的组件为Hadoop、Hive、Spark、HBase、Presto、Flink。其中HBase组件使用**obs://**的方式对接OBS服务在MRS 1.9.2版本暂不支持。
+
+MRS提供两种使用**obs://**协议访问OBS的方式：
+
+-   在MRS集群中配置AK/SK，AK/SK会明文暴露在配置文件中，请谨慎使用，具体请参考本章节。
+-   通过为MRS集群绑定ECS委托方式访问OBS，避免了AK/SK直接暴露在配置文件中的风险，具体请参考[ECS委托方式访问OBS](ECS委托方式访问OBS.md)。
 
 ## Hadoop访问OBS<a name="section2114171071418"></a>
 
@@ -38,9 +43,9 @@ MRS2.0.0之后的版本，支持使用obs的方式对接OBS服务，当前主要
 1.  登录集群详情页面，选择“组件管理 \> Hive \> 服务配置”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Hive \> 服务配置”。  
+    >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Hive \> 服务配置”。  
 
-2.  参数类别设置为“全部配置”。
+2.  将“基础配置”切换为“全部配置”。
 3.  搜索“fs.obs.access.key”和“fs.obs.secret.key”参数，并分别配置为OBS的AK和SK。
 
     **图 1**  配置OBS的AK/SK<a name="fig79611510113312"></a>  
@@ -74,9 +79,9 @@ MRS2.0.0之后的版本，支持使用obs的方式对接OBS服务，当前主要
     1.  登录集群详情页面，选择“组件管理 \> Spark \> 服务配置”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Spark \> 服务配置”。  
+        >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Spark \> 服务配置”。  
 
-    2.  “参数类别”配置为“全部配置”。
+    2.  将“基础配置”切换为“全部配置”。
     3.  选择“JDBCServer \> OBS”配置fs.obs.access.key、fs.obs.secret.key参数。
     4.  单击“保存配置”，并勾选“重新启动受影响的服务或实例。”重启HBase服务。
     5.  在spark-beeline中访问OBS，例如访问obs://obs-demo-input/table/目录：
@@ -110,10 +115,12 @@ MRS2.0.0之后的版本，支持使用obs的方式对接OBS服务，当前主要
 
 ## HBase访问OBS<a name="section4462193319149"></a>
 
+HBase组件使用**obs://**的方式对接OBS服务在MRS 1.9.2版本暂不支持。
+
 1.  登录集群详情页面，选择页面右上角“管理操作 \> 停止所有组件”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> HBase”，单击“停止服务”。  
+    >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> HBase”，单击“停止服务”。  
 
 2.  登录任意一个Master节点，具体请参见[登录集群节点](登录集群节点.md)。
 3.  执行如下命令初始化环境变量。
@@ -133,9 +140,9 @@ MRS2.0.0之后的版本，支持使用obs的方式对接OBS服务，当前主要
 6.  登录集群详情页面，选择“组件管理 \> HBase \> 服务配置”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> HBase \> 服务配置”。  
+    >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> HBase \> 服务配置”。  
 
-7.  “参数类别”配置为“全部配置”。
+7.  将“基础配置”切换为“全部配置”。
 8.  配置如下访问OBS的相关参数。
     -   fs.obs.access.key
     -   fs.obs.secret.key
@@ -147,24 +154,23 @@ MRS2.0.0之后的版本，支持使用obs的方式对接OBS服务，当前主要
 
 ## Presto访问OBS<a name="section1974614263315"></a>
 
-该功能在MRS 2.0.5及之后版本支持。
+该功能在MRS 1.9.2及之后版本支持。
 
 1.  登录集群详情页面，选择“组件管理 \> Presto \> 服务配置”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Hive \> 服务配置”。  
-
-2.  参数类别设置为“全部配置”。
+2.  将“基础配置”切换为“全部配置”。
 3.  搜索并配置如下参数。
-    -   fs.obs.access.key配置为用户ak
-    -   fs.obs.secret.key配置为用户sk
+
+    -   fs.obs.access.key配置为用户AK
+    -   fs.obs.secret.key配置为用户SK
+
+    若当前集群中搜索不到如上两个参数，请在左侧导航选择“Presto \> Hive”，在自定义参数“core.site.customized.configs”中增加如上两个参数。
 
 4.  单击“保存配置”，并勾选“重新启动受影响的服务或实例。”重启Presto服务。
 5.  选择“组件管理 \> Hive \> 服务配置”。
-6.  参数类别设置为“全部配置”。
+6.  将“基础配置”切换为“全部配置”。
 7.  搜索并配置如下参数。
-    -   fs.obs.access.key配置为用户ak
-    -   fs.obs.secret.key配置为用户sk
+    -   fs.obs.access.key配置为用户AK
+    -   fs.obs.secret.key配置为用户SK
 
 8.  单击“保存配置”，并勾选“重新启动受影响的服务或实例。”重启Hive服务。
 9.  在Presto客户端中执行语句创建schema，指定location为OBS路径，例如：

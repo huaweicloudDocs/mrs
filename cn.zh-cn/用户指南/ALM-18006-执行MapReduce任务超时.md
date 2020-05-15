@@ -80,7 +80,7 @@
     1.  登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  <a name="zh-cn_topic_0191813946_substep_03d21a89"></a>在告警列表中，查看是否有“ALM-18000 Yarn服务不可用”产生。
         -   是，执行[2.c](#zh-cn_topic_0191813946_substep_03d82569)。

@@ -217,7 +217,8 @@ MRS集群系统数据库用户包含OMS数据库用户、DBService数据库用�
 <td class="cellrowborder" valign="top" headers="mcps1.1.5.1.3 "><p id="p1296316094551"><a name="p1296316094551"></a><a name="p1296316094551"></a>OMS数据库数据访问用户</p>
 </td>
 </tr>
-<tr id="row6479190094551"><td class="cellrowborder" rowspan="4" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.1 "><p id="p3211675894551"><a name="p3211675894551"></a><a name="p3211675894551"></a>DBService数据库</p>
+<tr id="row6479190094551"><td class="cellrowborder" rowspan="5" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.1 "><p id="p3211675894551"><a name="p3211675894551"></a><a name="p3211675894551"></a>DBService数据库</p>
+<p id="p797965141820"><a name="p797965141820"></a><a name="p797965141820"></a></p>
 </td>
 <td class="cellrowborder" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.2 "><p id="p6332914194551"><a name="p6332914194551"></a><a name="p6332914194551"></a>omm</p>
 </td>
@@ -245,6 +246,13 @@ MRS集群系统数据库用户包含OMS数据库用户、DBService数据库用�
 <td class="cellrowborder" valign="top" headers="mcps1.1.5.1.2 "><p id="p26477538105213"><a name="p26477538105213"></a><a name="p26477538105213"></a>SqoopUser@</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.1.5.1.3 "><p id="p64305825105213"><a name="p64305825105213"></a><a name="p64305825105213"></a>Loader连接DBService数据库的用户</p>
+</td>
+</tr>
+<tr id="row15979185161813"><td class="cellrowborder" valign="top" headers="mcps1.1.5.1.1 "><p id="p128161347101511"><a name="p128161347101511"></a><a name="p128161347101511"></a>ranger</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.5.1.2 "><p id="p16816154781516"><a name="p16816154781516"></a><a name="p16816154781516"></a>RangerUser@</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.5.1.3 "><p id="p2081612477158"><a name="p2081612477158"></a><a name="p2081612477158"></a>Ranger连接DBService数据库的用户</p>
 </td>
 </tr>
 </tbody>

@@ -1,11 +1,8 @@
-# 13\_MRS用户指南-大纲调整190603
+# MRS用户指南
 
 -   [IAM权限管理]
-    -   [IAM权限管理基本概念](IAM权限管理基本概念.md)
     -   [创建用户并授权使用MRS](创建用户并授权使用MRS.md)
-    -   [创建MRS自定义策略](创建MRS自定义策略.md)
-    -   [策略语法：细粒度策略](策略语法-细粒度策略.md)
-    -   [策略语法：RBAC](策略语法-RBAC.md)
+    -   [MRS自定义策略](MRS自定义策略.md)
     -   [IAM用户同步MRS](IAM用户同步MRS.md)
 
 -   [入门]
@@ -20,19 +17,18 @@
     -   [集群列表简介](集群列表简介.md)
     -   [购买方式简介](购买方式简介.md)
     -   [快速购买Hadoop分析集群](快速购买Hadoop分析集群.md)
-    -   [快速购买HBase集群](快速购买HBase集群.md)
-    -   [快速购买Kafka集群](快速购买Kafka集群.md)
+    -   [快速购买HBase分析集群](快速购买HBase分析集群.md)
+    -   [快速购买Kafka流式集群](快速购买Kafka流式集群.md)
     -   [自定义购买集群](自定义购买集群.md)
-    -   [创建集群](创建集群.md)
     -   [创建最小规格集群](创建最小规格集群.md)
     -   [创建专属云MRS集群](创建专属云MRS集群.md)
-    -   [创建集群（历史版本）](创建集群（历史版本）.md)
+    -   [配置存算分离集群](配置存算分离集群.md)
     -   [添加集群标签](添加集群标签.md)
     -   [通过引导操作安装第三方软件]
         -   [引导操作简介](引导操作简介.md)
         -   [准备引导操作脚本](准备引导操作脚本.md)
-        -   [添加引导操作](添加引导操作.md)
         -   [查看执行记录](查看执行记录.md)
+        -   [添加引导操作](添加引导操作.md)
         -   [脚本样例](脚本样例.md)
 
 
@@ -41,7 +37,7 @@
         -   [查看集群基本信息](查看集群基本信息.md)
         -   [查看集群补丁信息](查看集群补丁信息.md)
         -   [查看和定制集群监控指标](查看和定制集群监控指标.md)
-        -   [管理服务和主机监控](管理服务和主机监控.md)
+        -   [管理组件和主机监控](管理组件和主机监控.md)
 
     -   [扩容集群](扩容集群.md)
     -   [缩容集群](缩容集群.md)
@@ -57,6 +53,22 @@
     -   [退订集群](退订集群.md)
     -   [删除失败任务](删除失败任务.md)
     -   [组件管理]
+        -   [对象管理简介](对象管理简介.md)
+        -   [查看配置](查看配置.md)
+        -   [管理服务操作](管理服务操作.md)
+        -   [配置服务参数](配置服务参数.md)
+        -   [配置服务自定义参数](配置服务自定义参数.md)
+        -   [同步服务配置](同步服务配置.md)
+        -   [管理角色实例操作](管理角色实例操作.md)
+        -   [配置角色实例参数](配置角色实例参数.md)
+        -   [同步角色实例配置](同步角色实例配置.md)
+        -   [退服和入服务角色实例](退服和入服务角色实例.md)
+        -   [管理主机（节点）操作](管理主机（节点）操作.md)
+        -   [隔离主机](隔离主机.md)
+        -   [取消隔离主机](取消隔离主机.md)
+        -   [启动及停止集群](启动及停止集群.md)
+        -   [同步集群配置](同步集群配置.md)
+        -   [导出集群的配置数据](导出集群的配置数据.md)
         -   [支持滚动重启](支持滚动重启.md)
 
     -   [作业管理]
@@ -74,7 +86,7 @@
         -   [使用OBS加密数据运行作业](使用OBS加密数据运行作业.md)
         -   [配置作业消息通知](配置作业消息通知.md)
 
-    -   [管理数据文件](管理数据文件.md)
+    -   [管理数据文件]
     -   [告警管理]
         -   [查看告警列表](查看告警列表.md)
         -   [查看与手动清除告警](查看与手动清除告警.md)
@@ -177,6 +189,14 @@
         -   [ALM-43011 JDBCServer进程非堆内存使用超出阈值](ALM-43011-JDBCServer进程非堆内存使用超出阈值.md)
         -   [ALM-43012 JDBCServer进程直接内存使用超出阈值](ALM-43012-JDBCServer进程直接内存使用超出阈值.md)
         -   [ALM-43013 JDBCServer GC 时间超出阈值](ALM-43013-JDBCServer-GC-时间超出阈值.md)
+        -   [ALM-44004 Presto Coordinator资源组排队任务超过阈值](ALM-44004-Presto-Coordinator资源组排队任务超过阈值.md)
+        -   [ALM-44005 Presto Coordinator进程垃圾收集时间超出阈值](ALM-44005-Presto-Coordinator进程垃圾收集时间超出阈值.md)
+        -   [ALM-44006 Presto Worker进程垃圾收集时间超出阈值](ALM-44006-Presto-Worker进程垃圾收集时间超出阈值.md)
+        -   [ALM-18010 Yarn任务挂起数超过阈值](ALM-18010-Yarn任务挂起数超过阈值.md)
+        -   [ALM-18011 Yarn任务挂起内存超过阈值](ALM-18011-Yarn任务挂起内存超过阈值.md)
+        -   [ALM-18012 上个周期被终止的Yarn任务数超过阈值](ALM-18012-上个周期被终止的Yarn任务数超过阈值.md)
+        -   [ALM-18013 上个周期运行失败的Yarn任务数超过阈值](ALM-18013-上个周期运行失败的Yarn任务数超过阈值.md)
+        -   [ALM-16005 上个周期Hive SQL执行失败超过阈值](ALM-16005-上个周期Hive-SQL执行失败超过阈值.md)
 
     -   [补丁管理]
         -   [MRS 1.7.0前版本补丁操作指导](MRS-1-7-0前版本补丁操作指导.md)
@@ -189,26 +209,13 @@
         -   [MRS 1.7.1.3补丁说明](MRS-1-7-1-3补丁说明.md)
         -   [MRS 1.7.1.5补丁说明](MRS-1-7-1-5补丁说明.md)
         -   [MRS 1.7.1.6补丁说明](MRS-1-7-1-6补丁说明.md)
+        -   [MRS 1.8.10.1补丁说明](MRS-1-8-10-1补丁说明.md)
         -   [MRS 2.0.1.1补丁说明](MRS-2-0-1-1补丁说明.md)
         -   [MRS 2.0.1.2补丁说明](MRS-2-0-1-2补丁说明.md)
-
-    -   [对象管理]
-        -   [对象管理简介](对象管理简介.md)
-        -   [查看配置](查看配置.md)
-        -   [管理服务操作](管理服务操作.md)
-        -   [配置服务参数](配置服务参数.md)
-        -   [配置服务自定义参数](配置服务自定义参数.md)
-        -   [同步服务配置](同步服务配置.md)
-        -   [管理角色实例操作](管理角色实例操作.md)
-        -   [配置角色实例参数](配置角色实例参数.md)
-        -   [同步角色实例配置](同步角色实例配置.md)
-        -   [退服和入服务角色实例](退服和入服务角色实例.md)
-        -   [管理主机（节点）操作](管理主机（节点）操作.md)
-        -   [隔离主机](隔离主机.md)
-        -   [取消隔离主机](取消隔离主机.md)
-        -   [启动及停止集群](启动及停止集群.md)
-        -   [同步集群配置](同步集群配置.md)
-        -   [导出集群的配置数据](导出集群的配置数据.md)
+        -   [MRS 2.0.1.3补丁说明](MRS-2-0-1-3补丁说明.md)
+        -   [MRS 2.1.0.1补丁说明](MRS-2-1-0-1补丁说明.md)
+        -   [MRS 2.1.0.2补丁说明](MRS-2-1-0-2补丁说明.md)
+        -   [MRS 2.1.0.3补丁说明](MRS-2-1-0-3补丁说明.md)
 
     -   [日志管理]
         -   [查看及导出审计日志](查看及导出审计日志.md)
@@ -309,6 +316,8 @@
     -   [访问MRS集群上托管的开源组件Web页面]
         -   [开源组件Web站点](开源组件Web站点.md)
         -   [开源组件端口列表](开源组件端口列表.md)
+        -   [通过弹性公网IP访问](通过弹性公网IP访问.md)
+        -   [通过Windows弹性云服务器访问](通过Windows弹性云服务器访问.md)
         -   [创建连接MRS集群的SSH隧道并配置浏览器](创建连接MRS集群的SSH隧道并配置浏览器.md)
 
 
@@ -330,6 +339,7 @@
     -   [从零开始使用Spark SQL](从零开始使用Spark-SQL.md)
     -   [使用Spark]
         -   [从零开始使用Spark](从零开始使用Spark.md)
+        -   [访问Spark Web UI界面](访问Spark-Web-UI界面.md)
         -   [Spark对接OpenTSDB]
             -   [创建表关联OpenTSDB](创建表关联OpenTSDB.md)
             -   [插入数据至OpenTSDB表](插入数据至OpenTSDB表.md)
@@ -340,7 +350,8 @@
     -   [使用Hive]
         -   [从零开始使用Hive](从零开始使用Hive.md)
         -   [配置Hive参数](配置Hive参数.md)
-
+        -   [配置Hive权限](配置Hive权限.md)
+    
     -   [使用HBase]
         -   [从零开始使用HBase](从零开始使用HBase.md)
         -   [配置HBase备份](配置HBase备份.md)
@@ -360,37 +371,34 @@
         -   [在Hue WebUI使用元数据浏览器](在Hue-WebUI使用元数据浏览器.md)
         -   [在Hue WebUI使用文件浏览器](在Hue-WebUI使用文件浏览器.md)
         -   [在Hue WebUI使用作业浏览器](在Hue-WebUI使用作业浏览器.md)
-
+    
     -   [使用Kafka]
         -   [管理Kafka主题](管理Kafka主题.md)
         -   [查看Kafka主题](查看Kafka主题.md)
         -   [管理Kafka用户权限](管理Kafka用户权限.md)
         -   [管理Kafka主题中的消息](管理Kafka主题中的消息.md)
         -   [基于binlog的MySQL数据同步到MRS集群中](基于binlog的MySQL数据同步到MRS集群中.md)
-
+    
     -   [使用Storm]
         -   [使用客户端提交Storm拓扑](使用客户端提交Storm拓扑.md)
         -   [访问Storm的WebUI](访问Storm的WebUI.md)
         -   [管理Storm拓扑](管理Storm拓扑.md)
         -   [查看Storm拓扑日志](查看Storm拓扑日志.md)
-
+    
     -   [使用CarbonData]
         -   [CarbonData入门](CarbonData入门.md)
         -   [CarbonData表简介](CarbonData表简介.md)
         -   [创建CarbonData表](创建CarbonData表.md)
         -   [删除CarbonData表](删除CarbonData表.md)
-
+    
     -   [使用Flume]
         -   [使用简介](使用简介.md)
         -   [安装Flume客户端](安装Flume客户端.md)
         -   [查看Flume客户端日志](查看Flume客户端日志.md)
         -   [停止或卸载Flume客户端](停止或卸载Flume客户端.md)
         -   [使用Flume客户端加密工具](使用Flume客户端加密工具.md)
-        -   [Flume配置参数说明](Flume配置参数说明.md)
         -   [样例：使用Flume采集日志并导入Kafka生产者](样例-使用Flume采集日志并导入Kafka生产者.md)
-        -   [样例：使用Flume采集日志并导入OBS](样例-使用Flume采集日志并导入OBS.md)
-        -   [样例：使用Flume监控OBS目录并上传文件到HDFS](样例-使用Flume监控OBS目录并上传文件到HDFS.md)
-
+    
     -   [使用Loader]
         -   [Loader使用简介](Loader使用简介.md)
         -   [Loader连接配置说明](Loader连接配置说明.md)
@@ -400,42 +408,55 @@
         -   [管理Loader作业](管理Loader作业.md)
         -   [准备MySQL数据库连接的驱动](准备MySQL数据库连接的驱动.md)
         -   [样例：通过Loader将数据从OBS导入HDFS](样例-通过Loader将数据从OBS导入HDFS.md)
-
+    
     -   [使用Presto]
         -   [访问Presto的WebUI](访问Presto的WebUI.md)
         -   [使用客户端执行查询语句](使用客户端执行查询语句.md)
         -   [在DLF中使用Presto转储](在DLF中使用Presto转储.md)
         -   [配置Presto组件权限](配置Presto组件权限.md)
-
+    
     -   [使用KafkaManager]
         -   [KafkaManager介绍](KafkaManager介绍.md)
         -   [访问KafkaManager的WebUI](访问KafkaManager的WebUI.md)
         -   [管理Kafka集群](管理Kafka集群.md)
         -   [Kafka集群监控管理](Kafka集群监控管理.md)
-
+    
     -   [使用OpenTSDB]
         -   [使用MRS客户端操作OpenTSDB指标数据](使用MRS客户端操作OpenTSDB指标数据.md)
         -   [使用curl命令操作OpenTSDB](使用curl命令操作OpenTSDB.md)
-
+    
     -   [使用Flink]
         -   [从零开始使用Flink](从零开始使用Flink.md)
+        -   [访问Flink的WebUI](访问Flink的WebUI.md)
         -   [配置管理Flink](配置管理Flink.md)
         -   [安全配置](安全配置.md)
         -   [安全加固](安全加固.md)
         -   [日志介绍](日志介绍.md)
         -   [性能调优](性能调优.md)
         -   [Shell操作命令](Shell操作命令.md)
-
+    
     -   [使用Impala]
         -   [从零开始使用Impala](从零开始使用Impala.md)
-
+    
     -   [使用Kudu]
         -   [从零开始使用Kudu](从零开始使用Kudu.md)
-
-    -   [使用MRS访问OBS]
-        -   [使用原生s3方式对接](使用原生s3方式对接.md)
-        -   [使用Huawei OBS方式对接](使用Huawei-OBS方式对接.md)
-        -   [使用ECS委托自动获取AK/SK访问OBS](使用ECS委托自动获取AK-SK访问OBS.md)
+    
+    -   [使用Alluxio]
+        -   [配置底层存储系统](配置底层存储系统.md)
+        -   [通过数据应用访问Alluxio](通过数据应用访问Alluxio.md)
+        -   [Alluxio常用操作](Alluxio常用操作.md)
+    
+    -   [使用Ranger]
+        -   [创建Ranger集群](创建Ranger集群.md)
+        -   [访问Ranger WebUI及同步Unix用户到Ranger WebUI](访问Ranger-WebUI及同步Unix用户到Ranger-WebUI.md)
+        -   [在Ranger中配置Hive的访问权限](在Ranger中配置Hive的访问权限.md)
+        -   [在Ranger中配置HBase的访问权限](在Ranger中配置HBase的访问权限.md)
+    
+    -   [使用MRS组件访问OBS]
+        -   [obs方式访问OBS](obs方式访问OBS.md)
+        -   [ECS委托方式访问OBS](ECS委托方式访问OBS.md)
+        -   [HDFS地址映射方式访问OBS](HDFS地址映射方式访问OBS.md)
+        -   [OBS访问日志转储至OBS](OBS访问日志转储至OBS.md)
 
 
 -   [安全性]
@@ -444,5 +465,5 @@
 -   [附录]
     -   [MRS所使用的弹性云服务器规格](MRS所使用的弹性云服务器规格.md)
     -   [MRS所使用的裸金属服务器规格](MRS所使用的裸金属服务器规格.md)
-    -   [修订记录]
+
 

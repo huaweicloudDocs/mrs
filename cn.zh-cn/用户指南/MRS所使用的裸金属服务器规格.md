@@ -20,7 +20,7 @@ AB.C.D
 
 ## 规格<a name="zh-cn_topic_0179742194_section1399585312355"></a>
 
-**表 1**  本地存储型（D2型）裸金属服务器的规格
+**表 1**  IO优化型（IO2型）裸金属服务器的规格
 
 <a name="zh-cn_topic_0179742194_table24263593453"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0179742194_row20450165974514"><th class="cellrowborder" valign="top" width="15%" id="mcps1.2.6.1.1"><p id="p189621387153"><a name="p189621387153"></a><a name="p189621387153"></a>规格名称/ID</p>

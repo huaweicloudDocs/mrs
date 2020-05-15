@@ -129,15 +129,24 @@ AB.C.D
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p10653543192920"><a name="zh-cn_topic_0179742194_p10653543192920"></a><a name="zh-cn_topic_0179742194_p10653543192920"></a>KVM</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row164571325903"><td class="cellrowborder" rowspan="4" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p10188451512"><a name="zh-cn_topic_0179742194_p10188451512"></a><a name="zh-cn_topic_0179742194_p10188451512"></a>S3型</p>
+<tr id="zh-cn_topic_0179742194_row164571325903"><td class="cellrowborder" rowspan="5" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p10188451512"><a name="zh-cn_topic_0179742194_p10188451512"></a><a name="zh-cn_topic_0179742194_p10188451512"></a>S3型</p>
 </td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p72667511316"><a name="zh-cn_topic_0179742194_p72667511316"></a><a name="zh-cn_topic_0179742194_p72667511316"></a>8</p>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p12290019135718"><a name="zh-cn_topic_0179742194_p12290019135718"></a><a name="zh-cn_topic_0179742194_p12290019135718"></a>4</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p192694512113"><a name="zh-cn_topic_0179742194_p192694512113"></a><a name="zh-cn_topic_0179742194_p192694512113"></a>16</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p3290319145717"><a name="zh-cn_topic_0179742194_p3290319145717"></a><a name="zh-cn_topic_0179742194_p3290319145717"></a>8</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p182748510114"><a name="zh-cn_topic_0179742194_p182748510114"></a><a name="zh-cn_topic_0179742194_p182748510114"></a>s3.2xlarge.2.linux.bigdata</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p17290111916570"><a name="zh-cn_topic_0179742194_p17290111916570"></a><a name="zh-cn_topic_0179742194_p17290111916570"></a>s3.xlarge.2.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p32787510117"><a name="zh-cn_topic_0179742194_p32787510117"></a><a name="zh-cn_topic_0179742194_p32787510117"></a>KVM</p>
+<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p72901319135714"><a name="zh-cn_topic_0179742194_p72901319135714"></a><a name="zh-cn_topic_0179742194_p72901319135714"></a>KVM</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0179742194_row26343155716"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p1015110875710"><a name="zh-cn_topic_0179742194_p1015110875710"></a><a name="zh-cn_topic_0179742194_p1015110875710"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p915118165716"><a name="zh-cn_topic_0179742194_p915118165716"></a><a name="zh-cn_topic_0179742194_p915118165716"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p4151986574"><a name="zh-cn_topic_0179742194_p4151986574"></a><a name="zh-cn_topic_0179742194_p4151986574"></a>s3.2xlarge.2.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1115115813573"><a name="zh-cn_topic_0179742194_p1115115813573"></a><a name="zh-cn_topic_0179742194_p1115115813573"></a>KVM</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0179742194_row136049301908"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p19286451118"><a name="zh-cn_topic_0179742194_p19286451118"></a><a name="zh-cn_topic_0179742194_p19286451118"></a>16</p>

@@ -269,9 +269,9 @@ MRS集群系统数据库用户包含OMS数据库用户、DBService数据库用�
 >数据库用户不能删除，否则可能导致集群或组件服务无法正常工作。  
 
 <a name="zh-cn_topic_0173178308_td88a77ed35f74ba58ec71944adb700ec"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0173178308_r3f2f2e5a358247e99299781263514b27"><th class="cellrowborder" valign="top" width="21.102110211021103%" id="mcps1.1.5.1.1"><p id="zh-cn_topic_0173178308_a8fea2203ff3c4e87b2ce27e3bc8ab10a"><a name="zh-cn_topic_0173178308_a8fea2203ff3c4e87b2ce27e3bc8ab10a"></a><a name="zh-cn_topic_0173178308_a8fea2203ff3c4e87b2ce27e3bc8ab10a"></a>类别</p>
+<table><thead align="left"><tr id="zh-cn_topic_0173178308_r3f2f2e5a358247e99299781263514b27"><th class="cellrowborder" valign="top" width="21.172117211721172%" id="mcps1.1.5.1.1"><p id="zh-cn_topic_0173178308_a8fea2203ff3c4e87b2ce27e3bc8ab10a"><a name="zh-cn_topic_0173178308_a8fea2203ff3c4e87b2ce27e3bc8ab10a"></a><a name="zh-cn_topic_0173178308_a8fea2203ff3c4e87b2ce27e3bc8ab10a"></a>类别</p>
 </th>
-<th class="cellrowborder" valign="top" width="21.102110211021103%" id="mcps1.1.5.1.2"><p id="zh-cn_topic_0173178308_a71838f8eb417474fb9da0c87da81a82e"><a name="zh-cn_topic_0173178308_a71838f8eb417474fb9da0c87da81a82e"></a><a name="zh-cn_topic_0173178308_a71838f8eb417474fb9da0c87da81a82e"></a>默认用户</p>
+<th class="cellrowborder" valign="top" width="21.03210321032103%" id="mcps1.1.5.1.2"><p id="zh-cn_topic_0173178308_a71838f8eb417474fb9da0c87da81a82e"><a name="zh-cn_topic_0173178308_a71838f8eb417474fb9da0c87da81a82e"></a><a name="zh-cn_topic_0173178308_a71838f8eb417474fb9da0c87da81a82e"></a>默认用户</p>
 </th>
 <th class="cellrowborder" valign="top" width="20.862086208620862%" id="mcps1.1.5.1.3"><p id="zh-cn_topic_0173178308_a6b8c0dccb89a4f1995c8bdfa97c090ac"><a name="zh-cn_topic_0173178308_a6b8c0dccb89a4f1995c8bdfa97c090ac"></a><a name="zh-cn_topic_0173178308_a6b8c0dccb89a4f1995c8bdfa97c090ac"></a>初始密码</p>
 </th>
@@ -279,9 +279,9 @@ MRS集群系统数据库用户包含OMS数据库用户、DBService数据库用�
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0173178308_r23e2048060c649f796e2da4451f26ba3"><td class="cellrowborder" rowspan="2" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0173178308_a77b1dfce79f545efa4af627a3993b302"><a name="zh-cn_topic_0173178308_a77b1dfce79f545efa4af627a3993b302"></a><a name="zh-cn_topic_0173178308_a77b1dfce79f545efa4af627a3993b302"></a>OMS数据库</p>
+<tbody><tr id="zh-cn_topic_0173178308_r23e2048060c649f796e2da4451f26ba3"><td class="cellrowborder" rowspan="2" valign="top" width="21.172117211721172%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0173178308_a77b1dfce79f545efa4af627a3993b302"><a name="zh-cn_topic_0173178308_a77b1dfce79f545efa4af627a3993b302"></a><a name="zh-cn_topic_0173178308_a77b1dfce79f545efa4af627a3993b302"></a>OMS数据库</p>
 </td>
-<td class="cellrowborder" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0173178308_a564f46a9a8a046fbb03cc124434167e0"><a name="zh-cn_topic_0173178308_a564f46a9a8a046fbb03cc124434167e0"></a><a name="zh-cn_topic_0173178308_a564f46a9a8a046fbb03cc124434167e0"></a>ommdba</p>
+<td class="cellrowborder" valign="top" width="21.03210321032103%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0173178308_a564f46a9a8a046fbb03cc124434167e0"><a name="zh-cn_topic_0173178308_a564f46a9a8a046fbb03cc124434167e0"></a><a name="zh-cn_topic_0173178308_a564f46a9a8a046fbb03cc124434167e0"></a>ommdba</p>
 </td>
 <td class="cellrowborder" valign="top" width="20.862086208620862%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0173178308_ab2447cdd41e9428ca1ff5211e734d283"><a name="zh-cn_topic_0173178308_ab2447cdd41e9428ca1ff5211e734d283"></a><a name="zh-cn_topic_0173178308_ab2447cdd41e9428ca1ff5211e734d283"></a>dbChangeMe@123456</p>
 </td>
@@ -295,9 +295,10 @@ MRS集群系统数据库用户包含OMS数据库用户、DBService数据库用�
 <td class="cellrowborder" valign="top" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0173178308_a7536eb415f6e4cc7ade6fefa85c59ee0"><a name="zh-cn_topic_0173178308_a7536eb415f6e4cc7ade6fefa85c59ee0"></a><a name="zh-cn_topic_0173178308_a7536eb415f6e4cc7ade6fefa85c59ee0"></a>OMS数据库数据访问用户</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0173178308_r4ea56ebeb5184a52ad24591ca75cb100"><td class="cellrowborder" rowspan="4" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0173178308_a5bf21fd8ad014379acc952eccbc04415"><a name="zh-cn_topic_0173178308_a5bf21fd8ad014379acc952eccbc04415"></a><a name="zh-cn_topic_0173178308_a5bf21fd8ad014379acc952eccbc04415"></a>DBService数据库</p>
+<tr id="zh-cn_topic_0173178308_r4ea56ebeb5184a52ad24591ca75cb100"><td class="cellrowborder" rowspan="5" valign="top" width="21.172117211721172%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0173178308_a5bf21fd8ad014379acc952eccbc04415"><a name="zh-cn_topic_0173178308_a5bf21fd8ad014379acc952eccbc04415"></a><a name="zh-cn_topic_0173178308_a5bf21fd8ad014379acc952eccbc04415"></a>DBService数据库</p>
+<p id="zh-cn_topic_0173178308_p16816104761518"><a name="zh-cn_topic_0173178308_p16816104761518"></a><a name="zh-cn_topic_0173178308_p16816104761518"></a></p>
 </td>
-<td class="cellrowborder" valign="top" width="21.102110211021103%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0173178308_ab65e71a4a6b74a3dac40b77f86ff8eae"><a name="zh-cn_topic_0173178308_ab65e71a4a6b74a3dac40b77f86ff8eae"></a><a name="zh-cn_topic_0173178308_ab65e71a4a6b74a3dac40b77f86ff8eae"></a>omm</p>
+<td class="cellrowborder" valign="top" width="21.03210321032103%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0173178308_ab65e71a4a6b74a3dac40b77f86ff8eae"><a name="zh-cn_topic_0173178308_ab65e71a4a6b74a3dac40b77f86ff8eae"></a><a name="zh-cn_topic_0173178308_ab65e71a4a6b74a3dac40b77f86ff8eae"></a>omm</p>
 </td>
 <td class="cellrowborder" valign="top" width="20.862086208620862%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0173178308_a63c64a4581724f9da63cdfd02f6ad012"><a name="zh-cn_topic_0173178308_a63c64a4581724f9da63cdfd02f6ad012"></a><a name="zh-cn_topic_0173178308_a63c64a4581724f9da63cdfd02f6ad012"></a>dbserverAdmin@123</p>
 </td>
@@ -323,6 +324,13 @@ MRS集群系统数据库用户包含OMS数据库用户、DBService数据库用�
 <td class="cellrowborder" valign="top" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0173178308_p57656838105120"><a name="zh-cn_topic_0173178308_p57656838105120"></a><a name="zh-cn_topic_0173178308_p57656838105120"></a>SqoopUser@</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0173178308_p39692320105120"><a name="zh-cn_topic_0173178308_p39692320105120"></a><a name="zh-cn_topic_0173178308_p39692320105120"></a>Loader连接DBService数据库的用户</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0173178308_row128151547151515"><td class="cellrowborder" valign="top" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0173178308_p128161347101511"><a name="zh-cn_topic_0173178308_p128161347101511"></a><a name="zh-cn_topic_0173178308_p128161347101511"></a>ranger</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0173178308_p16816154781516"><a name="zh-cn_topic_0173178308_p16816154781516"></a><a name="zh-cn_topic_0173178308_p16816154781516"></a>RangerUser@</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0173178308_p2081612477158"><a name="zh-cn_topic_0173178308_p2081612477158"></a><a name="zh-cn_topic_0173178308_p2081612477158"></a>Ranger连接DBService数据库的用户</p>
 </td>
 </tr>
 </tbody>

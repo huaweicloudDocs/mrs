@@ -10,12 +10,6 @@
 
 -   **[使用Flume客户端加密工具](使用Flume客户端加密工具.md)**  
 
--   **[Flume配置参数说明](Flume配置参数说明.md)**  
-
 -   **[样例：使用Flume采集日志并导入Kafka生产者](样例-使用Flume采集日志并导入Kafka生产者.md)**  
-
--   **[样例：使用Flume采集日志并导入OBS](样例-使用Flume采集日志并导入OBS.md)**  
-
--   **[样例：使用Flume监控OBS目录并上传文件到HDFS](样例-使用Flume监控OBS目录并上传文件到HDFS.md)**  
 
 

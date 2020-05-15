@@ -99,7 +99,7 @@
     5.  <a name="zh-cn_topic_0191813945_li1487713813414"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     6.  单击“Flume  \>  实例“。
     7.  单击进入故障节点的Flume实例页面，查看监控指标“Source速度指标”，检查告警中的Source速度是否为0。

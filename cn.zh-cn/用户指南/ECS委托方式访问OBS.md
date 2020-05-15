@@ -1,18 +1,23 @@
 # ECS委托方式访问OBS<a name="ZH-CN_TOPIC_0205775032"></a>
 
-MRS支持通过IAM服务的“委托”机制， 实现使用ECS自动获取的临时AK/SK访问OBS。避免了AK/SK直接暴露在配置文件中的风险。
+MRS支持通过IAM服务的“委托”机制， 接暴露在配置文件中的风险。
 
-MRS 2.0.5及之后版本集群的Hadoop、Hive、Spark、HBase、Presto、Flink组件支持该功能。
+MRS 2.0.5及之后版本集群的Hadoop、Hive、Spark、HBase、Presto、Flink组件支持该功能。上的故事吧
+
+MRS提供两种使用**obs://**协议访问OBS的方式：
+
+-   在MRS集群中配置AK/SK，AK/SK会明文暴露在配置文件中，请谨慎使用，具体请参考[obs方式访问OBS](obs方式访问OBS.md)。
+-   通过为MRS集群绑定ECS委托方式访问OBS，避免了AK/SK直接暴露在配置文件中的风险，具体请参考本章节。
 
 ## 前提条件<a name="section818013281663"></a>
 
-请先在IAM控制台中开通细粒度策略，开通方法请参见：[申请细粒度访问控制公测](https://support.huaweicloud.com/usermanual-iam/iam_01_019.html)。
+请先在IAM控制台中开通细粒度策略。
 
 ## 步骤一：创建具有访问OBS权限的ECS委托<a name="section1566963623113"></a>
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->MRS在IAM的委托列表中预置了**MRS\_ECS\_DEFAULT\_AGENCY**委托，可在集群创建过程中可以选择该委托，该委托拥有对象存储服务的OBS Operator权限和在集群所在区域拥有CES Admin（对开启细粒度策略的用户）、CES Administrator和KMS Administrator权限。同时请勿在IAM修改**MRS\_ECS\_DEFAULT\_AGENCY**委托。  
->如需使用预置的委托，请跳过创建委托步骤。如需使用自定义委托，请参考如下步骤进行创建委托。  
+>-   MRS在IAM的委托列表中预置了**MRS\_ECS\_DEFAULT\_AGENCY**委托，可在集群创建过程中可以选择该委托，该委托拥有对象存储服务的OBS OperateAccess权限和在集群所在区域拥有CES FullAccess（对开启细粒度策略的用户）、CES Administrator和KMS Administrator权限。同时请勿在IAM修改**MRS\_ECS\_DEFAULT\_AGENCY**委托。  
+>-   如需使用预置的委托，请跳过创建委托步骤。如需使用自定义委托，请参考如下步骤进行创建委托（创建或修改委托需要用户具有Security Administrator权限。）。  
 
 1.  登录IAM服务控制台。
 2.  选择“委托 \> 创建委托”。
@@ -24,10 +29,10 @@ MRS 2.0.5及之后版本集群的Hadoop、Hive、Spark、HBase、Presto、Flink�
     ![](figures/创建委托.png "创建委托")
 
 6.  在“权限选择”区域中，单击“配置权限”。
-7.  在弹出页面中搜索“OBS Operator”策略，勾选“OBS Operator”策略并单击“确定”如[图2](#fig2430193414432)所示。
+7.  在弹出页面中搜索“OBS OperateAccess”策略，勾选“OBS OperateAccess”策略并单击“确定”如[图2](#fig2430193414432)所示。
 
     **图 2**  配置权限<a name="fig2430193414432"></a>  
-    ![](figures/配置权限-1.png "配置权限-1")
+    ![](figures/配置权限.png "配置权限")
 
 8.  单击“确定”完成委托创建。
 
@@ -37,28 +42,24 @@ MRS 2.0.5及之后版本集群的Hadoop、Hive、Spark、HBase、Presto、Flink�
 
 1.  登录MRS控制台，在导航栏选择“集群列表 \> 现有集群”。
 2.  单击集群名称，进入集群详情页面。
-3.  在集群详情页的“概览”页签，单击委托右侧的![](figures/zh-cn_image_0216500740.png)选择需要绑定的委托，或单击“新建委托”进入IAM控制台进行创建后再在此处进行绑定。
+3.  在集群详情页的“概览”页签，单击委托右侧的“管理委托”选择需要绑定的委托，或单击“新建委托”进入IAM控制台进行创建后再在此处进行绑定。
 
     **图 3**  绑定委托<a name="fig847198191"></a>  
-    ![](figures/绑定委托-10.png "绑定委托-10")
+    ![](figures/绑定委托-42.png "绑定委托-42")
 
 
 **方法二：在创建集群时绑定**
 
 1.  登录MRS服务控制台。
-2.  单击“购买集群”，在页面右上角切换至新版购买界面。
-
-    **图 4**  切换新版购买页面<a name="fig11941210240"></a>  
-    ![](figures/切换新版购买页面-11.png "切换新版购买页面-11")
-
+2.  单击“购买集群”。
 3.  选择“自定义购买”页签。
 
-    **图 5**  自定义购买集群<a name="fig13264172021413"></a>  
-    ![](figures/自定义购买集群-12.png "自定义购买集群-12")
+    **图 4**  自定义购买集群<a name="fig13264172021413"></a>  
+    ![](figures/自定义购买集群-43.png "自定义购买集群-43")
 
 4.  配置相关参数，在“高级配置”页签“委托”中选择[步骤一：创建具有访问OBS权限的ECS委托](#section1566963623113)所创建的委托。
 
-    **图 6**  配置委托<a name="fig19350115912619"></a>  
-    ![](figures/配置委托-13.png "配置委托-13")
+    **图 5**  配置委托<a name="fig19350115912619"></a>  
+    ![](figures/配置委托-44.png "配置委托-44")
 
 

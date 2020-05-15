@@ -47,6 +47,9 @@ HA证书用于主备进程与高可用进程的通信过程中加密数据，实
     **cp -arp $\{OMS\_RUN\_PATH\}/workspace0/ha/local/cert/root-ca.\* $\{BIGDATA\_HOME\}/om-0.0.1/security/certHA**
 
 5.  使用“omm”用户将主管理节点生成的“root-ca.crt”和“root-ca.pem”复制到备管理节点“$\{BIGDATA\_HOME\}/om-0.0.1/security/certHA”目录。
+
+    **scp $\{BIGDATA\_HOME\}/om-0.0.1/security/certHA/root-ca.\* omm@备管理节点IP:$\{BIGDATA\_HOME\}/om-0.0.1/security/certHA**
+
 6.  <a name="li61539631113353"></a>执行以下命令，生成HA用户证书并自动替换。
 
     **sh $\{BIGDATA\_HOME\}/om-0.0.1/sbin/replacehaSSLCert.sh**

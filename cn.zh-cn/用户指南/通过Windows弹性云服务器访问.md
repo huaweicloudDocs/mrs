@@ -18,7 +18,7 @@ MRS支持通过Windows弹性云服务器访问开源组件Web站点。该方式�
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >如果ECS的安全组和MRS集群的“安全组“不同，用户可以选择以下任一种方法修改配置：  
-    >-   将ECS的安全组修改为MRS集群的安全组，请参见[更改安全组](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0093492517.html)。  
+    >-   将ECS的安全组修改为MRS集群的安全组，请参见[更改安全组](https://support.huaweicloud.com/usermanual-ecs/ecs_03_0606.html)。  
     >-   在集群Master节点和Core节点的安全组中添加两条安全组规则使ECS可以访问集群，“协议“需选择为“TCP“，“端口“需分别选择“28443“和“20009“。请参见[创建安全组](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0013748715.html)。  
 
 4.  在VPC管理控制台，申请一个弹性IP地址，并与ECS绑定。
@@ -37,7 +37,7 @@ MRS支持通过Windows弹性云服务器访问开源组件Web站点。该方式�
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   集群控制台地址：远程登录Master2节点，执行“ifconfig”命令，系统回显中“eth0:wsom”表示集群控制台地址，请记录“inet”的实际参数值。如果在Master2节点无法查询到集群控制台地址，请切换到Master1节点查询并记录。如果只有一个Master节点时，直接在该Master节点查询并记录。  
-    >-   如果使用其他MRS集群用户访问Manager，第一次访问时需要修改密码。新密码需要满足集群当前的用户密码复杂度策略。请咨询管理员。  
+    >-   如果使用其他MRS集群用户访问Manager，第一次访问时需要修改密码。新密码需要满足集群当前的用户密码复杂度策略。  
     >-   默认情况下，在登录时输入5次错误密码将锁定用户，需等待5分钟自动解锁。  
 
 7.  请参考[开源组件Web站点](开源组件Web站点.md)页面提供的站点地址访问开源组件Web站点。

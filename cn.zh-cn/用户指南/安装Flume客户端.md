@@ -16,8 +16,8 @@
 2.  登录MRS管理控制台，单击集群名称进入集群详情页，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
 3.  <a name="l0386e6ce728545779987f3d40632a15d"></a>单击“下载客户端”。
     1.  在“客户端类型“选择“完整客户端“。
@@ -35,7 +35,7 @@
         -   密码：输入创建集群时设置的root用户密码。
         -   SSH私钥：选择并上传创建集群时使用的密钥文件。
 
-        针对MRS 1.8.2之前版本，在“SSH私钥“选择并上传创建B集群时使用的密钥文件。
+        针对MRS 1.8.2之前版本，在“SSH私钥“选择并上传创建集群时使用的密钥文件。
 
     6.  单击“确定“开始生成客户端文件。
 
@@ -52,7 +52,7 @@
         ```
 
 4.  选择“Flume”服务，单击“实例“，查看任意一个Flume实例和两个MonitorServer实例的“业务IP“。
-5.  使用VNC方式，登录弹性云服务器。参见[远程登录（VNC方式）](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0093263548.html)\)。
+5.  使用VNC方式，登录弹性云服务器。参见[远程登录（VNC方式）](https://support.huaweicloud.com/usermanual-ecs/ecs_03_0136.html)\)。
 
     所有镜像均支持Cloud-init特性。针对MRS1.6.2版本（不包含）前的集群，Cloud-init预配置的用户名“linux”，密码为“cloud.1234”，如果用户修改了默认密码请使用新密码。针对MRS1.6.2版本（包含）及以后的集群，Cloud-init预配置的用户名“root”，密码为创建集群时设置的密码。首次登录建议修改。
 

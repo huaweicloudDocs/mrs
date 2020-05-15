@@ -76,7 +76,7 @@
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  选择“Storm \> Supervisor“，进入Storm服务管理页面。
     3.  查看“角色“中是否存在状态为故障或者是恢复中的Supervisor实例。

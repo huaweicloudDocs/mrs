@@ -73,7 +73,7 @@ Spark服务恢复时，告警清除。
     1.  登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  在告警列表中，查看是否存在以下告警：
         1.  ALM-25500 KrbServer服务不可用

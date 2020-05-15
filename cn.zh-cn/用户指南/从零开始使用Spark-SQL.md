@@ -8,7 +8,7 @@ Spark提供类似SQL的Spark SQL语言操作结构化数据，本章节提供从
 
 1.  登录管理控制台。
 2.  单击用户名，在下拉列表中单击“我的凭证“。
-3.  单击“管理访问密钥“。
+3.  单击“访问密钥“。
 4.  单击“新增访问密钥“，进入“新增访问密钥“页面。
 5.  输入登录密码和短信验证码，单击“确定“，下载密钥，请妥善保。
 
@@ -32,24 +32,25 @@ Spark提供类似SQL的Spark SQL语言操作结构化数据，本章节提供从
 
         sparksql仅为示例，桶名称必须全局唯一，否则会创建桶失败。
 
-    3.  在sparksql桶下单击“新建文件夹“，创建input文件夹。
-    4.  进入input文件夹，单击![](figures/icon_mrs_obsmanu.jpg)，选择本地的text文件，然后单击“上传“。
+    3.  单击sparksql桶名称，并选择“对象”。
+    4.  单击“新建文件夹“，创建input文件夹。
+    5.  进入input文件夹，单击“上传对象 \> 添加文件”，选择本地的txt文件，然后单击“上传“。
 
         上传完成后如[图1](#f5f56c7f43bd1427d89bc3ce200aeb43e)所示。
 
-        **图 1**  输入文件列表<a name="f5f56c7f43bd1427d89bc3ce200aeb43e"></a>  
-        ![](figures/输入文件列表.png "输入文件列表")
+        **图 1**  上传文件<a name="f5f56c7f43bd1427d89bc3ce200aeb43e"></a>  
+        ![](figures/上传文件.png "上传文件")
 
-3.  登录MRS控制台，在左侧导航栏选择“集群列表 \> 现有集群“，单击名称为“mrs\_20160907“的集群。“mrs\_20160907“集群为[创建集群](创建集群-入门.md)中创建的集群。
-4.  将OBS中的text文件导入至HDFS中。
+3.  登录MRS控制台，在左侧导航栏选择“集群列表 \> 现有集群“，单击集群名称。创建集群请参考[自定义购买集群](自定义购买集群.md)。
+4.  将OBS中的txt文件导入至HDFS中。
     1.  选择“文件管理“。
-    2.  在“HDFS文件列表“页签中选择omm文件夹单击“新建“，创建一个名称为userinput的文件夹。
+    2.  在“HDFS文件列表“页签中单击“新建“，创建一个名称为userinput的文件夹。
     3.  进入userinput文件夹，单击“导入数据“。
     4.  选择OBS和HDFS路径，单击“确定“。
 
-        OBS路径：s3a://sparksql/input/sparksql-test.txt
+        OBS路径：obs://sparksql/input/sparksql-test.txt
 
-        HDFS路径：/user/omm/userinput
+        HDFS路径：/user/userinput
 
 5.  提交Spark SQL语句。
     1.  在MRS控制台选择“作业管理“，具体请参见[运行SparkSql作业](运行SparkSql作业.md)。
@@ -68,7 +69,7 @@ Spark提供类似SQL的Spark SQL语言操作结构化数据，本章节提供从
 
         -   方式一：创建一个src\_data表，将数据源中的数据一行一行写入src\_data表中。
             -   数据源存储在HDFS的“/user/omm/userinput“文件夹下：**create external table** _src\_data_**\(line string\) row format delimited fields terminated by '\\\\n' stored as textfile location** '_/user/__omm/__userinput_';
-            -   数据源存储在OBS的“/sparksql/input“文件夹下：**create external table** _src\_data_**\(line string\) row format delimited fields terminated by '\\\\n' stored as textfile location** '_s3a://AK:SK@sparksql/input_';
+            -   数据源存储在OBS的“/sparksql/input“文件夹下：**create external table** _src\_data_**\(line string\) row format delimited fields terminated by '\\\\n' stored as textfile location** '_obs://AK:SK@sparksql/input_';
 
                 AK/SK获取方法，请参见[前提条件](#sf409cb8b039d45e191bed0dc51e447e3)。
 
@@ -102,12 +103,12 @@ Spark提供类似SQL的Spark SQL语言操作结构化数据，本章节提供从
         **drop table src\_data;**
 
     5.  单击“检查“，检查输入语句的语法是否正确。
-    6.  单击“提交“。
+    6.  单击“确定“。
 
-        Spark SQL语句提交后，是否执行成功会在“执行结果“中展示，执行结果详情可在“查询结果集“中查看。
+        Spark SQL语句提交后，是否执行成功会在“执行结果“列中展示。
 
 6.  删除集群。
 
-    请参见《用户指南》中的[删除集群](删除集群.md)章节。
+    请参见[删除集群](删除集群.md)章节。
 
 

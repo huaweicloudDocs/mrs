@@ -24,7 +24,7 @@ Flume支持将采集的日志信息导入到Kafka。
 2.  登录MRS管理控制台，单击集群名称进入集群详情页，选择“组件管理 \> Flume \> 实例”，查看任一部署Flume角色节点的“业务IP地址“。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理  \>  Flume  \>  实例“，查看任一部署Flume角色节点的“业务IP地址“。  
+    >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理  \>  Flume  \>  实例“，查看任一部署Flume角色节点的“业务IP地址“。  
 
 3.  将此节点上的用户认证文件，复制到安装Flume客户端的节点，保存到Flume客户端中“Flume客户端安装目录/fusioninsight-flume-1.6.0/conf“目录。
     -   针对MRS 1.8.0之前版本，文件完整路径为“/opt/Bigdata/FusionInsight/FusionInsight-Flume-1.6.0/flume/conf/flume.keytab“

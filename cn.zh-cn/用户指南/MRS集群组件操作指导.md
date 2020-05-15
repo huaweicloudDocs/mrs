@@ -34,6 +34,10 @@
 
 -   **[使用Kudu](使用Kudu.md)**  
 
--   **[使用MRS访问OBS](使用MRS访问OBS.md)**  
+-   **[使用Alluxio](使用Alluxio.md)**  
+
+-   **[使用Ranger](使用Ranger.md)**  
+
+-   **[使用MRS组件访问OBS](使用MRS组件访问OBS.md)**  
 
 

@@ -73,7 +73,7 @@
     1.  打开MRS集群详情页面，在实时告警列表中，单击此告警。在“告警详情”区域，获取告警所在主机IP地址。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面查看告警信息。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
 
     2.  登录告警节点。
     3.  执行命令**cat /proc/sys/kernel/pid\_max**，查看系统当前运行的PID最大值“pid\_max“。

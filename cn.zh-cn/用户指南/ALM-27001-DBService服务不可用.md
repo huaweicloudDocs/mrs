@@ -70,7 +70,7 @@ DBService服务恢复时，告警清除。
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  单击“DBService \> 实例”。
     3.  查看是否有主实例存在。

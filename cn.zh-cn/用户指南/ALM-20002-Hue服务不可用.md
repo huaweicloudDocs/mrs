@@ -71,7 +71,7 @@
 1.  登录MRS集群详情页面，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
 2.  在服务列表中查看“KrbServer”的“健康状态”是否为“良好”。
     -   是，执行[5](#zh-cn_topic_0191813890_li1965161312249)。
@@ -88,7 +88,7 @@
 1.  <a name="zh-cn_topic_0191813890_li1965161312249"></a>登录MRS集群详情页面，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
 2.  在服务列表中查看DBService服务健康状态是否为“良好”。
     -   是，执行[9](#zh-cn_topic_0191813890_zh-cn_topic_0087039274_li3066850394312)。

@@ -79,7 +79,7 @@ HDFS存储数据丢失，HDFS可能会进入安全模式，无法提供写服务
     1.  在MRS集群详情页面，单击“组件管理 \> HDFS \> 实例”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS \> 实例”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS \> 实例”。  
 
     2.  查看所有DataNode实例的状态是否为“良好”。
         -   是，执行[3](#zh-cn_topic_0191813959_li572522141314)。

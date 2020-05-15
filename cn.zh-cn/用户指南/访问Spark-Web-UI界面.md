@@ -18,10 +18,10 @@ Spark主要有两个Web页面。
 1.  登录集群详情页面，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
-2.  选择“Yarn”并在“Yarn 概述“中“Presto WebUI“中单击“ResourceManager Web UI”对应的“ResourceManager”进入Web界面。
+2.  选择“Yarn”并在“Yarn 概述“中“ResourceManager Web UI“中单击“ResourceManager Web UI”对应的“ResourceManager”进入Web界面。
 
     **图 1**  ResourceManager Web UI<a name="fig93577234395"></a>  
     ![](figures/ResourceManager-Web-UI.png "ResourceManager-Web-UI")
@@ -40,13 +40,13 @@ Spark主要有两个Web页面。
 1.  登录集群详情页面，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
 2.  选择“Spark”并在“Spark 概述“中“Spark Web UI“中单击“Spark Web UI”对应的“JobHistory”进入Web界面。
 
     **图 4**  ResourceManager Web UI<a name="fig1882412564519"></a>  
-    ![](figures/ResourceManager-Web-UI-9.png "ResourceManager-Web-UI-9")
+    ![](figures/ResourceManager-Web-UI-41.png "ResourceManager-Web-UI-41")
 
     **图 5**  Spark History Server<a name="fig14824556452"></a>  
     ![](figures/Spark-History-Server.png "Spark-History-Server")

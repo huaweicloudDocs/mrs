@@ -79,7 +79,7 @@
     2.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step4"></a>在MRS集群详情页面，单击“组件管理 \> HDFS \> 实例”，检查对应DataNode是否处于停止状态。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS \> 实例”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS \> 实例”。  
 
         -   是，执行[1.c](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step5)。
         -   否，执行[2.a](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step6)。
@@ -101,7 +101,7 @@
     1.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step8"></a>在MRS集群详情页面单击“告警管理”，查看否存在“ALM-14008 HDFS DataNode内存使用率超过阈值”的告警。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面查看告警信息。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
 
         -   是，执行[3.b](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step13)。
         -   否，执行[4.a](#zh-cn_topic_0191813881_step9)。
@@ -118,7 +118,7 @@
     1.  <a name="zh-cn_topic_0191813881_step9"></a>在MRS集群详情页面单击“告警管理”，查看是否存在“ALM-14007 HDFS NameNode内存使用率超过阈值”的告警。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面查看告警信息。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
 
         -   是，执行[4.b](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step14)。
         -   否，执行[5](#zh-cn_topic_0191813881_li572522141314)。

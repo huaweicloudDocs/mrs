@@ -69,7 +69,7 @@
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  <a name="zh-cn_topic_0191813953_aalm-25500_mmccppss_id"></a>选择“KrbServer \> 实例”。进入KrbServer实例页面查看KrbServer服务所在节点的主机名。
     3.  在“告警管理”页面，查看是否有ALM-12006 节点故障告警产生。
@@ -89,7 +89,7 @@
     1.  <a name="zh-cn_topic_0191813953_li14191191521615"></a>登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  查看是否有ALM-12004 OLdap资源异常告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813953_aalm-25500_mmccppss_step_8)。

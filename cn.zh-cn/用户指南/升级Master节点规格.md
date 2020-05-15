@@ -76,16 +76,8 @@
 2.  选择  “集群列表  \>  现有集群“  ，选中需要升级Master节点规格的集群并单击集群名，进入集群信息页面。
 3.  在“节点管理“页签Master节点组的“操作”列选择“升级规格“。
 4.  选择升级后的规格，单击“下一步“。
-
-    **图 4**  选择升级后Master规格<a name="fig138415522612"></a>  
-    ![](figures/选择升级后Master规格.png "选择升级后Master规格")
-
 5.  在弹出的“确认“页面确认升级后的节点规格及费用，确认无误后单击“确认“。
 6.  确保已停止备Master节点的所有服务（详细操作请参考**Master节点规格升级前准备**的[1](#li487181481727)-[12](#li12169193211415)），在“升级Master规格“页面勾选“我已确认关闭备master节点上的所有服务“和“若升级前未成功停止所有服务，可能导致数据保存失败或损坏“两项提示内容，并单击“提交订单“。
-
-    **图 5**  选择升级备Master节点<a name="fig15289115320139"></a>  
-    ![](figures/选择升级备Master节点.png "选择升级备Master节点")
-
 7.  在弹出的“警告“页面，再次确认已确认关闭备master节点上的所有服务，然后单击“确定“开始升级备Master节点的规格。
 
     节点规格升级需要时间，请耐心等待。升级成功后集群状态更新为“Master备节点升级完成”，否则请联系运维人员处理。
@@ -95,7 +87,7 @@
     1.  分别访问主备节点的NameNode WebUI界面，NameNode WebUI访问方法请参考[11](#li47118211017)。
     2.  <a name="li67484244318"></a>分别在NameNode WebUI页面的标题栏选择“Overview”，查看并记录主备节点的Namenode ID。记录后不要关闭该页面。
 
-        **图 6**  主节点的Namenode ID<a name="fig72881017493"></a>  
+        **图 4**  主节点的Namenode ID<a name="fig72881017493"></a>  
         ![](figures/主节点的Namenode-ID.png "主节点的Namenode-ID")
 
     3.  任意登录一个Master节点的弹性云服务器，执行如下命令配置环境变量。
@@ -120,25 +112,17 @@
 
     6.  进入[9.b](#li67484244318)中未关闭的NameNode WebUI页面，然后刷新该页面，可以看到该NameNode已经主备倒换完成。
 
-        **图 7**  NameNode<a name="fig3872103795519"></a>  
+        **图 5**  NameNode<a name="fig3872103795519"></a>  
         ![](figures/NameNode.png "NameNode")
 
 10. 参考**Master节点规格升级前准备**的[1](#li487181481727)-[12](#li12169193211415)，停止主Master节点的所有服务。
 11. 在“升级Master规格“页面勾选“我已确认启动备master节点上的所有服务“和“我已确认关闭主master节点的所有服务“，并单击“提交主节点升级订单“。
-
-    **图 8**  备节点升级成功<a name="fig165215581408"></a>  
-    ![](figures/备节点升级成功.png "备节点升级成功")
-
 12. 在弹出的“确认“页面再次确认已停止主Master节点的所有服务，然后单击“确定“开始升级主Master节点的规格。
 
     节点规格升级过程需要时间，请您耐心等待。升级成功后集群状态更新为“Master升级规格成功”，否则请联系运维人员处理。
 
 13. 参考**Master节点规格升级后操作**的[1](#li1571022151014)-[11](#li47118211017)完成主Master节点所有服务的启动及参数配置。
 14. 在“升级Master规格“页面勾选“我已确认启动主master节点上的所有服务“，并单击“确定“完成Master规格升级。
-
-    **图 9**  主Master节点规格升级成功<a name="fig2341161665417"></a>  
-    ![](figures/主Master节点规格升级成功.png "主Master节点规格升级成功")
-
 
 **Master节点规格升级后操作**
 
@@ -176,9 +160,9 @@
     -   针对MRS 1.8.0及之后版本
         1.  选择“服务管理 \> HDFS \> 服务状态”。
         2.  在“HDFS 概述”栏目，单击“NameNode WebUI“右侧升级完成的备节点或主节点的“NameNode“。
-        3.  进入NameNode WebUI界面，在标题栏选择“Startup Progress”，确保Percent Complete显示100%后再执行下一步，如[图10](#fig111356111213)所示。
+        3.  进入NameNode WebUI界面，在标题栏选择“Startup Progress”，确保Percent Complete显示100%后再执行下一步，如[图6](#fig111356111213)所示。
 
-            **图 10**  NameNode的启动状态<a name="fig111356111213"></a>  
+            **图 6**  NameNode的启动状态<a name="fig111356111213"></a>  
             ![](figures/NameNode的启动状态.png "NameNode的启动状态")
 
     -   针对MRS 1.8.0之前版本
@@ -195,7 +179,7 @@
 
             >![](public_sys-resources/icon-note.gif) **说明：**   
             >如果ECS的安全组和Master节点的“默认安全组“不同，用户可以选择以下任一种方法修改配置：  
-            >-   将ECS的安全组修改为Master节点的默认安全组，请参见[更改安全组](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0093492517.html)。  
+            >-   将ECS的安全组修改为Master节点的默认安全组，请参见[更改安全组](https://support.huaweicloud.com/usermanual-ecs/ecs_03_0606.html)。  
             >-   在集群Master节点和Core节点的安全组添加两条安全组规则使ECS可以访问集群，“协议“需选择为“TCP“，“端口“需分别选择“28443“和“20009“。请参见[创建安全组](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0013748715.html)。  
 
         4.  在VPC管理控制台，申请一个弹性IP地址，并与ECS绑定。
@@ -220,9 +204,9 @@
 
                 http://主NameNode角色实例IP地址:9870/dfshealth.html\#tab-overview
 
-        7.  进入NameNode WebUI界面，在标题栏选择“Startup Progress”，确保Percent Complete显示100%后再执行下一步，如[图11](#f687f1ab2505e4f519765e6f2a26208e9)所示。
+        7.  进入NameNode WebUI界面，在标题栏选择“Startup Progress”，确保Percent Complete显示100%后再执行下一步，如[图7](#f687f1ab2505e4f519765e6f2a26208e9)所示。
 
-            **图 11**  NameNode的启动状态<a name="f687f1ab2505e4f519765e6f2a26208e9"></a>  
+            **图 7**  NameNode的启动状态<a name="f687f1ab2505e4f519765e6f2a26208e9"></a>  
             ![](figures/NameNode的启动状态.png "NameNode的启动状态")
 
 

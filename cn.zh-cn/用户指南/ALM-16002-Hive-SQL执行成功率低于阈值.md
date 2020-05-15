@@ -112,7 +112,7 @@
     1.  <a name="zh-cn_topic_0191813927_li51692872"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  在服务列表查看HDFS、Yarn、ZooKeeper等服务是否正常。
         -   是，执行[4.e](#zh-cn_topic_0191813927_step_6)。

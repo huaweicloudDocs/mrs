@@ -74,7 +74,7 @@ DataNode容量不足，会影响到HDFS的数据写入。
     1.  登录MRS集群详情页面，在“告警管理”页面查看是否存在“ALM-14001 HDFS磁盘空间使用率超过阈值”告警。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面查看告警信息。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面查看告警信息。  
 
         -   是，执行[1.b](#zh-cn_topic_0191813920_yt2)。
         -   否，执行[2.a](#zh-cn_topic_0191813920_li64268160)。

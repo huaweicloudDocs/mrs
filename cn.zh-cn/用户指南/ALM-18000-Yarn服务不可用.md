@@ -71,7 +71,7 @@ Yarn服务恢复时，告警恢复。
     1.  登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  在告警列表中，查看是否有“ALM-13000 ZooKeeper服务不可用”产生。
         -   是，执行[1.c](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss2)。
@@ -85,7 +85,7 @@ Yarn服务恢复时，告警恢复。
     1.  登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_ss3"></a>在告警列表中，查看是否有HDFS相关告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss4)。
@@ -99,7 +99,7 @@ Yarn服务恢复时，告警恢复。
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_ss5"></a>单击“Yarn”。
     3.  在“Yarn 概述”中，检查Yarn集群中是否存在主ResourceManager节点。
@@ -110,7 +110,7 @@ Yarn服务恢复时，告警恢复。
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  <a name="zh-cn_topic_0191813947_step_5"></a>单击“Yarn \> 实例”。
     3.  查看NodeManager的“健康状态”，检查是否有处于非健康状态的节点。

@@ -33,9 +33,9 @@ HBase是基于Key-Value的分布式存储数据库，基于rowkeys对表中的�
 1.  登录集群详情页面，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
-2.  选择“HBase \> 服务配置”，设置“参数类别”为“全部配置”，进入HBase配置界面。
+2.  选择“HBase \> 服务配置”，将“基础配置”切换为“全部配置”，进入HBase配置界面。
 
 <a name="table55481850135515"></a>
 <table><thead align="left"><tr id="row1860265013558"><th class="cellrowborder" valign="top" width="22.86%" id="mcps1.1.5.1.1"><p id="p146026506552"><a name="p146026506552"></a><a name="p146026506552"></a>配置入口</p>

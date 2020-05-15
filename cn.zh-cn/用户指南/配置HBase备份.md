@@ -30,14 +30,14 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 1.  <a name="li1966213718714"></a>登录集群详情页面，选择“组件管理”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903632.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
-2.  选择“HBase \> 服务配置”，设置“参数类别”为“全部配置”，进入HBase配置界面。
-3.  <a name="li66750118154955"></a>选择“RegionServer \> Replication”，查看“hbase.replication”配置项的值是否为“true”。如果参数值为“false”，配置“hbase.replication”为“true”。
+2.  选择“HBase \> 服务配置”，将“基础配置”切换为“全部配置”，进入HBase配置界面。
+3.  选择“RegionServer \> Replication”，查看“hbase.replication”配置项的值是否为“true”。如果参数值为“false”，配置“hbase.replication”为“true”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >MRS 2.0.1及其以后版本中该配置已被移除，需跳过步骤[3](#li66750118154955)。  
+    >MRS 2.0.1及其以后版本中该配置已被移除，需跳过该步骤。  
 
 4.  （可选）如[表1](#table6909942154955)所示，为HBase备份操作过程中的可选配置项，您可以根据描述来进行参数配置，或者使用缺省提供的值。
 
@@ -122,7 +122,7 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
     否，执行[11](#li33254619154955)。
 
-2.  <a name="li57688977154955"></a>选择“组件管理 \> HBase \> 服务配置”，设置“参数类别”为“全部配置”，进入HBase配置界面。
+2.  <a name="li57688977154955"></a>选择“HBase \> 服务配置”，将“基础配置”切换为“全部配置”，进入HBase配置界面。
 3.  在主、备集群的HBase配置界面，搜索并修改“hbase.replication.cluster.id”参数，表示主、备集群HBase的id，例如主集群HBase的id配置为"replication1"，备集群HBase的id配置为"replication2"，用于主备集群的连接。为了节省数据开销建议参数值长度不超过30。
 4.  <a name="li3244131341713"></a>在备集群的HBase配置界面，搜索并修改“hbase.replication.conf.dir”参数，表示备集群中所使用主集群客户端的HBase配置，用于启用bulkload数据备份功能时的数据备份。参数值为路径名，例如"/home"。
 
@@ -139,7 +139,7 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
 
     界面提示“操作成功。”，单击“完成”，服务成功启动。
 
-2.  <a name="li33254619154955"></a>在主备集群，选择“服务管理 \> 下载客户端”，请参见[更新客户端](更新客户端.md)，更新客户端配置文件。
+2.  <a name="li33254619154955"></a>在主备集群，选择“组件管理 \> 下载客户端”，请参见[更新客户端](更新客户端.md)，更新客户端配置文件。
 
 **同步主集群表数据。（主集群无数据可不执行）**
 
@@ -230,8 +230,8 @@ HBase集群备份作为提高HBase集群系统高可用性的一个关键特性�
         -   针对MRS 2.0.1之前版本，仅需执行**：add\_peer** **'replication2',**CLUSTER\_KEY =\>**** **'192.168.40.2,192.168.40.3,192.168.40.4:2181:/hbase'**
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >1.  单击“服务管理 \> ZooKeeper \> 实例”，获取ZooKeeper业务IP地址。  
-        >2.  单击“服务管理 \> ZooKeeper \> 服务配置”，“参数类别”选择”全部配置“，搜索获取clientPort,即为侦听客户端连接的端口。  
+        >1.  单击“组件管理 \> ZooKeeper \> 实例”，获取ZooKeeper业务IP地址。  
+        >2.  单击“组件管理 \> ZooKeeper \> 服务配置”，将“基础配置”切换为”全部配置“，搜索获取clientPort,即为侦听客户端连接的端口。  
         >3.  执行**list\_peers**命令判断主备备份关系添加结果，当界面提示以下信息表示成功。  
         >    ```  
         >    hbase(main):003:0> list_peers  

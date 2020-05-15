@@ -71,7 +71,7 @@ HBase服务恢复时，告警清除。
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  在服务列表中，查看ZooKeeper健康状态是否为“良好”。
         -   是，执行[2.a](#zh-cn_topic_0191813964_aalm-19000_mmccppss_hdfs)。

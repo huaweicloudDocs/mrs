@@ -69,7 +69,7 @@
     1.  登录MRS集群详情页面，选择“告警管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
 
     2.  查看是否有“ALM-14000 HDFS服务不可用”告警产生。
         -   是，参考“ALM-14000 HDFS服务不可用”的处理步骤处理该告警。
@@ -86,7 +86,7 @@
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     2.  <a name="zh-cn_topic_0191813917_li950355316374"></a>在MRS的服务列表中，查看HDFS、LdapServer服务是否已停止。
         -   是，启动HDFS、LdapServer服务，执行[3.c](#zh-cn_topic_0191813917_li4163406916374)。

@@ -4,6 +4,9 @@
 
 例如将HDFS文件系统的数据迁移到OBS服务中，通过使用HDFS地址映射功能简单配置即可实现客户端无需修改自己的的业务代码逻辑的情况下，访问存储到OBS的数据。或将元数据信息从HDFS文件系统部分迁移到OBS服务中，通过使用HDFS地址映射功能简单配置即可实现既能访问存储在OBS的数据也能访问存储在HDFS文件系统的数据。
 
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>该功能不支持使用WebHdfsFileSystem \(A FileSystem for HDFS over the web.\)的rest api访问的场景。  
+
 ## 通过Hadoop客户端命令操作HDFS（/path方式或hdfs://namespace/path方式）<a name="section921111193114"></a>
 
 1.  登录Master节点。
@@ -151,7 +154,7 @@
 
 -   集群默认的文件系统是HDFS。即fs.defaultFS的配置项是**hdfs：//**开始。
 -   集群已配置默认委托，可参考如下步骤配置。
-    1.  在集群详情页的“概览”页签，单击委托右侧的![](figures/zh-cn_image_0213351834.png)选择并绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
+    1.  在集群详情页的“概览”页签，单击委托右侧的“管理委托”选择并绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
     2.  在“节点管理”页签单击所有的节点名称，进入弹性云服务器详情页面，确保所有节点均已绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
 
 
@@ -160,11 +163,11 @@
 1.  在集群详情页，选择“组件管理”页签。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
 2.  选择“Hive \> 服务配置”。
-3.  参数类别设置为“全部配置”。
+3.  将“基础配置”切换为“全部配置”。
 4.  在“Hive \> 自定义”的“core.site.customized.configs”中增加如下配置。
 
     -   fs.hdfs.impl = com.huawei.hadoop.MRSHDFSWrapperFileSystem
@@ -193,7 +196,7 @@
 
 -   集群默认的文件系统是HDFS。即fs.defaultFS的配置项是**hdfs：//**开始。
 -   集群已配置默认委托，可参考如下步骤配置。
-    1.  在集群详情页的“概览”页签，单击委托右侧的![](figures/zh-cn_image_0213351834.png)选择并绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
+    1.  在集群详情页的“概览”页签，单击委托右侧的“管理委托”选择并绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
     2.  在“节点管理”页签单击所有的节点名称，进入弹性云服务器详情页面，确保所有节点均已绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
 
 
@@ -202,11 +205,11 @@
 1.  在集群详情页，选择“组件管理”页签。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
 2.  选择“Presto \> 服务配置”。
-3.  参数类别设置为“全部配置”。
+3.  将“基础配置”切换为“全部配置”。
 4.  在“Presto \> Hive”的“core.site.customized.configs”中增加如下配置。
 
     -   fs.hdfs.impl = com.huawei.hadoop.MRSHDFSWrapperFileSystem
@@ -231,18 +234,18 @@
 1.  在集群详情页，选择“组件管理”页签。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
 2.  选择“Yarn \> 服务配置”。
-3.  参数类别设置为“全部配置”。
+3.  将“基础配置”切换为“全部配置”。
 4.  在“Yarn \> 自定义”的“yarn.core-site.customized.configs”中增加如下配置。
 
     -   fs.hdfs.impl = com.huawei.hadoop.MRSHDFSWrapperFileSystem
     -   fs.hdfs.mounttable.hacluster.link./yy = obs://obs-test/job/yy
 
-    **图 3**  Flink配置<a name="fig838095797"></a>  
-    ![](figures/Flink配置.png "Flink配置")
+    **图 3**  Yarn配置<a name="fig838095797"></a>  
+    ![](figures/Yarn配置.png "Yarn配置")
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   **hacluster**为core-site.xml配置中fs.defaultFS的值的namespace，若修改了默认fs.defaultFS配置的namespace，**hacluster**修改对应的值即可。  
@@ -281,7 +284,7 @@
 
 -   集群默认的文件系统是HDFS。即fs.defaultFS的配置项是**hdfs：//**开始。
 -   集群已配置默认委托，可参考如下步骤配置。
-    1.  在集群详情页的“概览”页签，单击委托右侧的![](figures/zh-cn_image_0213351834.png)选择并绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
+    1.  在集群详情页的“概览”页签，单击委托右侧的“管理委托”选择并绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
     2.  在“节点管理”页签单击所有的节点名称，进入弹性云服务器详情页面，确保所有节点均已绑定MRS\_ECS\_DEFAULT\_AGENCY委托。
 
 
@@ -290,11 +293,11 @@
 1.  在集群详情页，选择“组件管理”页签。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0207903633.png)进行IAM用户同步）。  
-    >-   针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
+    >-   若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“点击同步”进行IAM用户同步）。  
+    >-   针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理”。  
 
 2.  选择“Spark \> 服务配置”。
-3.  参数类别设置为“全部配置”，角色设置为“JDBCServer”。
+3.  将“基础配置”切换为“全部配置”，角色设置为“JDBCServer”。
 4.  在“JDBCServer \> 自定义”的“spark.core-site.customized.configs”中增加如下配置。
 
     -   fs.hdfs.impl = com.huawei.hadoop.MRSHDFSWrapperFileSystem

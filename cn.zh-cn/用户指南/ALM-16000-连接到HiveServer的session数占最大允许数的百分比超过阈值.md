@@ -73,9 +73,9 @@
     1.  登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
-    2.  选择“Hive \> 服务配置”，“参数类别”设置为“全部配置”。
+    2.  选择“Hive \> 服务配置”，将“基础配置”切换为“全部配置”。
     3.  然后查找“hive.server.session.control.maxconnections”，调大该配置项的数值。设该配置项的值为A，阈值为B，连接到HiveServer的session数为C，调整策略为A x B \> C ，连接到HiveServer的session数可在Hive的监控界面查看。
     4.  查看本告警是否恢复。
         -   是，操作结束。

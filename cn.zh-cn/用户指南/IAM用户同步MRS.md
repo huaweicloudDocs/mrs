@@ -1,8 +1,6 @@
-# IAM用户同步MRS<a name="ZH-CN_TOPIC_0183742963"></a>
+# IAM用户同步MRS<a name="ZH-CN_TOPIC_0221445363"></a>
 
-IAM用户同步是指将绑定MRS相关策略的IAM用户同步至MRS系统中，创建同用户名、不同密码的账号，用于集群管理。同步之后，用户可以使用IAM用户名（密码需要MRS Manager的管理员admin重置后方可使用）管理集群。也可以在开启Kerberos认证的集群中，通过界面方式提交作业。
-
-该功能针对MRS 1.8.x版本支持MRS 1.8.7及之后版本，针对MRS 1.9.x支持所有版本，针对2.x版本支持MRS 2.0.5及之后版本。
+IAM用户同步是指将绑定MRS相关策略的IAM用户同步至MRS系统中，创建同用户名、不同密码的账号，用于集群管理。同步之后，用户可以使用IAM用户名（密码需要MRS Manager的管理员admin重置后方可使用）登录MRS Manager管理集群。也可以在开启Kerberos认证的集群中，通过界面方式提交作业。
 
 IAM用户权限策略及同步MRS后权限对比请参考[表1](#table3878619101919)，MRS Manager对应默认权限说明请参考[MRS集群中的用户与权限](MRS集群中的用户与权限.md)。
 
@@ -25,7 +23,7 @@ IAM用户权限策略及同步MRS后权限对比请参考[表1](#table3878619101
 <p id="p191048161316"><a name="p191048161316"></a><a name="p191048161316"></a></p>
 <p id="p16104101643115"><a name="p16104101643115"></a><a name="p16104101643115"></a></p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p4306134273012"><a name="p4306134273012"></a><a name="p4306134273012"></a>MRS Viewer</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p4306134273012"><a name="p4306134273012"></a><a name="p4306134273012"></a>MRS&nbsp;ReadOnlyAccess</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.3 "><p id="p10949195293012"><a name="p10949195293012"></a><a name="p10949195293012"></a>Manager_viewer</p>
 </td>
@@ -34,7 +32,7 @@ IAM用户权限策略及同步MRS后权限对比请参考[表1](#table3878619101
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p16423218365"><a name="p16423218365"></a><a name="p16423218365"></a>否</p>
 </td>
 </tr>
-<tr id="row987918191191"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p230604216306"><a name="p230604216306"></a><a name="p230604216306"></a>MRS User</p>
+<tr id="row987918191191"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p230604216306"><a name="p230604216306"></a><a name="p230604216306"></a>MRS&nbsp;CommonOperations</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><a name="ul4444174612152"></a><a name="ul4444174612152"></a><ul id="ul4444174612152"><li>Manager_viewer</li><li>default</li></ul>
 </td>
@@ -43,7 +41,7 @@ IAM用户权限策略及同步MRS后权限对比请参考[表1](#table3878619101
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p15642122116367"><a name="p15642122116367"></a><a name="p15642122116367"></a>是</p>
 </td>
 </tr>
-<tr id="row7879181971912"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1530654223011"><a name="p1530654223011"></a><a name="p1530654223011"></a>MRS Admin</p>
+<tr id="row7879181971912"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1530654223011"><a name="p1530654223011"></a><a name="p1530654223011"></a>MRS&nbsp;FullAccess</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><a name="ul7241758151514"></a><a name="ul7241758151514"></a><ul id="ul7241758151514"><li>Manager_administrator</li><li>Manager_auditor</li><li>Manager_operator</li><li>Manager_tenant</li><li>Manager_viewer</li><li>System_administrator</li><li>default</li></ul>
 </td>
@@ -96,22 +94,22 @@ IAM用户权限策略及同步MRS后权限对比请参考[表1](#table3878619101
 </table>
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->RBAC策略详细信息请参考[策略语法：RBAC](策略语法-RBAC.md)，细粒度详细信息策略请参考[策略语法：细粒度策略](策略语法-细粒度策略.md)。为了更方便进行用户权限管理，请尽可能使用细粒度策略，减少RBAC策略的使用，细粒度策略判断action时以deny优先原则。  
->-   RBAC策略只有具有Tenant Administrator或同时具有Server Administrator、Tenant Guest、MRS Administrator才在MRS集群中拥有同步IAM用户的权限。  
->-   细粒度策略只要拥有**action:mrs:cluster:syncUser**就在MRS集群中拥有同步IAM用户的权限。  
+>为了更方便进行用户权限管理，请尽可能使用细粒度策略，减少RBAC策略的使用，细粒度策略判断action时以deny优先原则。  
+>-   只有具有Tenant Administrator或同时具有Server Administrator、Tenant Guest、MRS Administrator角色才在MRS集群中拥有同步IAM用户的权限。  
+>-   只要拥有**action:mrs:cluster:syncUser**策略就在MRS集群中拥有同步IAM用户的权限。  
 
 ## 操作步骤<a name="section1968244415315"></a>
 
 1.  创建用户并授权使用MRS服务，具体请参考[创建用户并授权使用MRS](创建用户并授权使用MRS.md)。
-2.  登录MRS控制台并创建集群，具体请参考[购买方式简介](购买方式简介.md)。
+2.  登录MRS控制台并创建集群，具体请参考[自定义购买集群](自定义购买集群.md)。
 3.  在左侧导航栏中选择“集群列表  \>  现有集群“，单击集群名称进入集群详情页面。
-4.  <a name="li6999515311"></a>在“概览“页签的基本信息区域，单击“IAM用户同步“右侧的![](figures/zh-cn_image_0183939377.png)进行IAM用户同步。
-5.  同步请求下发后，在MRS控制台左侧导航栏中选择“操作日志”页面查看同步是否同步成功，日志相关说明请参考[查看操作日志](查看操作日志.md)。
+4.  <a name="li6999515311"></a>在“概览“页签的基本信息区域，单击“IAM用户同步“右侧的“点击同步“进行IAM用户同步。
+5.  同步请求下发后，在MRS控制台左侧导航栏中选择“操作日志”页面查看同步是否成功，日志相关说明请参考[查看操作日志](查看操作日志.md)。
 6.  同步成功后，即可使用IAM同步用户进行后续操作。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   当IAM用户的用户组的所属策略从MRS Viewer向MRS User、MRS Admin、MRS Administrator变化时，由于集群节点的sssd缓存刷新需要时间，因此同步完成后，请等待5分钟，等待新修改策略生效之后，再进行提交作业。否则，会出现提交作业失败的情况。  
-    >-   当IAM用户的用户组的所属策略从MRS User、MRS Admin、MRS Administrator向MRS Viewer变化时，由于集群节点的sssd缓存刷新需要时间，因此同步完成后，请等待5分钟，新修改策略才能生效。  
+    >-   当IAM用户的用户组的所属策略从MRS ReadOnlyAccess向MRS CommonOperations、MRS FullAccess、MRS Administrator变化时，由于集群节点的sssd缓存刷新需要时间，因此同步完成后，请等待5分钟，等待新修改策略生效之后，再进行提交作业。否则，会出现提交作业失败的情况。  
+    >-   当IAM用户的用户组的所属策略从MRS CommonOperations、MRS FullAccess、MRS Administrator向MRS ReadOnlyAccess变化时，由于集群节点的sssd缓存刷新需要时间，因此同步完成后，请等待5分钟，新修改策略才能生效。  
     >-   单击“IAM用户同步”按钮后，集群详情页面会出现短时间空白，这是由于正在进行用户数据同步中，请耐心等待，数据同步完成后，页面将会正常显示。  
 
     -   安全集群提交作业：安全集群中用户可通过界面“作业管理”功能提交作业，具体请参考[运行MapReduce作业](运行MapReduce作业.md)。

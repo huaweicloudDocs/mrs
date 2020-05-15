@@ -78,7 +78,7 @@ HDFS集群配置的磁盘空间不足。
     1.  在MRS集群详情页面，单击“组件管理 \> HDFS”，弹出“服务状态”页面。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS”。  
 
     2.  在“图表”区域中，通过监控项“Percentage of HDFS Capacity”查看HDFS磁盘使用率是否超过阈值（默认为80%）。
         -   是，执行[1.c](#zh-cn_topic_0191813969_cn_58_42_000001_5_mmccppss_step5)。

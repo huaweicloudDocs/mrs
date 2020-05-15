@@ -76,7 +76,7 @@ NameService服务恢复时，告警清除。
     1.  在MRS Manager首页，单击“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理”。  
 
     2.  单击“HDFS”。
     3.  单击“实例”。
@@ -96,7 +96,7 @@ NameService服务恢复时，告警清除。
     1.  <a name="zh-cn_topic_0191813899_alm14010_mmccppss_step11"></a>在MRS集群详情页面，单击“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理”。  
 
     2.  单击“HDFS”。
     3.  在“操作状态和健康状态”中，查看所有DataNode节点的“健康状态”是否为“良好”。
@@ -115,7 +115,7 @@ NameService服务恢复时，告警清除。
     1.  <a name="zh-cn_topic_0191813899_alm14010_mmccppss_step24"></a>在MRS集群详情页面，单击“节点管理”并展开节点组信息。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“主机管理”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“主机管理”。  
 
     2.  在“磁盘使用率”列，检查磁盘空间是否不足。
         -   是，执行[3.c](#zh-cn_topic_0191813899_alm14010_mmccppss_step26)。

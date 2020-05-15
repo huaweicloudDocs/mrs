@@ -91,11 +91,11 @@
     1.  进入本地Google Chrome浏览器客户端安装目录。
     2.  <a name="l2d621fbf73a04b28a135923e3a74a4f3"></a>按住“shift+鼠标右键”，选择“在此处打开命令窗口”，输入如下命令：
 
-        **chrome --proxy-server="socks5://localhost:8157" --host-resolver-rules="MAP \* 0.0.0.0 , EXCLUDE localhost" --user-data-dir=c:/tmppath --proxy-bypass-list="\*google\*com,\*gstatic.com,\*gvt\*.com,\*:80",**
+        **chrome --proxy-server="socks5://localhost:8157" --host-resolver-rules="MAP \* 0.0.0.0 , EXCLUDE localhost" --user-data-dir=c:/tmppath --proxy-bypass-list="\*google\*com,\*gstatic.com,\*gvt\*.com,\*:80"**
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >-   8157为[9](#lcf3e5d4b24e645bdbb9a0100a0dca09d)中配置的本地代理端口。  
-        >-   若本地操作系统为Windows 10，请打开Windows操作系统“开始”菜单，输入**cmd**命令，打开一个命令行窗口执行[10.b](#l2d621fbf73a04b28a135923e3a74a4f3)中的命令。  
+        >-   若本地操作系统为Windows 10，请打开Windows操作系统“开始”菜单，输入**cmd**命令，打开一个命令行窗口执行[10.b](#l2d621fbf73a04b28a135923e3a74a4f3)中的命令。若该方式不能成功，请打开Windows操作系统“开始”菜单后，在搜索框中输入并执行[10.b](#l2d621fbf73a04b28a135923e3a74a4f3)中的命令。  
 
 
 11. 在新弹出的浏览器地址栏，输入MRS Manager的访问地址。

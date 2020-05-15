@@ -86,7 +86,7 @@
     1.  打开MRS集群详情页面，在告警管理页签的告警列表中，单击此告警所在行，在告警详情中，查看该告警的节点地址。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面查看告警信息。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
 
     2.  登录告警节点。
     3.  执行**cat /proc/stat | awk 'NR==1'|awk '\{for\(i=2;i<=NF;i++\)j+=$i;print "" 100 - \($5+$6\) \* 100 / j;\}'**命令，查看系统当前CPU使用率。

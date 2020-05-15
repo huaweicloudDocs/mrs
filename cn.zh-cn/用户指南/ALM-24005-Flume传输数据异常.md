@@ -100,7 +100,7 @@ Flume Channel的磁盘空间使用量有继续增长的趋势，将会使数据�
     7.  <a name="zh-cn_topic_0191813885_li1487713813414"></a>登录MRS集群详情页面，选择“组件管理”。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请登录MRS Manager页面，选择“服务管理”。  
+        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
 
     8.  单击“Flume  \>  实例“。
     9.  单击进入故障节点的Flume实例页面，查看指标“Sink速度指标”，检查其速度是否为0。

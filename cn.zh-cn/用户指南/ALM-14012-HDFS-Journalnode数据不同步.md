@@ -70,7 +70,7 @@
     1.  登录MRS集群详情页面，单击“告警管理”，在告警列表中单击此告警。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面操作。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面操作。  
 
     2.  在“告警详情”区域，查看“定位信息”，获取告警产生的JournalNode节点IP地址。
     3.  单击“组件管理 \> HDFS \> 实例”，在实例列表中单击告警节点上的JournalNode实例，查看其“操作状态”是否为“已启动”。

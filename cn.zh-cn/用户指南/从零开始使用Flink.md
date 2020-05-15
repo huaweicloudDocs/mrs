@@ -20,8 +20,8 @@ MRS集群中已安装Flink组件。
 3.  若集群开启Kerberos认证，需要执行以下步骤，若集群未开启Kerberos认证请跳过该步骤。
     1.  准备一个提交Flink作业的用户，具体请参考[准备开发用户](https://support.huaweicloud.com/devg-mrs/mrs_06_0389.html)。
     2.  使用新创建的用户登录MRS Manager页面，选择“系统设置 \> 用户管理”，在已增加用户所在行的“操作”列，单击“更多 \> 下载认证凭据”。
-    3.  将下载的认证凭据压缩包解压缩，并将得到user.keytab文件拷贝到客户端节点中，例如客户端节点的“/opt/client/Flink/flink/conf“目录下。
-    4.  配置安全认证，在/opt/client/Flink/flink/flink-conf.yaml配置文件中的对应配置添加keytab路径以及用户名。
+    3.  将下载的认证凭据压缩包解压缩，并将得到user.keytab文件拷贝到客户端节点中，例如客户端节点的“/opt/client/Flink/flink/conf“目录下。如果是在集群外节点安装的客户端，需要将得到的krb5.conf文件拷贝到该节点的/etc/目录下。
+    4.  配置安全认证，在/opt/client/Flink/flink/conf/flink-conf.yaml配置文件中的对应配置添加keytab路径以及用户名。
 
         **security.kerberos.login.keytab: <user.keytab文件路径\>**
 
@@ -103,7 +103,7 @@ MRS集群中已安装Flink组件。
 6.  登录集群详情页面，选择“组件管理 \> Yarn”。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 2.0.1及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Yarn”。  
+    >针对MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](访问MRS-Manager.md)，然后选择“服务管理 \> Yarn”。  
 
 7.  在“服务状态 \> Yarn 概述”区域，单击“ResourceManager WebUI”对应的“ResourceManager \(主\)”。
 

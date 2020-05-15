@@ -72,7 +72,7 @@ DataNode的配置参数“dfs.datanode.data.dir”指定了DataNode的数据目�
     1.  在MRS集群详情页面，单击“告警管理”，在告警列表中单击此告警。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 2.0.1及之前版本，请打开MRS Manager页面，单击“告警管理”。  
+        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“告警管理”。  
 
     2.  在“告警详情”区域，查看“告警原因”，可知产生该告警的原因。 通过“定位信息”的“HostName”，获取告警产生的DataNode节点的主机名。
 
