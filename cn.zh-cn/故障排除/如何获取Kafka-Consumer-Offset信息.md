@@ -1,4 +1,4 @@
-# 如何获取Kafka Consumer Offset信息<a name="ZH-CN_TOPIC_0205107985"></a>
+# 如何获取Kafka Consumer Offset信息<a name="mrs_03_0157"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276386_section4387018310447"></a>
 
@@ -23,8 +23,8 @@
     指kafka.consumer.ConsumerConnector中定义的接口，在使用“kafka-console-consumer.sh”时，默认使用此API。
 
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->新Producer API和新Consumer API，在下文中统称为新API。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>新Producer API和新Consumer API，在下文中统称为新API。
 
 ## 处理步骤<a name="zh-cn_topic_0167276386_section40467730202055"></a>
 
@@ -35,7 +35,7 @@
     2.  已安装Kafka客户端。
 
 -   操作步骤
-    1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+    1.  以客户端安装用户，登录安装Kafka客户端的节点。
     2.  切换到Kafka客户端安装目录，例如“/opt/kafkaclient”。
 
         **cd /opt/kafkaclient**
@@ -78,7 +78,7 @@
     2.  已安装Kafka客户端。
 
 -   操作步骤
-    1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+    1.  以客户端安装用户，登录安装Kafka客户端的节点。
     2.  切换到Kafka客户端安装目录，例如“/opt/client”。
 
         **cd /opt/client**

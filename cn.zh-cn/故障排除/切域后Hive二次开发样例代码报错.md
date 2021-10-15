@@ -1,10 +1,10 @@
-# 切域后Hive二次开发样例代码报错<a name="ZH-CN_TOPIC_0210454010"></a>
+# 切域后Hive二次开发样例代码报错<a name="mrs_03_0185"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275090_section842971116813"></a>
 
 hive的二次开发代码样例运行报No rules applied to \*\*\*\*的错误：
 
-![](figures/zh-cn_image_0167275801.png)
+![](figures/zh-cn_image_0264281519.png)
 
 ## 原因分析<a name="zh-cn_topic_0167275090_section724010302087"></a>
 

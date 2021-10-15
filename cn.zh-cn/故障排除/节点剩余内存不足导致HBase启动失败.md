@@ -1,8 +1,8 @@
-# 节点剩余内存不足导致HBase启动失败<a name="ZH-CN_TOPIC_0181626540"></a>
+# 节点剩余内存不足导致HBase启动失败<a name="mrs_03_0067"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275175_sf76e408f8ea44020bf3de33c280bc079"></a>
 
-HBase的RegionServer服务一直是Concerning状态。
+HBase的RegionServer服务一直是Restoring状态。
 
 ## 原因分析<a name="zh-cn_topic_0167275175_s2d857902554344b38f9d1ff9130b2ce3"></a>
 

@@ -1,4 +1,4 @@
-# 浮动IP不通导致DBService备份失败<a name="ZH-CN_TOPIC_0185002832"></a>
+# 浮动IP不通导致DBService备份失败<a name="mrs_03_0129"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274756_sd64242caa665405798481482f49ab0ee"></a>
 
@@ -13,7 +13,7 @@
     Temporyary files at backup checkpoint DBService_test_DBService_DBService20180326155921 that failed last time are cleared successfully.
     ```
 
-    ![](figures/zh-cn_image_0167275578.png)
+    ![](figures/zh-cn_image_0264281766.png)
 
 2.  查看/var/log/Bigdata/dbservice/scriptlog/backup.log文件，发现日志停止打印，并没有备份相关信息。
 3.  查看主OMS节点 /var/log/Bigdata/controller/backupplugin.log日志发现如下错误信息：
@@ -23,16 +23,16 @@
     DBService backup failed.
     ```
 
-    ![](figures/zh-cn_image_0167274801.png)
+    ![](figures/zh-cn_image_0264281603.png)
 
 
 ## 解决办法<a name="zh-cn_topic_0167274756_section208703200573"></a>
 
 1.  登录DBService主节点（绑定有DBService浮动IP的master节点）。
 
-    ![](figures/zh-cn_image_0185010244.png)
+    ![](figures/zh-cn_image_0264281671.png)
 
-2.  检查 /etc/ssh/sshd\_config文件中ListenAddress，添加DBService浮动IP到ListenAdress或者注释掉ListenAdress。
+2.  检查 /etc/ssh/sshd\_config文件中ListenAddress配置项，添加DBService浮动IP到ListenAdress或者注释掉ListenAdress配置项。
 3.  执行如下命令重启sshd服务。
 
     **service sshd restart**

@@ -1,4 +1,4 @@
-# 连接到HBase响应慢<a name="ZH-CN_TOPIC_0168547216"></a>
+# 连接到HBase响应慢<a name="mrs_03_0042"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
@@ -8,7 +8,7 @@
 
 在相同的vpc下，外部集群通过Phoenix连接到HBase时，响应太慢。
 
-![](figures/zh-cn_image_0172252674.png)
+![](figures/zh-cn_image_0264281877.png)
 
 ## 原因分析<a name="section1237061220324"></a>
 

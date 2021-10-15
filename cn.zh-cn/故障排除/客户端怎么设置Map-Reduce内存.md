@@ -1,4 +1,4 @@
-# 客户端怎么设置Map/Reduce内存？<a name="ZH-CN_TOPIC_0205107311"></a>
+# 客户端怎么设置Map/Reduce内存？<a name="mrs_03_0152"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167274550_section1861111131114"></a>
 
@@ -18,6 +18,6 @@ set mapreduce.reduce.java.opts=-Xmx3276M; // 每个Reduce Task 的JVM最大使�
 set mapred.child.java.opts=-Xms1024M -Xmx3584M;//此参数为全局参数，既对Map和Reduce统一设置
 ```
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->参数设置只对当前session有效。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>参数设置只对当前session有效。
 

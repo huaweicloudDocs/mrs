@@ -1,4 +1,4 @@
-# 如何配置客户端shell命令的日志<a name="ZH-CN_TOPIC_0226521598"></a>
+# 如何配置客户端shell命令的日志<a name="mrs_03_0196"></a>
 
 ## 用户问题<a name="zh-cn_topic_0167276308_section4387018310447"></a>
 
@@ -6,7 +6,7 @@
 
 ## 处理步骤<a name="zh-cn_topic_0167276308_section16665572144748"></a>
 
-1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+1.  以客户端安装用户，登录安装Kafka客户端的节点。
 2.  切换到Kafka客户端安装目录，例如“/opt/client”。
 
     **cd /opt/client**
@@ -17,9 +17,9 @@
 
 4.  编辑tools-log4j.properties文件，将WARN修改为INFO，并保存。
 
-    ![](figures/zh-cn_image_0167274872.jpg)
+    ![](figures/zh-cn_image_0264281703.jpg)
 
-    ![](figures/zh-cn_image_0167276095.jpg)
+    ![](figures/zh-cn_image_0264281604.jpg)
 
 5.  切换到Kafka客户端安装目录，例如“/opt/client”。
 

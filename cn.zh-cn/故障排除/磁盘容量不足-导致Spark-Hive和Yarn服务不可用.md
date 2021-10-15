@@ -1,4 +1,4 @@
-# 磁盘容量不足，导致Spark、Hive和Yarn服务不可用<a name="ZH-CN_TOPIC_0181147978"></a>
+# 磁盘容量不足，导致Spark、Hive和Yarn服务不可用<a name="mrs_03_0036"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
@@ -17,10 +17,6 @@
 ## 处理步骤<a name="section520813413313"></a>
 
 针对磁盘容量不足产生的告警处理步骤，请参考[ALM-12017 磁盘容量不足](https://support.huaweicloud.com/usermanual-mrs/alm_12017.html)。
-
-## 建议与总结<a name="section8898183420"></a>
-
-无
 
 ## 参考信息<a name="section18208334123312"></a>
 

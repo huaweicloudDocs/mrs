@@ -1,4 +1,4 @@
-# 内存不足导致HDFS启动失败<a name="ZH-CN_TOPIC_0181713096"></a>
+# 内存不足导致HDFS启动失败<a name="mrs_03_0075"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275870_s6b990ebc666c4ba08e6bc5b71c23a056"></a>
 
@@ -21,7 +21,7 @@
     The reported blocks 29715437 needs additional 6542184 blocks to reach the threshold 0.9990 of total blocks 36293915.
     ```
 
-3.  打开MRS Manager页面，查看NameNode的GC\_OPTS参数配置如下：
+3.  打开Manager页面，查看NameNode的GC\_OPTS参数配置如下：
 
     **图 1**  查看NameNode的GC\_OPTS参数配置<a name="zh-cn_topic_0167275870_fig128017425374"></a>  
     ![](figures/查看NameNode的GC_OPTS参数配置.png "查看NameNode的GC_OPTS参数配置")

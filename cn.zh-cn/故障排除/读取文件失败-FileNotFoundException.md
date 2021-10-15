@@ -1,4 +1,4 @@
-# 读取文件失败，FileNotFoundException<a name="ZH-CN_TOPIC_0181713165"></a>
+# 读取文件失败，FileNotFoundException<a name="mrs_03_0084"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274700_section533506231639"></a>
 
@@ -18,7 +18,7 @@ at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.complete(NameNodeRpc
 FileNotFoundException...No lease on...File does not exist，该日志说明文件在操作的过程中被删除了。
 
 1.  搜索HDFS的NameNode的审计日志（Active NameNode的/var/log/Bigdata/audit/hdfs/nn/hdfs-audit-namenode.log）搜索文件名，确认文件的创建时间。
-2.  搜索文件创建到出现异常时间范围的NameNode的审计日志，搜索该文件是否被删除或者move到其他目录。
+2.  搜索文件创建到出现异常时间范围的NameNode的审计日志，搜索该文件是否被删除或者移动到其他目录。
 3.  如果该文件没有被删除或者移动，可能是该文件的父目录，或者更上层目录被删除或者移动，需要继续搜索上层目录。如本样例中，是文件的父目录的父目录被删除。
 
     ```
@@ -26,9 +26,9 @@ FileNotFoundException...No lease on...File does not exist，该日志说明文�
     
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   如上日志说明：192.168.1.22 节点的appUser用户删除了/user/sparkhive/warehouse/daas/dsp/output/\_temporary。  
-    >-   可以使用**zgrep "文件名" \*.zip**命令搜索zip包的内容。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >-   如上日志说明：192.168.1.22 节点的appUser用户删除了/user/sparkhive/warehouse/daas/dsp/output/\_temporary。
+    >-   可以使用**zgrep "文件名" \*.zip**命令搜索zip包的内容。
 
 
 ## 解决办法<a name="zh-cn_topic_0167274700_section122602861639"></a>

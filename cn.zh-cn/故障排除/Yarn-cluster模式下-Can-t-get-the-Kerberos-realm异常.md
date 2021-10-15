@@ -1,4 +1,4 @@
-# Yarn-cluster模式下，Can't get the Kerberos realm异常<a name="ZH-CN_TOPIC_0183415850"></a>
+# Yarn-cluster模式下，Can't get the Kerberos realm异常<a name="mrs_03_0110"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276133_sec17e362e6c844a08c01a7aadd6d2f1b"></a>
 
@@ -41,7 +41,7 @@
 
 在客户端提交任务时，在命令行中配置自定义的spark.driver.extraJavaOptions参数这样任务运行时就不会自动加载客户端路径下spark-defaults.conf中的spark.driver.extraJavaOptions；或者在启动spark任务时，通过--conf来指定driver的配置，如下（此处spark.driver.extraJavaOptions“=“号后面的引号部分不能缺少）。
 
-**./spark-submit –class yourclassname --master yarn-cluster --conf spark.driver.extraJavaOptions="**
+**./spark-submit -class yourclassname --master yarn-cluster --conf spark.driver.extraJavaOptions="**
 
 **-Dlog4j.configuration=file:/opt/client/Spark/spark/conf/log4j.properties -Djetty.version=x.y.z -Dzookeeper.server.principal=zookeeper/hadoop.794bbab6\_9505\_44cc\_8515\_b4eddc84e6c1.com -Djava.security.krb5.conf=/opt/client/KrbClient/kerberos/var/krb5kdc/krb5.conf -Djava.security.auth.login.config=/opt/client/Spark/spark/conf/jaas.conf -Dorg.xerial.snappy.tempdir=/opt/client/Spark/tmp -Dcarbon.properties.filepath=/opt/client/Spark/spark/conf/carbon.properties" ../yourdependencyjars**
 

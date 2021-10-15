@@ -1,4 +1,4 @@
-# 界面配置dfs.blocksize后put数据，block大小还是原来的大小<a name="ZH-CN_TOPIC_0181713164"></a>
+# 界面配置dfs.blocksize后put数据，block大小还是原来的大小<a name="mrs_03_0083"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275441_s8c03434db87d4eee9610cff894082d22"></a>
 

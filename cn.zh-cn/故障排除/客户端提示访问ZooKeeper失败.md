@@ -1,4 +1,4 @@
-# 客户端提示访问ZooKeeper失败<a name="ZH-CN_TOPIC_0207461511"></a>
+# 客户端提示访问ZooKeeper失败<a name="mrs_03_0172"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276080_s4062da02d4d340ed9dbd38c42c5a7475"></a>
 
@@ -13,7 +13,7 @@
  java.sql.SQLException: Could not establish connection to active hiveserver
 ```
 
-或者报出无法读取"Hiveserver2 uri from ZooKeeper"，如下：
+或者报出无法读取"Hiveserver2 configs from ZooKeeper"，如下：
 
 ```
 Exception in thread "main" java.sql.SQLException: org.apache.hive.jdbc.ZooKeeperHiveClientException: Unable to read HiveServer2 configs from ZooKeeper
@@ -52,7 +52,7 @@ at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenB
 
 ## 解决方案<a name="zh-cn_topic_0167276080_sf8f53c018c784bab9ca84e6d32b5d35d"></a>
 
-1.  确保用户可以正常读取客户端结点相关路径下的user.keytab文件。
+1.  确保用户可以正常读取客户端节点相关路径下的user.keytab文件。
 2.  确保用户的user.principal与指定的keytab文件对应。
 
     可通过**klist -kt keytabpath/user.keytab**查看。
@@ -65,7 +65,7 @@ at org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenB
 
     在客户端执行以下命令
 
-    **source $client\_home/bigdata\_env**
+    **source $\{client\_home\}/bigdata\_env**
 
     **kinit** _username_
 

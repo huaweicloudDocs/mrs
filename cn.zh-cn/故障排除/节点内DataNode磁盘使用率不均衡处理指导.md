@@ -1,4 +1,4 @@
-# 节点内DataNode磁盘使用率不均衡处理指导<a name="ZH-CN_TOPIC_0183415888"></a>
+# 节点内DataNode磁盘使用率不均衡处理指导<a name="mrs_03_0093"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276528_sd1dc17fee2214ed9867d242a14f38d7d"></a>
 
@@ -26,7 +26,7 @@ Filesystem  Size  Used Avail Use% Mounted on
 
 ## 原因分析<a name="zh-cn_topic_0167276528_s36d0a1c802044398ada37b44f5dced4e"></a>
 
-DataNode节点内写block磁盘时，有2种策略“轮询”和“优先写剩余磁盘空间多的磁盘”，默认是“轮询”。
+DataNode节点内写block磁盘时，有两种策略“轮询”和“优先写剩余磁盘空间多的磁盘”，默认是“轮询”。
 
 参数说明：dfs.datanode.fsdataset.volume.choosing.policy
 
@@ -37,13 +37,11 @@ DataNode节点内写block磁盘时，有2种策略“轮询”和“优先写剩
 
 ## 解决办法<a name="zh-cn_topic_0167276528_s72ccbb40aaab4b2d8bdeebae39f52199"></a>
 
-将DataNode选择磁盘策略的参数 dfs.datanode.fsdataset.volume.choosing.policy 的值改为
-
-org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy
+将DataNode选择磁盘策略的参数 dfs.datanode.fsdataset.volume.choosing.policy 的值改为：org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy，保存并重启受影响的服务或实例。
 
 让DataNode根据磁盘剩余空间大小，优先选择磁盘剩余空间多的节点存储数据副本。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->-   针对新写入到本DataNode的数据会优先写磁盘剩余空间多的磁盘。  
->-   部分磁盘使用率较高，依赖业务逐渐删除在HDFS中的数据（老化数据）来逐渐降低。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>-   针对新写入到本DataNode的数据会优先写磁盘剩余空间多的磁盘。
+>-   部分磁盘使用率较高，依赖业务逐渐删除在HDFS中的数据（老化数据）来逐渐降低。
 

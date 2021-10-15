@@ -1,8 +1,8 @@
-# 端口被占用导致RegionServer启动失败<a name="ZH-CN_TOPIC_0181626539"></a>
+# 端口被占用导致RegionServer启动失败<a name="mrs_03_0066"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275014_s7f8671494bed4bdeb17136db86359327"></a>
 
-MRS Manager页面监控发现RegionServer状态为Concerning。
+Manager页面监控发现RegionServer状态为Restoring。
 
 ## 原因分析<a name="zh-cn_topic_0167275014_se44ba4f171a24022a02c97b1203b8c51"></a>
 
@@ -12,5 +12,5 @@ MRS Manager页面监控发现RegionServer状态为Concerning。
 
 ## 解决办法<a name="zh-cn_topic_0167275014_sf44c4148fcbe469a8a2b2598e3c8757d"></a>
 
-1.  执行**kill -9** _DFSZkFailoverController的pid_， 使得其重启后绑定其它端口，然后重启Concerning的RegionServer。
+1.  执行**kill -9** _DFSZkFailoverController的pid_， 使得其重启后绑定其它端口，然后重启Restoring的RegionServer。
 

@@ -1,4 +1,4 @@
-# 升级Python后，无法登录MRS Manager页面<a name="ZH-CN_TOPIC_0169515038"></a>
+# 升级Python后，无法登录MRS Manager页面<a name="mrs_03_0040"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 

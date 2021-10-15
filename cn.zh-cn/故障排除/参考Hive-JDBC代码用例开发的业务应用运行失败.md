@@ -1,4 +1,4 @@
-# 参考Hive JDBC代码用例开发的业务应用运行失败<a name="ZH-CN_TOPIC_0210454019"></a>
+# 参考Hive JDBC代码用例开发的业务应用运行失败<a name="mrs_03_0194"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275480_s20deae74a71143aeabad239c7a22f024"></a>
 
@@ -40,7 +40,7 @@ at sun.security.jgss.GSSContextImpl.initSecContext(Unknown Source)
 ## 原因分析<a name="zh-cn_topic_0167275480_s7dfa4353c00142a991338a71eaf7d6ad"></a>
 
 1.  初步分析怀疑是没有完成kerberos认证就去进行业务交互。
-2.  深入分析日志发现日志上虽然有打印“com.huawei.bigdata.security.LoginUtil  - Login success!!!!!!!!!!!!!!”，但没打印“ org.apache.hadoop.security.UserGroupInformation      : Login successful...”。
+2.  深入分析日志发现日志上虽然有打印“com.huawei.bigdata.security.LoginUtil  - Login success!!!!!!!!!!!!!!”，但没打印“org.apache.hadoop.security.UserGroupInformation      : Login successful...”。
 
     分析源码，发现：
 

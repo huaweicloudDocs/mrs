@@ -1,4 +1,4 @@
-# 单NameNode长期故障，如何使用客户端手动checkpoint<a name="ZH-CN_TOPIC_0181713099"></a>
+# 单NameNode长期故障，如何使用客户端手动checkpoint<a name="mrs_03_0078"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274778_s17abfc85203d46d49c2198b46fbb9056"></a>
 
@@ -8,8 +8,8 @@
 
 备NameNode会周期性做合并editlog，生成fsimage文件的过程叫做checkpoint。备NameNode在新生成fsimage后，会将fsimage传递到主NameNode。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->由于“备NameNode会周期性做合并editlog”，因此当备NameNode异常时，无法合并editlog，因此主NameNode在下次启动的时候，需要加载较多editlog，需要大量内存，并且耗时较长。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>由于“备NameNode会周期性做合并editlog”，因此当备NameNode异常时，无法合并editlog，因此主NameNode在下次启动的时候，需要加载较多editlog，需要大量内存，并且耗时较长。
 
 合并元数据的周期由以下参数确定，即如果NameNode运行30分钟或者HDFS操作100万次，均会执行checkpoint。
 
@@ -26,34 +26,34 @@
 
     **source /opt/client/bigdata\_env**
 
-    **kinit admin**
+    **kinit  _组件用户_**
 
     说明：/opt/client 需要换为实际客户端的安装路径。
 
-4.  执行如下命令，让主NameNode进入安全模式，其中linux22换为主NameNode的主机名
+4.  执行如下命令，让主NameNode进入安全模式，其中linux22换为主NameNode的主机名。
 
     **hdfs dfsadmin -fs linux22:25000 -safemode enter**
 
-    ![](figures/zh-cn_image_0167274485.jpg)
+    ![](figures/zh-cn_image_0264281790.jpg)
 
 5.  执行如下命令，在主NameNode，合并editlog。
 
     **hdfs dfsadmin -fs linux22:25000 -saveNamespace**
 
-    ![](figures/zh-cn_image_0167275574.jpg)
+    ![](figures/zh-cn_image_0264281509.jpg)
 
 6.  执行如下命令，让主NameNode离开安全模式。
 
     **hdfs dfsadmin -fs linux22:25000 -safemode leave**
 
-    ![](figures/zh-cn_image_0167275215.jpg)
+    ![](figures/zh-cn_image_0264281850.jpg)
 
 7.  检查是否真的合并完成。
 
     **cd /srv/BigData/namenode/current**
 
-    检查先产生的fsimage是否是当前时间的，是的话表示已经合并完成
+    检查先产生的fsimage是否是当前时间的，若是则表示已经合并完成
 
-    ![](figures/zh-cn_image_0167274841.jpg)
+    ![](figures/zh-cn_image_0264281591.jpg)
 
 

@@ -1,4 +1,4 @@
-# Yarn-client模式提交ApplicationMaster尝试启动两次失败<a name="ZH-CN_TOPIC_0183415852"></a>
+# Yarn-client模式提交ApplicationMaster尝试启动两次失败<a name="mrs_03_0112"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276500_s7f0794d3c3ab4fe789816d7e1850311c"></a>
 
@@ -50,11 +50,11 @@ Yarn-client模式提交任务AppMaster尝试启动两次失败。
     tcp        0      0  ip:port   ip:port                  ESTABLISHED 107274/java        
     ```
 
-4.  在AppMaster启动的节点执行**telnet 192.168.1.100 23662**看下是否可以联通该端口请使用**root**用户和**omm**用户都执行一遍。 如果出现**Escape character is '^\]'**类似打印则说明可以联通，如果出现**connection refused**则表示失败，无法连接到相关端口。
+4.  在AppMaster启动的节点执行**telnet 192.168.1.100 23662**看下是否可以联通该端口，请使用**root**用户和**omm**用户都执行一遍。 如果出现**Escape character is '^\]'**类似打印则说明可以联通，如果出现**connection refused**则表示失败，无法连接到相关端口。
 
     如果相关端口打开，但是从别的节点无法联通到该端口，则需要排查下相关网络配置。
 
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >23662这个端口每次都是随机的，所以要根据自己启动任务打开的端口来测试。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >23662这个端口每次都是随机的，所以要根据自己启动任务打开的端口来测试。
 
 

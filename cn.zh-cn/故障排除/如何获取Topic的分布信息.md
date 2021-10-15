@@ -1,4 +1,4 @@
-# 如何获取Topic的分布信息<a name="ZH-CN_TOPIC_0226521599"></a>
+# 如何获取Topic的分布信息<a name="mrs_03_0197"></a>
 
 ## 用户问题<a name="zh-cn_topic_0167276323_sd1dc17fee2214ed9867d242a14f38d7d"></a>
 
@@ -11,7 +11,7 @@
     已安装Kafka、ZooKeeper客户端。
 
 -   操作步骤
-    1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+    1.  以客户端安装用户，登录安装Kafka客户端的节点。
     2.  切换到Kafka客户端安装目录，例如“/opt/client”。
 
         **cd /opt/client**

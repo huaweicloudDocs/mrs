@@ -1,4 +1,4 @@
-# SparkStreaming消费Kafka消息失败，提示Error getting partition metadata <a name="ZH-CN_TOPIC_0181626570"></a>
+# SparkStreaming消费Kafka消息失败，提示Error getting partition metadata<a name="mrs_03_0065"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275353_sf1db540c14e54778b6b4d6c6c2200ca7"></a>
 
@@ -32,14 +32,21 @@ org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 
 ## 原因分析<a name="zh-cn_topic_0167275353_sda1fa700b23b46be9d5f5adfb2943e40"></a>
 
-1.  通过MRS Manager页面，点击“Services \> Kafka”，查看当前Kafka集群当前状态，发现状态为Good，且监控指标内容显示正确。
+1.  查看kafka服务状态：
+    -   MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> Kafka ，查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
 
-    **图 1**  Kafka 的服务状态为良好<a name="zh-cn_topic_0167275353_fig6865736036"></a>  
-    ![](figures/Kafka-的服务状态为良好.png "Kafka-的服务状态为良好")
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \> 待操作集群的名称 \> 服务 \> Kafka，
 
-2.  通过MRS Manager页面，点击“Services \> Kafka \> Configuration”，查看当前Kafka集群配置，发现未配置“allow.everyone.if.no.acl.found“或配置为“false“。
-3.  当acl设置为false不允许采用Kafka非安全端口21005来进行访问。
-4.  通过客户端命令查看topic的acl权限设置信息：
+        查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
+
+
+
+1.  通过Manager页面，查看当前Kafka集群配置，发现未配置“allow.everyone.if.no.acl.found“或配置为“false“。
+    -   MRS Manager界面操作入口：登录MRS Manager，依次选择 “服务管理 \> Kafka\> 配置”。
+    -   FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \> 待操作集群的名称 \> 服务 \> Kafka \> 配置"。
+
+2.  当acl设置为false不允许采用Kafka非安全端口21005来进行访问。
+3.  通过客户端命令查看topic的acl权限设置信息：
 
     ```
     [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:2181/kafka --list --topic topic_acl
@@ -60,8 +67,8 @@ org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 
     **kinit test\_user**
 
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >需要使用Kafka管理员用户（属于kafkaadmin组）操作。  
+    >![](public_sys-resources/icon-notice.gif) **须知：** 
+    >需要使用Kafka管理员用户（属于kafkaadmin组）操作。
 
     例如：
 

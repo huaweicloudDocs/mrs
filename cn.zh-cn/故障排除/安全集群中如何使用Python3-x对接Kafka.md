@@ -1,4 +1,4 @@
-# 安全集群中如何使用Python3.x对接Kafka？<a name="ZH-CN_TOPIC_0168547249"></a>
+# 安全集群中如何使用Python3.x对接Kafka？<a name="mrs_03_0045"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
@@ -52,8 +52,8 @@ MRS开发指南中没有Kafka组件在Python环境下的指导。
 
     **cd Python-3.6.7**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >Python3.x的tgz包也可以去Python官网下载。推荐使用Python-3.6.X版本，3.7版本无法使用rdd的take函数。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >Python3.x的tgz包也可以去Python官网下载。推荐使用Python-3.6.X版本，3.7版本无法使用rdd的take函数。
 
 4.  <a name="li14481457182514"></a>执行如下命令，设置Python3.x的配置信息及编译安装，安装到/opt/Bigdata/python3目录下。
 
@@ -61,8 +61,8 @@ MRS开发指南中没有Kafka组件在Python环境下的指导。
 
     **make && make install**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >安装的目录可以自定义。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >安装的目录可以自定义。
 
 5.  执行如下命令，配置Python3.x变量。
 
@@ -74,8 +74,8 @@ MRS开发指南中没有Kafka组件在Python环境下的指导。
 
     **ln -s /opt/Bigdata/python3/bin/pip3 /usr/bin/pip3**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >配置变量的目录需要跟[4](#li14481457182514)中安装的目录保持一致。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >配置变量的目录需要跟[4](#li14481457182514)中安装的目录保持一致。
 
 6.  配置成功后，执行如下命令，在Python3.x环境中安装kafka组件。
 
@@ -87,8 +87,8 @@ MRS开发指南中没有Kafka组件在Python环境下的指导。
 
 7.  安装成功后，执行**source /opt/client/bigdata\_env**命令，登录MRS客户端。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >登录kinit kafka用户的用户名和密码为登录MRS Manager的账号密码。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >登录kinit kafka用户的用户名和密码为登录Manager的帐号密码。
 
 8.  执行Python3.x脚本样例。
 

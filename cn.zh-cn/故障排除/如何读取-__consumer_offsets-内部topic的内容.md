@@ -1,4 +1,4 @@
-# 如何读取“\_\_consumer\_offsets”内部topic的内容<a name="ZH-CN_TOPIC_0226521597"></a>
+# 如何读取“\_\_consumer\_offsets”内部topic的内容<a name="mrs_03_0202"></a>
 
 ## 用户问题<a name="zh-cn_topic_0167275877_section4387018310447"></a>
 
@@ -6,7 +6,7 @@ kafka如何将consumer 消费的offset保存在内部topic“ \_\_consumer\_offs
 
 ## 处理步骤<a name="zh-cn_topic_0167275877_section25565032202013"></a>
 
-1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+1.  以客户端安装用户，登录安装Kafka客户端的节点。
 2.  切换到Kafka客户端安装目录，例如“/opt/client”。
 
     **cd /opt/client**
@@ -37,6 +37,6 @@ kafka如何将consumer 消费的offset保存在内部topic“ \_\_consumer\_offs
 
     **kafka-console-consumer.sh --topic \_\_consumer\_offsets --zookeeper 10.5.144.2:2181/kafka --formatter "kafka.coordinator.group.GroupMetadataManager\\$OffsetsMessageFormatter" --consumer.config ../config/consumer.properties --from-beginning**
 
-    ![](figures/zh-cn_image_0167275643.jpg)
+    ![](figures/zh-cn_image_0264281582.jpg)
 
 

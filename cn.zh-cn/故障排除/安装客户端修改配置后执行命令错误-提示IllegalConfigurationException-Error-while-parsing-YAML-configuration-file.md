@@ -1,4 +1,4 @@
-# 安装客户端修改配置后执行命令错误，提示IllegalConfigurationException: Error while parsing YAML configuration file<a name="ZH-CN_TOPIC_0187615916"></a>
+# 安装客户端修改配置后执行命令错误，提示IllegalConfigurationException: Error while parsing YAML configuration file<a name="mrs_03_0134"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276087_section370710207470"></a>
 
@@ -12,15 +12,13 @@ Exception in thread "main" org.apache.flink.configuration.IllegalConfigurationEx
         at org.apache.flink.configuration.GlobalConfiguration.loadConfiguration(GlobalConfiguration.java:112)
         at org.apache.flink.configuration.GlobalConfiguration.loadConfiguration(GlobalConfiguration.java:79)
         at org.apache.flink.yarn.cli.FlinkYarnSessionCli.main(FlinkYarnSessionCli.java:482)
-[root@8-5-131-10 bin]#
-
 ```
 
 ## 原因分析<a name="zh-cn_topic_0167276087_section19940122851412"></a>
 
 配置文件flink-conf.yaml中配置项"security.kerberos.login.principal:pippo”错误。
 
-![](figures/zh-cn_image_0167274688.png)
+![](figures/zh-cn_image_0264281799.png)
 
 ## 解决办法<a name="zh-cn_topic_0167276087_section359043201"></a>
 
@@ -28,5 +26,5 @@ Exception in thread "main" org.apache.flink.configuration.IllegalConfigurationEx
 
 注意：配置项名称和值之间存在空格。
 
-![](figures/zh-cn_image_0167275011.png)
+![](figures/zh-cn_image_0264281646.png)
 

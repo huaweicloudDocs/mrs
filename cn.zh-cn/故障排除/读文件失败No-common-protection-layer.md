@@ -1,4 +1,4 @@
-# 读文件失败No common protection layer<a name="ZH-CN_TOPIC_0181713168"></a>
+# 读文件失败No common protection layer<a name="mrs_03_0087"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274845_sec075651f94f47e2bbbc953c2db7da77"></a>
 
@@ -32,11 +32,11 @@ Caused by: javax.security.sasl.SaslException: No common protection layer between
 1.  HDFS的客户端和服务端数据传输走的rpc协议，该协议有多种加密方式，由hadoop.rpc.protection参数控制。
 2.  如果客户端和服务端的hadoop.rpc.protection参数的配置值不一样，即会报**No common protection layer between client and server**错误。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >hadoop.rpc.protection参数表示数据可通过以下任一方式在节点间进行传输。  
-    >-   privacy：默认值，指数据在鉴权及加密后再传输。这种方式会降低性能。  
-    >-   auhtentication：指数据在鉴权后直接传输，不加密。这种方式能保证性能但存在安全风险。  
-    >-   integrity：指数据直接传输，即不加密也不鉴权。 为保证数据安全，请谨慎使用这种方式。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >hadoop.rpc.protection参数表示数据可通过以下任一方式在节点间进行传输。
+    >-   privacy：指数据在鉴权及加密后再传输。这种方式会降低性能。
+    >-   authentication：指数据在鉴权后直接传输，不加密。这种方式能保证性能但存在安全风险。
+    >-   integrity：指数据直接传输，即不加密也不鉴权。 为保证数据安全，请谨慎使用这种方式。
 
 
 ## 解决办法<a name="zh-cn_topic_0167274845_s199a3d59e10c4afdb760a75305019fcc"></a>

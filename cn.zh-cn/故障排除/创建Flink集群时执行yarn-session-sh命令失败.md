@@ -1,8 +1,8 @@
-# 创建Flink集群时执行yarn-session.sh命令失败<a name="ZH-CN_TOPIC_0187615917"></a>
+# 创建Flink集群时执行yarn-session.sh命令失败<a name="mrs_03_0135"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274939_section370710207470"></a>
 
-创建Fllink集群时，执行yarn-session.sh命令卡住一段时间后报错
+创建Fllink集群时，执行yarn-session.sh命令卡住一段时间后报错：
 
 ```
 2018-09-20 22:51:16,842 | WARN  | [main] | Unable to get ClusterClient status from Application Client | org.apache.flink.yarn.YarnClusterClient (YarnClusterClient.java:253) 
@@ -31,6 +31,8 @@ Flink开启了SSL通信加密，却没有正确的配置SSL证书。
 
 ## 解决办法<a name="zh-cn_topic_0167274939_section27114831816"></a>
 
+针对MRS 2.x及之前版本，操作如下：
+
 方法1：
 
 关闭Flink SSL通信加密，修改客户端配置文件**conf/flink-conf.yaml**。
@@ -53,7 +55,7 @@ security.ssl.internal.enabled: false
     在Flink的CLI yarn-session.sh命令中增加“-t“选项来传输keystore和truststore文件到各个执行节点。如：
 
     ```
-    yarn-session.sh -t ssl/ -n 2
+    yarn-session.sh -t ssl/ 2
     ```
 
 
@@ -62,6 +64,42 @@ security.ssl.internal.enabled: false
     ```
     security.ssl.internal.keystore: /opt/client/Flink/flink/conf/flink.keystore
     security.ssl.internal.truststore: /opt/client/Flink/flink/conf/flink.truststore
+    ```
+
+
+针对MRS3.x及之后版本，操作如下：
+
+方法1：
+
+关闭Flink SSL通信加密，修改客户端配置文件**conf/flink-conf.yaml**。
+
+```
+security.ssl.enabled: false
+```
+
+方法2：
+
+开启Flink SSL通信加密，security.ssl.enabled 保持默认。正确配置SSL：
+
+-   配置keystore或truststore文件路径为**相对路径**时，Flink Client执行命令的目录需要可以直接访问该相对路径
+
+    ```
+    security.ssl.keystore: ssl/flink.keystore
+    security.ssl.truststore: ssl/flink.truststore
+    ```
+
+    在Flink的CLI yarn-session.sh命令中增加“-t“选项来传输keystore和truststore文件到各个执行节点。如：
+
+    ```
+    yarn-session.sh -t ssl/ 2
+    ```
+
+
+-   配置keystore或truststore文件路径为**绝对路径**时，需要在Flink Client以及各个节点的该绝对路径上放置keystore或truststore文件。
+
+    ```
+    security.ssl.keystore: /opt/Bigdata/client/Flink/flink/conf/flink.keystore
+    security.ssl.truststore: /opt/Bigdata/client/Flink/flink/conf/flink.truststore
     ```
 
 

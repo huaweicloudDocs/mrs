@@ -1,4 +1,4 @@
-# Shell客户端连接提示"authentication failed"<a name="ZH-CN_TOPIC_0207461510"></a>
+# Shell客户端连接提示"authentication failed"<a name="mrs_03_0171"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275617_s4062da02d4d340ed9dbd38c42c5a7475"></a>
 
@@ -22,7 +22,7 @@ No password provided
 ## 解决方案<a name="zh-cn_topic_0167275617_sf8f53c018c784bab9ca84e6d32b5d35d"></a>
 
 1.  登录Hive客户端所在节点。
-2.  执行**source  $client\_home/bigdata\_env**命令。
+2.  执行**source **_集群客户端安装目录_**/bigdata\_env**命令。
 
     可通过**klist**命令查看本地是否有有效票据，如下信息表明票据在16年12月24日14:11:42生效，将在16年12月25日14:11:40失效。在此期间可以使用该票据，其他时间则该票据无效。
 

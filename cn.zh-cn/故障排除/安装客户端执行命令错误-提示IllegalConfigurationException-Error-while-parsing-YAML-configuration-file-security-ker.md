@@ -1,4 +1,4 @@
-# 安装客户端执行命令错误，提示IllegalConfigurationException: Error while parsing YAML configuration file :"security.kerberos.login.keytab"<a name="ZH-CN_TOPIC_0187615915"></a>
+# 安装客户端执行命令错误，提示IllegalConfigurationException: Error while parsing YAML configuration file :"security.kerberos.login.keytab"<a name="mrs_03_0133"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276112_section370710207470"></a>
 
@@ -19,7 +19,7 @@ Exception in thread "main" org.apache.flink.configuration.IllegalConfigurationEx
 
 在安全集群环境下，Flink需要进行安全认证。当前客户端未进行相关安全认证设置。
 
-1.  Flink整个系统有三种认证方式：
+1.  Flink整个系统有两种认证方式：
     -   使用kerberos认证：Flink  yarn client、Yarn Resource  Manager、JobManager、HDFS、TaskManager、Kafka和Zookeeper。
     -   使用YARN内部的认证机制：Yarn  Resource Manager与Application Master（简称AM）。
 
@@ -35,9 +35,9 @@ Exception in thread "main" org.apache.flink.configuration.IllegalConfigurationEx
         security.kerberos.login.keytab: /home/flinkuser/keytab/abc222.keytab
         ```
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >-   “/home/flinkuser/keytab/abc222.keytab”表示的是用户目录，为[1](#zh-cn_topic_0167276112_li1710292815513)中放置目录。  
-        >-   请确保客户端用户具备对应目录权限。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >-   “/home/flinkuser/keytab/abc222.keytab”表示的是用户目录，为[1](#zh-cn_topic_0167276112_li1710292815513)中放置目录。
+        >-   请确保客户端用户具备对应目录权限。
 
 
     1.  principal名。

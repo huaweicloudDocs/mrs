@@ -1,4 +1,4 @@
-# TEXTFILE类型文件使用ARC4压缩时select结果乱码<a name="ZH-CN_TOPIC_0208559514"></a>
+# TEXTFILE类型文件使用ARC4压缩时select结果乱码<a name="mrs_03_0178"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276526_s4062da02d4d340ed9dbd38c42c5a7475"></a>
 

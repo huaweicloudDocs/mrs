@@ -1,4 +1,4 @@
-# 如何定位进程被kill<a name="ZH-CN_TOPIC_0187677441"></a>
+# 如何定位进程被kill<a name="mrs_03_0137"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275628_section5966838993845"></a>
 
@@ -26,7 +26,7 @@
     2018-12-06 11:06:52,744 | INFO  | main | STARTUP_MSG:
     ```
 
-    以上日志说明，DataNode先被其他进程关闭，然后健康检查失败，2分钟后，被NodeAgent启动DataNode 进程。
+    以上日志说明，DataNode先被其他进程关闭，然后健康检查失败，2分钟后，被NodeAgent启动DataNode进程。
 
 
 ## 处理步骤<a name="zh-cn_topic_0167275628_section4029653894947"></a>
@@ -55,7 +55,7 @@
     Starting auditd done
     ```
 
-2.  审计日志临时增加 kill命令审计规则。
+2.  审计日志临时增加kill命令审计规则。
 
     增加规则：
 
@@ -69,8 +69,8 @@
 
     ![](figures/c00313340-应用组件PDU-02_productdoc2-image-5f1f0517-5aad-4145-a84d-d5af587f5cf2.png)
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >说明：a0是被kill进程的pid（16进制），a1是kill命令的信号量。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >a0是被kill进程的pid（16进制），a1是kill命令的信号量。
 
 
 **验证方法**

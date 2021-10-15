@@ -1,12 +1,12 @@
-# WebHCat启动失败<a name="ZH-CN_TOPIC_0210454009"></a>
+# WebHCat启动失败<a name="mrs_03_0184"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276485_section842971116813"></a>
 
 用户修改hostname导致WebHCat启动失败。
 
-查看对应节点WebHCat启动日志（ /var/log/Bigdata/hive/webhcat/hive.log），发现报如下错误
+查看对应节点WebHCat启动日志（ /var/log/Bigdata/hive/webhcat/hive.log），发现报如下错误：
 
-![](figures/zh-cn_image_0167275689.png)
+![](figures/zh-cn_image_0264281574.png)
 
 ## 原因分析<a name="zh-cn_topic_0167276485_section724010302087"></a>
 

@@ -1,4 +1,4 @@
-# 安全集群执行set命令的时候报Cannot modify xxx at runtime.<a name="ZH-CN_TOPIC_0187803459"></a>
+# 安全集群执行set命令的时候报Cannot modify xxx at runtime.<a name="mrs_03_0149"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276539_s39c985fc238f442f8e1c8acf7034746e"></a>
 
@@ -13,15 +13,21 @@
 
 **方案1：**
 
-1.  登录MRS Manager页面，单击“服务管理 \> Hive \> 服务配置 \> 全部配置 \> HiveServer \> 安全”。
-2.  将要添加的参数添加到配置项hive.security.authorization.sqlstd.confwhitelist中。
+1.  登录Manager界面，修改Hive参数。
+    -   MRS Manager界面操作：登录MRS Manager页面，选择“服务管理 \> Hive \> 服务配置 \> 全部配置 \> HiveServer \> 安全”。
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager页面，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Hive \> 配置 \> 全部配置 \> HiveServer \> 安全”。
+
+2.  将需要执行的命令参数添加到配置项hive.security.authorization.sqlstd.confwhitelist.append中。
 3.  单击保存并重启HiveServer后即可。如下图所示：
 
-    ![](figures/zh-cn_image_0182388605.png)
+    ![](figures/zh-cn_image_0264281608.png)
 
 
 **方案2：**
 
-1.  登录MRS Manager页面，单击“服务管理 \> Hive \> 服务配置 \> 全部配置 \> HiveServer \> 安全”。
+1.  登录Manager界面，修改Hive参数。
+    -   MRS Manager界面操作：登录MRS Manager页面，选择“服务管理 \> Hive \> 服务配置 \> 全部配置 \> HiveServer \> 安全”。
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager页面，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Hive \> 配置 \> 全部配置 \> HiveServer \> 安全”。
+
 2.  找到选项hive.security.whitelist.switch，选择OFF，单击保存并重启HiveServer即可。
 

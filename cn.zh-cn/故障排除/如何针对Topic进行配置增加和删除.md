@@ -1,4 +1,4 @@
-# 如何针对Topic进行配置增加和删除<a name="ZH-CN_TOPIC_0205107986"></a>
+# 如何针对Topic进行配置增加和删除<a name="mrs_03_0158"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275091_section4387018310447"></a>
 
@@ -34,7 +34,7 @@ unclean.leader.election.enable
     已安装Kafka客户端。
 
 -   操作步骤
-    1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+    1.  以客户端安装用户，登录安装Kafka客户端的节点。
     2.  切换到Kafka客户端安装目录，例如“/opt/client”。
 
         **cd /opt/client**

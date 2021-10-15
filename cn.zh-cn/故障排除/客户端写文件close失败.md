@@ -1,4 +1,4 @@
-# 客户端写文件close失败<a name="ZH-CN_TOPIC_0181713162"></a>
+# 客户端写文件close失败<a name="mrs_03_0081"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276038_sd90676c0ec6d4f35884c312c769390c4"></a>
 
@@ -50,7 +50,7 @@ at java.lang.Thread.run(Thread.java:745)
     ```
 
 4.  NameNode打印了多次checkFileProgress是由于HDFS客户端多次尝试close文件，但是由于当前状态不满足要求，导致close失败， HDFS客户端retry的次数是由参数dfs.client.block.write.locateFollowingBlock.retries决定的，该参数默认是5，所以在NameNode的日志中看到了6次checkFileProgress打印。
-5.  但是再过0.5s之后，DataNode就上报块已经成功写入了。
+5.  但是再过0.5s之后，DataNode就上报块已经成功写入。
 
     ```
     2015-05-27 19:00:40,608 | INFO  | IPC Server handler 60 on 25000 | BLOCK* addStoredBlock: blockMap updated: 192.168.10.21:25009 is added to blk_1099105501_25370893{blockUCState=COMMITTED, primaryNodeIndex=-1, replicas=[ReplicaUnderConstruction[[DISK]DS-ef5fd3c9-5088-4813-ae9a-34a0714ec3a3:NORMAL|RBW], ReplicaUnderConstruction[[DISK]DS-f863e30f-ce5b-48cc-9cca-72f64c558adc:NORMAL|RBW]]} size 11837530 | org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.logAddStoredBlock(BlockManager.java:2393)
@@ -58,7 +58,7 @@ at java.lang.Thread.run(Thread.java:745)
     ```
 
 6.  DataNode上报块写成功通知延迟的原因可能有：网络瓶颈导致、CPU瓶颈导致。
-7.  如果此时再次调用close或者close的retry的次数增多，那么close都将返回成功。建议适当增大参数dfs.client.block.write.locateFollowingBlock.retries的，默认值为5次，尝试的时间间隔为400ms、800ms、1600ms、3200ms、6400ms，12800ms，那么close函数最多需要25.2秒才能返回。
+7.  如果此时再次调用close或者close的retry的次数增多，那么close都将返回成功。建议适当增大参数dfs.client.block.write.locateFollowingBlock.retries的值，默认值为5次，尝试的时间间隔为400ms、800ms、1600ms、3200ms、6400ms，12800ms，那么close函数最多需要25.2秒才能返回。
 
 ## 解决办法<a name="zh-cn_topic_0167276038_s9443cea47d1b4038b41bc68b70401408"></a>
 

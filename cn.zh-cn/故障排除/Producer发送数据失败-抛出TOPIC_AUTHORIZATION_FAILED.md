@@ -1,4 +1,4 @@
-# Producer发送数据失败，抛出TOPIC\_AUTHORIZATION\_FAILED<a name="ZH-CN_TOPIC_0181626566"></a>
+# Producer发送数据失败，抛出TOPIC\_AUTHORIZATION\_FAILED<a name="mrs_03_0061"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276234_s8c5a413588744f3ea1320d012fdb73cb"></a>
 
@@ -16,10 +16,11 @@
 
 Producer发送数据到Kafka失败，可能原因客户端Producer侧问题或者Kafka侧问题。
 
-1.  通过MRS Manager页面，点击“Services \> Kafka”，查看当前Kafka集群当前状态，发现状态为Good，且监控指标内容显示正确。
+1.  查看kafka服务状态：
+    -   MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> Kafka ，查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Kafka，
 
-    **图 1**  Kafka 服务状态<a name="zh-cn_topic_0167276234_fig11396819124915"></a>  
-    ![](figures/Kafka-服务状态.png "Kafka-服务状态")
+        查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
 
 2.  查看Producer客户端日志，发现打印TOPIC\_AUTHORIZATION\_FAILED异常信息。
 
@@ -32,7 +33,10 @@ Producer发送数据到Kafka失败，可能原因客户端Producer侧问题或�
 
     Producer采用9092端口来访问Kafka，9092为非安全端口。
 
-3.  通过MRS Manager页面，点击“Services \> Kafka \> Configuration”，查看当前Kafka集群配置，发现未设置自定义配置“allow.everyone.if.no.acl.found“=“false“。
+3.  通过Manager页面，查看当前Kafka集群配置，发现未设置自定义配置“allow.everyone.if.no.acl.found“=“false“。
+    -   MRS Manager界面操作入口：登录MRS Manager，依次选择 “服务管理 \> Kafka\> 配置”。
+    -   FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Kafka \> 配置"。
+
 4.  当acl设置为false不允许采用9092来进行访问。
 5.  查看Producer客户端日志，发现打印TOPIC\_AUTHORIZATION\_FAILED异常信息。
 
@@ -44,7 +48,7 @@ Producer发送数据到Kafka失败，可能原因客户端Producer侧问题或�
     [2017-01-25 11:14:40,010] WARN Error while fetching metadata with correlation id 1 : {test_acl=TOPIC_AUTHORIZATION_FAILED} (org.apache.kafka.clients.NetworkClient)
     ```
 
-    Producer采用9092端口来访问Kafka，9092为非安全端口。
+    Producer采用21005端口来访问Kafka，21005为非安全端口。
 
 6.  通过客户端命令查看topic的acl权限设置信息。
 
@@ -84,7 +88,7 @@ Producer发送数据到Kafka失败，可能原因客户端Producer侧问题或�
 9.  通过客户端命令查看topic的acl权限设置信息。
 
     ```
-    [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:24002/kafka --list --topic topic_acl
+    [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:2181/kafka --list --topic topic_acl
     Current ACLs for resource `Topic:topic_acl`: 
      User:test_user has Allow permission for operations: Describe from hosts: *
     User:test_user has Allow permission for operations: Write from hosts: * 
@@ -110,7 +114,7 @@ Producer发送数据到Kafka失败，可能原因客户端Producer侧问题或�
 
 ## 解决办法<a name="zh-cn_topic_0167276234_s2d3c010d3bc0406fa3f531ccd76c297f"></a>
 
-1.  配置自定义配置“allow.everyone.if.no.acl.found“参数为“ture“，重启Kafka服务。
+1.  配置自定义配置“allow.everyone.if.no.acl.found“参数为“true“，重启Kafka服务。
 2.  采用具有权限用户登录。
 
     例如：
@@ -119,15 +123,15 @@ Producer发送数据到Kafka失败，可能原因客户端Producer侧问题或�
 
     或者赋予用户相关权限。
 
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >需要使用Kafka管理员用户（属于kafkaadmin组）操作。  
+    >![](public_sys-resources/icon-notice.gif) **须知：** 
+    >需要使用Kafka管理员用户（属于kafkaadmin组）操作。
 
     例如：
 
-    **kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:24002/kafka  --topic topic\_acl --producer --add --allow-principal User:test**
+    **kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:2181/kafka  --topic topic\_acl --producer --add --allow-principal User:test**
 
     ```
-    [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=8.5.144.2:24002/kafka --list --topic topic_acl
+    [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=8.5.144.2:2181/kafka --list --topic topic_acl
     Current ACLs for resource `Topic:topic_acl`: 
      User:test_user has Allow permission for operations: Describe from hosts: *
      User:test_user has Allow permission for operations: Write from hosts: *

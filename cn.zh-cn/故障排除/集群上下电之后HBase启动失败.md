@@ -1,4 +1,4 @@
-# 集群上下电之后HBase启动失败<a name="ZH-CN_TOPIC_0187794915"></a>
+# 集群上下电之后HBase启动失败<a name="mrs_03_0146"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276008_sf76e408f8ea44020bf3de33c280bc079"></a>
 
@@ -54,7 +54,7 @@
 
 4.  新建/hbase/WALs目录。
 
-    **hdfs dfs –mkdir /hbase/WALs**
+    **hdfs dfs -mkdir /hbase/WALs**
 
     必须保证路径权限是hbase:hadoop。
 
