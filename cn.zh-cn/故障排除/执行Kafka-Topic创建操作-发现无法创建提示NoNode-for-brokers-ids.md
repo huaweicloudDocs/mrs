@@ -1,4 +1,4 @@
-# 执行Kafka Topic创建操作，发现无法创建提示NoNode for /brokers/ids<a name="ZH-CN_TOPIC_0185002838"></a>
+# 执行Kafka Topic创建操作，发现无法创建提示NoNode for /brokers/ids<a name="mrs_03_0123"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275137_s5d135719deec4560b99adb07a0aa6416"></a>
 
@@ -40,7 +40,7 @@ Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode
 
 ## 可能原因<a name="zh-cn_topic_0167275137_s8efdc02bbb1a42cba8fa3e43e2e68817"></a>
 
--   Kafka服务处于停止状态
+-   Kafka服务处于停止状态。
 -   客户端命令中zookeeper地址参数配置错误。
 
 ## 原因分析<a name="zh-cn_topic_0167275137_section10342981143649"></a>
@@ -62,11 +62,7 @@ Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode
     	at kafka.admin.TopicCommand.main(TopicCommand.scala)
     ```
 
-2.  通过MRS Manager查看Kafka服务是否处于正常状态。
-
-    **图 1**  Kafka状态<a name="zh-cn_topic_0167275137_fig18285327113316"></a>  
-    ![](figures/Kafka状态.png "Kafka状态")
-
+2.  通过Manager查看Kafka服务是否处于正常状态。
 3.  检查客户端命令中ZooKeeper地址是否正确，访问ZooKeeper上所存放的Kafka信息，其路径（Znode）应该加上/kafka，发现配置中缺少/kafka：
 
     ```
@@ -82,7 +78,7 @@ Caused by: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode
 
     ```
     [root@10-10-144-2 client]# 
-    kafka-topics.sh --create  --replication-factor 1 --partitions 2 --topic test --zookeeper 192.168.234.231:24002/kafka
+    kafka-topics.sh --create  --replication-factor 1 --partitions 2 --topic test --zookeeper 192.168.234.231:2181/kafka
     ```
 
 

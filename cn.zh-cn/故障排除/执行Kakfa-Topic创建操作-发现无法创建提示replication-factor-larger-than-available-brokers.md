@@ -1,4 +1,4 @@
-# 执行Kakfa Topic创建操作，发现无法创建提示replication factor  larger than available brokers<a name="ZH-CN_TOPIC_0185002839"></a>
+# 执行Kakfa Topic创建操作，发现无法创建提示replication factor  larger than available brokers<a name="mrs_03_0124"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275718_s5d135719deec4560b99adb07a0aa6416"></a>
 
@@ -44,11 +44,7 @@ Error while executing topic command : replication factor: 2 larger than availabl
      (kafka.admin.TopicCommand$)
     ```
 
-2.  通过MRS Manager参看Kafka服务是否处于正常状态，当前可用Broker是否小于设置的replication-factor。
-
-    **图 1**  Kafka 状态<a name="zh-cn_topic_0167275718_fig18285327113316"></a>  
-    ![](figures/Kafka-状态.png "Kafka-状态")
-
+2.  通过Manager参看Kafka服务是否处于正常状态，当前可用Broker是否小于设置的replication-factor。
 3.  检查客户端命令中ZooKeeper地址是否正确，访问ZooKeeper上所存放的Kafka信息，其路径（Znode）应该加上/kafka，发现配置中缺少/kafka。
 
     ```
@@ -60,10 +56,6 @@ Error while executing topic command : replication factor: 2 larger than availabl
 ## 解决办法<a name="zh-cn_topic_0167275718_section3518145211446"></a>
 
 1.  保证Kafka服务处于正常状态，且可用Broker不小于设置的replication-factor。
-
-    **图 2**  Kafka的状态<a name="zh-cn_topic_0167275718_fig7995918143416"></a>  
-    ![](figures/Kafka的状态.png "Kafka的状态")
-
 2.  创建命令中ZooKeeper地址信息需要添加/kafka。
 
     ```

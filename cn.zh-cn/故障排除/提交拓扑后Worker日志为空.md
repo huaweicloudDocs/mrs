@@ -1,4 +1,4 @@
-# 提交拓扑后Worker日志为空<a name="ZH-CN_TOPIC_0183415882"></a>
+# 提交拓扑后Worker日志为空<a name="mrs_03_0098"></a>
 
 ## 现象描述<a name="zh-cn_topic_0167276160_sd2de281c3a2e46329e3c488c1b54fd23"></a>
 
@@ -38,11 +38,11 @@ Worker进程启动失败，触发Nimbus重新分配任务，在其他Supervisor�
     ```
 
 2.  重新打包Jar包，且不能包含“storm.yaml”文件、“log4j”和“slf4j-log4j”相关的Jar包。
-3.  使用Eclipse远程提交新打包的Jar包。
+3.  使用IntelliJ IDEA远程提交新打包的Jar包。
 4.  查看是否可以在WebUI查看拓扑的详细信息和Worker日志内容。
-5.  在MRS Manager页面的“服务管理 \> Strom \> 服务配置”修改Storm集群关于Worker启动超时参数（参数说明请参考[参考信息](#zh-cn_topic_0167276160_s10dcc60f00124c78a719d4bf23021008)），保存并重启Storm服务。
-
-    ![](figures/zh-cn_image_0181483407.png)
+5.  在Manager页面修改Storm集群关于Worker启动超时参数（参数说明请参考[参考信息](#zh-cn_topic_0167276160_s10dcc60f00124c78a719d4bf23021008)），保存并重启Storm服务。
+    -   MRS Manager界面操作入口：登录MRS Manager，依次选择 “服务管理 \> Storm\> 配置”。
+    -   FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \> 待操作集群的名称 \> 服务 \> Storm \> 配置"
 
 6.  重新提交待运行的Jar包。
 

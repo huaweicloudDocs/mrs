@@ -1,4 +1,4 @@
-# 使用Spark时报错<a name="ZH-CN_TOPIC_0169495347"></a>
+# 使用Spark时报错<a name="mrs_03_0029"></a>
 
 ## 用户问题<a name="zh-cn_topic_0135447916_section074319532445"></a>
 
@@ -8,7 +8,7 @@
 
 客户在使用spark组件时，集群运行失败。
 
-![](figures/zh-cn_image_0135455626.png)
+![](figures/zh-cn_image_0264281873.png)
 
 ## 原因分析<a name="zh-cn_topic_0135447916_section127461353154416"></a>
 

@@ -1,4 +1,4 @@
-# 执行Kafka Topic设置ACL操作失败，提示NoAuthException<a name="ZH-CN_TOPIC_0185002837"></a>
+# 执行Kafka Topic设置ACL操作失败，提示NoAuthException<a name="mrs_03_0122"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275006_s5d135719deec4560b99adb07a0aa6416"></a>
 
@@ -71,6 +71,8 @@ at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
 
 ## 解决办法<a name="zh-cn_topic_0167275006_s2d3c010d3bc0406fa3f531ccd76c297f"></a>
 
+MRS Manager界面操作：
+
 1.  登录MRS Manager。
 2.  选择“系统设置 \> 用户管理”。
 3.  在操作用户对应的“操作”列，单击“修改”。
@@ -83,6 +85,20 @@ at org.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
 
     ```
     [root@host1 client]# id test
+    uid=20032(test) gid=10001(hadoop) groups=10001(hadoop),9998(ficommon),10002(kafkaadmin)，10003(kafka)
+    ```
+
+
+FusionInsight Manager界面操作：
+
+1.  登录FusionInsight Manager。
+2.  选择“系统 \> 权限 \> 用户”。
+3.  在使用的用户所在行的单击“修改”。
+4.  为用户添加**kafkaadmin**组。单击“确定”完成修改操作。
+5.  通过命令**id**查询用户组信息。
+
+    ```
+    [root@10-10-144-2 client]# id test
     uid=20032(test) gid=10001(hadoop) groups=10001(hadoop),9998(ficommon),10002(kafkaadmin)，10003(kafka)
     ```
 

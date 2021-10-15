@@ -1,4 +1,4 @@
-# 使用HBase<a name="ZH-CN_TOPIC_0168398177"></a>
+# 使用HBase<a name="mrs_03_1001"></a>
 
 -   **[连接到HBase响应慢](连接到HBase响应慢.md)**  
 
@@ -26,7 +26,7 @@
 
 -   **[HBase启动后原生页面显示RegionServer个数多于实际个数](HBase启动后原生页面显示RegionServer个数多于实际个数.md)**  
 
--   **[RegionServer实例异常，处于Concerning状态](RegionServer实例异常-处于Concerning状态.md)**  
+-   **[RegionServer实例异常，处于Restoring状态](RegionServer实例异常-处于Restoring状态.md)**  
 
 -   **[新安装的集群HBase启动失败](新安装的集群HBase启动失败.md)**  
 

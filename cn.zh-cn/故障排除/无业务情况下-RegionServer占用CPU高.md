@@ -1,4 +1,4 @@
-# 无业务情况下，RegionServer占用CPU高<a name="ZH-CN_TOPIC_0183415847"></a>
+# 无业务情况下，RegionServer占用CPU高<a name="mrs_03_0116"></a>
 
 ## 问题背景<a name="zh-cn_topic_0167275351_sc4140a5d02d04106aa70da68ed2052cd"></a>
 
@@ -11,7 +11,20 @@
 
     **top -H -p <PID\>**（根据实际RegionServer的进程ID进行替换），具体如下图所示，发现部分线程CPU使用率均达到80%。
 
-    ![](figures/zh-cn_image_0167275915.png)
+    ```
+     PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+     75706 omm       20   0 6879444   1.0g  25612 S  90.4  1.6   0:00.00 java
+     75716 omm       20   0 6879444   1.0g  25612 S  90.4  1.6   0:04.74 java
+     75720 omm       20   0 6879444   1.0g  25612 S  88.6  1.6   0:01.93 java
+     75721 omm       20   0 6879444   1.0g  25612 S  86.8  1.6   0:01.99 java
+     75722 omm       20   0 6879444   1.0g  25612 S  86.8  1.6   0:01.94 java
+     75723 omm       20   0 6879444   1.0g  25612 S  86.8  1.6   0:01.96 java
+     75724 omm       20   0 6879444   1.0g  25612 S  86.8  1.6   0:01.97 java
+     75725 omm       20   0 6879444   1.0g  25612 S  81.5  1.6   0:02.06 java
+     75726 omm       20   0 6879444   1.0g  25612 S  79.7  1.6   0:02.01 java
+     75727 omm       20   0 6879444   1.0g  25612 S  79.7  1.6   0:01.95 java
+     75728 omm       20   0 6879444   1.0g  25612 S  78.0  1.6   0:01.99 java
+    ```
 
 3.  根据RegionServer的进程编号，获取线程堆栈信息。
 
@@ -25,11 +38,11 @@
 
 5.  根据输出16进制TID，在线程堆栈中进行查找，发现在执行compaction操作。
 
-    ![](figures/zh-cn_image_0167275206.png)
+    ![](figures/zh-cn_image_0264281656.png)
 
 6.  对其它线程执行相同操作，发现均为compactions线程。
 
-    ![](figures/zh-cn_image_0167275124.png)
+    ![](figures/zh-cn_image_0264281932.png)
 
 
 ## 解决办法<a name="zh-cn_topic_0167275351_sfd8b9cee80fe4f18b02eb07eef1bd6da"></a>

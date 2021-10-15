@@ -1,4 +1,4 @@
-# 执行create external table报错<a name="ZH-CN_TOPIC_0207461482"></a>
+# 执行create external table报错<a name="mrs_03_0163"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167274372_s0ce3988f42514f54905b33982eba7684"></a>
 

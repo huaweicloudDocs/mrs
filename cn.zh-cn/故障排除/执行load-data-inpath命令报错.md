@@ -1,4 +1,4 @@
-# 执行load data inpath命令报错<a name="ZH-CN_TOPIC_0207461480"></a>
+# 执行load data inpath命令报错<a name="mrs_03_0161"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167274496_s3daa76df58db43fcb4ff7a1f5dc4e283"></a>
 

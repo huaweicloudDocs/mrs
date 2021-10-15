@@ -1,4 +1,4 @@
-# 业务拓扑配置GC参数不生效<a name="ZH-CN_TOPIC_0183502590"></a>
+# 业务拓扑配置GC参数不生效<a name="mrs_03_0118"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275339_section12510183122915"></a>
 
@@ -16,7 +16,7 @@ File '/opt/jar/example.jar' uploaded to '/srv/BigData/streaming/stormdir/nimbus/
 
 通过ps -ef | grep worker命令查看worker进程信息如下：
 
-![](figures/zh-cn_image_0167276209.png)
+![](figures/zh-cn_image_0264281598.png)
 
 ## 原因分析<a name="zh-cn_topic_0167275339_section115913122917"></a>
 
@@ -26,11 +26,11 @@ File '/opt/jar/example.jar' uploaded to '/srv/BigData/streaming/stormdir/nimbus/
 
 ## 解决办法<a name="zh-cn_topic_0167275339_section125121723202911"></a>
 
-1.  如果想要修改拓扑的JVM参数可以在命令中直接修改topology.worker.gc.childopts这个参数或者在服务端修改该参数，当topology.worker.gc.childopts为 "-Xms4096m -Xmx4096m -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M"时，效果如下：
+1.  如果想要修改拓扑的JVM参数，可以在命令中直接修改topology.worker.gc.childopts这个参数或者在服务端修改该参数，当topology.worker.gc.childopts为 "-Xms4096m -Xmx4096m -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M"时，效果如下：
 
     ```
-    [main-SendThread(187.7.61.88:24002)] INFO o.a.s.s.o.a.z.ClientCnxn - Socket connection established, initiating session, client: /187.7.61.88:44694, server: 187.7.61.88/187.7.61.88:24002
-    [main-SendThread(187.7.61.88:24002)] INFO o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 187.7.61.88/187.7.61.88:24002, sessionid = 0x16037a6e5f092575, negotiated timeout = 40000
+    [main-SendThread(10.7.61.88:2181)] INFO o.a.s.s.o.a.z.ClientCnxn - Socket connection established, initiating session, client: /10.7.61.88:44694, server: 10.7.61.88/10.7.61.88:2181
+    [main-SendThread(10.7.61.88:2181)] INFO o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 10.7.61.88/10.7.61.88:2181, sessionid = 0x16037a6e5f092575, negotiated timeout = 40000
     [main-EventThread] INFO o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
     [main] INFO b.s.u.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [1000] the maxRetries [1]
     [main] INFO o.a.s.s.o.a.z.Login - successfully logged in.
@@ -47,6 +47,6 @@ File '/opt/jar/example.jar' uploaded to '/srv/BigData/streaming/stormdir/nimbus/
 
 2.  通过ps -ef | grep worker命令查看worker进程信息如下：
 
-    ![](figures/zh-cn_image_0167276533.png)
+    ![](figures/zh-cn_image_0264281589.png)
 
 

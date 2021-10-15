@@ -1,4 +1,4 @@
-# 新安装的集群HBase启动失败<a name="ZH-CN_TOPIC_0187794913"></a>
+# 新安装的集群HBase启动失败<a name="mrs_03_0144"></a>
 
 ## 问题背景<a name="zh-cn_topic_0167276450_sf76e408f8ea44020bf3de33c280bc079"></a>
 

@@ -1,4 +1,4 @@
-# 怎样在Hive提交任务的时候指定队列？<a name="ZH-CN_TOPIC_0205107310"></a>
+# 怎样在Hive提交任务的时候指定队列？<a name="mrs_03_0151"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275309_section1861111131114"></a>
 
@@ -15,9 +15,9 @@
 
 2.  提交任务后，可在Yarn页面看到，如下任务已经提交到队列QueueA。
 
-    ![](figures/zh-cn_image_0167275072.png)
+    ![](figures/zh-cn_image_0264281840.png)
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >队列的名称区分大小写，如写成queueA，Queuea均无效。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >队列的名称区分大小写，如写成queueA，Queuea均无效。
 
 

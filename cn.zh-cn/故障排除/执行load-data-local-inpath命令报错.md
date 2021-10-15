@@ -1,4 +1,4 @@
-# 执行load data local inpath命令报错<a name="ZH-CN_TOPIC_0207461481"></a>
+# 执行load data local inpath命令报错<a name="mrs_03_0162"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275418_s91ac7cf658f74a3b8df14d7dec078fbc"></a>
 
@@ -29,8 +29,8 @@
 
 ## 解决方案<a name="zh-cn_topic_0167275418_scb87efd2dd7d4352b547c9163f68269f"></a>
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->通常不建议使用本地文件加载数据到hive表。 建议先将本地文件放入HDFS，然后从集群中加载数据。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>通常不建议使用本地文件加载数据到hive表。 建议先将本地文件放入HDFS，然后从集群中加载数据。
 
 Hive对load data local inpath命令有如下权限要求，请对照下述要求是否满足：
 

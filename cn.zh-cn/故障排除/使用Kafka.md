@@ -1,4 +1,4 @@
-# 使用Kafka<a name="ZH-CN_TOPIC_0168546834"></a>
+# 使用Kafka<a name="mrs_03_0245"></a>
 
 -   **[运行Kafka获取topic报错](运行Kafka获取topic报错.md)**  
 
@@ -44,8 +44,6 @@
 
 -   **[Consumer消费数据存在重复消费现象](Consumer消费数据存在重复消费现象.md)**  
 
--   **[执行Kafka Topic创建操作，发现节点上Partition数量分布不均衡](执行Kafka-Topic创建操作-发现节点上Partition数量分布不均衡.md)**  
-
 -   **[执行Kafka Topic创建操作，发现Partition的Leader显示为none](执行Kafka-Topic创建操作-发现Partition的Leader显示为none.md)**  
 
 -   **[Kafka安全使用说明](Kafka安全使用说明.md)**  
@@ -67,5 +65,7 @@
 -   **[Kafka生产者写入单条记录过长问题](Kafka生产者写入单条记录过长问题.md)**  
 
 -   **[Kakfa消费者读取单条记录过长问题](Kakfa消费者读取单条记录过长问题.md)**  
+
+-   **[Kafka集群节点内多磁盘数据量占用高处理办法](Kafka集群节点内多磁盘数据量占用高处理办法.md)**  
 
 

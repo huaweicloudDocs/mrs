@@ -1,4 +1,4 @@
-# 使用Hive<a name="ZH-CN_TOPIC_0168546832"></a>
+# 使用Hive<a name="mrs_03_0243"></a>
 
 -   **[Hive各个日志里都存放了什么信息？](Hive各个日志里都存放了什么信息.md)**  
 
@@ -68,9 +68,9 @@
 
 -   **[DBService超过最大连接数，导致metastore异常](DBService超过最大连接数-导致metastore异常.md)**  
 
--   **[Beeline报Failed to execute session hooks: over max connections错误](Beeline报Failed-to-execute-session-hooks-over-max-connections错误.md)**  
+-   **[beeline报Failed to execute session hooks: over max connections错误](beeline报Failed-to-execute-session-hooks-over-max-connections错误.md)**  
 
--   **[Beeline报OutOfMemoryError错误](Beeline报OutOfMemoryError错误.md)**  
+-   **[beeline报OutOfMemoryError错误](beeline报OutOfMemoryError错误.md)**  
 
 -   **[输入文件数超出设置限制导致任务执行失败](输入文件数超出设置限制导致任务执行失败.md)**  
 
@@ -85,5 +85,19 @@
 -   **[参考Hive JDBC代码用例开发的业务应用运行失败](参考Hive-JDBC代码用例开发的业务应用运行失败.md)**  
 
 -   **[HiveServer和HiveHCat进程故障](HiveServer和HiveHCat进程故障.md)**  
+
+-   **[MRS hive使用代码连接ZooKeeper报错](MRS-hive使用代码连接ZooKeeper报错.md)**  
+
+-   **[配置数据连接超时](配置数据连接超时.md)**  
+
+-   **[Hive执行insert ino语句报错，命令界面报错信息不明](Hive执行insert-ino语句报错-命令界面报错信息不明.md)**  
+
+-   **[增加Hive表字段超时](增加Hive表字段超时.md)**  
+
+-   **[Hive服务重启失败](Hive服务重启失败.md)**  
+
+-   **[hive执行删除表失败](hive执行删除表失败.md)**  
+
+-   **[Hive执行msck repair table table\_name报错](Hive执行msck-repair-table-table_name报错.md)**  
 
 

@@ -1,4 +1,4 @@
-# 使用Kafka Shell命令无法操作Kafka集群<a name="ZH-CN_TOPIC_0226521601"></a>
+# 使用Kafka Shell命令无法操作Kafka集群<a name="mrs_03_0199"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275431_s20deae74a71143aeabad239c7a22f024"></a>
 
@@ -41,10 +41,10 @@ atorg.I0Itec.zkclient.ZkClient.retryUntilConnected(ZkClient.java:985)
 经确认执行命令有问题，访问ZooKeeper上所存放的Kafka信息，其路径（Znode）应该加上/kafka，完整的查询命令应该是：
 
 ```
-root@Slave2bin]#./kafka-topics.sh --describe --topic example-metric1 --zookeeper 192.119.147.231:2181,192.119.147.228:2181,192.119.147.227:2181/kafka
+root@Slave2bin]#./kafka-topics.sh --describe --topic example-metric1 --zookeeper 192.168.147.231:2181,192.168.147.228:2181,192.168.147.227:2181/kafka
 ```
 
 ## 解决办法<a name="zh-cn_topic_0167275431_section54311375103045"></a>
 
-属于命令操作有误，具体细节请参考“ 开发指南 \> Kafka应用开发 \> Kafka接口 \> Shell命令”章节。
+属于命令操作有误，具体细节请参考[Kafka Shell命令](https://support.huaweicloud.com/devg-mrs/mrs_06_0319.html)章节。
 

@@ -1,10 +1,10 @@
-# 使用不同用户，执行yarn-session创建集群失败<a name="ZH-CN_TOPIC_0187615918"></a>
+# 使用不同用户，执行yarn-session创建集群失败<a name="mrs_03_0136"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274935_section370710207470"></a>
 
 使用Flink过程中，具有两个相同权限用户testuser和bdpuser。
 
-使用用户testuser创建Flink集群正常，但是切换至bdpuser用户创建Fllink集群时，执行yarn-session.sh命令报错
+使用用户testuser创建Flink集群正常，但是切换至bdpuser用户创建Fllink集群时，执行yarn-session.sh命令报错：
 
 ```
 2019-01-02 14:28:09,098 | ERROR | [main] | Ensure path threw exception | org.apache.flink.shaded.curator.org.apache.curator.framework.imps.CuratorFrameworkImpl (CuratorFrameworkImpl.java:566) 

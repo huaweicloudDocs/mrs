@@ -1,4 +1,4 @@
-# 使用IE浏览器在Hue中执行HQL失败<a name="ZH-CN_TOPIC_0207364898"></a>
+# 使用IE浏览器在Hue中执行HQL失败<a name="mrs_03_0159"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276173_sd64242caa665405798481482f49ab0ee"></a>
 

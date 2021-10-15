@@ -1,4 +1,4 @@
-# 通过beeline创建UDF时候报错<a name="ZH-CN_TOPIC_0207461485"></a>
+# 通过beeline创建UDF时候报错<a name="mrs_03_0166"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276125_s97a4fd8fa6a04bc5b12606588b5827f6"></a>
 

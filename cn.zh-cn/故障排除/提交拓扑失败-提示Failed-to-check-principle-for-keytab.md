@@ -1,4 +1,4 @@
-# 提交拓扑失败，提示Failed to check principle for keytab<a name="ZH-CN_TOPIC_0183415881"></a>
+# 提交拓扑失败，提示Failed to check principle for keytab<a name="mrs_03_0097"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274757_s8c5a413588744f3ea1320d012fdb73cb"></a>
 
@@ -9,7 +9,7 @@
 ## 可能原因<a name="zh-cn_topic_0167274757_section51259467103320"></a>
 
 -   提交拓扑中没有包含用户的keytab文件。
--   提交拓扑中包含keytab和提交用户不一致。
+-   提交拓扑中包含的keytab和提交用户不一致。
 -   客户端/tmp目录下已存在user.keytab，且宿主非运行用户。
 
 ## 原因分析<a name="zh-cn_topic_0167274757_section2251282011336"></a>
@@ -47,7 +47,7 @@
 
     查看user.keytab文件，发现principal为zmk\_kafka.
 
-    ![](figures/zh-cn_image_0167275075.jpg)
+    ![](figures/zh-cn_image_0264281658.jpg)
 
     发现认证用户和user.keytab文件中principal不对应。
 

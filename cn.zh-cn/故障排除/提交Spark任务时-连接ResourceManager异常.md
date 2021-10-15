@@ -1,4 +1,4 @@
-# 提交Spark任务时，连接ResourceManager异常<a name="ZH-CN_TOPIC_0185002834"></a>
+# 提交Spark任务时，连接ResourceManager异常<a name="mrs_03_0131"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275589_sb20f31b2fbde41d88c1b10c6459ac320"></a>
 

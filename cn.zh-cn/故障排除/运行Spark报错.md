@@ -1,8 +1,8 @@
-# 运行Spark报错<a name="ZH-CN_TOPIC_0172252642"></a>
+# 运行Spark报错<a name="mrs_03_0043"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
-运行Spark作业报找不到指定的类
+运行Spark作业报找不到指定的类。
 
 ## 问题现象<a name="section117424454313"></a>
 
@@ -22,6 +22,6 @@ org.apache.hadoop.hbase.DoNotRetryIOException: java.lang.ClassNotFoundException:
 1.  登录任意Master节点。
 2.  修改Spark客户端目录下的配置文件。
 
-    执行**/opt/client/Spark/spark/conf/spark-defaults.conf**命令，打开spark-defaults.conf文件，设置“park.executor.extraClassPath“  取值为“$\{PWD\}/\*“。
+    执行**vim /opt/client/Spark/spark/conf/spark-defaults.conf**命令，打开spark-defaults.conf文件，设置“spark.executor.extraClassPath“  取值为“$\{PWD\}/\*“。
 
 

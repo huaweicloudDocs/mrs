@@ -1,4 +1,4 @@
-# 使用HDFS<a name="ZH-CN_TOPIC_0169495344"></a>
+# 使用HDFS<a name="mrs_03_0248"></a>
 
 -   **[修改集群HDFS服务的NameNode RPC端口后，NameNode都变为备状态](修改集群HDFS服务的NameNode-RPC端口后-NameNode都变为备状态.md)**  
 
@@ -18,7 +18,7 @@
 
 -   **[ntpdate修改时间导致HDFS出现大量丢块](ntpdate修改时间导致HDFS出现大量丢块.md)**  
 
--   **[DataNode概率性出现CPU占用接近100%，导致节点丢失（ssh连得很慢或者不上）](DataNode概率性出现CPU占用接近100-导致节点丢失（ssh连得很慢或者不上）.md)**  
+-   **[DataNode概率性出现CPU占用接近100%，导致节点丢失（ssh连得很慢或者连不上）](DataNode概率性出现CPU占用接近100-导致节点丢失（ssh连得很慢或者连不上）.md)**  
 
 -   **[单NameNode长期故障，如何使用客户端手动checkpoint](单NameNode长期故障-如何使用客户端手动checkpoint.md)**  
 
@@ -57,5 +57,9 @@
 -   **[HDFS显示磁盘空间不足，其实还有10%磁盘空间](HDFS显示磁盘空间不足-其实还有10-磁盘空间.md)**  
 
 -   **[普通集群在Core节点安装hdfs客户端，使用时报错](普通集群在Core节点安装hdfs客户端-使用时报错.md)**  
+
+-   **[集群外节点安装客户端使用hdfs上传文件失败](集群外节点安装客户端使用hdfs上传文件失败.md)**  
+
+-   **[HDFS写并发较大时，报副本不足的问题](HDFS写并发较大时-报副本不足的问题.md)**  
 
 

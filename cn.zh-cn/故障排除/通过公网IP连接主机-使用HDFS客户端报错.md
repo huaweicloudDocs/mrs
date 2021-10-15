@@ -1,4 +1,4 @@
-# 通过公网IP连接主机，使用HDFS客户端报错<a name="ZH-CN_TOPIC_0169496547"></a>
+# 通过公网IP连接主机，使用HDFS客户端报错<a name="mrs_03_0039"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 

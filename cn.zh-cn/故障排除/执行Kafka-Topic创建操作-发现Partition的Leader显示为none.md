@@ -1,4 +1,4 @@
-# 执行Kafka Topic创建操作，发现Partition的Leader显示为none<a name="ZH-CN_TOPIC_0187791613"></a>
+# 执行Kafka Topic创建操作，发现Partition的Leader显示为none<a name="mrs_03_0139"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274710_s5d135719deec4560b99adb07a0aa6416"></a>
 
@@ -27,12 +27,11 @@ Topic:test      PartitionCount:2        ReplicationFactor:2     Configs:
 
 ## 原因分析<a name="zh-cn_topic_0167274710_section10342981143649"></a>
 
-1.  通过MRS Manager页面，单击“服务管理 \> Kafka”，查看Kafka集群当前状态，发现状态为“良好“，且监控指标内容显示正确。
-2.  通过MRS Manager页面，单击“服务管理 \> Kafka”，在Kafka Summary中获取Controller节点信息。
+1.  查看kafka服务状态及监控指标。
+    -   MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> Kafka ，查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \> 待操作集群的名称 \> 服务 \> Kafka，查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
 
-    **图 1**  Kafka服务信息<a name="zh-cn_topic_0167274710_fig139698618327"></a>  
-    ![](figures/Kafka服务信息.png "Kafka服务信息")
-
+2.  在Kafka概览页面获取Controller节点信息。
 3.  登录Controller所在节点，通过**cd /var/log/Bigdata/kafka/broker**命令进入节点日志目录，在state-change.log发现存在ZooKeeper权限异常，提示NoAuthException。
 
     ```

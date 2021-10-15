@@ -1,4 +1,4 @@
-# 执行Kafka Topic删除操作，发现无法删除<a name="ZH-CN_TOPIC_0183415859"></a>
+# 执行Kafka Topic删除操作，发现无法删除<a name="mrs_03_0108"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276065_s5d135719deec4560b99adb07a0aa6416"></a>
 
@@ -39,9 +39,7 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
     test - marked for deletion
     ```
 
-    通过MRS Manager查看Kafka Broker实例的服务状态。
-
-    ![](figures/zh-cn_image_0181628321.png)
+    通过Manager查看Kafka Broker实例的运行状态。
 
     通过**cd /var/log/Bigdata/kafka/broker**命令进入RunningAsController节点日志目录，在controller.log发现ineligible for deletion: test。
 
@@ -50,9 +48,9 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
     2016-03-09 11:11:26,229 | INFO  | [main] | [Controller 1]: List of topics ineligible for deletion: test | kafka.controller.KafkaController (Logging.scala:68)
     ```
 
-3.  通过MRS Manager查询Broker删除Topic相关配置。
+3.  通过Manager查询Broker删除Topic相关配置。
 
-    ![](figures/zh-cn_image_0181626625.png)
+    ![](figures/zh-cn_image_0264281849.png)
 
     解决方法参考[2](#zh-cn_topic_0167276065_l7c46dca880334a5ba2048ae22c3bf1b5)
 
@@ -62,7 +60,7 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
     kafka-topics.sh --describe –topic test --zookeeper 192.168.0.122:2181/kafka
     ```
 
-    ![](figures/zh-cn_image_0167274507.png)
+    ![](figures/zh-cn_image_0264281674.png)
 
     进入RunningAsController节点日志目录，在controller.log发现marked ineligible for deletion。
 
@@ -71,9 +69,9 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
     2016-03-10 11:11:17,990 | INFO  | [delete-topics-thread-3] | [delete-topics-thread-3], Not retrying deletion of topic test at this time since it is marked ineligible for deletion | kafka.controller.TopicDeletionManager$DeleteTopicsThread (Logging.scala:68)
     ```
 
-5.  通过MRS Manager查询Broker状态。
+5.  通过Manager查询Broker状态。
 
-    ![](figures/zh-cn_image_0181626696.png)
+    ![](figures/zh-cn_image_0264281811.png)
 
     其中一个Broker处于停止或者故障状态。Topic进行删除必须保证该Topic的所有Partition所在的Broker必须处于正常状态。
 
@@ -84,25 +82,25 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
     ```
     2016-03-10 11:33:35,208 | INFO  | [delete-topics-thread-3] | [delete-topics-thread-3], Deletion of topic test successfully completed | kafka.controller.TopicDeletionManager$DeleteTopicsThread (Logging.scala:68)
     
-    2016-03-10 11:33:38,501 | INFO  | [ZkClient-EventThread-19-192.168.0.122:24002,160.172.0.52:24002,160.172.0.51:24002/kafka] | [TopicChangeListener on Controller 3]: New topics: [Set(test)], deleted topics: [Set()], new partition replica assignment
+    2016-03-10 11:33:38,501 | INFO  | [ZkClient-EventThread-19-192.168.0.122:2181,160.172.0.52:2181,160.172.0.51:2181/kafka] | [TopicChangeListener on Controller 3]: New topics: [Set(test)], deleted topics: [Set()], new partition replica assignment
     ```
 
-7.  通过MRS Manager查询Broker创建Topic相关配置。
+7.  通过Manager查询Broker创建Topic相关配置。
 
-    ![](figures/zh-cn_image_0181627003.png)
+    ![](figures/zh-cn_image_0264281648.png)
 
     经确认，对该Topic操作的应用没有停止。
 
     解决方法参考[4](#zh-cn_topic_0167276065_l68e7efb1c2484868a119c751bf10796b)。
 
 
-## **解决办法**<a name="zh-cn_topic_0167276065_scb957f8902054ebda5df5f2959778917"></a>
+## 解决办法<a name="zh-cn_topic_0167276065_scb957f8902054ebda5df5f2959778917"></a>
 
 1.  <a name="zh-cn_topic_0167276065_l65c91bf38d6d492a90463cbb43bacfcd"></a>ZooKeeper连接失败导致。
 
     Kafka客户端连接ZooKeeper服务超时。检查客户端到ZooKeeper的网络连通性。
 
-    网络连接失败，通过MRS Manager界面查看Zookeeper服务信息。
+    网络连接失败，通过Manager界面查看Zookeeper服务信息。
 
     **图 1**  Zookeeper服务信息<a name="zh-cn_topic_0167276065_fig16502026183014"></a>  
     ![](figures/Zookeeper服务信息.png "Zookeeper服务信息")
@@ -111,7 +109,7 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
 
 2.  <a name="zh-cn_topic_0167276065_l7c46dca880334a5ba2048ae22c3bf1b5"></a>Kafka服务端配置禁止删除。
 
-    通过MRS Manager界面修改delete.topic.enable为true。保存配置并重启服务。
+    通过Manager界面修改delete.topic.enable为true。保存配置并重启服务。
 
     **图 2**  修改delete.topic.enable<a name="zh-cn_topic_0167276065_fig635792113219"></a>  
     ![](figures/修改delete-topic-enable.png "修改delete-topic-enable")
@@ -151,7 +149,7 @@ kafka-topics.sh --delete --topic test --zookeeper 192.168.234.231:2181/kafka
 
 4.  <a name="zh-cn_topic_0167276065_l68e7efb1c2484868a119c751bf10796b"></a>Kafka配置自动创建，且Producer未停止。
 
-    停止相关应用，通过MRS Manager界面修改“auto.create.topics.enable“为“false“，保存配置并重启服务。
+    停止相关应用，通过Manager界面修改“auto.create.topics.enable“为“false“，保存配置并重启服务。
 
     **图 3**  修改auto.create.topics.enable<a name="zh-cn_topic_0167276065_fig17777193203317"></a>  
     ![](figures/修改auto-create-topics-enable.png "修改auto-create-topics-enable")

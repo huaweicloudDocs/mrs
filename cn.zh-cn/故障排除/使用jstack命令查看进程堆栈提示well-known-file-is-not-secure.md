@@ -1,10 +1,10 @@
-# 使用jstack命令查看进程堆栈提示well-known file is not secure<a name="ZH-CN_TOPIC_0183415884"></a>
+# 使用jstack命令查看进程堆栈提示well-known file is not secure<a name="mrs_03_0100"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275413_section12510183122915"></a>
 
 使用jstack命令查看进程堆栈信息报：well-known file is not secure。
 
-![](figures/zh-cn_image_0167274729.png)
+![](figures/zh-cn_image_0264281654.png)
 
 ## 原因分析<a name="zh-cn_topic_0167275413_section115913122917"></a>
 
@@ -17,38 +17,48 @@
 
 方式一：通过storm原生页面查看进程堆栈
 
-1.  通过storm原生页面查看：MRS Manager \> 服务管理
+1.  登录Storm原生界面。
 
-    ![](figures/zh-cn_image_0221461329.png)
+    MRS Manager界面操作：
+
+    1.  访问MRS Manager。
+    2.  在Manager选择“服务管理  \>  Storm“，在“Storm 概述“的“Storm WebUI“，单击任意一个UI链接，打开Storm的WebUI。
+
+    FusionInsight Manager界面操作：
+
+    1.  访问FusionInsight Manager。
+    2.  在Manager选择“集群 \> 服务  \>  Storm“，在“概览“的“Storm WebUI“，单击任意一个UI链接，打开Storm的WebUI。
 
 2.  选择要查看的拓扑。
 
-    ![](figures/zh-cn_image_0167275122.png)
+    ![](figures/zh-cn_image_0264281642.png)
 
 3.  选择要查看的spout或者bolt。
 
-    ![](figures/zh-cn_image_0167274633.png)
+    ![](figures/zh-cn_image_0264281559.png)
 
 4.  选择要查看的节点日志文件，再选择JStack或者Heap按钮，其中JStack对应的是堆栈信息，Heap对应的是堆信息：
 
-    ![](figures/zh-cn_image_0167274866.png)
+    ![](figures/zh-cn_image_0264281588.png)
 
 
 方式二：通过修改自定义参数查看进程堆栈
 
-1.  登录MRD Manager页面，选择“服务管理 \> Storm \> 服务配置”，“参数类别“选择“全部配置“。
+1.  进入Storm服务参数配置界面。
+
+    MRS Manager界面操作：登录MRS Manager页面，选择“服务管理 \> Storm \> 服务配置”，“参数类别“选择“全部配置“。
+
+    FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \> 服务 \> Yarn”，单击“配置”，选择“全部配置”。
+
 2.  在左侧导航栏选择“supervisor \> 自定义”，添加一个变量supervisor.run.worker.as.user=false。
-
-    ![](figures/zh-cn_image_0221461486.png)
-
-3.  单击“保存配置”，勾选“重新启动受影响的服务或实例。”并单击“确定”重启服务。
+3.  保存配置，勾选“重新启动受影响的服务或实例。”并单击“确定”重启服务。
 4.  重新提交拓扑。
 5.  后台节点切为omm用户执行jps命令即可查看worker的pid。
 
-    ![](figures/zh-cn_image_0167275253.png)
+    ![](figures/zh-cn_image_0264281920.png)
 
 6.  执行jstack pid，即可查看jstack信息。
 
-    ![](figures/zh-cn_image_0167275770.png)
+    ![](figures/zh-cn_image_0264281741.png)
 
 

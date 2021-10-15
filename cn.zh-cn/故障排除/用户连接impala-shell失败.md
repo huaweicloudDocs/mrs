@@ -1,4 +1,4 @@
-# 用户连接impala-shell失败<a name="ZH-CN_TOPIC_0203029723"></a>
+# 用户连接impala-shell失败<a name="mrs_03_0150"></a>
 
 ## 用户问题<a name="section2029414539714"></a>
 
@@ -6,7 +6,9 @@
 
 ## 问题现象<a name="section1999616579715"></a>
 
-用户在“组件管理”页面修改任意组件的配置并重启服务后，连接impala-shell，会出现连接失败，报错no such file/directory。![](figures/zh-cn_image_0203033467.png)
+用户在“组件管理”页面修改任意组件的配置并重启服务后，连接impala-shell，会出现连接失败，报错no such file/directory。
+
+![](figures/zh-cn_image_0264281578.png)
 
 ## 原因分析<a name="section18356981781"></a>
 

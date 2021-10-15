@@ -1,4 +1,4 @@
-# 执行balance失败，Source and target differ in block-size<a name="ZH-CN_TOPIC_0181713170"></a>
+# 执行balance失败，Source and target differ in block-size<a name="mrs_03_0089"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275542_sd1dc17fee2214ed9867d242a14f38d7d"></a>
 

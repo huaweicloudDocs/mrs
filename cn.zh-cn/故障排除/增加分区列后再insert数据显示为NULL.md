@@ -1,4 +1,4 @@
-# 增加分区列后再insert数据显示为NULL<a name="ZH-CN_TOPIC_0205107314"></a>
+# 增加分区列后再insert数据显示为NULL<a name="mrs_03_0155"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275647_s8417d2e55ed749d790b7c904712c7845"></a>
 
