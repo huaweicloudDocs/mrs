@@ -1,12 +1,12 @@
-# 配置MRS多用户访问OBS细粒度权限<a name="ZH-CN_TOPIC_0192402680"></a>
+# 配置MRS多用户访问OBS细粒度权限<a name="mrs_01_0632"></a>
 
-开启细粒度权限时，用户通过该指导配置访问OBS权限，实现MRS用户对OBS桶下的目录权限控制。MRS 2.0.5及之后版本支持该功能。
+开启细粒度权限时，用户通过该指导配置访问OBS权限，实现MRS用户对OBS文件系统下的目录权限控制。
 
-如需对MRS的用户访问OBS的资源进行详细控制，可通过该功能实现。例如，您只允许用户组A访问某一OBS桶中的日志文件，您可以执行以下操作来实现：
+如需对MRS的用户访问OBS的资源进行详细控制，可通过该功能实现。例如，您只允许用户组A访问某一OBS文件系统中的日志文件，您可以执行以下操作来实现：
 
-1.  为MRS集群配置OBS访问权限的委托，实现使用ECS自动获取的临时AK/SK访问OBS。避免了AK/SK直接暴露在配置文件中的风险。。
-2.  在IAM中创建一个只允许访问某一OBS桶中的日志文件的策略，并创建一个绑定该策略权限的委托。
-3.  在MRS集群中，新建的委托与MRS集群中的用户组A进行绑定，即可实现用户组A只拥有访问某一OBS桶中的日志文件的权限。
+1.  为MRS集群配置OBS访问权限的委托，实现使用ECS自动获取的临时AK/SK访问OBS。避免了AK/SK直接暴露在配置文件中的风险。
+2.  在IAM中创建一个只允许访问某一OBS文件系统中的日志文件的策略，并创建一个绑定该策略权限的委托。
+3.  在MRS集群中，新建的委托与MRS集群中的用户组A进行绑定，即可实现用户组A只拥有访问某一OBS文件系统中的日志文件的权限。
 
 在以下场景运行作业时，提交作业的用户名为内置用户名，无法实现MRS多用户访问OBS：
 
@@ -21,7 +21,7 @@
 
 ## 步骤一：给集群配置有OBS访问权限的委托<a name="section1123491716318"></a>
 
-1.  请参考[ECS委托方式访问OBS](ECS委托方式访问OBS.md)配置OBS访问权限的委托。
+1.  请参考[配置存算分离集群（委托方式）](配置存算分离集群（委托方式）.md)配置OBS访问权限的委托。
 
     配置的委托对该集群上所有用户（包括内置用户）及用户组生效，如需对集群上的用户及用户组访问OBS的权限进行控制请继续执行后续步骤。
 
@@ -33,7 +33,10 @@
 ## 步骤三：在MRS集群详情页面配置OBS权限控制映射关系<a name="section1256052875517"></a>
 
 1.  在MRS控制台，选择“集群列表 \> 现有集群”并单击集群名称。
-2.  在“概览”页签的基本信息区域，单击“OBS权限控制”右侧的“点击管理”。
+2.  在“概览”页签的基本信息区域，单击“OBS权限控制”右侧的“单击管理”。
+
+    ![](figures/5-29-15-单击管理.png)
+
 3.  单击“添加映射”，并参考[表1](#table175454305220)配置相关参数。
 
     **表 1**  OBS权限控制参数
@@ -71,23 +74,23 @@
 4.  单击“确定”。
 5.  勾选“我同意授权MRS用户（组）与IAM委托之间的信任关系。”，并单击“确定”，完成MRS用户与OBS权限的映射关系。
 
-    当集群详情页面“概览”页签的“OBS权限控制”后出现![](figures/zh-cn_image_0207464162.png)或OBS权限控制的映射表已刷新，表示映射生效（过程大约需要1分钟）。
+    当集群详情页面“概览”页签的“OBS权限控制”后出现![](figures/zh-cn_image_0264268402.png)或OBS权限控制的映射表已刷新，表示映射生效（过程大约需要1分钟）。
 
     在关系列表的“操作”列可以对已添加的关系进行编辑和删除。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   对于没有配置在OBS权限控制的用户，且没有配置AK、SK时，将以集群配置的委托在“对象存储服务”项目下所拥有的权限访问OBS。  
-    >-   无论用户是否配置OBS权限控制，只要配置AK、SK时，将以AK、SK的权限访问OBS。  
-    >-   映射关系的修改、创建、删除需要用户有Security Administrator权限。  
-    >-   修改映射关系后，若想使之在spark-beeline中生效，需要重启Spark服务，若想使之在hive beeline中生效，需要退出beeline重新进入，若想使之在Presto服务中生效，需要重启Presto服务。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >-   对于没有配置在OBS权限控制的用户，且没有配置AK、SK时，将以集群配置的委托在“对象存储服务”项目下所拥有的权限访问OBS。
+    >-   无论用户是否配置OBS权限控制，只要配置AK、SK时，将以AK、SK的权限访问OBS。
+    >-   映射关系的修改、创建、删除需要用户有Security Administrator权限。
+    >-   修改映射关系后，若想使之在spark-beeline中生效，需要重启Spark服务，若想使之在hive beeline中生效，需要退出beeline重新进入，若想使之在Presto服务中生效，需要重启Presto服务。
 
 
 ## 在开启OBS权限控制功能时各组件访问OBS的说明<a name="section1491171019243"></a>
 
 1.  以root用户登录集群任意一个节点，密码为用户创建集群时设置的root密码。
-2.  配置环境变量。
+2.  配置环境变量（MRS 3.x及之后版本客户端默认安装路径为“/opt/Bigdata/client”，MRS 3.x之前版本为“/opt/client”。具体以实际为准。）。
 
-    **source /opt/client/bigdata\_env**
+    **source /opt/Bigdata/client/bigdata\_env**
 
 3.  如果当前集群已启用Kerberos认证，执行以下命令认证当前用户。如果当前集群未启用Kerberos认证，则无需执行此命令。
 
@@ -107,9 +110,9 @@
 
     例如：**hadoop fs -ls "obs://obs-example/job/hadoop-mapreduce-examples-3.1.2.jar"**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   如需使用hadoop fs删除OBS上文件，请使用**hadoop fs -rm -skipTrash**来删除文件。  
-    >-   spark-sql、spark-beeline在创建表时，若不涉及数据导入，则不会访问OBS。即若在一个无权限的OBS目录下创建表，CREATE TABLE仍会成功，但插入数据会报403 AccessDeniedException。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >-   如需使用hadoop fs删除OBS上文件，请使用**hadoop fs -rm -skipTrash**来删除文件。
+    >-   spark-sql、spark-beeline在创建表时，若不涉及数据导入，则不会访问OBS。即若在一个无权限的OBS目录下创建表，CREATE TABLE仍会成功，但插入数据会报403 AccessDeniedException。
 
 
 ## 在IAM服务创建策略及委托<a name="section163381225399"></a>
@@ -117,7 +120,7 @@
 1.  <a name="li20781191935317"></a>在IAM服务创建策略。
     1.  登录IAM服务控制台。
     2.  单击“权限 \> 创建自定义策略”。
-    3.  参考[表2](#table4781201918533)填写参数。
+    3.  参考[表2](#table4781201918533)填写参数。常用的OBS自定义策略样例请参考[OBS自定义策略](https://support.huaweicloud.com/usermanual-obs/obs_03_0121.html)。
 
         **表 2**  策略参数
 
@@ -128,14 +131,14 @@
         </th>
         </tr>
         </thead>
-        <tbody><tr id="row07821119175313"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p5782919165310"><a name="p5782919165310"></a><a name="p5782919165310"></a><span>策略名称</span></p>
+        <tbody><tr id="row07821119175313"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p5782919165310"><a name="p5782919165310"></a><a name="p5782919165310"></a>策略名称</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p7782161925317"><a name="p7782161925317"></a><a name="p7782161925317"></a><span>只能包含如下字符：大小写字母、中文、数字、空格和特殊字符（</span><span>-_.,</span><span>）。</span></p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p7782161925317"><a name="p7782161925317"></a><a name="p7782161925317"></a>只能包含如下字符：大小写字母、中文、数字、空格和特殊字符（-_.,）。</p>
         </td>
         </tr>
-        <tr id="row147822196535"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p157829191533"><a name="p157829191533"></a><a name="p157829191533"></a><span>作用范围</span></p>
+        <tr id="row147822196535"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p157829191533"><a name="p157829191533"></a><a name="p157829191533"></a>作用范围</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p14782419105319"><a name="p14782419105319"></a><a name="p14782419105319"></a><span>选择全局服务，</span><span>OBS</span><span>为全局服务。</span></p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p14782419105319"><a name="p14782419105319"></a><a name="p14782419105319"></a>选择全局级服务，OBS为全局服务。</p>
         </td>
         </tr>
         <tr id="row1778211915534"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p3782201910532"><a name="p3782201910532"></a><a name="p3782201910532"></a>配置策略方式</p>
@@ -145,20 +148,20 @@
         </tr>
         <tr id="row978220194531"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p3782121918532"><a name="p3782121918532"></a><a name="p3782121918532"></a>策略内容</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><a name="ol18796132610249"></a><a name="ol18796132610249"></a><ol id="ol18796132610249"><li>“允许”选择“允许”。</li><li>“云服务”选择“对象存储服务 (OBS)”。</li><li>“操作”勾选所有“写”、“列表”和“只读”权限。</li><li>“特定资源”选择：<a name="ol14442191517372"></a><a name="ol14442191517372"></a><ol type="a" id="ol14442191517372"><li>“<span>object</span>”选择“<span>通过资源路径指定</span>”，并单击“添加资源路径”分别输入路径<strong id="b13351348172516"><a name="b13351348172516"></a><a name="b13351348172516"></a><em id="i16351194842512"><a name="i16351194842512"></a><a name="i16351194842512"></a>obs_bucket_name</em>/tmp/</strong>和<strong id="b182416537256"><a name="b182416537256"></a><a name="b182416537256"></a><em id="i6824145362515"><a name="i6824145362515"></a><a name="i6824145362515"></a>obs_bucket_name</em>/tmp/*</strong>。此处以<strong id="b51531146134913"><a name="b51531146134913"></a><a name="b51531146134913"></a>/tmp</strong>目录为例，如需其他目录权限请参考该步骤添加对应目录及该目录下所有对象的资源路径。</li><li>“bucket”选择“<span>通过资源路径指定</span>”，并单击“添加资源路径”输入路径<strong id="b11997118132611"><a name="b11997118132611"></a><a name="b11997118132611"></a><em id="i1699719185265"><a name="i1699719185265"></a><a name="i1699719185265"></a>obs_bucket_name</em></strong>。</li></ol>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><a name="ol18796132610249"></a><a name="ol18796132610249"></a><ol id="ol18796132610249"><li>“允许”选择“允许”。</li><li>“云服务”选择“对象存储服务 (OBS)”。</li><li>“操作”勾选所有“写”、“列表”和“只读”权限。</li><li>“特定资源”选择：<a name="ol14442191517372"></a><a name="ol14442191517372"></a><ol type="a" id="ol14442191517372"><li>“object”选择“通过资源路径指定”，并单击“添加资源路径”分别输入路径<strong id="b13351348172516"><a name="b13351348172516"></a><a name="b13351348172516"></a><em id="i16351194842512"><a name="i16351194842512"></a><a name="i16351194842512"></a>obs_bucket_name</em>/tmp/</strong>和<strong id="b182416537256"><a name="b182416537256"></a><a name="b182416537256"></a><em id="i6824145362515"><a name="i6824145362515"></a><a name="i6824145362515"></a>obs_bucket_name</em>/tmp/*</strong>。此处以<strong id="b51531146134913"><a name="b51531146134913"></a><a name="b51531146134913"></a>/tmp</strong>目录为例，如需其他目录权限请参考该步骤添加对应目录及该目录下所有对象的资源路径。</li><li>“bucket”选择“通过资源路径指定”，并单击“添加资源路径”输入路径<strong id="b11997118132611"><a name="b11997118132611"></a><a name="b11997118132611"></a><em id="i1699719185265"><a name="i1699719185265"></a><a name="i1699719185265"></a>obs_bucket_name</em></strong>。</li></ol>
         </li><li>（可选）请求条件，暂不添加。</li></ol>
         </td>
         </tr>
-        <tr id="row6782319205314"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1678261913537"><a name="p1678261913537"></a><a name="p1678261913537"></a><span>策略描述</span></p>
+        <tr id="row6782319205314"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1678261913537"><a name="p1678261913537"></a><a name="p1678261913537"></a>策略描述</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p878320194533"><a name="p878320194533"></a><a name="p878320194533"></a><span>可选，对策略的描述。</span></p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p878320194533"><a name="p878320194533"></a><a name="p878320194533"></a>可选，对策略的描述。</p>
         </td>
         </tr>
         </tbody>
         </table>
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >各个组件的写数据操作若通过rename的方式实现时，写数据时要配置删除对象的权限。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >各个组件的写数据操作若通过rename的方式实现时，写数据时要配置删除对象的权限。
 
     4.  单击“确定”保存策略。
 
@@ -176,14 +179,14 @@
         </th>
         </tr>
         </thead>
-        <tbody><tr id="row1290111548457"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p166711312471"><a name="p166711312471"></a><a name="p166711312471"></a><span>委托名称</span></p>
+        <tbody><tr id="row1290111548457"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p166711312471"><a name="p166711312471"></a><a name="p166711312471"></a>委托名称</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p196718384712"><a name="p196718384712"></a><a name="p196718384712"></a><span>只能包含如下字符：大小写字母、中文、数字、空格和特殊字符（</span><span>-_.,</span><span>）。</span></p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p196718384712"><a name="p196718384712"></a><a name="p196718384712"></a>只能包含如下字符：大小写字母、中文、数字、空格和特殊字符（-_.,）。</p>
         </td>
         </tr>
-        <tr id="row49011544454"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p56820311478"><a name="p56820311478"></a><a name="p56820311478"></a><span>委托类型</span></p>
+        <tr id="row49011544454"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p56820311478"><a name="p56820311478"></a><a name="p56820311478"></a>委托类型</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p0683304716"><a name="p0683304716"></a><a name="p0683304716"></a><span>选择普通账号</span>。</p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p0683304716"><a name="p0683304716"></a><a name="p0683304716"></a>选择普通账号。</p>
         </td>
         </tr>
         <tr id="row490116542458"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p968835475"><a name="p968835475"></a><a name="p968835475"></a>委托的账号</p>
@@ -193,17 +196,17 @@
         </tr>
         <tr id="row9901165414513"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p11681332474"><a name="p11681332474"></a><a name="p11681332474"></a>持续时间</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p196819311475"><a name="p196819311475"></a><a name="p196819311475"></a><span>根据需要选择一天或永久。</span></p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p196819311475"><a name="p196819311475"></a><a name="p196819311475"></a>根据需要选择一天或永久。</p>
         </td>
         </tr>
-        <tr id="row1902954134511"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p13683320475"><a name="p13683320475"></a><a name="p13683320475"></a><span>描述</span></p>
+        <tr id="row1902954134511"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p13683320475"><a name="p13683320475"></a><a name="p13683320475"></a>描述</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p9682344717"><a name="p9682344717"></a><a name="p9682344717"></a><span>可选，对委托的描述。</span></p>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p9682344717"><a name="p9682344717"></a><a name="p9682344717"></a>可选，对委托的描述。</p>
         </td>
         </tr>
-        <tr id="row744075754616"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1689318472"><a name="p1689318472"></a><a name="p1689318472"></a><span>权限选择</span></p>
+        <tr id="row744075754616"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1689318472"><a name="p1689318472"></a><a name="p1689318472"></a>权限选择</p>
         </td>
-        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><a name="ol17127325134910"></a><a name="ol17127325134910"></a><ol id="ol17127325134910"><li><span>在“项目”列对应的“对象存储服务”行，单击“操作”列的“修改”。</span></li><li><span>勾选</span><a href="#li20781191935317">1</a><span>中创建的策略，使之出现在“已选择策略中”。</span></li><li><span>单击“确定”。</span></li></ol>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><a name="ol17127325134910"></a><a name="ol17127325134910"></a><ol id="ol17127325134910"><li>在“项目”列对应的“对象存储服务”行，单击“操作”列的“修改”。</li><li>勾选<a href="#li20781191935317">1</a>中创建的策略，使之出现在“已选择策略中”。</li><li>单击“确定”。</li></ol>
         </td>
         </tr>
         </tbody>
@@ -211,8 +214,8 @@
 
     4.  单击“确定”保存委托。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >当使用该委托访问过OBS后，再修改该委托及其绑定的策略时，最长需要等待15分钟，修改的内容才能生效。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >当使用该委托访问过OBS后，再修改该委托及其绑定的策略时，最长需要等待15分钟，修改的内容才能生效。
 
 
 

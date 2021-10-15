@@ -1,11 +1,11 @@
-# 配置Syslog北向参数<a name="ZH-CN_TOPIC_0174499317"></a>
+# 配置Syslog北向参数<a name="mrs_01_0239"></a>
 
 ## 操作场景<a name="zh-cn_topic_0035209606_section2203633518343"></a>
 
 该任务指导用户以Syslog方式将MRS Manager的告警事件上报到指定的监控运维系统中。
 
->![](public_sys-resources/icon-notice.gif) **须知：**   
->Syslog协议未做加密，传输数据容易被窃取，存在安全风险。  
+>![](public_sys-resources/icon-notice.gif) **须知：** 
+>Syslog协议未做加密，传输数据容易被窃取，存在安全风险。
 
 ## 前提条件<a name="zh-cn_topic_0035209606_section36395386183434"></a>
 
@@ -80,7 +80,7 @@
     </tr>
     <tr id="zh-cn_topic_0035209606_row17684574183655"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0035209606_p55045998183655"><a name="zh-cn_topic_0035209606_p55045998183655"></a><a name="zh-cn_topic_0035209606_p55045998183655"></a>报告告警级别</p>
     </td>
-    <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0035209606_p29540844183655"><a name="zh-cn_topic_0035209606_p29540844183655"></a><a name="zh-cn_topic_0035209606_p29540844183655"></a>设置需要上报的告警级别。支持<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue865160416104"><a name="zh-cn_topic_0035209606_parmvalue865160416104"></a><a name="zh-cn_topic_0035209606_parmvalue865160416104"></a>“警告”</span>、<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue2969128516104"><a name="zh-cn_topic_0035209606_parmvalue2969128516104"></a><a name="zh-cn_topic_0035209606_parmvalue2969128516104"></a>“一般”</span>、<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue5618387916104"><a name="zh-cn_topic_0035209606_parmvalue5618387916104"></a><a name="zh-cn_topic_0035209606_parmvalue5618387916104"></a>“严重”</span>和&nbsp;<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue5460033716104"><a name="zh-cn_topic_0035209606_parmvalue5460033716104"></a><a name="zh-cn_topic_0035209606_parmvalue5460033716104"></a>“致命”</span>。</p>
+    <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0035209606_p29540844183655"><a name="zh-cn_topic_0035209606_p29540844183655"></a><a name="zh-cn_topic_0035209606_p29540844183655"></a>设置需要上报的告警级别。支持<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue865160416104"><a name="zh-cn_topic_0035209606_parmvalue865160416104"></a><a name="zh-cn_topic_0035209606_parmvalue865160416104"></a>“提示”</span>、<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue2969128516104"><a name="zh-cn_topic_0035209606_parmvalue2969128516104"></a><a name="zh-cn_topic_0035209606_parmvalue2969128516104"></a>“一般”</span>、<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue5618387916104"><a name="zh-cn_topic_0035209606_parmvalue5618387916104"></a><a name="zh-cn_topic_0035209606_parmvalue5618387916104"></a>“严重”</span>和&nbsp;<span class="parmvalue" id="zh-cn_topic_0035209606_parmvalue5460033716104"><a name="zh-cn_topic_0035209606_parmvalue5460033716104"></a><a name="zh-cn_topic_0035209606_parmvalue5460033716104"></a>“致命”</span>。</p>
     </td>
     </tr>
     <tr id="zh-cn_topic_0035209606_row2785453918375"><td class="cellrowborder" rowspan="2" valign="top" width="25.06250625062506%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0035209606_p594299018375"><a name="zh-cn_topic_0035209606_p594299018375"></a><a name="zh-cn_topic_0035209606_p594299018375"></a>未恢复告警上报设置</p>
@@ -115,8 +115,8 @@
     </tbody>
     </table>
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >设置周期上报心跳报文后，在某些集群容错自动恢复的场景下（例如主备管理节点倒换）可能会出现报文上报中断的现象，此时等待自动恢复即可。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >设置周期上报心跳报文后，在某些集群容错自动恢复的场景下（例如主备管理节点倒换）可能会出现报文上报中断的现象，此时等待自动恢复即可。
 
 4.  单击“确定”，设置完成。
 
