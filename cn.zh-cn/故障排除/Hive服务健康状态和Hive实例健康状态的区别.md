@@ -1,4 +1,4 @@
-# Hive服务健康状态和Hive实例健康状态的区别<a name="ZH-CN_TOPIC_0207461488"></a>
+# Hive服务健康状态和Hive实例健康状态的区别<a name="mrs_03_0169"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275780_section76101932145418"></a>
 

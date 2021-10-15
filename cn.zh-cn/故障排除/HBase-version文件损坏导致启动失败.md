@@ -1,4 +1,4 @@
-# HBase version文件损坏导致启动失败<a name="ZH-CN_TOPIC_0183415846"></a>
+# HBase version文件损坏导致启动失败<a name="mrs_03_0115"></a>
 
 ## 问题背景<a name="zh-cn_topic_0167274943_s2a86d4e9a3904293addd1c2baac35557"></a>
 
@@ -8,7 +8,7 @@ HBase启动失败。
 
 1.  HBase启动时会读取hbase.version文件，但是日志显示读取存在异常。
 
-    ![](figures/zh-cn_image_0181925151.png)
+    ![](figures/zh-cn_image_0264281723.png)
 
 2.  通过**hadoop fs -cat  /hbase/hbase.version**命令发现文件不能正常查看，该文件损坏。
 

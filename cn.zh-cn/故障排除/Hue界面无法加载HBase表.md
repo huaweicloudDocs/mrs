@@ -1,4 +1,4 @@
-# Hue界面无法加载HBase表<a name="ZH-CN_TOPIC_0232157193"></a>
+# Hue界面无法加载HBase表<a name="mrs_03_0209"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
@@ -14,9 +14,19 @@ IAM子账户权限不足。
 
 ## 处理步骤<a name="section185969433257"></a>
 
+MRS Manager界面操作：
+
 1.  登录[MRS Manager](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0102.html)。
 2.  选择“系统管理 \> 用户管理”。
 3.  在使用的用户所在行的单击“修改”。
+4.  为用户添加supergroup组。
+5.  单击“确定”完成修改操作。
+
+FusionInsight Manager界面操作：
+
+1.  登录FusionInsight Manager。
+2.  选择“系统 \> 权限 \> 用户”。
+3.  在使用的用户所在行单击“修改”。
 4.  为用户添加supergroup组。
 5.  单击“确定”完成修改操作。
 

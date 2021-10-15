@@ -1,8 +1,8 @@
-# HBase启动失败，RegionServer日志中提示FileNotFoundException异常<a name="ZH-CN_TOPIC_0183415848"></a>
+# HBase启动失败，RegionServer日志中提示FileNotFoundException异常<a name="mrs_03_0117"></a>
 
 ## 问题背景<a name="zh-cn_topic_0167276046_sf76e408f8ea44020bf3de33c280bc079"></a>
 
-HBase启动失败，RegionServer一直处于Concerning状态。
+HBase启动失败，RegionServer一直处于Restoring状态。
 
 ## 原因分析<a name="zh-cn_topic_0167276046_s2d857902554344b38f9d1ff9130b2ce3"></a>
 

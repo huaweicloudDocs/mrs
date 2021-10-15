@@ -1,4 +1,4 @@
-# Driver端提示executor memory超限<a name="ZH-CN_TOPIC_0183415849"></a>
+# Driver端提示executor memory超限<a name="mrs_03_0109"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275365_s0e15c6a5056e4e5a944630217779bd58"></a>
 
@@ -22,11 +22,19 @@ Spark任务提交至Yarn上面，运行task的executor使用的资源受yarn的�
 
 配置修改方法：
 
-1.  登录MRS Manager页面
-2.  单击“服务管理 \> Yarn \> 服务配置”将“参数类别”修改为“全部配置”。
+MRS Manager界面操作：
+
+1.  登录MRS Manager页面。
+2.  选择“服务管理 \> Yarn \> 服务配置”将“参数类别”修改为“全部配置”。
 3.  在“搜索”栏输入“yarn.scheduler.maximum-allocation-mb”修改参数并保存重启服务。如下图所示：
 
     **图 1**  修改Yarn服务参数<a name="zh-cn_topic_0167275365_fig11380183075910"></a>  
     ![](figures/修改Yarn服务参数.png "修改Yarn服务参数")
 
+
+FusionInsight Manager界面操作：
+
+1.  登录FusionInsight Manager页面。
+2.  选择“集群 \> 服务 \> Yarn”，单击“配置”，选择“全部配置”。
+3.  在“搜索”栏输入“yarn.scheduler.maximum-allocation-mb”修改参数并保存重启服务。
 

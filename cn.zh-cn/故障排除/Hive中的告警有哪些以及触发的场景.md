@@ -1,4 +1,4 @@
-# Hive中的告警有哪些以及触发的场景<a name="ZH-CN_TOPIC_0207461489"></a>
+# Hive中的告警有哪些以及触发的场景<a name="mrs_03_0170"></a>
 
 ## Hive中的告警<a name="zh-cn_topic_0167274975_section28561035132317"></a>
 
@@ -69,7 +69,7 @@
 -   16002：当执行SQL的成功率低于设定的阈值时变触发告警。如你执行了4条失败了2条，设定的阈值为60%，成功率2/4 < 60%便触发告警。
 -   16004：Hive服务的健康状态变为Bad时触发告警。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->-   告警的阈值和告警的级别以及触发告警的时间段可以在MRS Manager界面的“系统设置 \> 阈值配置“中设定。  
->-   Hive运行相关的指标可以在Hive监控界面查看。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>-   MRS Manager界面操作：告警的阈值和告警的级别以及触发告警的时间段可以在MRS Manager界面的“系统设置 \> 阈值配置“中设定。FusionInsight Manager界面操作：告警的阈值和告警的级别以及触发告警的时间段可以在FusionInsight Manager界面的“运维 \> 告警 \> 阈值设置”中设定。
+>-   Hive运行相关的指标可以在Hive监控界面查看。
 

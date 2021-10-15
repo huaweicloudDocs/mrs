@@ -1,4 +1,4 @@
-# desc描述表过长时，无法显示完整<a name="ZH-CN_TOPIC_0205107313"></a>
+# desc描述表过长时，无法显示完整<a name="mrs_03_0154"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167274514_section1861111131114"></a>
 

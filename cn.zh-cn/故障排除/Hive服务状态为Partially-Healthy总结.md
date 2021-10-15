@@ -1,4 +1,4 @@
-# Hive服务状态为Partially Healthy总结<a name="ZH-CN_TOPIC_0207461487"></a>
+# Hive服务状态为Partially Healthy总结<a name="mrs_03_0168"></a>
 
 ## 可能原因<a name="zh-cn_topic_0167275017_s3a76fbae55cf4b75bdcc718206298892"></a>
 

@@ -1,4 +1,4 @@
-# MRS 集群使用pip3安装python包提示网络不可达<a name="ZH-CN_TOPIC_0232157199"></a>
+# MRS 集群使用pip3安装python包提示网络不可达<a name="mrs_03_0212"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
@@ -8,7 +8,7 @@
 
 执行pip3 install 安装python包报错网络不可达。具体如下图所示：
 
-![](figures/zh-cn_image_0232158152.jpg)
+![](figures/zh-cn_image_0264281836.jpg)
 
 ## 原因分析<a name="section1237061220324"></a>
 

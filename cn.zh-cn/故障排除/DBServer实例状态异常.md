@@ -1,4 +1,4 @@
-# DBServer实例状态异常<a name="ZH-CN_TOPIC_0181661512"></a>
+# DBServer实例状态异常<a name="mrs_03_0071"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275972_sd64242caa665405798481482f49ab0ee"></a>
 

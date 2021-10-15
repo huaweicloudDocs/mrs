@@ -1,4 +1,4 @@
-# Consumer消费数据是否丢失排查<a name="ZH-CN_TOPIC_0183415856"></a>
+# Consumer消费数据是否丢失排查<a name="mrs_03_0105"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276280_s8c5a413588744f3ea1320d012fdb73cb"></a>
 
@@ -16,7 +16,7 @@ Kafka排查：
 
 1.  通过consumer-groups.sh来观察写入和消费的offerset的变化情况（生产一定数量的消息，客户端进行消费，观察offerset的变化）。
 
-    ![](figures/zh-cn_image_0183413122.png)
+    ![](figures/zh-cn_image_0264281538.png)
 
 2.  新建一个消费组，用客户端进行消费，然后查看消费的消息。
 

@@ -1,4 +1,4 @@
-# ntpdate修改时间导致HDFS出现大量丢块<a name="ZH-CN_TOPIC_0181713097"></a>
+# ntpdate修改时间导致HDFS出现大量丢块<a name="mrs_03_0076"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275184_sfb4bca11a6f641baa7979ea4eb143d0a"></a>
 
@@ -12,12 +12,12 @@
     **图 1**  块丢失<a name="zh-cn_topic_0167275184_fig755485124018"></a>  
     ![](figures/块丢失.png "块丢失")
 
-2.  查看原生页面 Datanode Information 发现显示的DataNode节点数和实际的相差10个节点
+2.  查看原生页面 Datanode Information 发现显示的DataNode节点数和实际的相差10个节点。
 
     **图 2**  查看DataNode节点数<a name="zh-cn_topic_0167275184_fig16911917414"></a>  
     ![](figures/查看DataNode节点数.png "查看DataNode节点数")
 
-3.  查看DateNode运行日志“/var/log/Bigdata/hdfs/dn/hadoop-omm-datanode-主机名.log”，发现如下错误信息
+3.  查看DateNode运行日志“/var/log/Bigdata/hdfs/dn/hadoop-omm-datanode-主机名.log”，发现如下错误信息。
 
     重要错误信息 Clock skew too great
 
@@ -27,6 +27,6 @@
 
 ## 解决办法<a name="zh-cn_topic_0167275184_section23899362118"></a>
 
-1.  修改在原生页面查看不到的10数据节点的时间。
-2.  在MRS Manager页面重启对应的DataNode实例。
+1.  修改在原生页面查看不到的10个数据节点的时间。
+2.  在Manager页面重启对应的DataNode实例。
 

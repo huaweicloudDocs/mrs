@@ -1,4 +1,4 @@
-# Hue上有job在运行<a name="ZH-CN_TOPIC_0169495351"></a>
+# Hue上有job在运行<a name="mrs_03_0024"></a>
 
 ## 用户问题<a name="zh-cn_topic_0135447911_section18305143583116"></a>
 
@@ -8,7 +8,7 @@
 
 客户的MRS装好后， Hue上查到有Job在运行 ，并且目前在运行的job并不是客户操作的。
 
-![](figures/zh-cn_image_0135451387.jpg)
+![](figures/zh-cn_image_0264281590.jpg)
 
 ## 原因分析<a name="zh-cn_topic_0135447911_section1237061220324"></a>
 

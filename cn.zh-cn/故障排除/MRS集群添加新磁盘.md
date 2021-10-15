@@ -1,4 +1,4 @@
-# MRS集群添加新磁盘<a name="ZH-CN_TOPIC_0169495356"></a>
+# MRS集群添加新磁盘<a name="mrs_03_0032"></a>
 
 ## 用户问题<a name="zh-cn_topic_0160818829_section18305143583116"></a>
 
@@ -10,7 +10,7 @@ MRS HBase服务不可用。
 
 ## 原因分析<a name="zh-cn_topic_0160818829_section1237061220324"></a>
 
-磁盘容量不足导致无法提供正常服务。
+Core节点的磁盘容量不足导致无法提供正常服务。
 
 ## 处理步骤<a name="zh-cn_topic_0160818829_section8869162262118"></a>
 
@@ -35,12 +35,12 @@ MRS HBase服务不可用。
 
 6.  <a name="zh-cn_topic_0160818829_li11355132131419"></a>初始化Linux数据盘，具体步骤可参见[初始化Linux数据盘](https://support.huaweicloud.com/qs-evs/evs_01_0033.html)。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >挂载点目录根据节点DataNode已有的实例编号递增，例如：使用df –h命令查到当前已有的编号为/srv/BigData/hadoop/data1，则新增挂载点为/srv/BigData/hadoop/data2。初始化Linux数据盘新建挂载点时，将新建挂载点命名为/srv/BigData/hadoop/data2，并将新建分区挂载到该挂载点下。例如  
-    >```  
-    >mkdir /srv/BigData/hadoop/data2  
-    >mount /dev/xvdb1 /srv/BigData/hadoop/data2  
-    >```  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >挂载点目录根据节点DataNode已有的实例编号递增，例如：使用df –h命令查到当前已有的编号为/srv/BigData/hadoop/data1，则新增挂载点为/srv/BigData/hadoop/data2。初始化Linux数据盘新建挂载点时，将新建挂载点命名为/srv/BigData/hadoop/data2，并将新建分区挂载到该挂载点下。例如
+    >```
+    >mkdir /srv/BigData/hadoop/data2
+    >mount /dev/xvdb1 /srv/BigData/hadoop/data2
+    >```
 
 7.  执行以下命令为新磁盘增加omm用户权限。
 
@@ -54,22 +54,37 @@ MRS HBase服务不可用。
 
     例如：**chmod 701 /srv/BigData/hadoop/data2**
 
-9.  登录MRS Manager，扩容DataNode实例和NodeManager实例的数据磁盘。
-10. 依次选择 "服务管理 \> HDFS \> 实例 \> 扩容的DataNode节点 \> 实例配置"，"参数类别" 选择 "全部配置"，修改当前节点DataNode实例配置。
+9.  登录Manager，扩容DataNode实例和NodeManager实例的数据磁盘。
+10. 修改当前节点DataNode实例配置。
+
+    MRS Manager界面操作入口：登录MRS Manager，依次选择 “服务管理 \> HDFS \> 实例 \> 扩容的DataNode节点 \> 实例配置”，“参数类别”选择 "全部配置"。
+
+    FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> HDFS \> 实例 \> 扩容的DataNode节点 \> 实例配置”，选择 "全部配置"。
 
     -   在 "搜索" 中输入"dfs.datanode.fsdataset.volume.choosing.policy"，将参数值改为 "org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy"。
     -   在 "搜索" 中输入 "dfs.datanode.data.dir"，将参数值改为"/srv/BigData/hadoop/data1/dn,/srv/BigData/hadoop/data2/dn"
 
     若此两个参数有修改，则单击 "保存配置"，并勾选 "重启角色实例" ，重启DataNode实例。
 
-11. 依次选择 "服务管理 \> Yarn \> 实例 \> 扩容节点的NodeManager \> 实例配置"，"参数类别" 选择 "全部配置"，修改当前节点Yarn NodeManager的实例配置。
+11. 修改当前节点Yarn NodeManager的实例配置。
+
+    MRS Manager界面操作入口：登录MRS Manager，依次选择 "服务管理 \> Yarn \> 实例 \> 扩容节点的NodeManager \> 实例配置"，"参数类别" 选择 "全部配置"。
+
+    FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Yarn \> 实例”单击扩容节点的NodeManager，选择“实例配置 \> 全部配置”。
 
     -   在“搜索”中输入 "yarn.nodemanager.local-dirs"，将参数值修改为： "/srv/BigData/hadoop/data1/nm/localdir,/srv/BigData/hadoop/data2/nm/localdir" 。
     -   在“搜索”中输入 "yarn.nodemanager.log-dirs"，将参数值修改为："/srv/BigData/hadoop/data1/nm/containerlogs,/srv/BigData/hadoop/data2/nm/containerlogs"。
 
-    若此两个参数有修改，则单击 "保存配置"，并勾选 "重启角色实例" ，重启NodeManager实例。
+    若此两个参数有修改，则保存配置，并勾选 "重启角色实例" ，重启NodeManager实例。
 
-12. 查看扩容是否成功，依次选择 "服务管理 \> HDFS \> 实例 \> 扩容的DataNode节点 "，在图表区域，查看实时监控项 "DataNode存储" 中 配置的总磁盘容量是否提升，若图表区域没有监控项 "DataNode存储" ，请单击“定制”增加该监控项。
+12. 查看扩容是否成功。
+
+    MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> HDFS \> 实例 \> 扩容的DataNode节点 "。
+
+    FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> HDFS \> 实例”，单击扩容的DataNode节点。
+
+    在图表区域，查看实时监控项 "DataNode存储" 中 配置的总磁盘容量是否提升，若图表区域没有监控项 "DataNode存储" ，请单击“定制”增加该监控项。
+
     -   若配置的总磁盘容量已提升，则扩容完成。
     -   若配置的总磁盘容量未提升，请联系技术支持处理。
 
@@ -77,17 +92,29 @@ MRS HBase服务不可用。
 
     修改当前节点Kafka实例配置。
 
-    1.  登录MRS Manager，依次选择 "服务管理 \> Kafka \> 实例 \> 扩容的Broker节点 \> 实例配置"，"参数类别" 选择 "全部配置"。
+    1.  进入Kafka扩容的Broker节点参数配置界面。
+
+        MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> Kafka \> 实例 \> 扩容的Broker节点 \> 实例配置"，"参数类别" 选择 "全部配置"。
+
+        FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Kafka \> 实例\> 扩容的Broker节点 \> 实例配置”， 选择 “全部配置”。
+
     2.  在 "搜索" 中输入"log.dirs"，加入新增磁盘信息，中间用英文  “,“  分割。
 
         例如原始只有一块Kafka数据盘，新增一块，则将"/srv/BigData/kafka/data1/kafka-logs" 改为 "/srv/BigData/kafka/data1/kafka-logs,/srv/BigData/kafka/data2/kafka-logs"。
 
-    3.  单击 "保存配置"，并勾选 "重启角色实例" 后根据提示重启实例。
-    4.  查看扩容是否成功，依次选择 "服务管理 \> Kafka \> 实例 \> 扩容的Broker节点 "，查看实时监控项 "Broker磁盘容量大小" 中配置的总磁盘容量是否提升。
+    3.  保存配置，并勾选 "重启角色实例" 后根据提示重启实例。
+    4.  查看扩容是否成功。
+
+        MRS Manager界面操作入口：登录MRS Manager，依次选择 "服务管理 \> Kafka \> 实例 \> 扩容的Broker节点 "。
+
+        FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> HDFS \> 实例\> 扩容的Broker节点 ”。
+
+        查看实时监控项 "Broker磁盘容量大小" 中配置的总磁盘容量是否提升。
 
 
->![](public_sys-resources/icon-caution.gif) **注意：**   
->集群的节点扩容磁盘之后，若再扩容集群节点时需要在新扩容的节点上参考该页面处理步骤执行添加磁盘的操作，否则会有数据丢失的风险 。  
+
+>![](public_sys-resources/icon-notice.gif) **须知：** 
+>集群的节点扩容磁盘之后，若再扩容集群节点时需要在新扩容的节点上参考该页面处理步骤执行添加磁盘的操作，否则会有数据丢失的风险 。
 
 ## 建议与总结<a name="zh-cn_topic_0160818829_section8898183420"></a>
 

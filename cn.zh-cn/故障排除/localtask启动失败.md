@@ -1,4 +1,4 @@
-# localtask启动失败<a name="ZH-CN_TOPIC_0210454008"></a>
+# localtask启动失败<a name="mrs_03_0183"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275537_section842971116813"></a>
 
@@ -66,10 +66,18 @@ Hive在执行join操作，数据量小时会生成MapJoin，执行MapJoin时会�
 
 ## 解决办法<a name="zh-cn_topic_0167275537_section4534334783"></a>
 
-1.  在MRS Manager页面的“服务管理 \> Hive \> 服务配置”中对Hive的服务配置参数进行修改。
-2.  修改hive的配置hive.auto.convert.join 为false，保存配置并重启服务。
+1.  进入Hive服务配置页面：
+    -   MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0102.html)，然后选择“服务管理 \> Hive \> 服务配置”，单击“基础配置”下拉菜单，选择“全部配置”。
+    -   MRS 1.8.10之后及2._x_版本，单击集群名称，登录集群详情页面，选择“组件管理 \> Hive \> 服务配置”，单击“基础配置”下拉菜单，选择“全部配置”。
+
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“单击同步”进行IAM用户同步）。
+
+    -   MRS 3.x及后续版本，登录FusionInsight Manager，然后选择“集群 \>  _待操作的集群名_称 \> 服务 \> Hive \> 配置 \> 全部配置”。
+
+2.  搜索“hive.auto.convert.join”参数并修改hive的配置hive.auto.convert.join 为false，保存配置并重启服务。
 
     该参数修改后会对业务性能有一定影响。继续执行后续步骤可不影响业务性能。
 
-3.  修改 hive的HIVE\_GC\_OPTS,把Xms调小，具体要根据业务评估，最小设置为Xmx的一半，修改完后保存配置并重启服务。
+3.  搜索“HIVE\_GC\_OPTS”参数并修改 hive的HIVE\_GC\_OPTS，把Xms调小，具体要根据业务评估，最小设置为Xmx的一半，修改完后保存配置并重启服务。
 

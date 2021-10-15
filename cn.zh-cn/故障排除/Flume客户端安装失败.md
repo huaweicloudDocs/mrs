@@ -1,4 +1,4 @@
-# Flume客户端安装失败<a name="ZH-CN_TOPIC_0181626571"></a>
+# Flume客户端安装失败<a name="mrs_03_0053"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275049_sd64242caa665405798481482f49ab0ee"></a>
 

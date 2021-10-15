@@ -1,8 +1,8 @@
-# hive任务运行过程中失败，重试成功<a name="ZH-CN_TOPIC_0210454005"></a>
+# hive任务运行过程中失败，重试成功<a name="mrs_03_0180"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275611_s279271d9ef1f448c82bf851fcc361636"></a>
 
-当hive任务在正常运行时失败，在客户端报出错误，类似的错误打印时：
+当hive任务在正常运行时失败，在客户端报出错误，类似的错误打印：
 
 ```
 Error:Invalid OperationHandler:OperationHander [opType=EXECUTE_STATEMENT,getHandleIdentifier()=XXX](state=,code=0)
@@ -10,7 +10,7 @@ Error:Invalid OperationHandler:OperationHander [opType=EXECUTE_STATEMENT,getHand
 
 而此任务提交到yarn上的mapreduce任务运行成功。
 
-![](figures/zh-cn_image_0167275477.png)
+![](figures/zh-cn_image_0264281801.png)
 
 ## 原因分析<a name="zh-cn_topic_0167275611_s2be99397c5de4111a414f6fbd0fb7c2f"></a>
 

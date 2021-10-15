@@ -1,12 +1,12 @@
-# HBase异常<a name="ZH-CN_TOPIC_0239258447"></a>
+# HBase异常<a name="mrs_03_0217"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
-HBase异常
+HBase异常。
 
 ## 问题现象<a name="section117424454313"></a>
 
-导入数据到hbase报错：NotServingRegionException
+导入数据到hbase报错：NotServingRegionException。
 
 ## 原因分析<a name="section1237061220324"></a>
 
@@ -14,8 +14,16 @@ HBase异常
 
 ## 处理步骤<a name="section10354134118129"></a>
 
-1.  登录[MRS Manager](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0102.html)。
-2.  选择“服务管理 \> HBase”，在“服务状态”页签单击“HMaster Web UI“右侧的“HMaster \(主\)“进入HBase Web UI界面。
+1.  进入HBase服务页面：
+    -   MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0102.html)，然后选择“服务管理 \> HBase”。
+    -   MRS 1.8.10之后及2._x_版本，单击集群名称，登录集群详情页面，选择“组件管理 \> HBase”。
+
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“单击同步”进行IAM用户同步）。
+
+    -   MRS 3.x及后续版本，登录FusionInsight Manager。然后选择“集群 \>  _待操作的集群名_称 \> 服务 \> HBase”。
+
+2.  在“HMaster Web UI“右侧，单击“HMaster \(主\)“进入HBase Web UI界面。
 3.  在“Procedures“页签查看问题节点。
 4.  以root用户登录问题节并执行**hdfs dfs -ls**命令查看所有块信息。
 5.  执行**hdfs dfs -mkdir**命令新建目录用于存放问题块。

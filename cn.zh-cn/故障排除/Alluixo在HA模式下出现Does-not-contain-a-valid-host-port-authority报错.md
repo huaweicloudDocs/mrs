@@ -1,4 +1,4 @@
-# Alluixo在HA模式下出现Does not contain a valid host:port authority报错<a name="ZH-CN_TOPIC_0226830994"></a>
+# Alluixo在HA模式下出现Does not contain a valid host:port authority报错<a name="mrs_03_0204"></a>
 
 ## 用户问题<a name="section7422205115512"></a>
 
@@ -8,7 +8,7 @@
 
 安全集群中，Alluixo在HA模式下出现Does not contain a valid host:port authority的报错。
 
-![](figures/zh-cn_image_0226831031.png)
+![](figures/zh-cn_image_0264281925.png)
 
 ## 原因分析<a name="section893314412561"></a>
 

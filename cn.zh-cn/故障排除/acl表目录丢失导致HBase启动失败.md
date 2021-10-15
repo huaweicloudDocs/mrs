@@ -1,4 +1,4 @@
-# acl表目录丢失导致HBase启动失败<a name="ZH-CN_TOPIC_0187794914"></a>
+# acl表目录丢失导致HBase启动失败<a name="mrs_03_0145"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275766_sf76e408f8ea44020bf3de33c280bc079"></a>
 

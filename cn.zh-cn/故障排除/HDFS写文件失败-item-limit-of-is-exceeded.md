@@ -1,4 +1,4 @@
-# HDFS写文件失败，item limit of / is exceeded<a name="ZH-CN_TOPIC_0181713166"></a>
+# HDFS写文件失败，item limit of / is exceeded<a name="mrs_03_0085"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276068_s17abfc85203d46d49c2198b46fbb9056"></a>
 

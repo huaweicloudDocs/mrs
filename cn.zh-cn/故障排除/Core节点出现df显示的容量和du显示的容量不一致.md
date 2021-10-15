@@ -1,4 +1,4 @@
-# Core节点出现df显示的容量和du显示的容量不一致<a name="ZH-CN_TOPIC_0232157197"></a>
+# Core节点出现df显示的容量和du显示的容量不一致<a name="mrs_03_0205"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 

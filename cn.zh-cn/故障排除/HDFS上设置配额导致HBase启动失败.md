@@ -1,4 +1,4 @@
-# HDFS上设置配额导致HBase启动失败<a name="ZH-CN_TOPIC_0183415844"></a>
+# HDFS上设置配额导致HBase启动失败<a name="mrs_03_0113"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167275487_s0fe2972fbdce490daac4377fe3fe6135"></a>
 
@@ -8,7 +8,7 @@ HBase启动失败。
 
 查看HMaster日志信息（“/var/log/Bigdata/hbase/hm/hbase-omm-xxx.log“），出现如下异常，The DiskSpace quota of /hbase is exceeded。
 
-![](figures/zh-cn_image_0167275504.png)
+![](figures/c9c62061-2203-41a5-b5f6-b1392d3e9c3a.png)
 
 ## 解决办法<a name="zh-cn_topic_0167275487_s01bb0fcfd11a428e9bc2a94265bd7067"></a>
 

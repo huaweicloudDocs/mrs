@@ -1,4 +1,4 @@
-# Hive状态为Bad问题总结<a name="ZH-CN_TOPIC_0207461486"></a>
+# Hive状态为Bad问题总结<a name="mrs_03_0167"></a>
 
 ## 可能原因<a name="zh-cn_topic_0167276439_s8b6ced0471b14932a294e67edb3f1168"></a>
 

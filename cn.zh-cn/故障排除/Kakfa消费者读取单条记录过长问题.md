@@ -1,4 +1,4 @@
-# Kakfa消费者读取单条记录过长问题<a name="ZH-CN_TOPIC_0226521603"></a>
+# Kakfa消费者读取单条记录过长问题<a name="mrs_03_0201"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274552_s20deae74a71143aeabad239c7a22f024"></a>
 

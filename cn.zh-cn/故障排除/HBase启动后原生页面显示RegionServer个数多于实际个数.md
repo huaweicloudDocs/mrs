@@ -1,4 +1,4 @@
-# HBase启动后原生页面显示RegionServer个数多于实际个数<a name="ZH-CN_TOPIC_0187794911"></a>
+# HBase启动后原生页面显示RegionServer个数多于实际个数<a name="mrs_03_0142"></a>
 
 ## 问题背景<a name="zh-cn_topic_0167275364_sf76e408f8ea44020bf3de33c280bc079"></a>
 

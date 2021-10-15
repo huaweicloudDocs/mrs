@@ -1,4 +1,4 @@
-# Kafka生产者写入单条记录过长问题<a name="ZH-CN_TOPIC_0226521602"></a>
+# Kafka生产者写入单条记录过长问题<a name="mrs_03_0200"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275360_s20deae74a71143aeabad239c7a22f024"></a>
 

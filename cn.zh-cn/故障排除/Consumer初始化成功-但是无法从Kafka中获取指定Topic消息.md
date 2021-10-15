@@ -1,4 +1,4 @@
-# Consumer初始化成功，但是无法从Kafka中获取指定Topic消息<a name="ZH-CN_TOPIC_0181626568"></a>
+# Consumer初始化成功，但是无法从Kafka中获取指定Topic消息<a name="mrs_03_0063"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275928_sf1db540c14e54778b6b4d6c6c2200ca7"></a>
 
@@ -17,10 +17,11 @@
 
 Storm、Spark、Flume或者自定义Consumer代码可以都称为Consumer。
 
-1.  通过MRS Manager页面，点击服务-\>Kafka，查看当前Kafka集群当前状态，发现状态为良好，且监控指标内容显示正确。
+1.  查看kafka服务状态：
+    -   MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> Kafka ，查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Kafka，
 
-    **图 1**  Kafka的服务状态良好<a name="zh-cn_topic_0167275928_fig147802492565"></a>  
-    ![](figures/Kafka的服务状态良好.png "Kafka的服务状态良好")
+        查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
 
 2.  通过Kafka Client，判断是否可以正常消费数据。
 
@@ -73,7 +74,7 @@ Storm、Spark、Flume或者自定义Consumer代码可以都称为Consumer。
 4.  查看Consumer相关日志，发现打印ConsumerRebalanceFailedException异常。
 
     ```
-    2016-02-03 15:55:32,557 | ERROR | [ZkClient-EventThread-75- 192.168.234.231:24002/kafka] |  Error handling event ZkEvent[New session event sent to kafka.consumer.ZookeeperConsumerConnector$ZKSessionExpireListener@34b41dfe]  | org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:77)
+    2016-02-03 15:55:32,557 | ERROR | [ZkClient-EventThread-75- 192.168.234.231:2181/kafka] |  Error handling event ZkEvent[New session event sent to kafka.consumer.ZookeeperConsumerConnector$ZKSessionExpireListener@34b41dfe]  | org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:77)
     kafka.common.ConsumerRebalanceFailedException: pc-zjqbetl86-1454482884879-2ec95ed3 can't rebalance after 4 retries
     at kafka.consumer.ZookeeperConsumerConnector$ZKRebalancerListener.syncedRebalance(ZookeeperConsumerConnector.scala:633)
     at kafka.consumer.ZookeeperConsumerConnector$ZKSessionExpireListener.handleNewSession(ZookeeperConsumerConnector.scala:487)
@@ -111,14 +112,14 @@ Storm、Spark、Flume或者自定义Consumer代码可以都称为Consumer。
 
         执行**cat /etc/hosts**命令。
 
-        **图 2**  示例1<a name="zh-cn_topic_0167275928_fig4806755115710"></a>  
+        **图 1**  示例1<a name="zh-cn_topic_0167275928_fig4806755115710"></a>  
         ![](figures/示例1.png "示例1")
 
     -   Windows
 
         打开“C:\\Windows\\System32\\drivers\\etc\\hosts”。
 
-        **图 3**  示例2<a name="zh-cn_topic_0167275928_fig523014715814"></a>  
+        **图 2**  示例2<a name="zh-cn_topic_0167275928_fig523014715814"></a>  
         ![](figures/示例2.jpg "示例2")
 
         解决方法参考[4](#zh-cn_topic_0167275928_l4532ac33f2904f39bfe3928758c4a8b4)。
@@ -218,12 +219,12 @@ Storm、Spark、Flume或者自定义Consumer代码可以都称为Consumer。
 5.  在hosts文件中添加对应的主机名和IP的对应关系。
     -   Linux
 
-        **图 4**  示例3<a name="zh-cn_topic_0167275928_fig980313875911"></a>  
+        **图 3**  示例3<a name="zh-cn_topic_0167275928_fig980313875911"></a>  
         ![](figures/示例3.png "示例3")
 
     -   Windows
 
-        **图 5**  示例4<a name="zh-cn_topic_0167275928_fig145361416205918"></a>  
+        **图 4**  示例4<a name="zh-cn_topic_0167275928_fig145361416205918"></a>  
         ![](figures/示例4.jpg "示例4")
 
 

@@ -1,4 +1,4 @@
-# drop partition操作，有大量分区时操作失败<a name="ZH-CN_TOPIC_0210454007"></a>
+# drop partition操作，有大量分区时操作失败<a name="mrs_03_0182"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275042_s7bff89706cab436ba99310b49244d1ed"></a>
 

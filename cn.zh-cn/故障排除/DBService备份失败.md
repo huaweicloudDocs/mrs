@@ -1,4 +1,4 @@
-# DBService备份失败<a name="ZH-CN_TOPIC_0185002829"></a>
+# DBService备份失败<a name="mrs_03_0126"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276016_sd64242caa665405798481482f49ab0ee"></a>
 
@@ -13,11 +13,11 @@ ls /srv/BigData/LocalBackup/default\_20190720222358/ -rlth
 
 -   查看DBService的备份日志/var/log/Bigdata/dbservice/scriptlog/backup.log，其实备份已经成功，只是上传至OMS节点时失败。
 
-    ![](figures/zh-cn_image_0167276431.jpg)
+    ![](figures/zh-cn_image_0264281528.jpg)
 
 -   失败原因是由于ssh不通。
 
-    ![](figures/zh-cn_image_0167274644.jpg)
+    ![](figures/zh-cn_image_0264281547.jpg)
 
 
 ## 解决办法<a name="zh-cn_topic_0167276016_section4599086017025"></a>

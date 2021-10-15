@@ -1,4 +1,4 @@
-# HDFS性能差导致HBase服务不可用告警<a name="ZH-CN_TOPIC_0181626561"></a>
+# HDFS性能差导致HBase服务不可用告警<a name="mrs_03_0068"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276256_sdcf366c887bf49da9d6a23befbbc2b25"></a>
 
@@ -11,7 +11,7 @@ HBase组件断断续续上报服务不可用告警。
 1.  首先查看HMaster日志（“/var/log/Bigdata/hbase/hm/hbase-omm-xxx.log“），确认HMaster日志中没有频繁打印“system pause”或“jvm”等GC相关信息。
 2.  然后可以通过下列三种方式确认原因为HDFS性能慢造成告警产生。
     1.  使用客户端验证，通过**hbase shell**进入hbase命令行后，执行**list**验证需要运行多久。
-    2.  开启HDFS的debug日志，然后查看下层目录很多的路径（**hadoop fs –ls /XXX/XXX**），验证需要运行多久。
+    2.  开启HDFS的debug日志，然后查看下层目录很多的路径（**hadoop fs -ls /XXX/XXX**），验证需要运行多久。
     3.  打印HMaster进程jstack：
 
         **su - omm**

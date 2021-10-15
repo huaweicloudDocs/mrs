@@ -1,4 +1,4 @@
-# Hiveserver或者Metastore实例的健康状态为Concerning<a name="ZH-CN_TOPIC_0208559513"></a>
+# Hiveserver或者Metastore实例的健康状态为Concerning<a name="mrs_03_0177"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167274562_sf10df03c6be743d693a1ba5536bfc228"></a>
 

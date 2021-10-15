@@ -1,9 +1,4 @@
-# Kafka安全使用说明<a name="ZH-CN_TOPIC_0187791614"></a>
-
--   Kafka API简单说明
--   Kafka访问协议说明
--   Topic的ACL设置
--   针对不同的Topic访问场景，Kafka新旧API使用说明
+# Kafka安全使用说明<a name="mrs_03_0140"></a>
 
 ## Kafka API简单说明<a name="zh-cn_topic_0167274777_section34977990102121"></a>
 
@@ -24,8 +19,8 @@
     指kafka.consumer.ConsumerConnector中定义的接口，在使用“kafka-console-consumer.sh”时，默认使用此API。
 
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->新Producer API和新Consumer API，在下文中统称为新API。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>新Producer API和新Consumer API，在下文中统称为新API。
 
 ## Kafka 访问协议说明<a name="zh-cn_topic_0167274777_section4763104010434"></a>
 
@@ -52,7 +47,7 @@ Kafka服务启动时，默认会启动PLAINTEXT和SASL\_PLAINTEXT两种协议类
 </td>
 <td class="cellrowborder" valign="top" width="20.202020202020204%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0167274777_p48546858102411"><a name="zh-cn_topic_0167274777_p48546858102411"></a><a name="zh-cn_topic_0167274777_p48546858102411"></a>新API和旧API</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.151515151515152%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0167274777_p39981454102411"><a name="zh-cn_topic_0167274777_p39981454102411"></a><a name="zh-cn_topic_0167274777_p39981454102411"></a>21005</p>
+<td class="cellrowborder" valign="top" width="15.151515151515152%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0167274777_p39981454102411"><a name="zh-cn_topic_0167274777_p39981454102411"></a><a name="zh-cn_topic_0167274777_p39981454102411"></a>9092</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0167274777_row24288770102411"><td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0167274777_p21233355102411"><a name="zh-cn_topic_0167274777_p21233355102411"></a><a name="zh-cn_topic_0167274777_p21233355102411"></a>SASL_PLAINTEXT</p>
@@ -70,7 +65,7 @@ Kafka服务启动时，默认会启动PLAINTEXT和SASL\_PLAINTEXT两种协议类
 </td>
 <td class="cellrowborder" valign="top" width="20.202020202020204%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0167274777_p55536365102411"><a name="zh-cn_topic_0167274777_p55536365102411"></a><a name="zh-cn_topic_0167274777_p55536365102411"></a>新API</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.151515151515152%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0167274777_p2151737102411"><a name="zh-cn_topic_0167274777_p2151737102411"></a><a name="zh-cn_topic_0167274777_p2151737102411"></a>21008</p>
+<td class="cellrowborder" valign="top" width="15.151515151515152%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0167274777_p2151737102411"><a name="zh-cn_topic_0167274777_p2151737102411"></a><a name="zh-cn_topic_0167274777_p2151737102411"></a>9093</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0167274777_row19365641102411"><td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0167274777_p25113063102411"><a name="zh-cn_topic_0167274777_p25113063102411"></a><a name="zh-cn_topic_0167274777_p25113063102411"></a>SASL_SSL</p>
@@ -125,7 +120,7 @@ Kafka支持安全访问，因此可以针对Topic进行ACL设置，从而控制�
     2.  已安装Kafka客户端。
 
 -   操作步骤
-    1.  使用PuTTY工具，以客户端安装用户，登录安装Kafka客户端的节点。
+    1.  以客户端安装用户，登录安装Kafka客户端的节点。
     2.  切换到Kafka客户端安装目录，例如“/opt/kafkaclient”。
 
         **cd /opt/kafkaclient**
@@ -163,8 +158,8 @@ Kafka支持安全访问，因此可以针对Topic进行ACL设置，从而控制�
 
             **./kafka-acls.sh --authorizer-properties zookeeper.connect=<ZooKeeper集群业务IP:2181/kafka \> --remove --allow-principal User:<用户名\> --consumer --topic <Topic名称\> --group <消费者组名称\>**
 
-            >![](public_sys-resources/icon-note.gif) **说明：**   
-            >MRS 1.6.3及之前版本，无论集群是否开启Kerberos认证ZooKeeper默认端口号均为24002。MRS 1.6.3及之后版本，无论集群是否开启Kerberos认证ZooKeeper默认端口号均为2181。  
+            >![](public_sys-resources/icon-note.gif) **说明：** 
+            >MRS 1.6.3及之前版本，无论集群是否开启Kerberos认证ZooKeeper默认端口号均为24002。MRS 1.6.3及之后版本，无论集群是否开启Kerberos认证ZooKeeper默认端口号均为2181。
 
 
 
@@ -206,15 +201,15 @@ Kafka支持安全访问，因此可以针对Topic进行ACL设置，从而控制�
     <td class="cellrowborder" valign="top" headers="mcps1.1.6.1.3 "><p id="zh-cn_topic_0167274777_p4736951512500"><a name="zh-cn_topic_0167274777_p4736951512500"></a><a name="zh-cn_topic_0167274777_p4736951512500"></a>sasl-ssl.port（默认21009）</p>
     </td>
     </tr>
-    <tr id="zh-cn_topic_0167274777_row2367245712500"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.1 "><p id="zh-cn_topic_0167274777_p3842085312500"><a name="zh-cn_topic_0167274777_p3842085312500"></a><a name="zh-cn_topic_0167274777_p3842085312500"></a>旧API</p>
+    <tr id="row9296145172416"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.1 "><p id="p729795162415"><a name="p729795162415"></a><a name="p729795162415"></a>旧API</p>
     </td>
-    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.2 "><p id="zh-cn_topic_0167274777_p2508134912500"><a name="zh-cn_topic_0167274777_p2508134912500"></a><a name="zh-cn_topic_0167274777_p2508134912500"></a>不支持访问</p>
+    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.2 "><p id="p129755111243"><a name="p129755111243"></a><a name="p129755111243"></a>不涉及</p>
     </td>
-    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.3 "><p id="zh-cn_topic_0167274777_p1832336112500"><a name="zh-cn_topic_0167274777_p1832336112500"></a><a name="zh-cn_topic_0167274777_p1832336112500"></a>不涉及</p>
+    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.3 "><p id="p788712732516"><a name="p788712732516"></a><a name="p788712732516"></a>不涉及</p>
     </td>
-    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.4 "><p id="zh-cn_topic_0167274777_p779729812500"><a name="zh-cn_topic_0167274777_p779729812500"></a><a name="zh-cn_topic_0167274777_p779729812500"></a>不涉及</p>
+    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.4 "><p id="p15457179102515"><a name="p15457179102515"></a><a name="p15457179102515"></a>不涉及</p>
     </td>
-    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.5 "><p id="zh-cn_topic_0167274777_p2760144012500"><a name="zh-cn_topic_0167274777_p2760144012500"></a><a name="zh-cn_topic_0167274777_p2760144012500"></a>不涉及</p>
+    <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.6.1.5 "><p id="p106691710102514"><a name="p106691710102514"></a><a name="p106691710102514"></a>不涉及</p>
     </td>
     </tr>
     </tbody>
@@ -238,7 +233,7 @@ Kafka支持安全访问，因此可以针对Topic进行ACL设置，从而控制�
     <tbody><tr id="zh-cn_topic_0167274777_row4538248612511"><td class="cellrowborder" rowspan="6" valign="top" width="20.307969203079693%" headers="mcps1.1.6.1.1 "><p id="zh-cn_topic_0167274777_p5210277212511"><a name="zh-cn_topic_0167274777_p5210277212511"></a><a name="zh-cn_topic_0167274777_p5210277212511"></a>新API</p>
     </td>
     <td class="cellrowborder" valign="top" width="19.96800319968003%" headers="mcps1.1.6.1.2 "><p id="zh-cn_topic_0167274777_p5957497812511"><a name="zh-cn_topic_0167274777_p5957497812511"></a><a name="zh-cn_topic_0167274777_p5957497812511"></a>用户需满足以下条件之一：</p>
-    <a name="zh-cn_topic_0167274777_ul6641275412511"></a><a name="zh-cn_topic_0167274777_ul6641275412511"></a><ul id="zh-cn_topic_0167274777_ul6641275412511"><li>属于系统管理员组</li><li>属于kafkaadmisumn组</li><li>属于kafkasuperuser组</li></ul>
+    <a name="zh-cn_topic_0167274777_ul6641275412511"></a><a name="zh-cn_topic_0167274777_ul6641275412511"></a><ul id="zh-cn_topic_0167274777_ul6641275412511"><li>属于系统管理员组</li><li>属于kafkaadmin组</li><li>属于kafkasuperuser组</li></ul>
     <p id="zh-cn_topic_0167274777_p2669528412511"><a name="zh-cn_topic_0167274777_p2669528412511"></a><a name="zh-cn_topic_0167274777_p2669528412511"></a></p>
     </td>
     <td class="cellrowborder" rowspan="2" valign="top" width="18.90810918908109%" headers="mcps1.1.6.1.3 "><p id="zh-cn_topic_0167274777_p25743348103948"><a name="zh-cn_topic_0167274777_p25743348103948"></a><a name="zh-cn_topic_0167274777_p25743348103948"></a>security.protocol=SASL_PLAINTEXT</p>

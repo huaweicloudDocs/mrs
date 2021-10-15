@@ -1,8 +1,8 @@
-# DBService超过最大连接数，导致metastore异常<a name="ZH-CN_TOPIC_0210454011"></a>
+# DBService超过最大连接数，导致metastore异常<a name="mrs_03_0186"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275692_section842971116813"></a>
 
-DBService默认最大连接数是300，如果当业务量比较大，导致连接DBService的最大连接数超过300时，metastore会出现异常，并报slots are reserved for non-replication superuser connections的错误
+DBService默认最大连接数是300，如果当业务量比较大，导致连接DBService的最大连接数超过300时，metastore会出现异常，并报slots are reserved for non-replication superuser connections的错误：
 
 ```
 2018-04-26 14:58:55,657 | ERROR | BoneCP-pool-watch-thread | Failed to acquire connection to jdbc:postgresql://10.*.*.*:20051/hivemeta?socketTimeout=60. Sleeping for 1000 ms. Attempts left: 9 | com.jolbox.bonecp.BoneCP.obtainInternalConnection(BoneCP.java:292)
@@ -35,9 +35,16 @@ org.postgresql.util.PSQLException: FATAL: remaining connection slots are reserve
 
 ## 解决办法<a name="zh-cn_topic_0167275692_section17326135612212"></a>
 
-1.  登录MRS Manager 页面。
-2.  依次选择“服务管理 \> DBService \> 服务配置 \> 参数类别（选择全部配置）”，搜索dbservice.database.max.connections配置项。
-3.  修改dbservice.database.max.connections配置的值到合适值，不能超过1000。
-4.  保存配置，并重启受影响的服务或者实例。
-5.  如果调整完还报超过最大连接数，需要排查业务代码，是否有连接泄露。
+1.  进入DBService服务配置页面：
+    -   MRS 1.8.10及之前版本，登录MRS Manager页面，具体请参见[访问MRS Manager](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0102.html)，然后选择“服务管理 \> DBService \> 服务配置”，单击“基础配置”下拉菜单，选择“全部配置”。
+    -   MRS 1.8.10之后及2._x_版本，单击集群名称，登录集群详情页面，选择“组件管理 \> DBService \> 服务配置”，单击“基础配置”下拉菜单，选择“全部配置”。
+
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >若集群详情页面没有“组件管理”页签，请先完成IAM用户同步（在集群详情页的“概览”页签，单击“IAM用户同步“右侧的“单击同步”进行IAM用户同步）。
+
+    -   MRS 3.x及后续版本，登录FusionInsight Manager，然后选择“集群 \>  _待操作的集群名_称 \> 服务 \> DBService \> 配置 \> 全部配置”。
+
+2.  搜索dbservice.database.max.connections配置项，并修改dbservice.database.max.connections配置的值到合适值，不能超过1000。
+3.  保存配置，并重启受影响的服务或者实例。
+4.  如果调整完还报超过最大连接数，需要排查业务代码，是否有连接泄露。
 

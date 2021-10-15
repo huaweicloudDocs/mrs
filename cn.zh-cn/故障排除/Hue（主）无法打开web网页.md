@@ -1,4 +1,4 @@
-# Hue（主）无法打开web网页<a name="ZH-CN_TOPIC_0207826482"></a>
+# Hue（主）无法打开web网页<a name="mrs_03_0174"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276173_sd64242caa665405798481482f49ab0ee"></a>
 
@@ -22,7 +22,9 @@ The server is temporarily unable to service your request due to maintenance down
     2.  执行**hostname -i**获取本机IP。
     3.  执行如下命令获取“HUE\_FLOAT\_IP”的地址：
 
-        **grep "HUE\_FLOAT\_IP" /opt/Bigdata/MRS\_Current/1\_\*/etc\*/ENV\_VARS**
+        **grep "HUE\_FLOAT\_IP" $\{BIGDATA\_HOME\}/_MRS_\_Current/1\_\*/etc\*/ENV\_VARS，**
+
+        其中_MRS_以实际文件名为准。
 
     4.  比较本机IP和“HUE\_FLOAT\_IP”的值是否相同，若不相同，请修改“HUE\_FLOAT\_IP”的值为本机IP。
     5.  重启Hue服务。

@@ -1,4 +1,4 @@
-# Hive启动失败问题的原因有哪些？<a name="ZH-CN_TOPIC_0187803458"></a>
+# Hive启动失败问题的原因有哪些？<a name="mrs_03_0148"></a>
 
 Hive启动失败最常见的原因是metastore实例无法连接上DBservice。可以查看metastore日志中具体的错误信息。目前总结连不上DBservice原因主要有：
 
@@ -10,9 +10,9 @@ DBservice没有初始化好Hive的元数据库hivemeta。
 
 1.  执行以下命令：
 
-    **source /opt/Bigdata/MRS\_XXX/install/dbservice/.dbservice\_profile**
+    **source /opt/Bigdata/MRS\_**_XXX_**/install/dbservice/.dbservice\_profile**
 
-    **gsql -h 192.168.0.44（DB的浮动ip）-p 20051 -d hivemeta -U hive -W HiveUser@**
+    **gsql -h **_DBservice浮动IP_** -p 20051 -d hivemeta -U hive -W HiveUser@**
 
 2.  如果不能正确进入交互界面，说明数据库初始化失败。如果报如下错误说明在DBservice所在的节点的配置文件可能丢失了hivemeta的配置。
 
@@ -21,8 +21,8 @@ DBservice没有初始化好Hive的元数据库hivemeta。
     ```
 
 3.  编辑“/srv/BigData/dbdata\_service/data/pg\_hba.conf“，在文件最后面追加**host hivemeta hive 0.0.0.0/0 sha256**配置。
-4.  执行**source /opt/Bigdata/MRS\_XXX/install/dbservice/.dbservice\_profile**命令配置环境变量。
-5.  执行**gs\_ctl -D $GAUSSDATA reload  \#**  使修改后的配置生效。
+4.  执行**source /opt/Bigdata/MRS\_**_XXX_**/install/dbservice/.dbservice\_profile**命令配置环境变量。
+5.  执行**gs\_ctl -D $GAUSSDATA reload \#**命令使修改后的配置生效。
 
 ## 可能原因2<a name="zh-cn_topic_0167275490_s3575bb96b24e4814b39e7a64ace006d4"></a>
 

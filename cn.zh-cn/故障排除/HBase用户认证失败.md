@@ -1,8 +1,8 @@
-# HBase用户认证失败<a name="ZH-CN_TOPIC_0168547217"></a>
+# HBase用户认证失败<a name="mrs_03_0051"></a>
 
 ## 用户问题<a name="section18305143583116"></a>
 
-HBase用户认证失败
+HBase用户认证失败。
 
 ## 问题现象<a name="section117424454313"></a>
 
@@ -31,6 +31,6 @@ HBase用户认证失败
 
 3.  将步骤2中的jar包下载到本地。
 4.  将下载的jar包替换到本地JDK目录/opt/Bigdata/jdk/jre/lib/security。
-5.  执行**cd /opt/client/HBase/hbase/bin**  命令，进入到HBase的bin目录。
+5.  执行**cd /opt/client/HBase/hbase/bin**命令，进入到HBase的bin目录。
 6.  执行**sh  start-hbase.sh**命令，重启HBase组件。
 

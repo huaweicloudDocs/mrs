@@ -1,4 +1,4 @@
-# JDK版本不匹配启动spark-sql，spark-shell失败<a name="ZH-CN_TOPIC_0183415851"></a>
+# JDK版本不匹配启动spark-sql，spark-shell失败<a name="mrs_03_0111"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275545_section82729302464"></a>
 
@@ -19,7 +19,7 @@ JDK版本不匹配导致客户端启动spark-sql，spark-shell失败。
 1.  使用**which java**命令查看默认的java命令是否是客户端的java。
 2.  如果不是，请按正常的客户端执行流程。
 
-    **source $client\_path/bigdata\_env**
+    **source $\{client\_path\}/bigdata\_env**
 
     **kinit** _用户名_，然后输入用户名对应的密码，启动任务即可。
 

@@ -1,4 +1,4 @@
-# Load数据到Hive表失败<a name="ZH-CN_TOPIC_0210454018"></a>
+# Load数据到Hive表失败<a name="mrs_03_0193"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274921_s20deae74a71143aeabad239c7a22f024"></a>
 

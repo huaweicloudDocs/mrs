@@ -1,4 +1,4 @@
-# Consumer消费数据失败，Consumer一直处于等待状态 <a name="ZH-CN_TOPIC_0181626569"></a>
+# Consumer消费数据失败，Consumer一直处于等待状态<a name="mrs_03_0064"></a>
 
 ## 问题现象<a name="zh-cn_topic_0167276017_s8c5a413588744f3ea1320d012fdb73cb"></a>
 
@@ -16,10 +16,11 @@
 
 Consumer向Kafka消费数据失败，可能原因客户端Consumer侧问题或者Kafka侧问题。
 
-1.  通过MRS Manager页面，点击“服务\> Kafka”，查看当前Kafka集群当前状态，发现状态为良好，且监控指标内容显示正确。
+1.  查看kafka服务状态：
+    -   MRS Manager界面操作：登录MRS Manager，依次选择 "服务管理 \> Kafka ，查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
+    -   FusionInsight Manager界面操作：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Kafka，
 
-    **图 1**  Kafka 的服务状态良好<a name="zh-cn_topic_0167276017_fig7459122314012"></a>  
-    ![](figures/Kafka-的服务状态良好.png "Kafka-的服务状态良好")
+        查看当前Kafka状态，发现状态为良好，且监控指标内容显示正确。
 
 2.  查看Consumer客户端日志发现频繁连接Broker节点和断链打印信息，如下所示。
 
@@ -32,9 +33,12 @@ Consumer向Kafka消费数据失败，可能原因客户端Consumer侧问题或�
     [2017-03-07 09:22:00,659] INFO Disconnecting from 10.5.144.2:9092 (kafka.producer.SyncProducer)
     ```
 
-    Consumer采用21005端口来访问Kafka，21005为非安全端口。
+    Consumer采用9092端口来访问Kafka，9092为非安全端口。
 
-3.  通过MRS Manager页面，点击“Service \> Kafka \> Configuration”，查看当前Kafka集群配置，发现未配置自定义参数“allow.everyone.if.no.acl.found“=“false“。
+3.  通过Manager页面查看当前Kafka集群配置，发现未配置自定义参数“allow.everyone.if.no.acl.found“=“false“。
+    -   MRS Manager界面操作入口：登录MRS Manager，依次选择 “服务管理 \> Kafka\> 配置”。
+    -   FusionInsight Manager界面操作入口：登录FusionInsight Manager，选择“集群 \>  _待操作集群的名称_  \> 服务 \> Kafka \> 配置"。
+
 4.  当acl设置为false不允许采用9092来进行访问。
 5.  查看Consumer客户端日志发现频繁连接Broker节点和断链打印信息，如下所示。
 
@@ -114,7 +118,7 @@ Consumer向Kafka消费数据失败，可能原因客户端Consumer侧问题或�
 
 ## 解决办法<a name="zh-cn_topic_0167276017_s2d3c010d3bc0406fa3f531ccd76c297f"></a>
 
-1.  配置自定义参数“allow.everyone.if.no.acl.found“参数为“ture“，重启Kafka服务。
+1.  配置自定义参数“allow.everyone.if.no.acl.found“参数为“true“，重启Kafka服务。
 2.  <a name="zh-cn_topic_0167276017_li42828707125627"></a>采用具有权限用户登录。
 
     例如：
@@ -123,15 +127,15 @@ Consumer向Kafka消费数据失败，可能原因客户端Consumer侧问题或�
 
     或者赋予用户相关权限。
 
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >需要使用Kafka管理员用户（属于kafkaadmin组）操作。  
+    >![](public_sys-resources/icon-notice.gif) **须知：** 
+    >需要使用Kafka管理员用户（属于kafkaadmin组）操作。
 
     例如：
 
-    **kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:24002/kafka  --topic topic\_acl --consumer --add --allow-principal User:test --group test**
+    **kafka-acls.sh --authorizer-properties zookeeper.connect=10.5.144.2:2181/kafka  --topic topic\_acl --consumer --add --allow-principal User:test --group test**
 
     ```
-    [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=8.5.144.2:24002/kafka --list --topic topic_acl
+    [root@10-10-144-2 client]# kafka-acls.sh --authorizer-properties zookeeper.connect=8.5.144.2:2181/kafka --list --topic topic_acl
     Current ACLs for resource `Topic:topic_acl`: 
      User:test_user has Allow permission for operations: Describe from hosts: *
      User:test_user has Allow permission for operations: Write from hosts: *

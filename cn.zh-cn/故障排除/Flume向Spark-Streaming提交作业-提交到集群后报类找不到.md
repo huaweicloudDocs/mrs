@@ -1,4 +1,4 @@
-# Flume向Spark Streaming提交作业，提交到集群后报类找不到<a name="ZH-CN_TOPIC_0169495350"></a>
+# Flume向Spark Streaming提交作业，提交到集群后报类找不到<a name="mrs_03_0023"></a>
 
 ## 用户问题<a name="zh-cn_topic_0135447910_section18305143583116"></a>
 

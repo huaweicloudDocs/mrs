@@ -1,4 +1,4 @@
-# DBService配置文件丢失导致启动失败<a name="ZH-CN_TOPIC_0185002833"></a>
+# DBService配置文件丢失导致启动失败<a name="mrs_03_0130"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276152_sd64242caa665405798481482f49ab0ee"></a>
 
@@ -11,26 +11,26 @@
 
     ```
     The program "gaussdb" was found by "
-    /opt/Bigdata/MRS_2.0.1/install/dbservice/gaussdb/bin/gs_guc)
+    /opt/Bigdata/MRS_xxx/install/dbservice/gaussdb/bin/gs_guc)
     But not was not the same version as gs_guc.
     Check your installation.
     ```
 
-    ![](figures/zh-cn_image_0167276231.png)
+    ![](figures/zh-cn_image_0264281936.png)
 
 3.  比对主备DBServer节点/srv/BigData/dbdata\_service/data目录下的配置文件发现差距比较大。
 
-    ![](figures/zh-cn_image_0167276225.png)
+    ![](figures/zh-cn_image_0264281513.png)
 
-    ![](figures/zh-cn_image_0167276072.png)
+    ![](figures/zh-cn_image_0264281686.png)
 
 
 ## 解决办法<a name="zh-cn_topic_0167276152_section1539215652120"></a>
 
-1.  把主节点**/srv/BigData/dbdata\_service/data**的内容拷贝到备节点，保持文件权限和属组和主节点一样。
-2.  修改postgresql.conf配置信息，localhost变成本节点的，remotehost变成对端节点。
+1.  把主节点**/srv/BigData/dbdata\_service/data**的内容拷贝到备节点，保持文件权限和属组与主节点一样。
+2.  修改postgresql.conf配置信息，localhost修改成本节点IP，remotehost修改成对端节点IP。
 
-    ![](figures/zh-cn_image_0167276089.png)
+    ![](figures/zh-cn_image_0264281541.png)
 
-3.  登录MRS Manager页面重启备DBServer节点。
+3.  登录Manager页面重启备DBServer节点。
 

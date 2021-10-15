@@ -1,4 +1,4 @@
-# Consumer消费数据失败，提示SchemaException: Error reading field 'brokers'<a name="ZH-CN_TOPIC_0183415855"></a>
+# Consumer消费数据失败，提示SchemaException: Error reading field 'brokers'<a name="mrs_03_0104"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167276398_s8c5a413588744f3ea1320d012fdb73cb"></a>
 

@@ -1,4 +1,4 @@
-# Hive任务失败，报没有HDFS目录的权限<a name="ZH-CN_TOPIC_0210454017"></a>
+# Hive任务失败，报没有HDFS目录的权限<a name="mrs_03_0192"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167274487_section1511554917485"></a>
 
@@ -40,7 +40,7 @@ at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2254)
 
 2.  检查HDFS上表目录下所有文件目录的权限，发现有一个目录权限为700（只有文件属主能够访问），确认存在异常目录。
 
-    ![](figures/zh-cn_image_0167276039.png)
+    ![](figures/zh-cn_image_0264281928.png)
 
 
 ## 解决办法<a name="zh-cn_topic_0167274487_section78323421615"></a>

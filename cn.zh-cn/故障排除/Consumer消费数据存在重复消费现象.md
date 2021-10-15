@@ -1,4 +1,4 @@
-# Consumer消费数据存在重复消费现象<a name="ZH-CN_TOPIC_0185002840"></a>
+# Consumer消费数据存在重复消费现象<a name="mrs_03_0125"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275680_section3945184441312"></a>
 
@@ -41,7 +41,7 @@
 
 ## 解决办法<a name="zh-cn_topic_0167275680_section103311642181412"></a>
 
-建议用户在MRS Manager页面调整以下服务参数参数：
+建议用户在Manager页面调整以下服务参数参数：
 
 request.timeout.ms=100000
 

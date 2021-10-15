@@ -1,11 +1,10 @@
-# HDFS目录配额（quota）不足导致写文件失败<a name="ZH-CN_TOPIC_0181713169"></a>
+# HDFS目录配额（quota）不足导致写文件失败<a name="mrs_03_0088"></a>
 
 ## 问题背景与现象<a name="zh-cn_topic_0167275765_sd1dc17fee2214ed9867d242a14f38d7d"></a>
 
 给某目录设置quota后，往目录中写文件失败，出现如下问题“**The DiskSpace quota of** /tmp/tquota2 is **exceeded**”
 
 ```
-[omm@189-39-150-115 client]$ 
 [omm@189-39-150-115 client]$ hdfs dfs -put switchuser.py  /tmp/tquota2
 put: The DiskSpace quota of /tmp/tquota2 is exceeded: quota = 157286400 B = 150 MB but diskspace consumed = 402653184 B = 384 MB
 ```
@@ -40,10 +39,10 @@ put: The DiskSpace quota of /tmp/tquota2 is exceeded: quota = 157286400 B = 150 
 
 1.  增加配额大小，即重新设置目录的配额大小。
 
-    **hadoop dfsadmin -setSpaceQuota  150G /目录名**
+    **hadoop dfsadmin -setSpaceQuota  150G /**_目录名_
 
 2.  清空配额。
 
-    **hdfs dfsadmin -clrSpaceQuota /目录名**
+    **hdfs dfsadmin -clrSpaceQuota /**_目录名_
 
 
