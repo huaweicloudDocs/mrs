@@ -1,4 +1,4 @@
-# ALM-43013 JDBCServer GC 时间超出阈值<a name="ZH-CN_TOPIC_0191883164"></a>
+# ALM-43013 JDBCServer GC 时间超出阈值<a name="alm_43013"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813943_zh-cn_topic_0087039425_section43920869"></a>
 
@@ -64,10 +64,6 @@ GC时间超出阈值，会影响JDBCServer进程运行的性能，甚至造成JD
 
 1.  检查GC时间。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  选中“告警ID”为“43013”的告警，查看“定位信息”中的实例的IP地址及角色名。
     3.  单击“组件管理 \> Spark \> 实例 \> JDBCServer（对应上报告警实例IP地址） \> 定制 \>JDBCServer的GC时间“。单击“确定”，查看GC时间。
     4.  查看JDBCServer进程的GC时间是否大于12秒。

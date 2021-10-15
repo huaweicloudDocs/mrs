@@ -1,4 +1,4 @@
-# ALM-44004 Presto Coordinator资源组排队任务超过阈值<a name="ZH-CN_TOPIC_0226470315"></a>
+# ALM-44004 Presto Coordinator资源组排队任务超过阈值<a name="alm_44004"></a>
 
 ## 告警解释<a name="zh-cn_topic_0226447372_zh-cn_topic_0087039425_section43920869"></a>
 

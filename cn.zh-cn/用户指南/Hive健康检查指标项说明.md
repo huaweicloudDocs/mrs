@@ -1,4 +1,4 @@
-# Hive健康检查指标项说明<a name="ZH-CN_TOPIC_0173397609"></a>
+# Hive健康检查指标项说明<a name="mrs_01_0257"></a>
 
 ## HiveServer允许的最大session数量<a name="section16062967111623"></a>
 

@@ -1,4 +1,4 @@
-# KrbServer健康检查指标项说明<a name="ZH-CN_TOPIC_0173397615"></a>
+# KrbServer健康检查指标项说明<a name="mrs_01_0263"></a>
 
 ## KerberosAdmin服务可用性检查<a name="section13031472111847"></a>
 

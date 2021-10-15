@@ -1,4 +1,4 @@
-# Kafka数据<a name="ZH-CN_TOPIC_0173178935"></a>
+# Kafka数据<a name="mrs_01_0449"></a>
 
 当我们需要在两个Kafka集群间做数据同步，或者将原有Kafka集群上的数据搬迁到新的Kafka集群上时就需要用到Kafka数据同步的利器——MirrorMaker。MirrorMaker是Kafka内嵌的一个工具，其内部实际上是集成了Kafka的Consumer和Producer，它可以从一个Kafka集群消费数据然后写入另一个Kafka集群，从而实现Kafka集群间的数据同步。
 
@@ -6,12 +6,10 @@
 
 ## 操作步骤<a name="section6504202912"></a>
 
+**3.x之前版本：**
+
 1.  <a name="li1980875616292"></a>配置集群Kerberos互信，具体配置方式请参考[配置跨集群互信](配置跨集群互信.md)。
 2.  若计划在源集群使用MirrorMaker工具，请登录目的集群的集群详情页面，选择“组件管理”。若计划在目的集群使用MirrorMaker工具，请登录源集群的集群详情页面，选择“组件管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本的集群，若计划在源集群使用MirrorMaker工具，请登录目的集群的MRS Manager页面，选择“服务管理”。若计划在目的集群使用MirrorMaker工具，请登录源集群的MRS Manager页面，选择“服务管理”。  
-
 3.  选择“Kafka \> 服务配置”，将页面右侧的“基础配置”切换为“全部配置”。
 4.  选择“Broker \> 自定义”配置项增加如下规则。
 
@@ -24,14 +22,10 @@
 
 5.  <a name="li854919509282"></a>单击“保存配置”，按照提示选择“重新启动受影响的服务或实例。”并单击“确定”，重启Kafka服务。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >开启Kerberos认证的安全集群需要执行步骤[1](#li1980875616292)-[5](#li854919509282)，未开启Kerberos认证的普通集群请跳过步骤[1](#li1980875616292)-[5](#li854919509282)，直接从[6](#li3402143084520)开始执行。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >开启Kerberos认证的安全集群需要执行步骤[1](#li1980875616292)-[5](#li854919509282)，未开启Kerberos认证的普通集群请跳过步骤[1](#li1980875616292)-[5](#li854919509282)，直接从[6](#li3402143084520)开始执行。
 
 6.  <a name="li3402143084520"></a>在计划使用MirrorMaker工具的集群，登录集群详情页面，选择“组件管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本的集群，登录MRS Manager页面，选择“服务管理”。  
-
 7.  选择“Kafka \> 服务配置”，切换“基础配置”为“全部配置”，“角色”为“MirrorMaker”。
 
     **图 2**  配置Kafka服务的MirrorMaker参数<a name="fig52561818481"></a>  
@@ -46,6 +40,6 @@
 
 8.  单击“保存配置”，按照提示选择“重新启动受影响的服务或实例。”并单击“是”，重启MirrorMaker实例。
 
-    待MirrorMaker重启完成后，数据迁移任务即已启动，可通过[KafkaManager](KafkaManager介绍.md)或者命令行工具监控MirrorMaker数据同步进度。
+    待MirrorMaker重启完成后，数据迁移任务即已启动，可通过[KafkaManager](https://support.huaweicloud.com/cmpntguide-mrs/mrs_01_0436.html)或者命令行工具监控MirrorMaker数据同步进度。
 
 

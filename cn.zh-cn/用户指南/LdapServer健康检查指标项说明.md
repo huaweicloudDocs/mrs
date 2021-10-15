@@ -1,4 +1,4 @@
-# LdapServer健康检查指标项说明<a name="ZH-CN_TOPIC_0173397620"></a>
+# LdapServer健康检查指标项说明<a name="mrs_01_0268"></a>
 
 ## SlapdServer服务可用性检查<a name="section19258516112619"></a>
 

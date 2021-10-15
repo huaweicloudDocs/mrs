@@ -1,4 +1,4 @@
-# Loader健康检查指标项说明<a name="ZH-CN_TOPIC_0173397624"></a>
+# Loader健康检查指标项说明<a name="mrs_01_0272"></a>
 
 ## ZooKeeper健康状态<a name="section26131397102445"></a>
 

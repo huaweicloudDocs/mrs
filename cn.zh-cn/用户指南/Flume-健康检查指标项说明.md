@@ -1,4 +1,4 @@
-# Flume 健康检查指标项说明<a name="ZH-CN_TOPIC_0173397581"></a>
+# Flume 健康检查指标项说明<a name="mrs_01_0229"></a>
 
 ## 服务健康状态<a name="section808833110229"></a>
 

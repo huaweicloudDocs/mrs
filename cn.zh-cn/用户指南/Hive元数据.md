@@ -1,4 +1,4 @@
-# Hive元数据<a name="ZH-CN_TOPIC_0173178973"></a>
+# Hive元数据<a name="mrs_01_0446"></a>
 
 ## Hive元数据备份<a name="section1744543016545"></a>
 
@@ -27,7 +27,7 @@ Hive表数据存储在HDFS上，表数据及表数据的元数据由HDFS统一�
 
 ## Hive元数据恢复<a name="section14357913301"></a>
 
-在目的集群中安装并使用Sqoop命令将导出的Hive元数据导入MRS集群dbservice。
+在目的集群中安装并使用Sqoop命令将导出的Hive元数据导入MRS集群DBService。
 
 ```
 $Sqoop_Home/bin/sqoop export --connect jdbc:postgresql://<ip>:20051/hivemeta --table <table_name> --username hive -password <passwd> --export-dir <export_from>

@@ -1,4 +1,4 @@
-# HDFS数据<a name="ZH-CN_TOPIC_0173178098"></a>
+# HDFS数据<a name="mrs_01_0445"></a>
 
 ## 打通数据传输通道<a name="section2349182854814"></a>
 
@@ -29,7 +29,7 @@
 
 -   不同Region
 
-    当源集群与目标集群处于不同Region时，用Distcp工具将源集群数据拷贝到OBS，借助OBS跨区域复制功能（请参见[跨区域复制](https://support.huaweicloud.com/usermanual-obs/obs_03_0002.html)）将数据复制到对应目的集群所在Region的OBS，然后通过Distcp工具将OBS数据拷贝到目的集群的HDFS上。由于执行Distcp无法为OBS上的文件设置权限、属主/组等信息，因此当前场景在进行数据导出时也需要将HDFS的元数据信息进行导出并拷贝，以防HDFS文件属性信息丢失。
+    当源集群与目标集群处于不同Region时，用Distcp工具将源集群数据拷贝到OBS，借助OBS跨区域复制功能（请参见[跨区域复制](https://support.huaweicloud.com/ugobs-obs/obs_41_0034.html)）将数据复制到对应目的集群所在Region的OBS，然后通过Distcp工具将OBS数据拷贝到目的集群的HDFS上。由于执行Distcp无法为OBS上的文件设置权限、属主/组等信息，因此当前场景在进行数据导出时也需要将HDFS的元数据信息进行导出并拷贝，以防HDFS文件属性信息丢失。
 
 -   线下集群向云迁移
 
@@ -59,8 +59,8 @@ $HADOOP_HOME/bin/hdfs dfs –ls –R <migrating_path> > /tmp/hdfs_meta.txt
 -   _<migrating\_path\>_：HDFS上待迁移的数据目录
 -   /tmp/hdfs\_meta.txt：导出的元数据信息保存在本地的路径。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->如果源集群与目标集群网络互通，且以超级管理员身份运行hadoop distcp命令进行数据拷贝，可以添加参数“-p”让distcp在拷贝数据的同时在目标集群上分别恢复相应文件的元数据信息。因此在这种场景下可直接跳过本步骤。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>如果源集群与目标集群网络互通，且以超级管理员身份运行hadoop distcp命令进行数据拷贝，可以添加参数“-p”让distcp在拷贝数据的同时在目标集群上分别恢复相应文件的元数据信息。因此在这种场景下可直接跳过本步骤。
 
 ## HDFS文件属性恢复<a name="section16356182920517"></a>
 

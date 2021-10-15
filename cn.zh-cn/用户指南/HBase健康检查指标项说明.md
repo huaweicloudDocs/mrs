@@ -1,4 +1,4 @@
-# HBase健康检查指标项说明<a name="ZH-CN_TOPIC_0173397582"></a>
+# HBase健康检查指标项说明<a name="mrs_01_0230"></a>
 
 ## 运行良好的RegionServer数<a name="section297156105658"></a>
 

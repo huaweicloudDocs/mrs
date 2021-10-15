@@ -1,4 +1,4 @@
-# ALM-43006 JobHistory进程堆内存使用超出阈值<a name="ZH-CN_TOPIC_0191883157"></a>
+# ALM-43006 JobHistory进程堆内存使用超出阈值<a name="alm_43006"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813968_zh-cn_topic_0087039425_section43920869"></a>
 
@@ -64,10 +64,6 @@ JobHistory进程堆内存使用率过高，会影响JobHistory进程运行的性
 
 1.  检查堆内存使用率。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  选中“告警ID”为“43006”的告警，查看“定位信息”中的实例的IP地址及角色名。
     3.  单击“组件管理 \> Spark \> 实例 \> JobHistory（对应上报告警实例IP地址） \> 定制 \> JobHistory进程的堆内存统计“。单击“确定”，查看堆内存使用情况。
     4.  查看JobHistory进程使用的堆内存是否已达到JobHistory进程设定的最大堆内存的90%。
@@ -75,7 +71,8 @@ JobHistory进程堆内存使用率过高，会影响JobHistory进程运行的性
         -   否，执行[2](#zh-cn_topic_0191813968_li572522141314)。
 
     5.  <a name="zh-cn_topic_0191813968_li1011493181634"></a>单击“组件管理 \> Spark \> 服务配置 \> 全部配置 \> JobHistory \> 默认“。将“SPARK\_DAEMON\_MEMORY“参数的值根据实际情况调大。
-    6.  观察界面告警是否清除。
+    6.  单击“保存配置”，勾选“重新启动受影响的服务或实例。”并单击“确定”。
+    7.  观察界面告警是否清除。
         -   是，处理完毕。
         -   否，执行[2](#zh-cn_topic_0191813968_li572522141314)。
 

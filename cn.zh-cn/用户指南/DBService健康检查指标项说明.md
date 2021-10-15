@@ -1,4 +1,4 @@
-# DBService健康检查指标项说明<a name="ZH-CN_TOPIC_0173397580"></a>
+# DBService健康检查指标项说明<a name="mrs_01_0228"></a>
 
 ## 服务健康检查<a name="section55209118105537"></a>
 

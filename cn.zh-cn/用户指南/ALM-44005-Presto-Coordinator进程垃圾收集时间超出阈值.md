@@ -1,4 +1,4 @@
-# ALM-44005 Presto Coordinator进程垃圾收集时间超出阈值<a name="ZH-CN_TOPIC_0225317134"></a>
+# ALM-44005 Presto Coordinator进程垃圾收集时间超出阈值<a name="alm_44005"></a>
 
 ## 告警解释<a name="zh-cn_topic_0225312712_zh-cn_topic_0087039425_section43920869"></a>
 
@@ -64,10 +64,6 @@ Coordinator进程GC时间过长，会影响Coordinator进程运行的性能，�
 
 1.  检查GC时间。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  选中“告警ID”为“44005”的告警，查看“定位信息”中的实例的IP地址及角色名。
     3.  单击“组件管理 \> Presto \> 实例 \> Coordinator（对应上报告警实例IP地址） \> 定制 \> Presto进程GC时间“。单击“确定”，查看GC时间。
     4.  查看Coordinator进程的GC时间是否大于5秒。

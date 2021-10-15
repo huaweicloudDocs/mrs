@@ -1,4 +1,4 @@
-# ALM-43011 JDBCServer进程非堆内存使用超出阈值<a name="ZH-CN_TOPIC_0191883162"></a>
+# ALM-43011 JDBCServer进程非堆内存使用超出阈值<a name="alm_43011"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813888_zh-cn_topic_0087039425_section43920869"></a>
 
@@ -64,10 +64,6 @@ JDBCServer进程非堆内存使用率过高，会影响JDBCServer进程运行的
 
 1.  检查非堆内存使用率。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  选中“告警ID”为“43011”的告警，查看“定位信息”中的实例的IP地址及角色名。
     3.  单击“组件管理 \> Spark \> 实例 \> JDBCServer（对应上报告警实例IP地址） \> 定制 \>JDBCServer进程的非堆内存统计“。单击“确定”，查看非堆内存使用情况。
     4.  查看JDBCServer进程的非堆内存是否已达到JDBCServer进程设定的最大非堆内存的90%。

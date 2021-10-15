@@ -1,4 +1,4 @@
-# Kafka健康检查指标项说明<a name="ZH-CN_TOPIC_0173397614"></a>
+# Kafka健康检查指标项说明<a name="mrs_01_0262"></a>
 
 ## Broker可用节点数<a name="section38909312142447"></a>
 
