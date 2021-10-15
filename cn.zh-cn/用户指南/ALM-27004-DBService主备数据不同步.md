@@ -1,4 +1,4 @@
-# ALM-27004 DBService主备数据不同步<a name="ZH-CN_TOPIC_0191883117"></a>
+# ALM-27004 DBService主备数据不同步<a name="alm_27004"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813894_section51489795"></a>
 
@@ -83,10 +83,6 @@ DBService主备数据不同步，每10秒检查一次主备数据同步状态，
 
 1.  检查主备节点网络是否正常。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中单击此告警所在行，在告警详情中查看该告警的DBService备节点IP地址。
     3.  登录主DBService节点。
     4.  执行**ping** _备DBService__心跳IP__地址_命令检查备DBService节点是否可达。

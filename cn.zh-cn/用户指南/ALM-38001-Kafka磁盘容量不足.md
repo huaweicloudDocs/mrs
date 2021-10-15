@@ -1,4 +1,4 @@
-# ALM-38001 Kafka磁盘容量不足<a name="ZH-CN_TOPIC_0191883124"></a>
+# ALM-38001 Kafka磁盘容量不足<a name="alm_38001"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813921_section44214237175627"></a>
 
@@ -79,10 +79,6 @@
 ## 处理步骤<a name="zh-cn_topic_0191813921_section46014572175627"></a>
 
 1.  登录MRS集群详情页面，选择“告警管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
 2.  <a name="zh-cn_topic_0191813921_li13769123214531"></a>在告警列表中单击该告警，从“告警详情“的“定位信息“中获得HostName（主机名称）和PartitionName（磁盘分区名称）。
 3.  在“主机管理“页面，单击[2](#zh-cn_topic_0191813921_li13769123214531)中获取的主机名称。
 4.  检查“磁盘“区域中是否包含该告警中的磁盘分区名称。
@@ -105,8 +101,8 @@
     -   是，执行[12](#zh-cn_topic_0191813921_li076953295311)。
     -   否，根据业务需求合理调整数据保存周期，执行[12](#zh-cn_topic_0191813921_li076953295311)。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果有个别Topic不能做保存周期调整，那么可配置在“disk.adapter.topic.blacklist”中。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >如果有个别Topic不能做保存周期调整，那么可配置在“disk.adapter.topic.blacklist”中。
 
 11. <a name="zh-cn_topic_0191813921_li19769532105319"></a>等待10分钟，查看故障磁盘使用率是否有减少。
     -   是，继续等待直到告警消除。
@@ -122,19 +118,19 @@
 
 14. <a name="zh-cn_topic_0191813921_li1176913210535"></a>查看是否由于某些Topic的Partition配置不合理导致部分磁盘使用率达到上限（例如：数据量非常大的Topic的Partition数目小于配置的磁盘个数，导致各磁盘上数据分配无法均匀，进而部分磁盘达到使用率上限）。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果不清楚哪些Topic业务数据量较大，可以根据[2](#zh-cn_topic_0191813921_li13769123214531)中获取到的主机节点信息，登录到实例节点上，进入对应的数据目录（即[6](#zh-cn_topic_0191813921_li16769832165314)中“log.dirs“修改之前的配置路径），查看该目录下哪些Topic的Patition目录占用的磁盘空间比较大。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >如果不清楚哪些Topic业务数据量较大，可以根据[2](#zh-cn_topic_0191813921_li13769123214531)中获取到的主机节点信息，登录到实例节点上，进入对应的数据目录（即[6](#zh-cn_topic_0191813921_li16769832165314)中“log.dirs“修改之前的配置路径），查看该目录下哪些Topic的Patition目录占用的磁盘空间比较大。
 
     -   是，执行[15](#zh-cn_topic_0191813921_li137701132145312)。
     -   否，执行[16](#zh-cn_topic_0191813921_li9770103214530)。
 
-15. <a name="zh-cn_topic_0191813921_li137701132145312"></a>通过Kafka客户端对Topic的Partion进行扩展，命令行操作命令如下：
+15. <a name="zh-cn_topic_0191813921_li137701132145312"></a>通过Kafka客户端对Topic的Partition进行扩展，命令行操作命令如下：
 
     **kafka-topics.sh --zookeeper** _ZooKeeper地址:24002/kafka_ **--alter --topic** _Topic名称_ **--partitions=**_新Partition数目_
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >新Partition数目建议配置为Kafka数据磁盘数量的倍数。  
-    >当前步骤修改可能不会很快解决当前告警，需要结合数据保存时间逐渐均衡数据。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >新Partition数目建议配置为Kafka数据磁盘数量的倍数。
+    >当前步骤修改可能不会很快解决当前告警，需要结合数据保存时间逐渐均衡数据。
 
 16. <a name="zh-cn_topic_0191813921_li9770103214530"></a>考虑是否需要扩容。
     -   是，请为集群添加节点，然后执行[17](#zh-cn_topic_0191813921_li4770432185318)。

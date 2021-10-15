@@ -1,4 +1,4 @@
-# ALM-19006 HBase容灾同步失败<a name="ZH-CN_TOPIC_0191883111"></a>
+# ALM-19006 HBase容灾同步失败<a name="alm_19006"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813928_section18389930"></a>
 
@@ -67,10 +67,6 @@
 
 1.  观察告警是否自动修复。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中单击该告警，从“告警详情”的“产生时间”处获得告警的产生时间，查看告警是否持续超过5分钟。
         -   是，执行[2.a](#zh-cn_topic_0191813928_li1255962015108)。
         -   否，执行[1.c](#zh-cn_topic_0191813928_step3)。
@@ -81,10 +77,6 @@
 
 2.  检查备集群HBase服务状态。
     1.  <a name="zh-cn_topic_0191813928_li1255962015108"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中单击该告警，从“告警详情”的“定位信息”处获得“HostName”。
     3.  登录主集群HBase客户端所在节点。执行以下命令切换用户：
 
@@ -131,10 +123,6 @@
 
 3.  检查主备集群RegionServer之间的网络连接。
     1.  <a name="zh-cn_topic_0191813928_li594194191119"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中单击该告警，从“告警详情”的“定位信息”处获得“HostName”。
     3.  登录故障RegionServer节点。
     4.  执行**ping**命令，查看故障RegionServer节点和备集群RegionServer所在主机的网络连接是否正常。

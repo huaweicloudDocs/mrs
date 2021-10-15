@@ -1,4 +1,4 @@
-# ALM-25004 LdapServer数据同步异常<a name="ZH-CN_TOPIC_0191883113"></a>
+# ALM-25004 LdapServer数据同步异常<a name="alm_25004"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813874_section47176343"></a>
 
@@ -68,10 +68,6 @@ LdapServer数据不一致时，有可能是Manager上的LdapServer数据损坏�
 
 1.  检查LdapServer所在的节点网络是否故障。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  记录该告警定位信息中的“HostName”的IP地址为IP1（若出现多个告警，则分别记录其中的IP地址为IP1、IP2、IP3等）。
     3.  联系运维人员，登录IP1节点，在这个节点上使用**ping**命令检查该节点与主oms节点的管理平面IP是否可达。
         -   是，执行[1.d](#zh-cn_topic_0191813874_aalm-25004_mmccppss_step3)。
@@ -83,10 +79,6 @@ LdapServer数据不一致时，有可能是Manager上的LdapServer数据损坏�
 
 2.  检查LdapServer进程是否正常。
     1.  <a name="zh-cn_topic_0191813874_li4768141014141"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  查看是否有LdapServer的ALM-12004 OLdap资源异常告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813874_aalm-25004_mmccppss_step5)。
         -   否，执行[2.e](#zh-cn_topic_0191813874_aalm-25004_mmccppss_step7)。
@@ -107,10 +99,6 @@ LdapServer数据不一致时，有可能是Manager上的LdapServer数据损坏�
 
 3.  检查是否存在因为OS重启导致LdapServer数据损坏。
     1.  <a name="zh-cn_topic_0191813874_li1816316468144"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  记录该告警定位信息中的“HostName”的IP地址为IP1（若出现多个告警，则分别记录其中的IP地址为IP1，IP2，IP3等）。单击“服务管理 \> LdapServer \> 服务配置”，记录LdapServer的端口号为PORT\(若告警定位信息中的IP地址为oms备节点IP地址，则端口号为默认端口21750\)。
     3.  以**omm**用户登录IP1节点，分别执行**ldapsearch -H ldaps://IP1:PORT -x -LLL -b dc=hadoop,dc=com**命令（如果该IP为OMS备节点IP地址，执行该命令之前先执行**export LDAPCONF=$\{CONTROLLER\_HOME\}/ldapserver/ldapserver/local/conf/ldap.conf**命令），观察查询出来的内容是否提示有error错误信息。
         -   是，执行[3.d](#zh-cn_topic_0191813874_aalm-25004_mmccppss_step12)。
@@ -118,8 +106,8 @@ LdapServer数据不一致时，有可能是Manager上的LdapServer数据损坏�
 
     4.  <a name="zh-cn_topic_0191813874_aalm-25004_mmccppss_step12"></a>参考“恢复元数据”章节，使用告警出现日期之前的备份包进行LdapServer恢复和OMS恢复。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >必须使用同一时间点的OMS和LdapServer备份数据进行恢复，否则可能造成业务和操作失败。当业务正常时需要恢复数据，建议手动备份最新管理数据后，再执行恢复数据操作，否则会丢失从备份时刻到恢复时刻之间的Manager数据。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >必须使用同一时间点的OMS和LdapServer备份数据进行恢复，否则可能造成业务和操作失败。当业务正常时需要恢复数据，建议手动备份最新管理数据后，再执行恢复数据操作，否则会丢失从备份时刻到恢复时刻之间的Manager数据。
 
     5.  在告警列表中查看“ALM-25004 LdapServer数据同步异常”告警是否清除。
         -   是，处理完毕。

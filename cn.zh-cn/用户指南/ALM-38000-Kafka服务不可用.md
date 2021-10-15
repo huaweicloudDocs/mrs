@@ -1,4 +1,4 @@
-# ALM-38000 Kafka服务不可用<a name="ZH-CN_TOPIC_0191883123"></a>
+# ALM-38000 Kafka服务不可用<a name="alm_38000"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813970_section19665522175625"></a>
 
@@ -68,10 +68,6 @@
 
 1.  检查KrbServer组件状态。未启用Kerberos认证的集群无需检查Kerberos状态，请直接执行[2](#zh-cn_topic_0191813970_li21507667181241)。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813970_li1071286918299"></a>查看KrbServer服务的健康状态是否为“良好“。
         -   是，执行[2.a](#zh-cn_topic_0191813970_li22712539182948)。
         -   否，执行[1.c](#zh-cn_topic_0191813970_li50060872182922)。

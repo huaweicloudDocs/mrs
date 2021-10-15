@@ -1,4 +1,4 @@
-# ALM-20002 Hue服务不可用<a name="ZH-CN_TOPIC_0191883151"></a>
+# ALM-20002 Hue服务不可用<a name="alm_20002"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813890_zh-cn_topic_0087039274_section42400121"></a>
 
@@ -69,10 +69,6 @@
 **检查KrbServer服务是否正常。**
 
 1.  登录MRS集群详情页面，选择“组件管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
 2.  在服务列表中查看“KrbServer”的“健康状态”是否为“良好”。
     -   是，执行[5](#zh-cn_topic_0191813890_li1965161312249)。
     -   否，执行[3](#zh-cn_topic_0191813890_zh-cn_topic_0087039274_li3201870494312)。
@@ -86,18 +82,14 @@
 **检查DBService是否正常**
 
 1.  <a name="zh-cn_topic_0191813890_li1965161312249"></a>登录MRS集群详情页面，选择“组件管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
 2.  在服务列表中查看DBService服务健康状态是否为“良好”。
     -   是，执行[9](#zh-cn_topic_0191813890_zh-cn_topic_0087039274_li3066850394312)。
     -   否，执行[7](#zh-cn_topic_0191813890_zh-cn_topic_0087039274_li6300946494312)。
 
 3.  <a name="zh-cn_topic_0191813890_zh-cn_topic_0087039274_li6300946494312"></a>单击DBService服务的“操作”列的“重启”，重启该服务。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >重启服务需要输入MRS Manager管理员密码并勾选“同时重启或启动相关的服务。”。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >重启服务需要输入MRS Manager管理员密码并勾选“同时重启或启动相关的服务。”。
 
 4.  等待几分钟。检查“ALM-20002 Hue服务不可用”告警是否恢复。
     -   是，操作结束。

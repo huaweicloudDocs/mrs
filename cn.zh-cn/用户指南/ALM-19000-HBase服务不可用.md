@@ -1,4 +1,4 @@
-# ALM-19000 HBase服务不可用<a name="ZH-CN_TOPIC_0191883110"></a>
+# ALM-19000 HBase服务不可用<a name="alm_19000"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813964_section18389930"></a>
 
@@ -69,10 +69,6 @@ HBase服务恢复时，告警清除。
 
 1.  检查ZooKeeper服务状态。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  在服务列表中，查看ZooKeeper健康状态是否为“良好”。
         -   是，执行[2.a](#zh-cn_topic_0191813964_aalm-19000_mmccppss_hdfs)。
         -   否，执行[1.c](#zh-cn_topic_0191813964_aalm-19000_mmccppss_alm-53004)。

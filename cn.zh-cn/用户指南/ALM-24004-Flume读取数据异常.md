@@ -1,4 +1,4 @@
-# ALM-24004 Flume读取数据异常<a name="ZH-CN_TOPIC_0191883129"></a>
+# ALM-24004 Flume读取数据异常<a name="alm_24004"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813945_section19665522175625"></a>
 
@@ -97,10 +97,6 @@
         -   否，执行[1.e](#zh-cn_topic_0191813945_li1487713813414)。
 
     5.  <a name="zh-cn_topic_0191813945_li1487713813414"></a>登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     6.  单击“Flume  \>  实例“。
     7.  单击进入故障节点的Flume实例页面，查看监控指标“Source速度指标”，检查告警中的Source速度是否为0。
         -   是，执行[2.a](#zh-cn_topic_0191813945_li39514043173729)。

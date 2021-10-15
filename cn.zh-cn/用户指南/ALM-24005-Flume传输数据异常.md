@@ -1,4 +1,4 @@
-# ALM-24005 Flume传输数据异常<a name="ZH-CN_TOPIC_0191883130"></a>
+# ALM-24005 Flume传输数据异常<a name="alm_24005"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813885_section19665522175625"></a>
 
@@ -98,10 +98,6 @@ Flume Channel的磁盘空间使用量有继续增长的趋势，将会使数据�
         -   否，执行[1.g](#zh-cn_topic_0191813885_li1487713813414)。
 
     7.  <a name="zh-cn_topic_0191813885_li1487713813414"></a>登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     8.  单击“Flume  \>  实例“。
     9.  单击进入故障节点的Flume实例页面，查看指标“Sink速度指标”，检查其速度是否为0。
         -   是，执行[2.a](#zh-cn_topic_0191813885_li60707704172341)。

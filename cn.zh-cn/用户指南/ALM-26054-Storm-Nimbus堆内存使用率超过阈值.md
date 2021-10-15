@@ -1,4 +1,4 @@
-# ALM-26054 Storm Nimbus堆内存使用率超过阈值<a name="ZH-CN_TOPIC_0191883122"></a>
+# ALM-26054 Storm Nimbus堆内存使用率超过阈值<a name="alm_26054"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813940_section52867048175622"></a>
 
@@ -73,10 +73,6 @@ Storm Nimbus堆内存使用率过高时，可能造成频繁的内存垃圾回�
 
 1.  检查堆内存使用量。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  单击“ALM-26054 Storm Nimbus堆内存使用率超过阈值 \> 定位信息“，查看告警上报的实例的HostName。
     3.  单击“组件管理 \> Storm \> 实例 \> Nimbus（对应上报告警实例HostName） \> 定制 \> Nimbus堆内存使用率“，查看堆内存使用情况。
     4.  查看Nimbus使用的堆内存是否已达到Nimbus设定的最大堆内存的80%。

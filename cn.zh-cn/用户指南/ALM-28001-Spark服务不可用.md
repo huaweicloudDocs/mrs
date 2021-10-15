@@ -1,4 +1,4 @@
-# ALM-28001 Spark服务不可用<a name="ZH-CN_TOPIC_0191883118"></a>
+# ALM-28001 Spark服务不可用<a name="alm_28001"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813883_section6492062019553"></a>
 
@@ -71,10 +71,6 @@ Spark服务恢复时，告警清除。
 
 1.  检查Spark依赖的服务是否有服务不可用告警。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，查看是否存在以下告警：
         1.  ALM-25500 KrbServer服务不可用
         2.  ALM-25000 LdapServer服务不可用

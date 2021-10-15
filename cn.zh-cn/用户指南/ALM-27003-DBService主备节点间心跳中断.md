@@ -1,4 +1,4 @@
-# ALM-27003 DBService主备节点间心跳中断<a name="ZH-CN_TOPIC_0191883116"></a>
+# ALM-27003 DBService主备节点间心跳中断<a name="alm_27003"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813956_section48623408"></a>
 
@@ -76,10 +76,6 @@ DBService主备间心跳中断时只有一个节点提供服务，一旦该节�
 
 1.  检查主备DBService服务器间的网络是否正常。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，单击此告警所在行，在告警详情中，查看该告警的DBService备服务器地址。
     3.  登录主DBService服务器。
     4.  执行**ping** _备DBService__心跳IP__地址_命令检查备DBService服务器是否可达。

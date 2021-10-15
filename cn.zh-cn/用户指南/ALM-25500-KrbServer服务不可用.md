@@ -1,4 +1,4 @@
-# ALM-25500 KrbServer服务不可用<a name="ZH-CN_TOPIC_0191883114"></a>
+# ALM-25500 KrbServer服务不可用<a name="alm_25500"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813953_section10722842"></a>
 
@@ -67,10 +67,6 @@
 
 1.  检查组件KrbServer服务所在节点是否故障。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813953_aalm-25500_mmccppss_id"></a>选择“KrbServer \> 实例”。进入KrbServer实例页面查看KrbServer服务所在节点的主机名。
     3.  在“告警管理”页面，查看是否有ALM-12006 节点故障告警产生。
         -   是，执行[1.d](#zh-cn_topic_0191813953_aalm-25500_mmccppss_step_4)。
@@ -87,10 +83,6 @@
 
 2.  检查OLdap服务是否不可用。
     1.  <a name="zh-cn_topic_0191813953_li14191191521615"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  查看是否有ALM-12004 OLdap资源异常告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813953_aalm-25500_mmccppss_step_8)。
         -   否，执行[3](#zh-cn_topic_0191813953_li572522141314)。

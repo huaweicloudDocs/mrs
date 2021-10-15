@@ -1,4 +1,4 @@
-# ALM-26053 Storm Slot使用率超过阈值<a name="ZH-CN_TOPIC_0191883121"></a>
+# ALM-26053 Storm Slot使用率超过阈值<a name="alm_26053"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813942_section32908243175620"></a>
 
@@ -74,16 +74,12 @@
 
 1.  检查Supervisor状态。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  选择“Storm \> Supervisor“，进入Storm服务管理页面。
-    3.  查看“角色”中是否存在状态为故障或者是恢复中的Supervisor实例。
+    3.  查看“角色”中是否存在状态为故障或者是正在恢复的Supervisor实例。
         -   是，执行[1.d](#zh-cn_topic_0191813942_li6671657118374)。
         -   否，执行[2.a](#zh-cn_topic_0191813942_li142406612228)或者[3.a](#zh-cn_topic_0191813942_li22838295183633)。
 
-    4.  <a name="zh-cn_topic_0191813942_li6671657118374"></a>勾选状态为“故障“或者“恢复中“的Supervisor角色实例，选择“更多 \> 重启实例“，查看是否重启成功。
+    4.  <a name="zh-cn_topic_0191813942_li6671657118374"></a>勾选状态为“故障“或者“正在恢复“的Supervisor角色实例，选择“更多 \> 重启实例“，查看是否重启成功。
         -   是，执行[1.e](#zh-cn_topic_0191813942_li5198268318374)。
         -   否，执行[4](#zh-cn_topic_0191813942_li572522141314)。
 
@@ -93,10 +89,6 @@
 
 2.  增加Supervisor Slot数量配置。
     1.  <a name="zh-cn_topic_0191813942_li142406612228"></a>登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  选择“Storm \> Supervisor \> 服务配置 \> 全部配置“。
     3.  调整“supervisor.slots.ports“的数值，适当增加每个Supervisor上Slot的数量，并重启实例。
     4.  等待一段时间，检查该告警是否恢复。

@@ -1,4 +1,4 @@
-# ALM-25000 LdapServer服务不可用<a name="ZH-CN_TOPIC_0191883112"></a>
+# ALM-25000 LdapServer服务不可用<a name="alm_25000"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813909_section2601186"></a>
 
@@ -67,10 +67,6 @@
 
 1.  检查LdapServer服务的两个SlapdServer实例所在节点是否故障。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813909_aalm-25000_mmccppss_id"></a>选择“LdapServer \> 实例”。进入LdapServer实例页面获取两个SlapdServer实例所在节点的主机名。
     3.  在“告警管理”页面，查看是否有ALM-12006 节点故障告警产生。
         -   是，执行[1.d](#zh-cn_topic_0191813909_aalm-25000_mmccppss_step_4)。
@@ -87,10 +83,6 @@
 
 2.  检查LdapServer进程是否正常。
     1.  <a name="zh-cn_topic_0191813909_li192616463126"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  查看是否有ALM-12007 进程故障告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813909_aalm-25000_mmccppss_step_8)。
         -   否，执行[3](#zh-cn_topic_0191813909_li572522141314)。

@@ -1,4 +1,4 @@
-# ALM-26051 Storm服务不可用<a name="ZH-CN_TOPIC_0191883119"></a>
+# ALM-26051 Storm服务不可用<a name="alm_26051"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813871_section5795214917567"></a>
 
@@ -69,10 +69,6 @@
 
 1.  检查Kerberos组件状态。未启用Kerberos认证的集群无需检查Kerberos状态，请执行[2](#zh-cn_topic_0191813871_li59618494175936)。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813871_li4574896917592"></a>查看Kerberos服务的健康状态是否为“良好“。
         -   是，执行[2.a](#zh-cn_topic_0191813871_li384738318010)。
         -   否，执行[1.c](#zh-cn_topic_0191813871_li22276139175922)。

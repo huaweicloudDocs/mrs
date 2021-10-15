@@ -1,4 +1,4 @@
-# ALM-27001 DBService服务不可用<a name="ZH-CN_TOPIC_0191883115"></a>
+# ALM-27001 DBService服务不可用<a name="alm_27001"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813879_section48728718"></a>
 
@@ -68,10 +68,6 @@ DBService服务恢复时，告警清除。
 
 1.  检查集群环境中是否存在浮动IP。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  单击“DBService \> 实例”。
     3.  查看是否有主实例存在。
         -   是，执行[1.d](#zh-cn_topic_0191813879_step111)。

@@ -1,4 +1,4 @@
-# ALM-24000 Flume服务不可用<a name="ZH-CN_TOPIC_0191883126"></a>
+# ALM-24000 Flume服务不可用<a name="alm_24000"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813917_section19665522175625"></a>
 
@@ -67,10 +67,6 @@
 
 1.  检查HDFS的服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  查看是否有“ALM-14000 HDFS服务不可用”告警产生。
         -   是，参考“ALM-14000 HDFS服务不可用”的处理步骤处理该告警。
         -   否，执行[2](#zh-cn_topic_0191813917_li56731580163419)。
@@ -84,10 +80,6 @@
 
 3.  检查HDFS、LdapServer的服务是否已停止。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813917_li950355316374"></a>在MRS的服务列表中，查看HDFS、LdapServer服务是否已停止。
         -   是，启动HDFS、LdapServer服务，执行[3.c](#zh-cn_topic_0191813917_li4163406916374)。
         -   否，执行[4](#zh-cn_topic_0191813917_li572522141314)。
