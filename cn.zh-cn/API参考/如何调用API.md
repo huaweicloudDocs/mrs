@@ -1,4 +1,4 @@
-# 如何调用API<a name="ZH-CN_TOPIC_0172602522"></a>
+# 如何调用API<a name="zh-cn_topic_0013582897"></a>
 
 -   **[构造请求](构造请求.md)**  
 

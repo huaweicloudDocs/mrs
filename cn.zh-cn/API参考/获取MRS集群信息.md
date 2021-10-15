@@ -1,4 +1,17 @@
-# 获取MRS集群信息<a name="ZH-CN_TOPIC_0184821083"></a>
+# 获取MRS集群信息<a name="mrs_02_9001"></a>
+
+## MRS服务支持的组件<a name="section1741815651015"></a>
+
+-   MRS 3.1.0支持的组件信息如下：
+    -   分析集群包含的组件有：Hadoop,Spark2x,HBase,Hive,Hue,Loader,Flink,Oozie,ZooKeeper,Ranger,Tez,Impala,Presto,Kudu,Sqoop
+    -   流式集群包含的组件有：Kafka,Flume,ZooKeeper,Ranger
+    -   混合集群包含的组件有：Hadoop,Spark2x,HBase,Hive,Hue,Loader,Flink,Oozie,ZooKeeper,Ranger,Tez,Impala,Presto,Kudu,Sqoop,Kafka,Flume
+    -   自定义集群包含的组件有：Hadoop,Spark2x,HBase,Hive,Hue,Loader,Kafka,Flume,Flink,Oozie,ZooKeeper,Ranger,Tez,Impala,Presto,ClickHouse,Kudu,Sqoop
+
+-   MRS 1.9.2支持的组件信息如下：
+    -   分析集群包含的组件有：Presto,Hadoop,Spark,HBase,Opentsdb,Hive,Hue,Loader,Tez,Flink,Alluxio,Ranger
+    -   流式集群包含的组件有：Kafka,KafkaManager,Storm,Flume
+
 
 ## 获取集群ID<a name="section177891315153619"></a>
 

@@ -1,4 +1,4 @@
-# 获取项目ID<a name="ZH-CN_TOPIC_0172602531"></a>
+# 获取项目ID<a name="mrs_02_0011"></a>
 
 ## 从控制台获取项目ID<a name="section964292414404"></a>
 
@@ -22,7 +22,7 @@
 
 获取项目ID的接口为“GET https://\{Endpoint\}/v3/projects”，其中\{Endpoint\}为IAM的终端节点，可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)获取。接口的认证鉴权请参见[认证鉴权](认证鉴权.md)。
 
-响应示例如下，其中projects下的“id”即为项目ID。
+响应示例如下，其中projects下的“id”即为“name”所对应区域的项目ID。
 
 ```
 {
@@ -31,7 +31,7 @@
             "domain_id": "65382450e8f64ac0870cd180d14e684b",
             "is_domain": false,
             "parent_id": "65382450e8f64ac0870cd180d14e684b",
-            "name": "cn-north-4",
+            "name": "region_id",
             "description": "",
             "links": {
                 "next": null,
