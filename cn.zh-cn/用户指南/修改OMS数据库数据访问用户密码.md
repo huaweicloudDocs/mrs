@@ -1,14 +1,14 @@
-# 修改OMS数据库数据访问用户密码<a name="ZH-CN_TOPIC_0173397682"></a>
+# 修改OMS数据库数据访问用户密码<a name="mrs_01_0568"></a>
 
-## 操作场景<a name="section623381471013"></a>
+## 操作场景<a name="zh-cn_topic_0042008032_section623381471013"></a>
 
 该任务指导用户定期修改OMS数据库访问用户的密码，以提升系统运维安全性。
 
-## 对系统的影响<a name="section5745835010120"></a>
+## 对系统的影响<a name="zh-cn_topic_0042008032_section5745835010120"></a>
 
 修改密码需要重启OMS服务，服务在重启时无法访问。
 
-## 操作步骤<a name="section2407101410135"></a>
+## 操作步骤<a name="zh-cn_topic_0042008032_section2407101410135"></a>
 
 1.  在MRS Manager单击“系统设置”。
 2.  在“权限配置”区域下，单击“OMS数据库密码修改”。
@@ -24,8 +24,8 @@
 4.  单击“确定”，等待界面提示“操作成功”后单击“完成”。
 5.  在omm用户所在行，单击“操作”列下的“重启OMS服务“，重启OMS数据库。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果修改了密码但未重启OMS数据库，则omm用户的状态变为“Waiting to restart“且无法再修改密码，直到重启OMS数据库  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >如果修改了密码但未重启OMS数据库，则omm用户的状态变为“Waiting to restart“且无法再修改密码，直到重启OMS数据库
 
 6.  在弹出的对话框中，勾选“我已阅读此信息并了解其影响。”，单击“确定”，重新启动OMS服务。
 
