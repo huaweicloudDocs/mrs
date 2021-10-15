@@ -1,4 +1,4 @@
-# 创建用户并授权使用MRS<a name="ZH-CN_TOPIC_0173178179"></a>
+# 创建用户并授权使用MRS<a name="mrs_01_0453"></a>
 
 如果您需要对您所拥有的MapReduce服务（MapReduce Service）进行精细的权限管理，您可以使用[统一身份认证服务](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)（Identity and Access Management，简称IAM），通过IAM，您可以：
 

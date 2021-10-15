@@ -1,4 +1,4 @@
-# 创建专属云MRS集群<a name="ZH-CN_TOPIC_0173178568"></a>
+# 创建专属云MRS集群<a name="mrs_01_0911"></a>
 
 本章节为您介绍如何在您的专属资源上创建一个MRS集群。
 
@@ -19,22 +19,22 @@
 3.  在购买集群页面，选择“快速购买”页签。
 4.  参考下列参数说明配置集群基本信息，参数详细信息请参考[自定义购买集群](自定义购买集群.md)。
     -   区域：默认即可。
-    -   计费模式：当前仅支持“包年/包月“模式。
+    -   计费模式：根据需要选择“按需计费“或“包年/包月“模式。
     -   购买时长：购买集群的时长，最短时长为1个月，最长时长为一年。
     -   集群名称：可以设置为系统默认名称，但为了区分和记忆，建议带上项目拼音缩写或者日期等。
     -   集群版本：默认选择最新版本即可（不同版本集群提供的组件有所不同，请根据需要选择集群版本）。
-    -   组件选择：根据需要选择“Hadoop分析集群”、“HBase分析集群”或“Kafka流式集群”。
-    -   磁盘类型：默认即可。
+    -   组件选择：根据需要选择“Hadoop分析集群”、“HBase查询集群”或“Kafka流式集群”。
+    -   磁盘类型：默认即可。MRS 3.x版本暂时没有该参数。
     -   集群节点：请根据自身需要选择集群节点规格数量等。
-    -   集群高可用：默认即可。
+    -   集群高可用：默认即可。MRS 3.x版本暂时没有该参数。
     -   用户名：默认为“root/admin”，root用于远程登录ECS机器，admin用于登录集群管理页面。
     -   密码：设置root用户和admin用户密码。
     -   确认密码：再次输入设置的root用户和admin用户密码。
 
 5.  单击“立即购买”。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果您对价格有疑问，可以单击页面左下角“了解计费详情”，根据计费详情来了解产品价格。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >如果您对价格有疑问，可以单击页面左下角“了解计费详情”，根据计费详情来了解产品价格。
 
 6.  单击“返回集群列表”，可以查看到集群创建的状态。
 
@@ -50,8 +50,10 @@
 5.  参考[自定义购买集群硬件配置](#section1339818162220)配置集群信息后，单击“下一步”。
 6.  参考[自定义购买集群高级配置（可选）](#section861294242018)配置集群信息后，单击“立即购买“。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果您对价格有疑问，可以单击页面左下角“了解计费详情”，根据计费详情来了解产品价格。  
+    当集群开启Kerberos认证时，需要确认是否需要开启Kerberos认证，若确认开启请单击“继续”，若无需开启Kerberos认证请单击“返回”关闭Kerberos认证后再创建集群。
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >如果您对价格有疑问，可以单击页面左下角“了解计费详情”，根据计费详情来了解产品价格。
 
 7.  单击“返回集群列表”，可以查看到集群创建的状态。
 
@@ -74,7 +76,7 @@
 <tbody><tr id="zh-cn_topic_0173525263_row13287142793915"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1545319287398"><a name="zh-cn_topic_0173525263_p1545319287398"></a><a name="zh-cn_topic_0173525263_p1545319287398"></a>区域</p>
 </td>
 <td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p14453728143913"><a name="zh-cn_topic_0173525263_p14453728143913"></a><a name="zh-cn_topic_0173525263_p14453728143913"></a>选择<a href="https://support.huaweicloud.com/usermanual-iaas/zh-cn_topic_0184026189.html" target="_blank" rel="noopener noreferrer">区域</a>。</p>
-<p id="zh-cn_topic_0173525263_p174542028183916"><a name="zh-cn_topic_0173525263_p174542028183916"></a><a name="zh-cn_topic_0173525263_p174542028183916"></a><span>不同区域的云服务产品之间内网互不相通。请就近选择靠近您业务的区域，可减少网络时延，提高访问速度。</span></p>
+<p id="zh-cn_topic_0173525263_p174542028183916"><a name="zh-cn_topic_0173525263_p174542028183916"></a><a name="zh-cn_topic_0173525263_p174542028183916"></a>不同区域的云服务产品之间内网互不相通。请就近选择靠近您业务的区域，可减少网络时延，提高访问速度。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row077982319575"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1632137202218"><a name="zh-cn_topic_0173525263_p1632137202218"></a><a name="zh-cn_topic_0173525263_p1632137202218"></a>集群名称</p>
@@ -86,12 +88,12 @@
 </tr>
 <tr id="zh-cn_topic_0173525263_row178019237579"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p2065916742212"><a name="zh-cn_topic_0173525263_p2065916742212"></a><a name="zh-cn_topic_0173525263_p2065916742212"></a>集群版本</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p11302191119226"><a name="zh-cn_topic_0173525263_p11302191119226"></a><a name="zh-cn_topic_0173525263_p11302191119226"></a>目前支持MRS 1.8.10、MRS 1.9.2、MRS 2.0.5、MRS 2.1.0版本。默认值为当前最新版本MRS 2.1.0。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p11302191119226"><a name="zh-cn_topic_0173525263_p11302191119226"></a><a name="zh-cn_topic_0173525263_p11302191119226"></a>目前支持MRS 1.9.2、MRS 3.1.0版本。默认值为当前最新版本。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row3780823165720"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p197518710224"><a name="zh-cn_topic_0173525263_p197518710224"></a><a name="zh-cn_topic_0173525263_p197518710224"></a>集群类型</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><div class="p" id="zh-cn_topic_0173525263_p2978676228"><a name="zh-cn_topic_0173525263_p2978676228"></a><a name="zh-cn_topic_0173525263_p2978676228"></a>提供三种集群类型：<a name="zh-cn_topic_0173525263_ul6981207172215"></a><a name="zh-cn_topic_0173525263_ul6981207172215"></a><ul id="zh-cn_topic_0173525263_ul6981207172215"><li>分析集群：用来做离线数据分析，提供的是Hadoop体系的组件。</li><li>流式集群：用来做流处理任务，提供的是流式处理组件。</li><li>混合集群：既可以用来做离线数据分析，也可以用来做流处理任务，提供的是Hadoop体系的组件和流式处理组件。建议同时需要做离线数据分析和流处理任务时使用混合集群。（MRS 1.8.5及之后版本支持混合集群。）</li></ul>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><div class="p" id="zh-cn_topic_0173525263_p2978676228"><a name="zh-cn_topic_0173525263_p2978676228"></a><a name="zh-cn_topic_0173525263_p2978676228"></a>提供几种集群类型：<a name="zh-cn_topic_0173525263_ul6981207172215"></a><a name="zh-cn_topic_0173525263_ul6981207172215"></a><ul id="zh-cn_topic_0173525263_ul6981207172215"><li>分析集群：用来做离线数据分析，提供的是Hadoop体系的组件。</li><li>流式集群：用来做流处理任务，提供的是流式处理组件。</li><li>混合集群：既可以用来做离线数据分析，也可以用来做流处理任务，提供的是Hadoop体系的组件和流式处理组件。建议同时需要做离线数据分析和流处理任务时使用混合集群。</li><li>自定义：用户可按照业务需求调整集群服务的部署方式，具体请参见<a href="创建自定义拓扑集群.md">创建自定义拓扑集群</a>。（目前仅MRS 3.x版本支持）</li></ul>
 </div>
 <div class="note" id="zh-cn_topic_0173525263_note3116811229"><a name="zh-cn_topic_0173525263_note3116811229"></a><a name="zh-cn_topic_0173525263_note3116811229"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0173525263_p18311892216"><a name="zh-cn_topic_0173525263_p18311892216"></a><a name="zh-cn_topic_0173525263_p18311892216"></a>MRS流式集群不支持<span class="parmname" id="zh-cn_topic_0173525263_parmname116148122214"><a name="zh-cn_topic_0173525263_parmname116148122214"></a><a name="zh-cn_topic_0173525263_parmname116148122214"></a>“作业管理”</span>和<span class="parmname" id="zh-cn_topic_0173525263_parmname1510108152218"><a name="zh-cn_topic_0173525263_parmname1510108152218"></a><a name="zh-cn_topic_0173525263_parmname1510108152218"></a>“文件管理”</span>功能<sub id="zh-cn_topic_0173525263_sub162001738173"><a name="zh-cn_topic_0173525263_sub162001738173"></a><a name="zh-cn_topic_0173525263_sub162001738173"></a>。</sub></p>
 </div></div>
@@ -110,7 +112,7 @@
 <tr id="zh-cn_topic_0173525263_row1435212408419"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p09151334184818"><a name="zh-cn_topic_0173525263_p09151334184818"></a><a name="zh-cn_topic_0173525263_p09151334184818"></a>使用外部数据源存储元数据</p>
 </td>
 <td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p491518342484"><a name="zh-cn_topic_0173525263_p491518342484"></a><a name="zh-cn_topic_0173525263_p491518342484"></a>是否使用外部数据源存储元数据。通过单击<a name="zh-cn_topic_0173525263_image15322271545"></a><a name="zh-cn_topic_0173525263_image15322271545"></a><span><img id="zh-cn_topic_0173525263_image15322271545" src="figures/icon_mrs_disable_hec4.png"></span>开启该功能，当该功能开启时，若集群异常或删除时将不影响元数据，适用于存储计算分离的场景。</p>
-<p id="zh-cn_topic_0173525263_p1929716115717"><a name="zh-cn_topic_0173525263_p1929716115717"></a><a name="zh-cn_topic_0173525263_p1929716115717"></a>MRS 1.9.2及之后版本且支持Hive或Ranger组件的集群支持该功能。</p>
+<p id="zh-cn_topic_0173525263_p1929716115717"><a name="zh-cn_topic_0173525263_p1929716115717"></a><a name="zh-cn_topic_0173525263_p1929716115717"></a>支持Hive或Ranger组件的集群支持该功能。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row9292195355510"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1729315532557"><a name="zh-cn_topic_0173525263_p1729315532557"></a><a name="zh-cn_topic_0173525263_p1729315532557"></a>组件名</p>
@@ -129,34 +131,34 @@
 </tr>
 <tr id="zh-cn_topic_0173525263_row25882361410"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p12108183315483"><a name="zh-cn_topic_0173525263_p12108183315483"></a><a name="zh-cn_topic_0173525263_p12108183315483"></a>数据连接实例</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p3108173364815"><a name="zh-cn_topic_0173525263_p3108173364815"></a><a name="zh-cn_topic_0173525263_p3108173364815"></a>当“数据连接类型”选择“RDS服务PostgreSQL数据库”或“RDS服务MySQL数据库”时，该参数有效。用于表示MRS集群与RDS服务数据库连接的名称，该实例必选先创建才能在此处引用。可单击“创建数据连接”进行创建，具体请参考<a href="管理数据连接.md">管理数据连接</a>。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p3108173364815"><a name="zh-cn_topic_0173525263_p3108173364815"></a><a name="zh-cn_topic_0173525263_p3108173364815"></a>当“数据连接类型”选择“RDS服务PostgreSQL数据库”或“RDS服务MySQL数据库”时，该参数有效。用于表示MRS集群与RDS服务数据库连接的名称，该实例必选先创建才能在此处引用。可单击“创建数据连接”进行创建，具体请参考<a href="配置数据连接.md">配置数据连接</a>。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row2341133015583"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p17692775227"><a name="zh-cn_topic_0173525263_p17692775227"></a><a name="zh-cn_topic_0173525263_p17692775227"></a>Kerberos认证</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p515256154517"><a name="zh-cn_topic_0173525263_p515256154517"></a><a name="zh-cn_topic_0173525263_p515256154517"></a>登录MRS Manager管理页面时是否启用Kerberos认证。</p>
-<a name="zh-cn_topic_0173525263_ul137018762216"></a><a name="zh-cn_topic_0173525263_ul137018762216"></a><ul id="zh-cn_topic_0173525263_ul137018762216"><li><a name="zh-cn_topic_0173525263_image141881543400"></a><a name="zh-cn_topic_0173525263_image141881543400"></a><span><img id="zh-cn_topic_0173525263_image141881543400" src="figures/icon_mrs_disable_hec4.png"></span>：<span class="parmname" id="zh-cn_topic_0173525263_parmname1772018732216"><a name="zh-cn_topic_0173525263_parmname1772018732216"></a><a name="zh-cn_topic_0173525263_parmname1772018732216"></a>“Kerberos认证”</span>关闭时，用户可使用MRS集群的所有功能。建议单用户场景下使用。不启用Kerberos认证时的安全配置建议请参见<a href="集群（未启用Kerberos认证）安全配置建议.md">集群（未启用Kerberos认证）安全配置建议</a>。</li><li><a name="zh-cn_topic_0173525263_image18280143715110"></a><a name="zh-cn_topic_0173525263_image18280143715110"></a><span><img id="zh-cn_topic_0173525263_image18280143715110" src="figures/icon_mrs_enable_hec4.png"></span>：<span class="parmname" id="zh-cn_topic_0173525263_parmname074211710221"><a name="zh-cn_topic_0173525263_parmname074211710221"></a><a name="zh-cn_topic_0173525263_parmname074211710221"></a>“Kerberos认证”</span>开启时，普通用户无权限使用MRS集群的<span class="menucascade" id="zh-cn_topic_0173525263_menucascade074411762214"><a name="zh-cn_topic_0173525263_menucascade074411762214"></a><a name="zh-cn_topic_0173525263_menucascade074411762214"></a>“<span class="uicontrol" id="zh-cn_topic_0173525263_uicontrol157485711225"><a name="zh-cn_topic_0173525263_uicontrol157485711225"></a><a name="zh-cn_topic_0173525263_uicontrol157485711225"></a>文件管理</span>”</span>和<span class="menucascade" id="zh-cn_topic_0173525263_menucascade575047182215"><a name="zh-cn_topic_0173525263_menucascade575047182215"></a><a name="zh-cn_topic_0173525263_menucascade575047182215"></a>“<span class="uicontrol" id="zh-cn_topic_0173525263_uicontrol2753167192211"><a name="zh-cn_topic_0173525263_uicontrol2753167192211"></a><a name="zh-cn_topic_0173525263_uicontrol2753167192211"></a>作业管理</span>”</span>功能，并且无法查看Hadoop、Spark的作业记录以及集群资源使用情况。如果需要使用集群更多功能，需要找MRS Manager的管理员分配权限。建议在多用户场景下使用。</li></ul>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p515256154517"><a name="zh-cn_topic_0173525263_p515256154517"></a><a name="zh-cn_topic_0173525263_p515256154517"></a>登录Manager管理页面时是否启用Kerberos认证。</p>
+<a name="zh-cn_topic_0173525263_ul137018762216"></a><a name="zh-cn_topic_0173525263_ul137018762216"></a><ul id="zh-cn_topic_0173525263_ul137018762216"><li><a name="zh-cn_topic_0173525263_image141881543400"></a><a name="zh-cn_topic_0173525263_image141881543400"></a><span><img id="zh-cn_topic_0173525263_image141881543400" src="figures/icon_mrs_disable_hec4.png"></span>：<span class="parmname" id="zh-cn_topic_0173525263_parmname1772018732216"><a name="zh-cn_topic_0173525263_parmname1772018732216"></a><a name="zh-cn_topic_0173525263_parmname1772018732216"></a>“Kerberos认证”</span>关闭时，普通用户可使用MRS集群的所有功能。建议单用户场景下使用。不启用Kerberos认证时的安全配置建议请参见<a href="集群（未启用Kerberos认证）安全配置建议.md">集群（未启用Kerberos认证）安全配置建议</a>。</li><li><a name="zh-cn_topic_0173525263_image18280143715110"></a><a name="zh-cn_topic_0173525263_image18280143715110"></a><span><img id="zh-cn_topic_0173525263_image18280143715110" src="figures/icon_mrs_enable_hec4.png"></span>：<span class="parmname" id="zh-cn_topic_0173525263_parmname074211710221"><a name="zh-cn_topic_0173525263_parmname074211710221"></a><a name="zh-cn_topic_0173525263_parmname074211710221"></a>“Kerberos认证”</span>开启时，普通用户无权限使用MRS集群的<span class="menucascade" id="zh-cn_topic_0173525263_menucascade074411762214"><a name="zh-cn_topic_0173525263_menucascade074411762214"></a><a name="zh-cn_topic_0173525263_menucascade074411762214"></a>“<span class="uicontrol" id="zh-cn_topic_0173525263_uicontrol157485711225"><a name="zh-cn_topic_0173525263_uicontrol157485711225"></a><a name="zh-cn_topic_0173525263_uicontrol157485711225"></a>文件管理</span>”</span>和<span class="menucascade" id="zh-cn_topic_0173525263_menucascade575047182215"><a name="zh-cn_topic_0173525263_menucascade575047182215"></a><a name="zh-cn_topic_0173525263_menucascade575047182215"></a>“<span class="uicontrol" id="zh-cn_topic_0173525263_uicontrol2753167192211"><a name="zh-cn_topic_0173525263_uicontrol2753167192211"></a><a name="zh-cn_topic_0173525263_uicontrol2753167192211"></a>作业管理</span>”</span>功能，并且无法查看Hadoop、Spark的作业记录以及集群资源使用情况。如果需要使用集群更多功能，需要找Manager的管理员分配权限。建议在多用户场景下使用。</li></ul>
 <p id="zh-cn_topic_0173525263_p19756107142214"><a name="zh-cn_topic_0173525263_p19756107142214"></a><a name="zh-cn_topic_0173525263_p19756107142214"></a>通过单击<a name="zh-cn_topic_0173525263_image713061419317"></a><a name="zh-cn_topic_0173525263_image713061419317"></a><span><img id="zh-cn_topic_0173525263_image713061419317" src="figures/icon_mrs_enable_hec4.png"></span>或<a name="zh-cn_topic_0173525263_image136638518414"></a><a name="zh-cn_topic_0173525263_image136638518414"></a><span><img id="zh-cn_topic_0173525263_image136638518414" src="figures/icon_mrs_disable_hec4.png"></span>来关闭或开启Kerberos认证。</p>
 <p id="zh-cn_topic_0173525263_p6182700381"><a name="zh-cn_topic_0173525263_p6182700381"></a><a name="zh-cn_topic_0173525263_p6182700381"></a>当选择Ranger组件时不支持开启Kerberos认证。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row84211237163015"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1881047102211"><a name="zh-cn_topic_0173525263_p1881047102211"></a><a name="zh-cn_topic_0173525263_p1881047102211"></a>用户名</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p78163717228"><a name="zh-cn_topic_0173525263_p78163717228"></a><a name="zh-cn_topic_0173525263_p78163717228"></a>MRS Manager管理员用户，目前默认为<strong id="zh-cn_topic_0173525263_b118184702216"><a name="zh-cn_topic_0173525263_b118184702216"></a><a name="zh-cn_topic_0173525263_b118184702216"></a>admin</strong>用户。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p78163717228"><a name="zh-cn_topic_0173525263_p78163717228"></a><a name="zh-cn_topic_0173525263_p78163717228"></a>Manager管理员用户，目前默认为<strong id="zh-cn_topic_0173525263_b118184702216"><a name="zh-cn_topic_0173525263_b118184702216"></a><a name="zh-cn_topic_0173525263_b118184702216"></a>admin</strong>用户。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row794111372304"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1584714718227"><a name="zh-cn_topic_0173525263_p1584714718227"></a><a name="zh-cn_topic_0173525263_p1584714718227"></a>密码</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p1685312718220"><a name="zh-cn_topic_0173525263_p1685312718220"></a><a name="zh-cn_topic_0173525263_p1685312718220"></a>配置MRS Manager管理员用户的密码。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p1685312718220"><a name="zh-cn_topic_0173525263_p1685312718220"></a><a name="zh-cn_topic_0173525263_p1685312718220"></a>配置Manager管理员用户的密码。</p>
 <p id="zh-cn_topic_0173525263_p78555710227"><a name="zh-cn_topic_0173525263_p78555710227"></a><a name="zh-cn_topic_0173525263_p78555710227"></a>需要满足：</p>
-<a name="zh-cn_topic_0173525263_ul1485917132213"></a><a name="zh-cn_topic_0173525263_ul1485917132213"></a><ul id="zh-cn_topic_0173525263_ul1485917132213"><li>密码长度应在8～26个字符之间</li><li>必须包含如下4种中至少3种字符的组合<a name="zh-cn_topic_0173525263_ul88721278226"></a><a name="zh-cn_topic_0173525263_ul88721278226"></a><ul id="zh-cn_topic_0173525263_ul88721278226"><li>至少一个小写字母</li><li>至少一个大写字母</li><li>至少一个数字</li><li>至少一个特殊字符：~`!?,.:;-_'"(){}[]/&lt;&gt;@#$%^&amp;*+|\=</li></ul>
+<a name="zh-cn_topic_0173525263_ul1485917132213"></a><a name="zh-cn_topic_0173525263_ul1485917132213"></a><ul id="zh-cn_topic_0173525263_ul1485917132213"><li>密码长度应在8～26个字符之间</li><li>必须包含如下4种字符的组合<a name="zh-cn_topic_0173525263_ul88721278226"></a><a name="zh-cn_topic_0173525263_ul88721278226"></a><ul id="zh-cn_topic_0173525263_ul88721278226"><li>至少一个小写字母</li><li>至少一个大写字母</li><li>至少一个数字</li><li>至少一个特殊字符：~`!?,.:;-_'"(){}[]/&lt;&gt;@#$%^&amp;*+|\=</li></ul>
 </li><li>不能和用户名或倒序的用户名相同</li></ul>
 <p id="zh-cn_topic_0173525263_p891310772213"><a name="zh-cn_topic_0173525263_p891310772213"></a><a name="zh-cn_topic_0173525263_p891310772213"></a>安全程度：颜色条红、橙、绿分别表示密码安全强度弱、中、强。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row45583386304"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p694219719224"><a name="zh-cn_topic_0173525263_p694219719224"></a><a name="zh-cn_topic_0173525263_p694219719224"></a>确认密码</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p149481718222"><a name="zh-cn_topic_0173525263_p149481718222"></a><a name="zh-cn_topic_0173525263_p149481718222"></a>再次输入MRS Manager管理员用户的密码。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p149481718222"><a name="zh-cn_topic_0173525263_p149481718222"></a><a name="zh-cn_topic_0173525263_p149481718222"></a>再次输入Manager管理员用户的密码。</p>
 </td>
 </tr>
 </tbody>
@@ -211,9 +213,7 @@
 <tr id="zh-cn_topic_0173525263_row971023274215"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p9711153212421"><a name="zh-cn_topic_0173525263_p9711153212421"></a><a name="zh-cn_topic_0173525263_p9711153212421"></a>子网</p>
 </td>
 <td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p171459811223"><a name="zh-cn_topic_0173525263_p171459811223"></a><a name="zh-cn_topic_0173525263_p171459811223"></a>通过子网提供与其他网络隔离的、可以独享的网络资源，以提高网络安全。</p>
-<p id="zh-cn_topic_0173525263_p1214915819223"><a name="zh-cn_topic_0173525263_p1214915819223"></a><a name="zh-cn_topic_0173525263_p1214915819223"></a>选择需要创建集群的子网，可进入VPC服务控制台查看VPC下已创建的子网名称和ID，若VPC下未创建子网，请单击<span class="uicontrol" id="zh-cn_topic_0173525263_uicontrol191521488223"><a name="zh-cn_topic_0173525263_uicontrol191521488223"></a><a name="zh-cn_topic_0173525263_uicontrol191521488223"></a>“创建子网”</span>进行创建。</p>
-<div class="note" id="zh-cn_topic_0173525263_note187902016182519"><a name="zh-cn_topic_0173525263_note187902016182519"></a><a name="zh-cn_topic_0173525263_note187902016182519"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0173525263_p1879111165254"><a name="zh-cn_topic_0173525263_p1879111165254"></a><a name="zh-cn_topic_0173525263_p1879111165254"></a>请勿将子网和网络ACL关联。</p>
-</div></div>
+<p id="zh-cn_topic_0173525263_p1214915819223"><a name="zh-cn_topic_0173525263_p1214915819223"></a><a name="zh-cn_topic_0173525263_p1214915819223"></a>选择需要创建集群的子网，可进入VPC服务控制台查看VPC下已创建的子网名称和ID，若VPC下未创建子网，请在VPC服务控制台单击<span class="uicontrol" id="zh-cn_topic_0173525263_uicontrol191521488223"><a name="zh-cn_topic_0173525263_uicontrol191521488223"></a><a name="zh-cn_topic_0173525263_uicontrol191521488223"></a>“创建子网”</span>进行创建。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row1599515321422"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p14995123219425"><a name="zh-cn_topic_0173525263_p14995123219425"></a><a name="zh-cn_topic_0173525263_p14995123219425"></a>安全组</p>
@@ -226,17 +226,16 @@
 </tr>
 <tr id="zh-cn_topic_0173525263_row153131233184215"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1431383311429"><a name="zh-cn_topic_0173525263_p1431383311429"></a><a name="zh-cn_topic_0173525263_p1431383311429"></a>弹性公网IP</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p21911274314"><a name="zh-cn_topic_0173525263_p21911274314"></a><a name="zh-cn_topic_0173525263_p21911274314"></a>通过将弹性公网IP与MRS集群绑定，实现使用弹性公网IP访问MRS Manager的目的。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p21911274314"><a name="zh-cn_topic_0173525263_p21911274314"></a><a name="zh-cn_topic_0173525263_p21911274314"></a>通过将弹性公网IP与MRS集群绑定，实现使用弹性公网IP访问Manager的目的。</p>
 <p id="zh-cn_topic_0173525263_p19997852143711"><a name="zh-cn_topic_0173525263_p19997852143711"></a><a name="zh-cn_topic_0173525263_p19997852143711"></a>用户创建集群时，可选择下拉框中已有的弹性公网IP进行绑定。若下拉框中没有可选的弹性公网IP，可以单击<span class="parmname" id="zh-cn_topic_0173525263_parmname14739128123819"><a name="zh-cn_topic_0173525263_parmname14739128123819"></a><a name="zh-cn_topic_0173525263_parmname14739128123819"></a>“管理弹性公网IP”</span>进入弹性公网IP服务进行购买。</p>
-<div class="note" id="zh-cn_topic_0173525263_note69611412419"><a name="zh-cn_topic_0173525263_note69611412419"></a><a name="zh-cn_topic_0173525263_note69611412419"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0173525263_p83831034123813"><a name="zh-cn_topic_0173525263_p83831034123813"></a><a name="zh-cn_topic_0173525263_p83831034123813"></a>该参数仅在MRS 1.8.0及以后版本有效。</p>
-<p id="zh-cn_topic_0173525263_p6461193613816"><a name="zh-cn_topic_0173525263_p6461193613816"></a><a name="zh-cn_topic_0173525263_p6461193613816"></a>弹性公网IP必须和集群在同一区域。</p>
+<div class="note" id="zh-cn_topic_0173525263_note69611412419"><a name="zh-cn_topic_0173525263_note69611412419"></a><a name="zh-cn_topic_0173525263_note69611412419"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0173525263_p6461193613816"><a name="zh-cn_topic_0173525263_p6461193613816"></a><a name="zh-cn_topic_0173525263_p6461193613816"></a>弹性公网IP必须和集群在同一区域。</p>
 </div></div>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row1569193334211"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p2569733204215"><a name="zh-cn_topic_0173525263_p2569733204215"></a><a name="zh-cn_topic_0173525263_p2569733204215"></a>企业项目</p>
 </td>
 <td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p1114434124610"><a name="zh-cn_topic_0173525263_p1114434124610"></a><a name="zh-cn_topic_0173525263_p1114434124610"></a>选择集群所属的企业项目，如需使用企业项目，请先通过“企业管理 &gt; 企业项目管理”服务创建。</p>
-<p id="zh-cn_topic_0173525263_p1011543414467"><a name="zh-cn_topic_0173525263_p1011543414467"></a><a name="zh-cn_topic_0173525263_p1011543414467"></a><span>企业项目所在的企业管理控制台以面向企业资源管理为出发点，帮助企业以公司、部门、项目等分级管理方式实现企业云上的人员、资源、权限、财务的管理</span><span>。</span></p>
+<p id="zh-cn_topic_0173525263_p1011543414467"><a name="zh-cn_topic_0173525263_p1011543414467"></a><a name="zh-cn_topic_0173525263_p1011543414467"></a>企业项目所在的企业管理控制台以面向企业资源管理为出发点，帮助企业以公司、部门、项目等分级管理方式实现企业云上的人员、资源、权限、财务的管理。</p>
 </td>
 </tr>
 </tbody>
@@ -253,13 +252,13 @@
 </thead>
 <tbody><tr id="row932994614912"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="p252412414471"><a name="p252412414471"></a><a name="p252412414471"></a>CPU架构</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="p11001830115010"><a name="p11001830115010"></a><a name="p11001830115010"></a>MRS提供的CPU架构类型。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="p11001830115010"><a name="p11001830115010"></a><a name="p11001830115010"></a>MRS提供的CPU架构类型。MRS 3.x版本无该参数。</p>
 <a name="ul6902183265018"></a><a name="ul6902183265018"></a><ul id="ul6902183265018"><li>x86计算：x86 CPU架构采用复杂指令集（CISC），CISC指令集的每个小指令可以执行一些较低阶的硬件操作，指令数目多而且复杂，每条指令的长度并不相同。由于指令执行较为复杂所以每条指令花费的时间较长。</li><li>鲲鹏计算：鲲鹏 CPU架构采用精简指令集（RISC），RISC是一种执行较少类型计算机指令的微处理器，它能够以更快的速度执行操作，使计算机的结构更加简单合理地提高运行速度，相对于X86 CPU架构具有更加均衡的性能功耗比。鲲鹏的优势是高密度低功耗，可以提供更高的性价比。</li></ul>
 </td>
 </tr>
 <tr id="row2863132191813"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="p85205852019"><a name="p85205852019"></a><a name="p85205852019"></a>磁盘类型</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="p155135852013"><a name="p155135852013"></a><a name="p155135852013"></a><span>根据磁盘使用的存储资源是否独享，磁盘划分为“云硬盘”、“专属分布式存储”。</span></p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="p155135852013"><a name="p155135852013"></a><a name="p155135852013"></a>根据磁盘使用的存储资源是否独享，磁盘划分为“云硬盘”、“专属分布式存储”。</p>
 <a name="ul185658192014"></a><a name="ul185658192014"></a><ul id="ul185658192014"><li>云硬盘：提供规格丰富、安全可靠、可弹性扩展的硬盘资源，满足不同性能要求的业务场景。<p id="p125458192019"><a name="p125458192019"></a><a name="p125458192019"></a>如果未申请独享的存储池，请选择“云硬盘”，创建的磁盘使用公共存储资源。</p>
 </li><li>专属分布式存储：为用户提供独享的存储资源，通过数据冗余和缓存加速等多项技术，提供高可用性和持久性，以及稳定的低时延性能。<p id="p2051582207"><a name="p2051582207"></a><a name="p2051582207"></a>如果您在专属分布式存储服务页面申请了存储池，可以选择“专属分布式存储”，在已申请的存储池中创建磁盘。</p>
 </li></ul>
@@ -282,7 +281,7 @@
 <tr id="row118071852124914"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="p14807125213494"><a name="p14807125213494"></a><a name="p14807125213494"></a>实例规格</p>
 </td>
 <td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="p89434514180"><a name="p89434514180"></a><a name="p89434514180"></a>选择主节点和核心节点的实例规格。MRS当前支持主机规格的配型由CPU+内存+Disk共同决定。支持的实例规格详细说明请参见<a href="MRS所使用的弹性云服务器规格.md">MRS所使用的弹性云服务器规格</a>。单击<a name="image7943428195217"></a><a name="image7943428195217"></a><span><img id="image7943428195217" src="figures/icon_mrs_edit.png"></span>，配置集群节点的实例规格、系统盘和数据盘参数。</p>
-<div class="note" id="note14394174431514"><a name="note14394174431514"></a><a name="note14394174431514"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_ul16495199172216"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_ul16495199172216"></a><ul id="zh-cn_topic_0173525263_zh-cn_topic_0173525262_ul16495199172216"><li>节点的实例规格配置越高，数据处理分析能力越强，集群所需费用也越高。</li><li>当Core节点规格选择为HDD磁盘时，MRS无需为数据磁盘付费，但ECS需要为此付费。</li><li>当Core节点规格选择HDD磁盘时，Master节点和Core节点的系统磁盘大小为40GB，或者Master节点的数据磁盘大小为200GB，它们都称为SATA磁盘。</li><li>当Core节点规格选择非HDD磁盘时，Master节点和Core节点的磁盘类型取决于数据磁盘。</li><li>当节点的实例规格选项后标示<span class="parmvalue" id="zh-cn_topic_0173525263_zh-cn_topic_0173525262_parmvalue1898312103619"><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_parmvalue1898312103619"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_parmvalue1898312103619"></a>“已售罄”</span>时，将无法购买此规格的节点，请选择其他规格节点进行购买。</li><li>Master节点中的4核8GB规格不在SLA售后范围内，仅适用于测试环境，不建议用于生产环境。</li></ul>
+<div class="note" id="note14394174431514"><a name="note14394174431514"></a><a name="note14394174431514"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_ul16495199172216"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_ul16495199172216"></a><ul id="zh-cn_topic_0173525263_zh-cn_topic_0173525262_ul16495199172216"><li>节点的实例规格配置越高，数据处理分析能力越强，集群所需费用也越高。</li><li>当Core节点规格选择为HDD磁盘时，MRS无需为数据磁盘付费，但ECS需要为此付费。</li><li>当Core节点规格选择非HDD磁盘时，Master节点和Core节点的磁盘类型取决于数据磁盘。</li><li>当节点的实例规格选项后标示<span class="parmvalue" id="zh-cn_topic_0173525263_zh-cn_topic_0173525262_parmvalue1898312103619"><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_parmvalue1898312103619"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0173525262_parmvalue1898312103619"></a>“已售罄”</span>时，将无法购买此规格的节点，请选择其他规格节点进行购买。</li><li>Master节点中的4核8GB规格不在SLA售后范围内，仅适用于测试环境，不建议用于生产环境。</li></ul>
 </div></div>
 </td>
 </tr>
@@ -346,7 +345,7 @@
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><a name="zh-cn_topic_0173525263_ul1060120434182"></a><a name="zh-cn_topic_0173525263_ul1060120434182"></a><ul id="zh-cn_topic_0173525263_ul1060120434182"><li>密码<p id="zh-cn_topic_0173525263_p1611692652019"><a name="zh-cn_topic_0173525263_p1611692652019"></a><a name="zh-cn_topic_0173525263_p1611692652019"></a>使用密码方式登录ECS节点。</p>
 <p id="zh-cn_topic_0173525263_p18116126162012"><a name="zh-cn_topic_0173525263_p18116126162012"></a><a name="zh-cn_topic_0173525263_p18116126162012"></a>密码设置约束如下：</p>
 <a name="zh-cn_topic_0173525263_ol8116126132011"></a><a name="zh-cn_topic_0173525263_ol8116126132011"></a><ol id="zh-cn_topic_0173525263_ol8116126132011"><li>字符串类型，可输入的字符串长度为8~26。</li><li>至少包含三种字符组合，如大写字母，小写字母，数字，特殊字符（`~!@#$%^&amp;*()-_=+\|[{}];:'",&lt;.&gt;/?）和空格。</li><li>不能与用户名或倒序用户名相同。</li></ol>
-</li><li>密钥对<p id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1071419914222"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1071419914222"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1071419914222"></a>使用密钥方式登录集群ECS节点。从下拉框中选择密钥对，如果已获取私钥文件，请勾选“我确认已获取该密钥对中的私钥文件<i><span class="varname" id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_varname47183932217"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_varname47183932217"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_varname47183932217"></a>SSHkey-bba1.pem</span></i>，否则无法登录弹性云服务器”。如果没有创建密钥对，请单击<span class="uicontrol" id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_uicontrol1572069192218"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_uicontrol1572069192218"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_uicontrol1572069192218"></a>“查看密钥对”</span>创建或导入密钥，然后再获取私钥文件。</p>
+</li><li>密钥对<p id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1071419914222"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1071419914222"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1071419914222"></a>使用密钥方式登录集群ECS节点。从下拉框中选择密钥对，如果已获取私钥文件，请勾选“我确认已获取该密钥对中的私钥文件<i><span class="varname" id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_varname47183932217"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_varname47183932217"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_varname47183932217"></a>SSHkey-xxx</span></i>，否则无法登录弹性云服务器”。如果没有创建密钥对，请单击<span class="uicontrol" id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_uicontrol1572069192218"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_uicontrol1572069192218"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_uicontrol1572069192218"></a>“查看密钥对”</span>创建或导入密钥，然后再获取私钥文件。</p>
 <p id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p17247952213"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p17247952213"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p17247952213"></a>密钥对即SSH密钥，包含SSH公钥和私钥。您可以新建一个SSH密钥，并下载私钥用于远程登录身份认证。为保证安全，私钥只能下载一次，请妥善保管。</p>
 <p id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1672620914229"><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1672620914229"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_p1672620914229"></a>您可以通过以下两种方式中的任意一种使用SSH密钥。</p>
 <a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_ol2945123165614"></a><a name="zh-cn_topic_0173525263_zh-cn_topic_0175446773_ol2945123165614"></a><ol id="zh-cn_topic_0173525263_zh-cn_topic_0175446773_ol2945123165614"><li>创建SSH密钥：创建SSH密钥，同时会创建公钥和私钥，公钥保存在ECS系统中，私钥保存在用户本机。当登录弹性云服务器时，使用公钥和私钥进行鉴权。</li><li>导入SSH密钥：当用户已有公钥和私钥，可以选择将公钥导入系统。当登录弹性云服务器时，使用公钥和私钥进行鉴权。</li></ol>
@@ -384,7 +383,7 @@
 </tr>
 <tr id="zh-cn_topic_0173525263_row164071028993"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p24081528694"><a name="zh-cn_topic_0173525263_p24081528694"></a><a name="zh-cn_topic_0173525263_p24081528694"></a>委托</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p740872813913"><a name="zh-cn_topic_0173525263_p740872813913"></a><a name="zh-cn_topic_0173525263_p740872813913"></a>通过绑定委托，您可以将部分资源共享给ECS或BMS云服务来管理，例如通过配置ECS委托可自动获取AK/SK访问OBS，具体请参见<a href="ECS委托方式访问OBS.md">ECS委托方式访问OBS</a>。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p740872813913"><a name="zh-cn_topic_0173525263_p740872813913"></a><a name="zh-cn_topic_0173525263_p740872813913"></a>通过绑定委托，您可以将部分资源共享给ECS或BMS云服务来管理，例如通过配置ECS委托可自动获取AK/SK访问OBS，具体请参见<a href="配置存算分离集群（委托方式）.md">配置存算分离集群（委托方式）</a>。</p>
 <p id="zh-cn_topic_0173525263_p5919131831716"><a name="zh-cn_topic_0173525263_p5919131831716"></a><a name="zh-cn_topic_0173525263_p5919131831716"></a><strong id="zh-cn_topic_0173525263_b23613919610"><a name="zh-cn_topic_0173525263_b23613919610"></a><a name="zh-cn_topic_0173525263_b23613919610"></a>MRS_ECS_DEFAULT_AGENCY</strong>委托拥有对象存储服务的OBS&nbsp;OperateAccess权限和在集群所在区域拥有CES&nbsp;FullAccess（对开启细粒度策略的用户）、CES Administrator和KMS Administrator权限。</p>
 </td>
 </tr>
@@ -395,13 +394,13 @@
 </tr>
 <tr id="zh-cn_topic_0173525263_row1213044602011"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1784404717208"><a name="zh-cn_topic_0173525263_p1784404717208"></a><a name="zh-cn_topic_0173525263_p1784404717208"></a>OBS权限控制</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p10844147162017"><a name="zh-cn_topic_0173525263_p10844147162017"></a><a name="zh-cn_topic_0173525263_p10844147162017"></a>开启细粒度权限控制的用户可以通过该功能实现不同的MRS用户对OBS桶下的不同目录有不同的权限。具体请参见<a href="配置MRS多用户访问OBS细粒度权限.md">配置MRS多用户访问OBS细粒度权限</a>。</p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p10844147162017"><a name="zh-cn_topic_0173525263_p10844147162017"></a><a name="zh-cn_topic_0173525263_p10844147162017"></a>开启细粒度权限控制的用户可以通过该功能实现不同的MRS用户对OBS文件系统下的不同目录有不同的权限。具体请参见<a href="配置MRS多用户访问OBS细粒度权限.md">配置MRS多用户访问OBS细粒度权限</a>。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0173525263_row3236230111812"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p1079035013513"><a name="zh-cn_topic_0173525263_p1079035013513"></a><a name="zh-cn_topic_0173525263_p1079035013513"></a>数据盘加密</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p16335111473519"><a name="zh-cn_topic_0173525263_p16335111473519"></a><a name="zh-cn_topic_0173525263_p16335111473519"></a>是否<span>对集群挂载的数据盘中的数据进行加密</span>，默认关闭。如需使用该功能，当前用户必须<span>拥有“Security Administrator”和“KMS Administrator”权限</span>。</p>
-<p id="zh-cn_topic_0173525263_p229333463718"><a name="zh-cn_topic_0173525263_p229333463718"></a><a name="zh-cn_topic_0173525263_p229333463718"></a><span>加密数据盘使用的密钥由数据加密服务（DEW，Data Encryption Workshop）中的密钥管理（KMS，Key Management Service）功能提供，无需您自行构建和维护密钥管理基础设施，安全便捷。</span></p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p16335111473519"><a name="zh-cn_topic_0173525263_p16335111473519"></a><a name="zh-cn_topic_0173525263_p16335111473519"></a>是否对集群挂载的数据盘中的数据进行加密，默认关闭。如需使用该功能，当前用户必须拥有“Security Administrator”和“KMS Administrator”权限。</p>
+<p id="zh-cn_topic_0173525263_p229333463718"><a name="zh-cn_topic_0173525263_p229333463718"></a><a name="zh-cn_topic_0173525263_p229333463718"></a>加密数据盘使用的密钥由数据加密服务（DEW，Data Encryption Workshop）中的密钥管理（KMS，Key Management Service）功能提供，无需您自行构建和维护密钥管理基础设施，安全便捷。</p>
 <p id="zh-cn_topic_0173525263_p1943193514409"><a name="zh-cn_topic_0173525263_p1943193514409"></a><a name="zh-cn_topic_0173525263_p1943193514409"></a>通过单击<span class="parmname" id="zh-cn_topic_0173525263_parmname1690182792518"><a name="zh-cn_topic_0173525263_parmname1690182792518"></a><a name="zh-cn_topic_0173525263_parmname1690182792518"></a>“数据盘加密”</span>开启或关闭数据盘加密功能，详情请参考<a href="https://support.huaweicloud.com/productdesc-evs/evs_01_0001.html" target="_blank" rel="noopener noreferrer">云硬盘加密</a>。</p>
 </td>
 </tr>
@@ -412,8 +411,8 @@
 </tr>
 <tr id="zh-cn_topic_0173525263_row1522613275189"><td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0173525263_p528502914118"><a name="zh-cn_topic_0173525263_p528502914118"></a><a name="zh-cn_topic_0173525263_p528502914118"></a>密钥名称</p>
 </td>
-<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p1828516291416"><a name="zh-cn_topic_0173525263_p1828516291416"></a><a name="zh-cn_topic_0173525263_p1828516291416"></a>当<span class="parmname" id="zh-cn_topic_0173525263_parmname1625014151522"><a name="zh-cn_topic_0173525263_parmname1625014151522"></a><a name="zh-cn_topic_0173525263_parmname1625014151522"></a>“数据盘加密”</span>功能开启时，需要配置该参数。选择用来加密数据盘的<span>密钥</span>名称，<span>默认选择密钥名称为“evs/default”的默认主密钥，在下拉框中可以选择其他用户主密钥。</span></p>
-<p id="zh-cn_topic_0173525263_p1291510961417"><a name="zh-cn_topic_0173525263_p1291510961417"></a><a name="zh-cn_topic_0173525263_p1291510961417"></a><span>使用用户主密钥加密云硬盘，若对用户主密钥执行禁用、计划删除等操作，将会导致云硬盘不可读写，甚至数据永远无法恢复，请谨慎操作。</span></p>
+<td class="cellrowborder" valign="top" width="70%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0173525263_p1828516291416"><a name="zh-cn_topic_0173525263_p1828516291416"></a><a name="zh-cn_topic_0173525263_p1828516291416"></a>当<span class="parmname" id="zh-cn_topic_0173525263_parmname1625014151522"><a name="zh-cn_topic_0173525263_parmname1625014151522"></a><a name="zh-cn_topic_0173525263_parmname1625014151522"></a>“数据盘加密”</span>功能开启时，需要配置该参数。选择用来加密数据盘的密钥名称，默认选择密钥名称为“evs/default”的默认主密钥，在下拉框中可以选择其他用户主密钥。</p>
+<p id="zh-cn_topic_0173525263_p1291510961417"><a name="zh-cn_topic_0173525263_p1291510961417"></a><a name="zh-cn_topic_0173525263_p1291510961417"></a>使用用户主密钥加密云硬盘，若对用户主密钥执行禁用、计划删除等操作，将会导致云硬盘不可读写，甚至数据永远无法恢复，请谨慎操作。</p>
 <p id="zh-cn_topic_0173525263_p15153141941411"><a name="zh-cn_topic_0173525263_p15153141941411"></a><a name="zh-cn_topic_0173525263_p15153141941411"></a>单击<span class="parmname" id="zh-cn_topic_0173525263_parmname1287017439141"><a name="zh-cn_topic_0173525263_parmname1287017439141"></a><a name="zh-cn_topic_0173525263_parmname1287017439141"></a>“查看密钥列表”</span>，进入密钥管理页面可以创建及管理密钥。</p>
 </td>
 </tr>
