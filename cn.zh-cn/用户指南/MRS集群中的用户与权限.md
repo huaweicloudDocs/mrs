@@ -1,24 +1,24 @@
-# MRS集群中的用户与权限<a name="ZH-CN_TOPIC_0173178927"></a>
+# MRS集群中的用户与权限<a name="mrs_01_0341"></a>
 
 ## 概述<a name="s948e4bbe367f49a0ab0d2628a75dcd3f"></a>
 
 -   **MRS集群用户**
 
-    MRS Manager中的安全帐号，包含用户名、密码等属性，MRS集群的使用者通过这类用户访问集群中的资源。每个启用Kerberos认证的MRS集群可以有多个用户。
+    Manager中的安全帐号，包含用户名、密码等属性，MRS集群的使用者通过这类用户访问集群中的资源。每个启用Kerberos认证的MRS集群可以有多个用户。
 
 -   **MRS集群角色**
 
     用户在实际使用MRS集群时需根据业务场景获取访问资源的权限，访问资源的权限是定义到MRS集群对象上的。集群的角色就是包含一个或者多个权限的集合。例如，HDFS中某个目录的访问权限，需要在指定的目录上配置，并保存在角色中。
 
 
-MRS Manager支持MRS集群用户权限管理功能，使权限管理与用户管理更加直观、易用。
+Manager支持MRS集群用户权限管理功能，使权限管理与用户管理更加直观、易用。
 
 -   权限管理：使用RBAC（Role-Based Access Control）方式，即基于角色授予权限，形成权限的集合。用户通过分配一个或多个已授权的角色取得对应的权限。
 -   用户管理：使用Manager统一管理MRS集群用户，并通过Kerberos协议认证用户，LDAP协议存储用户信息。
 
 ## 权限管理<a name="sbe419f3367a1491492402109a0980047"></a>
 
-MRS集群提供的权限包括MRS Manager和各组件（例如HDFS、HBase、Hive和Yarn等）的操作维护权限，在实际应用时需根据业务场景为各用户分别配置不同权限。为了提升权限管理的易用性，MRS Manager引入角色的功能，通过选取指定的权限并统一授予角色，以权限集合的形式实现了权限集中查看和管理，提升了权限管理的易用性和用户体验。
+MRS集群提供的权限包括Manager和各组件（例如HDFS、HBase、Hive和Yarn等）的操作维护权限，在实际应用时需根据业务场景为各用户分别配置不同权限。为了提升权限管理的易用性，Manager引入角色的功能，通过选取指定的权限并统一授予角色，以权限集合的形式实现了权限集中查看和管理，提升了权限管理的易用性和用户体验。
 
 角色可以理解为集中一个或多个权限的逻辑体，角色被授予指定的权限，用户通过绑定角色获得对应的权限。
 
@@ -30,7 +30,7 @@ MRS集群提供的权限包括MRS Manager和各组件（例如HDFS、HBase、Hiv
 
 例如，MRS集群用户绑定了管理员角色，那么这个用户成为MRS集群的管理员用户。
 
-MRS Manager界面显示系统默认创建的角色如[表1](#te7b79730a8de49dc9a52be8196677697)所示。
+Manager界面显示系统默认创建的角色如[表1](#te7b79730a8de49dc9a52be8196677697)所示。
 
 **表 1**  Manager默认角色与描述
 
@@ -79,7 +79,7 @@ MRS Manager界面显示系统默认创建的角色如[表1](#te7b79730a8de49dc9a
 </tbody>
 </table>
 
-通过MRS Manager创建角色时支持对Manager和组件进行授权管理，如[表2](#t1eebab7f372e49fbb70f1802069f1001)所示。
+通过Manager创建角色时支持对Manager和组件进行授权管理，如[表2](#t1eebab7f372e49fbb70f1802069f1001)所示。
 
 **表 2**  Manager与组件授权管理
 
@@ -131,15 +131,17 @@ MRS Manager界面显示系统默认创建的角色如[表1](#te7b79730a8de49dc9a
 
 支持Kerberos认证的MRS集群使用Kerberos协议和LDAP（Lightweight Directory Access Protocol）协议来配合工作，实现用户管理：
 
--   Kerberos用于在用户登录MRS Manager与使用组件客户端时认证用户身份，未启用Kerberos认证的集群则不认证用户身份。
+-   Kerberos用于在用户登录Manager与使用组件客户端时认证用户身份，未启用Kerberos认证的集群则不认证用户身份。
 -   LDAP用于存储用户记录、用户组信息与权限信息等用户信息。
 
-MRS集群支持在MRS Manager执行创建用户或者修改用户等任务时，系统自动完成更新Kerberos和LDAP的用户数据，用户登录MRS Manager或使用组件客户端时，系统自动完成认证用户身份和获取用户信息。这样一方面保证了用户管理的安全性，另一方面简化了用户管理的操作任务。MRS Manager还提供了用户组功能，可对单个或多个用户进行分类管理：
+MRS集群支持在Manager执行创建用户或者修改用户等任务时，系统自动完成更新Kerberos和LDAP的用户数据，用户登录Manager或使用组件客户端时，系统自动完成认证用户身份和获取用户信息。这样一方面保证了用户管理的安全性，另一方面简化了用户管理的操作任务。Manager还提供了用户组功能，可对单个或多个用户进行分类管理：
 
 -   用户组为一批用户的集合，可对用户进行分类管理。系统中的用户可以单独存在也可以加入到某个用户组中。
 -   对已分配角色的用户组来说，当用户添加到该组时，用户组分配的角色权限将授权给用户。
 
-MRS Manager界面显示系统默认创建的用户组如所示。
+MRS 3.x之前版本集群MRS Manager界面显示系统默认创建的用户组如[表3](#td676ae12a3a64c008ec055b498a52d78)所示。
+
+MRS 3.x及之后版本集群FusionInsight Manager界面显示系统默认创建的用户组请参考[用户组](默认权限信息一览.md#zh-cn_topic_0263899337_section1031812876)。
 
 **表 3**  Manager默认用户组与描述
 
@@ -163,6 +165,11 @@ MRS Manager界面显示系统默认创建的用户组如所示。
 <tr id="r021484b01b7441bcbccc07289a07df17"><td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.3.1.1 "><p id="a17ca637ad9f44c7b9e7e10a40f9bf2b1"><a name="a17ca637ad9f44c7b9e7e10a40f9bf2b1"></a><a name="a17ca637ad9f44c7b9e7e10a40f9bf2b1"></a>hive</p>
 </td>
 <td class="cellrowborder" valign="top" width="69.3069306930693%" headers="mcps1.2.3.1.2 "><p id="a28690a36d3404283b9c8e9a8415ec082"><a name="a28690a36d3404283b9c8e9a8415ec082"></a><a name="a28690a36d3404283b9c8e9a8415ec082"></a>将用户加入此用户组，可以使用Hive。</p>
+</td>
+</tr>
+<tr id="r125f6208d20c483daa9e4bacacc87713"><td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.3.1.1 "><p id="af352507ea96f41ea9213beb75c219a7c"><a name="af352507ea96f41ea9213beb75c219a7c"></a><a name="af352507ea96f41ea9213beb75c219a7c"></a>spark</p>
+</td>
+<td class="cellrowborder" valign="top" width="69.3069306930693%" headers="mcps1.2.3.1.2 "><p id="a64fe40fa2412488f89dc2d61b8b0b889"><a name="a64fe40fa2412488f89dc2d61b8b0b889"></a><a name="a64fe40fa2412488f89dc2d61b8b0b889"></a>普通用户组，将用户加入此用户组不会获得额外的权限。</p>
 </td>
 </tr>
 <tr id="r1f5a7d097dd04f6c9856b7fa01baadcb"><td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.3.1.1 "><p id="a9cf4097367db44ab87a70131e6a47ef1"><a name="a9cf4097367db44ab87a70131e6a47ef1"></a><a name="a9cf4097367db44ab87a70131e6a47ef1"></a>supergroup</p>
@@ -207,10 +214,10 @@ MRS Manager界面显示系统默认创建的用户组如所示。
 
 ## 流程概述<a name="s9fffbfa836e84b47ba7113e6196cc9e1"></a>
 
-在实际业务中，MRS集群用户需要先明确大数据的业务场景，规划集群用户对应的权限。然后在Manager界面创建角色，并设置角色包含的权限以匹配业务的需求。如果需要统一管理单个或多个相同业务场景中的用户，MRS Manager提供了用户组的功能，管理员可以创建用户组。
+在实际业务中，MRS集群用户需要先明确大数据的业务场景，规划集群用户对应的权限。然后在Manager界面创建角色，并设置角色包含的权限以匹配业务的需求。如果需要统一管理单个或多个相同业务场景中的用户，Manager提供了用户组的功能，管理员可以创建用户组。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->如果角色设置HDFS、HBase、Hive或Yarn各组件的权限，仅可以使用组件自身功能。如果还需要使用MRS Manager，请在角色中添加对应的Manager权限。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>如果角色设置HDFS、HBase、Hive或Yarn各组件的权限，仅可以使用组件自身功能。如果还需要使用Manager，请在角色中添加对应的Manager权限。
 
 **图 1**  创建用户流程示意<a name="f9a6048170fe14a80b4973d74d9d86a97"></a>  
 ![](figures/创建用户流程示意.png "创建用户流程示意")

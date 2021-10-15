@@ -1,4 +1,4 @@
-# MRS所使用的裸金属服务器规格<a name="ZH-CN_TOPIC_0202149928"></a>
+# MRS所使用的裸金属服务器规格<a name="mrs_01_9001"></a>
 
 针对不同的应用场景，MRS使用到如下类型的裸金属服务器。
 
@@ -64,15 +64,15 @@ AB.C.D
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0179742194_row8532241591"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.1 "><p id="p1850713675514"><a name="p1850713675514"></a><a name="p1850713675514"></a><span>physical.d2.large</span></p>
+<tbody><tr id="zh-cn_topic_0179742194_row8532241591"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.1 "><p id="p1850713675514"><a name="p1850713675514"></a><a name="p1850713675514"></a>physical.d2.large</p>
 </td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.6.1.2 "><p id="p650306175517"><a name="p650306175517"></a><a name="p650306175517"></a><span>2 * 12 Core Intel Xeon Gold 5118 V5 (2.3 GHz)</span></p>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.6.1.2 "><p id="p650306175517"><a name="p650306175517"></a><a name="p650306175517"></a>2 * 12 Core Intel Xeon Gold 5118 V5 (2.3 GHz)</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.3 "><p id="p1550236175514"><a name="p1550236175514"></a><a name="p1550236175514"></a><span>192 DDR4 RAM (GB)</span></p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.3 "><p id="p1550236175514"><a name="p1550236175514"></a><a name="p1550236175514"></a>192 DDR4 RAM (GB)</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.4 "><p id="p13501564553"><a name="p13501564553"></a><a name="p13501564553"></a><span>2 * 600GB SAS System Disk RAID 1 + 12 * 10TB SATA</span></p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.4 "><p id="p13501564553"><a name="p13501564553"></a><a name="p13501564553"></a>2 * 600GB SAS System Disk RAID 1 + 12 * 10TB SATA</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p115004655510"><a name="p115004655510"></a><a name="p115004655510"></a><span>2 x 2 * 10GE</span></p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p115004655510"><a name="p115004655510"></a><a name="p115004655510"></a>2 x 2 * 10GE</p>
 </td>
 </tr>
 </tbody>

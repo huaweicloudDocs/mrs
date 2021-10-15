@@ -1,4 +1,4 @@
-# ZooKeeper健康检查指标项说明<a name="ZH-CN_TOPIC_0173397642"></a>
+# ZooKeeper健康检查指标项说明<a name="mrs_01_0290"></a>
 
 ## ZooKeeper服务处理请求平均延时<a name="section64170771113434"></a>
 

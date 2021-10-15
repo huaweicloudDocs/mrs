@@ -1,20 +1,21 @@
-# MRS所使用的弹性云服务器规格<a name="ZH-CN_TOPIC_0189639247"></a>
+# MRS所使用的弹性云服务器规格<a name="mrs_01_9006"></a>
 
 针对不同的应用场景，MRS使用到如下类型的弹性云服务器。
 
--   通用计算型（S1型）
--   通用计算型（S2型）
 -   通用计算型（S3型）
--   通用计算型（C2型）
 -   通用计算增强型（C3型）
 -   通用计算增强型（C6型）
 -   磁盘增强型（D2型）
+-   磁盘增强型（D3型）
 -   通用网络增强型（C3ne型）
 -   高性能计算型（Hc2）
 -   内存优化型（M3）
+-   内存优化型（M6）
 -   鲲鹏通用计算增强型（KC1型）
 -   鲲鹏内存优化型（KM1型）
+-   鲲鹏内存优化型（KI1型）
 -   超高I/O型（I3型）
+-   超高I/O型（IR3型）
 -   GPU计算加速型（P1型）
 
 ## 规格命名规则<a name="zh-cn_topic_0179742194_section741930611313"></a>
@@ -34,167 +35,64 @@ AB.C.D
 
 **表 1**  通用计算型弹性云服务器的规格
 
-<a name="zh-cn_topic_0179742194_table66778917103035"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0179742194_row21254511103035"><th class="cellrowborder" valign="top" width="23%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0179742194_p52972653162927"><a name="zh-cn_topic_0179742194_p52972653162927"></a><a name="zh-cn_topic_0179742194_p52972653162927"></a>类型</p>
+<a name="zh-cn_topic_0179742194_table367241161115"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0179742194_row118484141119"><th class="cellrowborder" valign="top" width="23%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0179742194_p1392144120110"><a name="zh-cn_topic_0179742194_p1392144120110"></a><a name="zh-cn_topic_0179742194_p1392144120110"></a>类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="23%" id="mcps1.2.6.1.2"><p id="zh-cn_topic_0179742194_p62926494162927"><a name="zh-cn_topic_0179742194_p62926494162927"></a><a name="zh-cn_topic_0179742194_p62926494162927"></a>vCPU</p>
+<th class="cellrowborder" valign="top" width="23%" id="mcps1.2.6.1.2"><p id="zh-cn_topic_0179742194_p1296184111116"><a name="zh-cn_topic_0179742194_p1296184111116"></a><a name="zh-cn_topic_0179742194_p1296184111116"></a>vCPU</p>
 </th>
-<th class="cellrowborder" valign="top" width="21%" id="mcps1.2.6.1.3"><p id="zh-cn_topic_0179742194_p63881219162927"><a name="zh-cn_topic_0179742194_p63881219162927"></a><a name="zh-cn_topic_0179742194_p63881219162927"></a>内存（GB）</p>
+<th class="cellrowborder" valign="top" width="21%" id="mcps1.2.6.1.3"><p id="zh-cn_topic_0179742194_p149884171118"><a name="zh-cn_topic_0179742194_p149884171118"></a><a name="zh-cn_topic_0179742194_p149884171118"></a>内存（GB）</p>
 </th>
-<th class="cellrowborder" valign="top" width="21%" id="mcps1.2.6.1.4"><p id="zh-cn_topic_0179742194_p6996228162927"><a name="zh-cn_topic_0179742194_p6996228162927"></a><a name="zh-cn_topic_0179742194_p6996228162927"></a>规格名称</p>
+<th class="cellrowborder" valign="top" width="21%" id="mcps1.2.6.1.4"><p id="zh-cn_topic_0179742194_p10102241121115"><a name="zh-cn_topic_0179742194_p10102241121115"></a><a name="zh-cn_topic_0179742194_p10102241121115"></a>规格名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="12%" id="mcps1.2.6.1.5"><p id="zh-cn_topic_0179742194_p19167123116295"><a name="zh-cn_topic_0179742194_p19167123116295"></a><a name="zh-cn_topic_0179742194_p19167123116295"></a>虚拟化类型</p>
+<th class="cellrowborder" valign="top" width="12%" id="mcps1.2.6.1.5"><p id="zh-cn_topic_0179742194_p8104154117112"><a name="zh-cn_topic_0179742194_p8104154117112"></a><a name="zh-cn_topic_0179742194_p8104154117112"></a>虚拟化类型</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0179742194_row8532241591"><td class="cellrowborder" rowspan="3" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p3534747915"><a name="zh-cn_topic_0179742194_p3534747915"></a><a name="zh-cn_topic_0179742194_p3534747915"></a>S1型</p>
-<p id="zh-cn_topic_0179742194_p15824165112920"><a name="zh-cn_topic_0179742194_p15824165112920"></a><a name="zh-cn_topic_0179742194_p15824165112920"></a></p>
-<p id="zh-cn_topic_0179742194_p114844523910"><a name="zh-cn_topic_0179742194_p114844523910"></a><a name="zh-cn_topic_0179742194_p114844523910"></a></p>
+<tbody><tr id="zh-cn_topic_0179742194_row6824183441213"><td class="cellrowborder" rowspan="5" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p13262641141118"><a name="zh-cn_topic_0179742194_p13262641141118"></a><a name="zh-cn_topic_0179742194_p13262641141118"></a>S3型</p>
 </td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p1253410414911"><a name="zh-cn_topic_0179742194_p1253410414911"></a><a name="zh-cn_topic_0179742194_p1253410414911"></a>4</p>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p13825934151213"><a name="zh-cn_topic_0179742194_p13825934151213"></a><a name="zh-cn_topic_0179742194_p13825934151213"></a>4</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p1553419411912"><a name="zh-cn_topic_0179742194_p1553419411912"></a><a name="zh-cn_topic_0179742194_p1553419411912"></a>16</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p082519344126"><a name="zh-cn_topic_0179742194_p082519344126"></a><a name="zh-cn_topic_0179742194_p082519344126"></a>8</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p553411413913"><a name="zh-cn_topic_0179742194_p553411413913"></a><a name="zh-cn_topic_0179742194_p553411413913"></a>s1.xlarge.linux.bigdata</p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1382519342127"><a name="zh-cn_topic_0179742194_p1382519342127"></a><a name="zh-cn_topic_0179742194_p1382519342127"></a>s3.xlarge.2.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p612815911919"><a name="zh-cn_topic_0179742194_p612815911919"></a><a name="zh-cn_topic_0179742194_p612815911919"></a>XEN</p>
+<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p138255348122"><a name="zh-cn_topic_0179742194_p138255348122"></a><a name="zh-cn_topic_0179742194_p138255348122"></a>KVM</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row98249514915"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p18241651791"><a name="zh-cn_topic_0179742194_p18241651791"></a><a name="zh-cn_topic_0179742194_p18241651791"></a>16</p>
+<tr id="zh-cn_topic_0179742194_row1526034121120"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p1426584111112"><a name="zh-cn_topic_0179742194_p1426584111112"></a><a name="zh-cn_topic_0179742194_p1426584111112"></a>8</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p13824125111919"><a name="zh-cn_topic_0179742194_p13824125111919"></a><a name="zh-cn_topic_0179742194_p13824125111919"></a>64</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p18267641151119"><a name="zh-cn_topic_0179742194_p18267641151119"></a><a name="zh-cn_topic_0179742194_p18267641151119"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p168244514915"><a name="zh-cn_topic_0179742194_p168244514915"></a><a name="zh-cn_topic_0179742194_p168244514915"></a>s1.4xlarge.linux.bigdata</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p7276144151114"><a name="zh-cn_topic_0179742194_p7276144151114"></a><a name="zh-cn_topic_0179742194_p7276144151114"></a>s3.2xlarge.2.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p17814459790"><a name="zh-cn_topic_0179742194_p17814459790"></a><a name="zh-cn_topic_0179742194_p17814459790"></a>XEN</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row34841252894"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p34847521293"><a name="zh-cn_topic_0179742194_p34847521293"></a><a name="zh-cn_topic_0179742194_p34847521293"></a>32</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p174841952997"><a name="zh-cn_topic_0179742194_p174841952997"></a><a name="zh-cn_topic_0179742194_p174841952997"></a>128</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p184840524912"><a name="zh-cn_topic_0179742194_p184840524912"></a><a name="zh-cn_topic_0179742194_p184840524912"></a>s1.8xlarge.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1950414018107"><a name="zh-cn_topic_0179742194_p1950414018107"></a><a name="zh-cn_topic_0179742194_p1950414018107"></a>XEN</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p82781241141113"><a name="zh-cn_topic_0179742194_p82781241141113"></a><a name="zh-cn_topic_0179742194_p82781241141113"></a>KVM</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row9271195762811"><td class="cellrowborder" rowspan="5" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p122721457102811"><a name="zh-cn_topic_0179742194_p122721457102811"></a><a name="zh-cn_topic_0179742194_p122721457102811"></a>S2型</p>
-<p id="zh-cn_topic_0179742194_p743413376293"><a name="zh-cn_topic_0179742194_p743413376293"></a><a name="zh-cn_topic_0179742194_p743413376293"></a></p>
-<p id="zh-cn_topic_0179742194_p19827154022911"><a name="zh-cn_topic_0179742194_p19827154022911"></a><a name="zh-cn_topic_0179742194_p19827154022911"></a></p>
-<p id="zh-cn_topic_0179742194_p2980174872918"><a name="zh-cn_topic_0179742194_p2980174872918"></a><a name="zh-cn_topic_0179742194_p2980174872918"></a></p>
-<p id="zh-cn_topic_0179742194_p6652134319299"><a name="zh-cn_topic_0179742194_p6652134319299"></a><a name="zh-cn_topic_0179742194_p6652134319299"></a></p>
+<tr id="zh-cn_topic_0179742194_row927914181116"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p5282641141114"><a name="zh-cn_topic_0179742194_p5282641141114"></a><a name="zh-cn_topic_0179742194_p5282641141114"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p24361830183112"><a name="zh-cn_topic_0179742194_p24361830183112"></a><a name="zh-cn_topic_0179742194_p24361830183112"></a>4</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p828624161118"><a name="zh-cn_topic_0179742194_p828624161118"></a><a name="zh-cn_topic_0179742194_p828624161118"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p927205782811"><a name="zh-cn_topic_0179742194_p927205782811"></a><a name="zh-cn_topic_0179742194_p927205782811"></a>16</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p128818412119"><a name="zh-cn_topic_0179742194_p128818412119"></a><a name="zh-cn_topic_0179742194_p128818412119"></a>s3.4xlarge.2.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1327265712812"><a name="zh-cn_topic_0179742194_p1327265712812"></a><a name="zh-cn_topic_0179742194_p1327265712812"></a>s2.xlarge.4.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p6272145722810"><a name="zh-cn_topic_0179742194_p6272145722810"></a><a name="zh-cn_topic_0179742194_p6272145722810"></a>KVM</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p52926415112"><a name="zh-cn_topic_0179742194_p52926415112"></a><a name="zh-cn_topic_0179742194_p52926415112"></a>KVM</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row6434123717299"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p45301738183113"><a name="zh-cn_topic_0179742194_p45301738183113"></a><a name="zh-cn_topic_0179742194_p45301738183113"></a>8</p>
+<tr id="zh-cn_topic_0179742194_row429419419110"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p3296154118111"><a name="zh-cn_topic_0179742194_p3296154118111"></a><a name="zh-cn_topic_0179742194_p3296154118111"></a>4</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p8434437132910"><a name="zh-cn_topic_0179742194_p8434437132910"></a><a name="zh-cn_topic_0179742194_p8434437132910"></a>16</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p430014120119"><a name="zh-cn_topic_0179742194_p430014120119"></a><a name="zh-cn_topic_0179742194_p430014120119"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p1150661153213"><a name="zh-cn_topic_0179742194_p1150661153213"></a><a name="zh-cn_topic_0179742194_p1150661153213"></a>s2.2xlarge.2.linux.bigdata</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p1830394111118"><a name="zh-cn_topic_0179742194_p1830394111118"></a><a name="zh-cn_topic_0179742194_p1830394111118"></a>s3.xlarge.4.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1443493716290"><a name="zh-cn_topic_0179742194_p1443493716290"></a><a name="zh-cn_topic_0179742194_p1443493716290"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row2827114011296"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p1798214520311"><a name="zh-cn_topic_0179742194_p1798214520311"></a><a name="zh-cn_topic_0179742194_p1798214520311"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p0827124013293"><a name="zh-cn_topic_0179742194_p0827124013293"></a><a name="zh-cn_topic_0179742194_p0827124013293"></a>32</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p14505161193220"><a name="zh-cn_topic_0179742194_p14505161193220"></a><a name="zh-cn_topic_0179742194_p14505161193220"></a>s2.4xlarge.2.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p782704042913"><a name="zh-cn_topic_0179742194_p782704042913"></a><a name="zh-cn_topic_0179742194_p782704042913"></a>KVM</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p4306441141111"><a name="zh-cn_topic_0179742194_p4306441141111"></a><a name="zh-cn_topic_0179742194_p4306441141111"></a>KVM</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row19980164832913"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p0900651113118"><a name="zh-cn_topic_0179742194_p0900651113118"></a><a name="zh-cn_topic_0179742194_p0900651113118"></a>16</p>
+<tr id="zh-cn_topic_0179742194_row830924116119"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p153121419112"><a name="zh-cn_topic_0179742194_p153121419112"></a><a name="zh-cn_topic_0179742194_p153121419112"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p149801148102918"><a name="zh-cn_topic_0179742194_p149801148102918"></a><a name="zh-cn_topic_0179742194_p149801148102918"></a>64</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p1731594114111"><a name="zh-cn_topic_0179742194_p1731594114111"></a><a name="zh-cn_topic_0179742194_p1731594114111"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p050214112321"><a name="zh-cn_topic_0179742194_p050214112321"></a><a name="zh-cn_topic_0179742194_p050214112321"></a>s2.4xlarge.4.linux.bigdata</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p53190411111"><a name="zh-cn_topic_0179742194_p53190411111"></a><a name="zh-cn_topic_0179742194_p53190411111"></a>s3.4xlarge.4.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1980948162912"><a name="zh-cn_topic_0179742194_p1980948162912"></a><a name="zh-cn_topic_0179742194_p1980948162912"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row176521443172916"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p139561600328"><a name="zh-cn_topic_0179742194_p139561600328"></a><a name="zh-cn_topic_0179742194_p139561600328"></a>32</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p1265294302911"><a name="zh-cn_topic_0179742194_p1265294302911"></a><a name="zh-cn_topic_0179742194_p1265294302911"></a>128</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p711501763110"><a name="zh-cn_topic_0179742194_p711501763110"></a><a name="zh-cn_topic_0179742194_p711501763110"></a>s2.8xlarge.4.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p10653543192920"><a name="zh-cn_topic_0179742194_p10653543192920"></a><a name="zh-cn_topic_0179742194_p10653543192920"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row164571325903"><td class="cellrowborder" rowspan="5" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p10188451512"><a name="zh-cn_topic_0179742194_p10188451512"></a><a name="zh-cn_topic_0179742194_p10188451512"></a>S3型</p>
-</td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p12290019135718"><a name="zh-cn_topic_0179742194_p12290019135718"></a><a name="zh-cn_topic_0179742194_p12290019135718"></a>4</p>
-</td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p3290319145717"><a name="zh-cn_topic_0179742194_p3290319145717"></a><a name="zh-cn_topic_0179742194_p3290319145717"></a>8</p>
-</td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p17290111916570"><a name="zh-cn_topic_0179742194_p17290111916570"></a><a name="zh-cn_topic_0179742194_p17290111916570"></a>s3.xlarge.2.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p72901319135714"><a name="zh-cn_topic_0179742194_p72901319135714"></a><a name="zh-cn_topic_0179742194_p72901319135714"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row26343155716"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p1015110875710"><a name="zh-cn_topic_0179742194_p1015110875710"></a><a name="zh-cn_topic_0179742194_p1015110875710"></a>8</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p915118165716"><a name="zh-cn_topic_0179742194_p915118165716"></a><a name="zh-cn_topic_0179742194_p915118165716"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p4151986574"><a name="zh-cn_topic_0179742194_p4151986574"></a><a name="zh-cn_topic_0179742194_p4151986574"></a>s3.2xlarge.2.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1115115813573"><a name="zh-cn_topic_0179742194_p1115115813573"></a><a name="zh-cn_topic_0179742194_p1115115813573"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row136049301908"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p19286451118"><a name="zh-cn_topic_0179742194_p19286451118"></a><a name="zh-cn_topic_0179742194_p19286451118"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p132901651817"><a name="zh-cn_topic_0179742194_p132901651817"></a><a name="zh-cn_topic_0179742194_p132901651817"></a>32</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p1429320519115"><a name="zh-cn_topic_0179742194_p1429320519115"></a><a name="zh-cn_topic_0179742194_p1429320519115"></a>s3.4xlarge.2.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p152968511111"><a name="zh-cn_topic_0179742194_p152968511111"></a><a name="zh-cn_topic_0179742194_p152968511111"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row14459525505"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p193448511014"><a name="zh-cn_topic_0179742194_p193448511014"></a><a name="zh-cn_topic_0179742194_p193448511014"></a>4</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p93482512115"><a name="zh-cn_topic_0179742194_p93482512115"></a><a name="zh-cn_topic_0179742194_p93482512115"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p6353105114118"><a name="zh-cn_topic_0179742194_p6353105114118"></a><a name="zh-cn_topic_0179742194_p6353105114118"></a>s3.xlarge.4.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p163577511015"><a name="zh-cn_topic_0179742194_p163577511015"></a><a name="zh-cn_topic_0179742194_p163577511015"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row34273588017"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p173841511713"><a name="zh-cn_topic_0179742194_p173841511713"></a><a name="zh-cn_topic_0179742194_p173841511713"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p138815120119"><a name="zh-cn_topic_0179742194_p138815120119"></a><a name="zh-cn_topic_0179742194_p138815120119"></a>64</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p143951351811"><a name="zh-cn_topic_0179742194_p143951351811"></a><a name="zh-cn_topic_0179742194_p143951351811"></a>s3.4xlarge.4.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p43981518110"><a name="zh-cn_topic_0179742194_p43981518110"></a><a name="zh-cn_topic_0179742194_p43981518110"></a>KVM</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row104412047125812"><td class="cellrowborder" rowspan="2" valign="top" width="23%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p14916958185820"><a name="zh-cn_topic_0179742194_p14916958185820"></a><a name="zh-cn_topic_0179742194_p14916958185820"></a>C2型</p>
-<p id="zh-cn_topic_0179742194_p1994945818583"><a name="zh-cn_topic_0179742194_p1994945818583"></a><a name="zh-cn_topic_0179742194_p1994945818583"></a></p>
-</td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p19917358145817"><a name="zh-cn_topic_0179742194_p19917358145817"></a><a name="zh-cn_topic_0179742194_p19917358145817"></a>8</p>
-</td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p09209585583"><a name="zh-cn_topic_0179742194_p09209585583"></a><a name="zh-cn_topic_0179742194_p09209585583"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p5921115812583"><a name="zh-cn_topic_0179742194_p5921115812583"></a><a name="zh-cn_topic_0179742194_p5921115812583"></a>c2.2xlarge.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.5 "><p id="zh-cn_topic_0179742194_p1292285815813"><a name="zh-cn_topic_0179742194_p1292285815813"></a><a name="zh-cn_topic_0179742194_p1292285815813"></a>XEN</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0179742194_row85771564580"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0179742194_p49261758205816"><a name="zh-cn_topic_0179742194_p49261758205816"></a><a name="zh-cn_topic_0179742194_p49261758205816"></a>16</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0179742194_p1992865825811"><a name="zh-cn_topic_0179742194_p1992865825811"></a><a name="zh-cn_topic_0179742194_p1992865825811"></a>32</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p59301758125810"><a name="zh-cn_topic_0179742194_p59301758125810"></a><a name="zh-cn_topic_0179742194_p59301758125810"></a>c2.4xlarge.linux.bigdata</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p179311858145812"><a name="zh-cn_topic_0179742194_p179311858145812"></a><a name="zh-cn_topic_0179742194_p179311858145812"></a>XEN</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p73241541141118"><a name="zh-cn_topic_0179742194_p73241541141118"></a><a name="zh-cn_topic_0179742194_p73241541141118"></a>KVM</p>
 </td>
 </tr>
 </tbody>
@@ -384,61 +282,102 @@ AB.C.D
 </tbody>
 </table>
 
-**表 4**  D2型弹性云服务器的规格
+**表 4**  磁盘增强型型弹性云服务器的规格
 
 <a name="zh-cn_topic_0179742194_table47541937112515"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0179742194_row1775413371257"><th class="cellrowborder" valign="top" width="13%" id="mcps1.2.8.1.1"><p id="zh-cn_topic_0179742194_p17228105016252"><a name="zh-cn_topic_0179742194_p17228105016252"></a><a name="zh-cn_topic_0179742194_p17228105016252"></a>类型</p>
+<table><thead align="left"><tr id="zh-cn_topic_0179742194_row1775413371257"><th class="cellrowborder" valign="top" width="18.17818218178182%" id="mcps1.2.7.1.1"><p id="zh-cn_topic_0179742194_p17228105016252"><a name="zh-cn_topic_0179742194_p17228105016252"></a><a name="zh-cn_topic_0179742194_p17228105016252"></a>类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="8%" id="mcps1.2.8.1.2"><p id="zh-cn_topic_0179742194_p123165013254"><a name="zh-cn_topic_0179742194_p123165013254"></a><a name="zh-cn_topic_0179742194_p123165013254"></a>vCPU</p>
+<th class="cellrowborder" valign="top" width="13.638636136386362%" id="mcps1.2.7.1.2"><p id="zh-cn_topic_0179742194_p123165013254"><a name="zh-cn_topic_0179742194_p123165013254"></a><a name="zh-cn_topic_0179742194_p123165013254"></a>vCPU</p>
 </th>
-<th class="cellrowborder" valign="top" width="11%" id="mcps1.2.8.1.3"><p id="zh-cn_topic_0179742194_p7236185013252"><a name="zh-cn_topic_0179742194_p7236185013252"></a><a name="zh-cn_topic_0179742194_p7236185013252"></a>内存（GB）</p>
+<th class="cellrowborder" valign="top" width="13.638636136386362%" id="mcps1.2.7.1.3"><p id="zh-cn_topic_0179742194_p7236185013252"><a name="zh-cn_topic_0179742194_p7236185013252"></a><a name="zh-cn_topic_0179742194_p7236185013252"></a>内存（GB）</p>
 </th>
-<th class="cellrowborder" valign="top" width="15%" id="mcps1.2.8.1.4"><p id="zh-cn_topic_0179742194_p18237155062514"><a name="zh-cn_topic_0179742194_p18237155062514"></a><a name="zh-cn_topic_0179742194_p18237155062514"></a>规格名称</p>
+<th class="cellrowborder" valign="top" width="27.267273272672732%" id="mcps1.2.7.1.4"><p id="zh-cn_topic_0179742194_p18237155062514"><a name="zh-cn_topic_0179742194_p18237155062514"></a><a name="zh-cn_topic_0179742194_p18237155062514"></a>规格名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="11%" id="mcps1.2.8.1.5"><p id="zh-cn_topic_0179742194_p724035017257"><a name="zh-cn_topic_0179742194_p724035017257"></a><a name="zh-cn_topic_0179742194_p724035017257"></a>虚拟化类型</p>
+<th class="cellrowborder" valign="top" width="13.638636136386362%" id="mcps1.2.7.1.5"><p id="zh-cn_topic_0179742194_p724035017257"><a name="zh-cn_topic_0179742194_p724035017257"></a><a name="zh-cn_topic_0179742194_p724035017257"></a>虚拟化类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="13%" id="mcps1.2.8.1.6"><p id="zh-cn_topic_0179742194_p1624105092519"><a name="zh-cn_topic_0179742194_p1624105092519"></a><a name="zh-cn_topic_0179742194_p1624105092519"></a>本地盘（GB）</p>
-</th>
-<th class="cellrowborder" valign="top" width="28.999999999999996%" id="mcps1.2.8.1.7"><p id="zh-cn_topic_0179742194_p9205101061511"><a name="zh-cn_topic_0179742194_p9205101061511"></a><a name="zh-cn_topic_0179742194_p9205101061511"></a>硬件配置</p>
+<th class="cellrowborder" valign="top" width="13.638636136386362%" id="mcps1.2.7.1.6"><p id="zh-cn_topic_0179742194_p1624105092519"><a name="zh-cn_topic_0179742194_p1624105092519"></a><a name="zh-cn_topic_0179742194_p1624105092519"></a>本地盘（GB）</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0179742194_row974834394812"><td class="cellrowborder" rowspan="3" valign="top" width="13%" headers="mcps1.2.8.1.1 "><p id="zh-cn_topic_0179742194_p9760548192919"><a name="zh-cn_topic_0179742194_p9760548192919"></a><a name="zh-cn_topic_0179742194_p9760548192919"></a>D2型</p>
+<tbody><tr id="zh-cn_topic_0179742194_row974834394812"><td class="cellrowborder" rowspan="3" valign="top" width="18.17818218178182%" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0179742194_p9760548192919"><a name="zh-cn_topic_0179742194_p9760548192919"></a><a name="zh-cn_topic_0179742194_p9760548192919"></a>D2型</p>
 </td>
-<td class="cellrowborder" valign="top" width="8%" headers="mcps1.2.8.1.2 "><p id="zh-cn_topic_0179742194_p12750124311482"><a name="zh-cn_topic_0179742194_p12750124311482"></a><a name="zh-cn_topic_0179742194_p12750124311482"></a>8</p>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0179742194_p12750124311482"><a name="zh-cn_topic_0179742194_p12750124311482"></a><a name="zh-cn_topic_0179742194_p12750124311482"></a>8</p>
 </td>
-<td class="cellrowborder" valign="top" width="11%" headers="mcps1.2.8.1.3 "><p id="zh-cn_topic_0179742194_p0750164314813"><a name="zh-cn_topic_0179742194_p0750164314813"></a><a name="zh-cn_topic_0179742194_p0750164314813"></a>64</p>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0179742194_p0750164314813"><a name="zh-cn_topic_0179742194_p0750164314813"></a><a name="zh-cn_topic_0179742194_p0750164314813"></a>64</p>
 </td>
-<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.8.1.4 "><p id="zh-cn_topic_0179742194_p1175054394818"><a name="zh-cn_topic_0179742194_p1175054394818"></a><a name="zh-cn_topic_0179742194_p1175054394818"></a>d2.2xlarge.8.linux.bigdata</p>
+<td class="cellrowborder" valign="top" width="27.267273272672732%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0179742194_p1175054394818"><a name="zh-cn_topic_0179742194_p1175054394818"></a><a name="zh-cn_topic_0179742194_p1175054394818"></a>d2.2xlarge.8.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" width="11%" headers="mcps1.2.8.1.5 "><p id="zh-cn_topic_0179742194_p1875013430483"><a name="zh-cn_topic_0179742194_p1875013430483"></a><a name="zh-cn_topic_0179742194_p1875013430483"></a>KVM</p>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.5 "><p id="zh-cn_topic_0179742194_p1875013430483"><a name="zh-cn_topic_0179742194_p1875013430483"></a><a name="zh-cn_topic_0179742194_p1875013430483"></a>KVM</p>
 </td>
-<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.8.1.6 "><p id="zh-cn_topic_0179742194_p17750443104811"><a name="zh-cn_topic_0179742194_p17750443104811"></a><a name="zh-cn_topic_0179742194_p17750443104811"></a>4×1800</p>
-</td>
-<td class="cellrowborder" rowspan="3" valign="top" width="28.999999999999996%" headers="mcps1.2.8.1.7 "><p id="zh-cn_topic_0179742194_p449920318167"><a name="zh-cn_topic_0179742194_p449920318167"></a><a name="zh-cn_topic_0179742194_p449920318167"></a>CPU：Intel&reg; Xeon&reg; Gold 6151 Processor v5</p>
-<p id="zh-cn_topic_0179742194_p676115981618"><a name="zh-cn_topic_0179742194_p676115981618"></a><a name="zh-cn_topic_0179742194_p676115981618"></a>Memory：20×32GB</p>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.6 "><p id="zh-cn_topic_0179742194_p17750443104811"><a name="zh-cn_topic_0179742194_p17750443104811"></a><a name="zh-cn_topic_0179742194_p17750443104811"></a>4×1800</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row14967171717297"><td class="cellrowborder" valign="top" headers="mcps1.2.8.1.1 "><p id="zh-cn_topic_0179742194_p1492123262911"><a name="zh-cn_topic_0179742194_p1492123262911"></a><a name="zh-cn_topic_0179742194_p1492123262911"></a>16</p>
+<tr id="zh-cn_topic_0179742194_row14967171717297"><td class="cellrowborder" valign="top" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0179742194_p1492123262911"><a name="zh-cn_topic_0179742194_p1492123262911"></a><a name="zh-cn_topic_0179742194_p1492123262911"></a>16</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.2 "><p id="zh-cn_topic_0179742194_p18434144113294"><a name="zh-cn_topic_0179742194_p18434144113294"></a><a name="zh-cn_topic_0179742194_p18434144113294"></a>128</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0179742194_p18434144113294"><a name="zh-cn_topic_0179742194_p18434144113294"></a><a name="zh-cn_topic_0179742194_p18434144113294"></a>128</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.3 "><p id="zh-cn_topic_0179742194_p196727215299"><a name="zh-cn_topic_0179742194_p196727215299"></a><a name="zh-cn_topic_0179742194_p196727215299"></a>d2.4xlarge.8.linux.bigdata</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0179742194_p196727215299"><a name="zh-cn_topic_0179742194_p196727215299"></a><a name="zh-cn_topic_0179742194_p196727215299"></a>d2.4xlarge.8.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.4 "><p id="zh-cn_topic_0179742194_p10967117172915"><a name="zh-cn_topic_0179742194_p10967117172915"></a><a name="zh-cn_topic_0179742194_p10967117172915"></a>KVM</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0179742194_p10967117172915"><a name="zh-cn_topic_0179742194_p10967117172915"></a><a name="zh-cn_topic_0179742194_p10967117172915"></a>KVM</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="zh-cn_topic_0179742194_p169678175293"><a name="zh-cn_topic_0179742194_p169678175293"></a><a name="zh-cn_topic_0179742194_p169678175293"></a>8×1800</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.5 "><p id="zh-cn_topic_0179742194_p169678175293"><a name="zh-cn_topic_0179742194_p169678175293"></a><a name="zh-cn_topic_0179742194_p169678175293"></a>8×1800</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0179742194_row575615372253"><td class="cellrowborder" valign="top" headers="mcps1.2.8.1.1 "><p id="zh-cn_topic_0179742194_p692123252911"><a name="zh-cn_topic_0179742194_p692123252911"></a><a name="zh-cn_topic_0179742194_p692123252911"></a>32</p>
+<tr id="zh-cn_topic_0179742194_row575615372253"><td class="cellrowborder" valign="top" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0179742194_p692123252911"><a name="zh-cn_topic_0179742194_p692123252911"></a><a name="zh-cn_topic_0179742194_p692123252911"></a>32</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.2 "><p id="zh-cn_topic_0179742194_p13434174116295"><a name="zh-cn_topic_0179742194_p13434174116295"></a><a name="zh-cn_topic_0179742194_p13434174116295"></a>256</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0179742194_p13434174116295"><a name="zh-cn_topic_0179742194_p13434174116295"></a><a name="zh-cn_topic_0179742194_p13434174116295"></a>256</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.3 "><p id="zh-cn_topic_0179742194_p1667222172917"><a name="zh-cn_topic_0179742194_p1667222172917"></a><a name="zh-cn_topic_0179742194_p1667222172917"></a>d2.8xlarge.8.linux.bigdata</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0179742194_p1667222172917"><a name="zh-cn_topic_0179742194_p1667222172917"></a><a name="zh-cn_topic_0179742194_p1667222172917"></a>d2.8xlarge.8.linux.bigdata</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.4 "><p id="zh-cn_topic_0179742194_p10756133715250"><a name="zh-cn_topic_0179742194_p10756133715250"></a><a name="zh-cn_topic_0179742194_p10756133715250"></a>KVM</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0179742194_p10756133715250"><a name="zh-cn_topic_0179742194_p10756133715250"></a><a name="zh-cn_topic_0179742194_p10756133715250"></a>KVM</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="zh-cn_topic_0179742194_p1675663717258"><a name="zh-cn_topic_0179742194_p1675663717258"></a><a name="zh-cn_topic_0179742194_p1675663717258"></a>16×1800</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.5 "><p id="zh-cn_topic_0179742194_p1675663717258"><a name="zh-cn_topic_0179742194_p1675663717258"></a><a name="zh-cn_topic_0179742194_p1675663717258"></a>16×1800</p>
+</td>
+</tr>
+<tr id="row11239134132819"><td class="cellrowborder" rowspan="4" valign="top" width="18.17818218178182%" headers="mcps1.2.7.1.1 "><p id="p31021947131216"><a name="p31021947131216"></a><a name="p31021947131216"></a>D3型</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.2 "><p id="p1324004112811"><a name="p1324004112811"></a><a name="p1324004112811"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.3 "><p id="p72405452810"><a name="p72405452810"></a><a name="p72405452810"></a>64</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.267273272672732%" headers="mcps1.2.7.1.4 "><p id="p8240642281"><a name="p8240642281"></a><a name="p8240642281"></a>d3.2xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.5 "><p id="p1424012412289"><a name="p1424012412289"></a><a name="p1424012412289"></a>KVM</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.638636136386362%" headers="mcps1.2.7.1.6 "><p id="p324010472813"><a name="p324010472813"></a><a name="p324010472813"></a>4 × 1800</p>
+</td>
+</tr>
+<tr id="row125009612283"><td class="cellrowborder" valign="top" headers="mcps1.2.7.1.1 "><p id="p35002617286"><a name="p35002617286"></a><a name="p35002617286"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="p05003612816"><a name="p05003612816"></a><a name="p05003612816"></a>128</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.3 "><p id="p150019662813"><a name="p150019662813"></a><a name="p150019662813"></a>d3.4xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.4 "><p id="p85001668282"><a name="p85001668282"></a><a name="p85001668282"></a>KVM</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.5 "><p id="p1350166122810"><a name="p1350166122810"></a><a name="p1350166122810"></a>8 × 1800</p>
+</td>
+</tr>
+<tr id="row719315011242"><td class="cellrowborder" valign="top" headers="mcps1.2.7.1.1 "><p id="p519450192418"><a name="p519450192418"></a><a name="p519450192418"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="p151941505244"><a name="p151941505244"></a><a name="p151941505244"></a>256</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.3 "><p id="p18195500249"><a name="p18195500249"></a><a name="p18195500249"></a>d3.8xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.4 "><p id="p4195405249"><a name="p4195405249"></a><a name="p4195405249"></a>KVM</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.5 "><p id="p18195140142419"><a name="p18195140142419"></a><a name="p18195140142419"></a>16 × 1800</p>
+</td>
+</tr>
+<tr id="row0388189112812"><td class="cellrowborder" valign="top" headers="mcps1.2.7.1.1 "><p id="p03885920286"><a name="p03885920286"></a><a name="p03885920286"></a>56</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="p338969102819"><a name="p338969102819"></a><a name="p338969102819"></a>560</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.3 "><p id="p1038913922814"><a name="p1038913922814"></a><a name="p1038913922814"></a>d3.14xlarge.10.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.4 "><p id="p17389191280"><a name="p17389191280"></a><a name="p17389191280"></a>KVM</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.5 "><p id="p23899916282"><a name="p23899916282"></a><a name="p23899916282"></a>28 × 1800</p>
 </td>
 </tr>
 </tbody>
@@ -574,7 +513,7 @@ AB.C.D
 </tbody>
 </table>
 
-**表 7**  内存优化型（M3）弹性云服务器的规格
+**表 7**  内存优化型弹性云服务器的规格
 
 <a name="zh-cn_topic_0179742194_table11173155712141"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0179742194_row11191105718140"><th class="cellrowborder" valign="top" width="23.232323232323235%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0179742194_p17196457201410"><a name="zh-cn_topic_0179742194_p17196457201410"></a><a name="zh-cn_topic_0179742194_p17196457201410"></a>类型</p>
@@ -644,6 +583,67 @@ AB.C.D
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0179742194_p167221657151619"><a name="zh-cn_topic_0179742194_p167221657151619"></a><a name="zh-cn_topic_0179742194_p167221657151619"></a>m3.15xlarge.8.linux.bigdata</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p1172295715169"><a name="zh-cn_topic_0179742194_p1172295715169"></a><a name="zh-cn_topic_0179742194_p1172295715169"></a>KVM</p>
+</td>
+</tr>
+<tr id="row2427123141213"><td class="cellrowborder" rowspan="6" valign="top" width="23.232323232323235%" headers="mcps1.2.6.1.1 "><p id="p144284237124"><a name="p144284237124"></a><a name="p144284237124"></a>M6型</p>
+<p id="p7674520152010"><a name="p7674520152010"></a><a name="p7674520152010"></a></p>
+<p id="p181715231209"><a name="p181715231209"></a><a name="p181715231209"></a></p>
+<p id="p050412258201"><a name="p050412258201"></a><a name="p050412258201"></a></p>
+<p id="p145751827122013"><a name="p145751827122013"></a><a name="p145751827122013"></a></p>
+<p id="p18870182932019"><a name="p18870182932019"></a><a name="p18870182932019"></a></p>
+</td>
+<td class="cellrowborder" valign="top" width="23.232323232323235%" headers="mcps1.2.6.1.2 "><p id="p542852314123"><a name="p542852314123"></a><a name="p542852314123"></a>4</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.191919191919194%" headers="mcps1.2.6.1.3 "><p id="p11428202311213"><a name="p11428202311213"></a><a name="p11428202311213"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.222222222222225%" headers="mcps1.2.6.1.4 "><p id="p17428123131211"><a name="p17428123131211"></a><a name="p17428123131211"></a>m6.xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.121212121212121%" headers="mcps1.2.6.1.5 "><p id="p14428172331216"><a name="p14428172331216"></a><a name="p14428172331216"></a>KVM</p>
+</td>
+</tr>
+<tr id="row116741202208"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p0674172019205"><a name="p0674172019205"></a><a name="p0674172019205"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p136741120102017"><a name="p136741120102017"></a><a name="p136741120102017"></a>64</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p5674142032014"><a name="p5674142032014"></a><a name="p5674142032014"></a>m6.2xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p14674132015202"><a name="p14674132015202"></a><a name="p14674132015202"></a>KVM</p>
+</td>
+</tr>
+<tr id="row51714237201"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p617122312019"><a name="p617122312019"></a><a name="p617122312019"></a>12</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p717102315207"><a name="p717102315207"></a><a name="p717102315207"></a>96</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p6171112352016"><a name="p6171112352016"></a><a name="p6171112352016"></a>m6.3xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1817152312201"><a name="p1817152312201"></a><a name="p1817152312201"></a>KVM</p>
+</td>
+</tr>
+<tr id="row15503162562018"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p6504102514200"><a name="p6504102514200"></a><a name="p6504102514200"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p550412254203"><a name="p550412254203"></a><a name="p550412254203"></a>128</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p9504152511208"><a name="p9504152511208"></a><a name="p9504152511208"></a>m6.4xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p85040255202"><a name="p85040255202"></a><a name="p85040255202"></a>KVM</p>
+</td>
+</tr>
+<tr id="row1575727192019"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p19575162752018"><a name="p19575162752018"></a><a name="p19575162752018"></a>24</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p11575182712208"><a name="p11575182712208"></a><a name="p11575182712208"></a>192</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p20575127112012"><a name="p20575127112012"></a><a name="p20575127112012"></a>m6.6xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p185751927172011"><a name="p185751927172011"></a><a name="p185751927172011"></a>KVM</p>
+</td>
+</tr>
+<tr id="row58701729112015"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1870112942015"><a name="p1870112942015"></a><a name="p1870112942015"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p487016296200"><a name="p487016296200"></a><a name="p487016296200"></a>256</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p208701829102014"><a name="p208701829102014"></a><a name="p208701829102014"></a>m6.8xlarge.8.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p78701729182018"><a name="p78701729182018"></a><a name="p78701729182018"></a>KVM</p>
 </td>
 </tr>
 </tbody>
@@ -808,7 +808,72 @@ AB.C.D
 </tbody>
 </table>
 
-**表 10**  超高I/O型（I3型）弹性云服务器的规格
+**表 10**  鲲鹏超高I/O型（KI1型）弹性云服务器的规格
+
+<a name="table261121919297"></a>
+<table><thead align="left"><tr id="row186219196292"><th class="cellrowborder" valign="top" width="25.03%" id="mcps1.2.6.1.1"><p id="p8621719152911"><a name="p8621719152911"></a><a name="p8621719152911"></a>类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.97%" id="mcps1.2.6.1.2"><p id="p262111911290"><a name="p262111911290"></a><a name="p262111911290"></a>vCPU</p>
+</th>
+<th class="cellrowborder" valign="top" width="15%" id="mcps1.2.6.1.3"><p id="p1663419162917"><a name="p1663419162917"></a><a name="p1663419162917"></a>内存(GB)</p>
+</th>
+<th class="cellrowborder" valign="top" width="25%" id="mcps1.2.6.1.4"><p id="p76341910292"><a name="p76341910292"></a><a name="p76341910292"></a>规格名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.5"><p id="p163141911292"><a name="p163141911292"></a><a name="p163141911292"></a>虚拟化类型</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1563181916297"><td class="cellrowborder" rowspan="5" valign="top" width="25.03%" headers="mcps1.2.6.1.1 "><p id="p863719122920"><a name="p863719122920"></a><a name="p863719122920"></a>KI1型</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.97%" headers="mcps1.2.6.1.2 "><p id="p186361910291"><a name="p186361910291"></a><a name="p186361910291"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.3 "><p id="p1363619182917"><a name="p1363619182917"></a><a name="p1363619182917"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.6.1.4 "><p id="p1463151918293"><a name="p1463151918293"></a><a name="p1463151918293"></a>ki1.2xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p96361962912"><a name="p96361962912"></a><a name="p96361962912"></a>KVM</p>
+</td>
+</tr>
+<tr id="row46319199295"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p13645195299"><a name="p13645195299"></a><a name="p13645195299"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1064141992911"><a name="p1064141992911"></a><a name="p1064141992911"></a>64</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p136416192296"><a name="p136416192296"></a><a name="p136416192296"></a>ki1.4xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p116416194299"><a name="p116416194299"></a><a name="p116416194299"></a>KVM</p>
+</td>
+</tr>
+<tr id="row1642194292"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p126441962912"><a name="p126441962912"></a><a name="p126441962912"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p764191922910"><a name="p764191922910"></a><a name="p764191922910"></a>128</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p36461917296"><a name="p36461917296"></a><a name="p36461917296"></a>ki1.8xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p66441992914"><a name="p66441992914"></a><a name="p66441992914"></a>KVM</p>
+</td>
+</tr>
+<tr id="row1664101952920"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p764131911296"><a name="p764131911296"></a><a name="p764131911296"></a>48</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p7646197298"><a name="p7646197298"></a><a name="p7646197298"></a>192</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p156531911299"><a name="p156531911299"></a><a name="p156531911299"></a>ki1.12xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p26510194290"><a name="p26510194290"></a><a name="p26510194290"></a>KVM</p>
+</td>
+</tr>
+<tr id="row86511199291"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p96521972911"><a name="p96521972911"></a><a name="p96521972911"></a>64</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p106517198299"><a name="p106517198299"></a><a name="p106517198299"></a>228</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p865219192914"><a name="p865219192914"></a><a name="p865219192914"></a>ki1.16xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1651819142916"><a name="p1651819142916"></a><a name="p1651819142916"></a>KVM</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 11**  超高I/O型弹性云服务器的规格
 
 <a name="zh-cn_topic_0179742194_table14808135715918"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0179742194_row208101557135914"><th class="cellrowborder" valign="top" width="25.03%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0179742194_p10810125735911"><a name="zh-cn_topic_0179742194_p10810125735911"></a><a name="zh-cn_topic_0179742194_p10810125735911"></a>类型</p>
@@ -861,10 +926,51 @@ AB.C.D
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0179742194_p16811185725918"><a name="zh-cn_topic_0179742194_p16811185725918"></a><a name="zh-cn_topic_0179742194_p16811185725918"></a>KVM</p>
 </td>
 </tr>
+<tr id="row29241856102513"><td class="cellrowborder" rowspan="4" valign="top" width="25.03%" headers="mcps1.2.6.1.1 "><p id="p292418569254"><a name="p292418569254"></a><a name="p292418569254"></a>IR3型</p>
+<p id="p2801165816263"><a name="p2801165816263"></a><a name="p2801165816263"></a></p>
+<p id="p7388215275"><a name="p7388215275"></a><a name="p7388215275"></a></p>
+<p id="p6380173152718"><a name="p6380173152718"></a><a name="p6380173152718"></a></p>
+</td>
+<td class="cellrowborder" valign="top" width="14.97%" headers="mcps1.2.6.1.2 "><p id="p1292415564258"><a name="p1292415564258"></a><a name="p1292415564258"></a>4</p>
+</td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.3 "><p id="p15925125610250"><a name="p15925125610250"></a><a name="p15925125610250"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.6.1.4 "><p id="p1892545611257"><a name="p1892545611257"></a><a name="p1892545611257"></a>ir3.xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p15925155622512"><a name="p15925155622512"></a><a name="p15925155622512"></a>KVM</p>
+</td>
+</tr>
+<tr id="row1680185819267"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p680195842615"><a name="p680195842615"></a><a name="p680195842615"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p580155882613"><a name="p580155882613"></a><a name="p580155882613"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1880117583264"><a name="p1880117583264"></a><a name="p1880117583264"></a>ir3.2xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p7801155822612"><a name="p7801155822612"></a><a name="p7801155822612"></a>KVM</p>
+</td>
+</tr>
+<tr id="row133881118272"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1938818117273"><a name="p1938818117273"></a><a name="p1938818117273"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p2038816102718"><a name="p2038816102718"></a><a name="p2038816102718"></a>64</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p153886172718"><a name="p153886172718"></a><a name="p153886172718"></a>ir3.4xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p15388201182717"><a name="p15388201182717"></a><a name="p15388201182717"></a>KVM</p>
+</td>
+</tr>
+<tr id="row17379038275"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p133801030276"><a name="p133801030276"></a><a name="p133801030276"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p19380337275"><a name="p19380337275"></a><a name="p19380337275"></a>128</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p838013342717"><a name="p838013342717"></a><a name="p838013342717"></a>ir3.8xlarge.4.linux.bigdata</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p63806362717"><a name="p63806362717"></a><a name="p63806362717"></a>KVM</p>
+</td>
+</tr>
 </tbody>
 </table>
 
-**表 11**  GPU计算加速型（P1型）弹性云服务器的规格
+**表 12**  GPU计算加速型（P1型）弹性云服务器的规格
 
 <a name="zh-cn_topic_0179742194_table1420535714162"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0179742194_row120614576162"><th class="cellrowborder" valign="top" width="25.03%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0179742194_p1320615761617"><a name="zh-cn_topic_0179742194_p1320615761617"></a><a name="zh-cn_topic_0179742194_p1320615761617"></a>类型</p>

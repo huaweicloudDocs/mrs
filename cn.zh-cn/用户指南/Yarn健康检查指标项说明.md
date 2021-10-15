@@ -1,4 +1,4 @@
-# Yarn健康检查指标项说明<a name="ZH-CN_TOPIC_0173397639"></a>
+# Yarn健康检查指标项说明<a name="mrs_01_0287"></a>
 
 ## 服务健康状态<a name="section4782228113339"></a>
 

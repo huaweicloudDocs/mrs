@@ -1,4 +1,4 @@
-# MRS Manager简介<a name="ZH-CN_TOPIC_0174499302"></a>
+# MRS Manager简介<a name="mrs_01_0101"></a>
 
 ## 概述<a name="zh-cn_topic_0035209593_section1737211712858"></a>
 
@@ -11,9 +11,12 @@ MRS为用户提供海量数据的管理及分析功能，快速从结构化和�
 
 ## 系统界面简介<a name="zh-cn_topic_0035209593_section44171021121413"></a>
 
-MRS Manager提供统一的集群管理平台，帮助用户快捷、直观的完成集群的运行维护。
+MRS Manager提供统一的集群管理平台，帮助用户快捷、直观的完成集群的运行维护。MRS Manager请参考[访问Manager](访问Manager-2.md)页面访问。
 
 各操作入口的详细功能如[表1](#zh-cn_topic_0035209593_table13549662121428)所示。
+
+**图 1**  MRS Manager界面<a name="fig975875616564"></a>  
+![](figures/MRS-Manager界面.png "MRS-Manager界面")
 
 **表 1**  界面操作入口功能描述
 
@@ -62,10 +65,7 @@ MRS Manager提供统一的集群管理平台，帮助用户快捷、直观的完
 </tbody>
 </table>
 
-当用户进入到“系统设置”的各子功能页面后，提供快捷方式跳转到其他System子功能页面。
-
--   普通集群的“系统设置“快捷菜单提供的跳转链接项如[表2](#zh-cn_topic_0035209593_table6784789113859)所示。
--   安全集群的“系统设置“快捷菜单提供的跳转链接项如[表3](#zh-cn_topic_0035209593_table5212148312126)所示。
+当用户进入到“系统设置”的各子功能页面后，提供快捷方式跳转到其他System子功能页面，如[表2](#zh-cn_topic_0035209593_table5212148312126)所示。
 
 快捷跳转操作示例如下所示。
 
@@ -80,79 +80,7 @@ MRS Manager提供统一的集群管理平台，帮助用户快捷、直观的完
     例如选择“维护 \> 日志导出“，进入“日志导出”界面。
 
 
-**表 2**  普通集群的系统设置快捷菜单
-
-<a name="zh-cn_topic_0035209593_table6784789113859"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0035209593_row9016418113859"><th class="cellrowborder" valign="top" width="49.94%" id="mcps1.2.3.1.1"><p id="zh-cn_topic_0035209593_p31770041114142"><a name="zh-cn_topic_0035209593_p31770041114142"></a><a name="zh-cn_topic_0035209593_p31770041114142"></a>菜单子标题</p>
-</th>
-<th class="cellrowborder" valign="top" width="50.06%" id="mcps1.2.3.1.2"><p id="zh-cn_topic_0035209593_p35878009113859"><a name="zh-cn_topic_0035209593_p35878009113859"></a><a name="zh-cn_topic_0035209593_p35878009113859"></a>功能链接</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="zh-cn_topic_0035209593_row40090469114312"><td class="cellrowborder" rowspan="2" valign="top" width="49.94%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p874840113859"><a name="zh-cn_topic_0035209593_p874840113859"></a><a name="zh-cn_topic_0035209593_p874840113859"></a>备份恢复管理</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.06%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0035209593_p33932283114312"><a name="zh-cn_topic_0035209593_p33932283114312"></a><a name="zh-cn_topic_0035209593_p33932283114312"></a>备份管理</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row49721070113859"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p3753198113859"><a name="zh-cn_topic_0035209593_p3753198113859"></a><a name="zh-cn_topic_0035209593_p3753198113859"></a>恢复管理</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row51727466113859"><td class="cellrowborder" rowspan="3" valign="top" width="49.94%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p29175247113859"><a name="zh-cn_topic_0035209593_p29175247113859"></a><a name="zh-cn_topic_0035209593_p29175247113859"></a>维护</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.06%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0035209593_p14384829113859"><a name="zh-cn_topic_0035209593_p14384829113859"></a><a name="zh-cn_topic_0035209593_p14384829113859"></a>日志导出</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row6039639811437"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p5003423411437"><a name="zh-cn_topic_0035209593_p5003423411437"></a><a name="zh-cn_topic_0035209593_p5003423411437"></a>审计日志导出</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row39138137114343"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p26804948114343"><a name="zh-cn_topic_0035209593_p26804948114343"></a><a name="zh-cn_topic_0035209593_p26804948114343"></a>健康检查</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row17557683113859"><td class="cellrowborder" rowspan="5" valign="top" width="49.94%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p12886237113859"><a name="zh-cn_topic_0035209593_p12886237113859"></a><a name="zh-cn_topic_0035209593_p12886237113859"></a>监控和告警配置</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.06%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0035209593_p14412701695"><a name="zh-cn_topic_0035209593_p14412701695"></a><a name="zh-cn_topic_0035209593_p14412701695"></a>Syslog配置</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row25194038114350"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p440528941695"><a name="zh-cn_topic_0035209593_p440528941695"></a><a name="zh-cn_topic_0035209593_p440528941695"></a>阈值管理</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row34875773114358"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p45831442114358"><a name="zh-cn_topic_0035209593_p45831442114358"></a><a name="zh-cn_topic_0035209593_p45831442114358"></a>SNMP配置</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row2324405311443"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p3289345511443"><a name="zh-cn_topic_0035209593_p3289345511443"></a><a name="zh-cn_topic_0035209593_p3289345511443"></a>监控指标转储配置</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row56483703114417"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p14433103114417"><a name="zh-cn_topic_0035209593_p14433103114417"></a><a name="zh-cn_topic_0035209593_p14433103114417"></a>资源贡献排名配置</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row39130839113859"><td class="cellrowborder" valign="top" width="49.94%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p15481408113859"><a name="zh-cn_topic_0035209593_p15481408113859"></a><a name="zh-cn_topic_0035209593_p15481408113859"></a>资源管理</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.06%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0035209593_p46034505113859"><a name="zh-cn_topic_0035209593_p46034505113859"></a><a name="zh-cn_topic_0035209593_p46034505113859"></a>静态服务池</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row101186259472"><td class="cellrowborder" rowspan="4" valign="top" width="49.94%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p46950462113859"><a name="zh-cn_topic_0035209593_p46950462113859"></a><a name="zh-cn_topic_0035209593_p46950462113859"></a>权限配置</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.06%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0035209593_p86652164818"><a name="zh-cn_topic_0035209593_p86652164818"></a><a name="zh-cn_topic_0035209593_p86652164818"></a>用户管理</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row462711223471"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p1466731114818"><a name="zh-cn_topic_0035209593_p1466731114818"></a><a name="zh-cn_topic_0035209593_p1466731114818"></a>用户组管理</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row1268710198479"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p8822579483"><a name="zh-cn_topic_0035209593_p8822579483"></a><a name="zh-cn_topic_0035209593_p8822579483"></a>密码策略配置</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row4722157113859"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p44891116113859"><a name="zh-cn_topic_0035209593_p44891116113859"></a><a name="zh-cn_topic_0035209593_p44891116113859"></a>OMS数据库密码修改</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0035209593_row43607253113859"><td class="cellrowborder" valign="top" width="49.94%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035209593_p42526568113859"><a name="zh-cn_topic_0035209593_p42526568113859"></a><a name="zh-cn_topic_0035209593_p42526568113859"></a>补丁管理</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.06%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0035209593_p22100021113859"><a name="zh-cn_topic_0035209593_p22100021113859"></a><a name="zh-cn_topic_0035209593_p22100021113859"></a>补丁管理</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-**表 3**  安全集群的System快捷菜单
+**表 2**  集群的System快捷菜单
 
 <a name="zh-cn_topic_0035209593_table5212148312126"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0035209593_row4143668412126"><th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.1"><p id="zh-cn_topic_0035209593_p835423612126"><a name="zh-cn_topic_0035209593_p835423612126"></a><a name="zh-cn_topic_0035209593_p835423612126"></a>菜单子标题</p>
@@ -226,9 +154,9 @@ MRS Manager提供统一的集群管理平台，帮助用户快捷、直观的完
 
 MapReduce服务是公有云的一项数据分析服务，用于海量数据的管理和分析，简称MRS。
 
-MRS通过MRS Manager管理大数据组件，例如Hadoop生态体系中的组件。因此，公有云MRS和MRS Manager管理界面上的部分概念需要区别，具体解释如[表4](#zh-cn_topic_0035209593_table39303837105524)：
+MRS通过MRS Manager管理大数据组件，例如Hadoop生态体系中的组件。因此，公有云MRS和MRS Manager管理界面上的部分概念需要区别，具体解释如[表3](#zh-cn_topic_0035209593_table39303837105524)：
 
-**表 4**  差异对比参考
+**表 3**  差异对比参考
 
 <a name="zh-cn_topic_0035209593_table39303837105524"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0035209593_row36661318105524"><th class="cellrowborder" valign="top" width="25.542554255425543%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0035209593_p16776821105524"><a name="zh-cn_topic_0035209593_p16776821105524"></a><a name="zh-cn_topic_0035209593_p16776821105524"></a>名词概念</p>
