@@ -1,4 +1,4 @@
-# ALM-12011 Manager主备节点同步数据异常<a name="ZH-CN_TOPIC_0191883071"></a>
+# ALM-12011 Manager主备节点同步数据异常<a name="alm_12011"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813887_section15466919171137"></a>
 
@@ -76,10 +76,6 @@
 
 1.  检查主备Manager服务器间的网络是否正常。
     1.  打开MRS集群详情页面，在告警管理页签的告警列表中，单击此告警所在行，在告警详情中，查看该告警的备Manager IP地址。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
-
     2.  登录主管理节点。 执行以下命令检查备Manager服务器是否可达。
 
         **ping** _备Manager IP地址_

@@ -1,4 +1,4 @@
-# ALM-12010 Manager主备节点间心跳中断<a name="ZH-CN_TOPIC_0191883070"></a>
+# ALM-12010 Manager主备节点间心跳中断<a name="alm_12010"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813932_section3336541317510"></a>
 
@@ -76,10 +76,6 @@
 
 1.  检查主备Manager服务器间的网络是否正常。
     1.  打开MRS集群详情页面，在告警管理页签的告警列表中，单击此告警所在行，在告警详情中，查看该告警的备Manager服务器地址。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
-
     2.  登录主管理节点。
     3.  执行以命令，检查备Manager服务器是否可达。
 

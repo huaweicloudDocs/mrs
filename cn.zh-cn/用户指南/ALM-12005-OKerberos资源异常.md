@@ -1,4 +1,4 @@
-# ALM-12005 OKerberos资源异常<a name="ZH-CN_TOPIC_0191883067"></a>
+# ALM-12005 OKerberos资源异常<a name="alm_12005"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813966_section3611620154337"></a>
 
@@ -75,7 +75,7 @@ Okerberos依赖的OLdap资源异常。
         -   是，执行[3](#zh-cn_topic_0191813966_li572522141314)。
         -   否，执行[2](#zh-cn_topic_0191813966_li29509559161240)。
 
-2.  <a name="zh-cn_topic_0191813966_li29509559161240"></a>参考[ALM-12004 OLdap资源异常](ALM-12004-OLdap资源异常.md#ZH-CN_TOPIC_0191883066)处理OLdap资源，状态恢复后，观察当前OKerberos资源状态是否恢复正常。
+2.  <a name="zh-cn_topic_0191813966_li29509559161240"></a>参考[ALM-12004 OLdap资源异常](ALM-12004-OLdap资源异常.md)处理OLdap资源，状态恢复后，观察当前OKerberos资源状态是否恢复正常。
     -   是，操作结束。
     -   否，执行[3](#zh-cn_topic_0191813966_li572522141314)。
 

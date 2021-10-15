@@ -1,4 +1,4 @@
-# ALM-12039 GaussDB主备数据不同步<a name="ZH-CN_TOPIC_0191883085"></a>
+# ALM-12039 GaussDB主备数据不同步<a name="alm_12039"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813916_section96088172812"></a>
 
@@ -82,10 +82,6 @@ GaussDB主备数据不同步，系统每10秒检查一次主备数据同步状�
 ## 处理步骤<a name="zh-cn_topic_0191813916_section33200607172858"></a>
 
 1.  登录MRS集群详情页面，单击“告警管理”，在告警列表中单击此告警所在行，在告警详情中查看该告警的GaussDB备节点IP地址。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面查看告警信息。  
-
 2.  登录主管理节点。
 3.  执行以下命令检查备GaussDB节点是否可达。
 

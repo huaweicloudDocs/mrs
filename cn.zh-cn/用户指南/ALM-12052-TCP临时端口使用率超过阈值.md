@@ -1,4 +1,4 @@
-# ALM-12052 TCP临时端口使用率超过阈值<a name="ZH-CN_TOPIC_0191883145"></a>
+# ALM-12052 TCP临时端口使用率超过阈值<a name="alm_12052"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813905_zh-cn_topic_0087039394_section41396267"></a>
 
@@ -75,10 +75,6 @@
 **扩大临时端口范围。**
 
 1.  登录MRS集群详情页面，选择“告警管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
 2.  在实时告警列表中，单击此告警。在“告警详情”区域，获取告警所在主机IP地址。
 3.  使用PuTTY工具，以**omm**用户登录告警所在主机。
 4.  执行**cat /proc/sys/net/ipv4/ip\_local\_port\_range |cut -f 1**命令，获得开始端口值，执行****cat /proc/sys/net/ipv4/ip\_local\_port\_range**  |cut -f 2**命令，获得结束端口值，相减得到临时端口总数，若临时端口总数小于28232，说明操作系统随机端口范围太小，需要联系系统管理员扩大端口范围。
@@ -113,10 +109,10 @@
 
     **ps -ef |grep** _PID_
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   PID为[8](#zh-cn_topic_0191813905_zh-cn_topic_0087039394_li62811777151245)查询出所属端口的进程号。  
-    >-   可以执行如下命令，收集系统所有进程信息，查看占用大量端口的进程。  
-    >    **ps -ef \> $BIGDATA\_HOME/tmp/ps\_result.txt**  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >-   PID为[8](#zh-cn_topic_0191813905_zh-cn_topic_0087039394_li62811777151245)查询出所属端口的进程号。
+    >-   可以执行如下命令，收集系统所有进程信息，查看占用大量端口的进程。
+    >    **ps -ef \> $BIGDATA\_HOME/tmp/ps\_result.txt**
 
 3.  请系统管理员确认后，清除大量占用端口的进程，等待5分钟，检查该告警是否恢复。
     -   是，处理完毕。

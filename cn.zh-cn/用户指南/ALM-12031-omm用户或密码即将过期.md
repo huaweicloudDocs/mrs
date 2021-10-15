@@ -1,4 +1,4 @@
-# ALM-12031 omm用户或密码即将过期<a name="ZH-CN_TOPIC_0191883078"></a>
+# ALM-12031 omm用户或密码即将过期<a name="alm_12031"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813902_section22913051112229"></a>
 
@@ -75,8 +75,8 @@
         1.  查找“Password expires”对应值，查看密码设置是否即将过期。
         2.  查找“Account expires”对应值，查看用户设置是否即将过期。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >如果参数值为“never”，则代表永不过期；如果为日期值，则查看是否在15天内过期。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >如果参数值为“never”，则代表永不过期；如果为日期值，则查看是否在15天内过期。
 
         -   是，执行[1.d](#zh-cn_topic_0191813902_li2310249112814)。
         -   否，执行[2](#zh-cn_topic_0191813902_li572522141314)。

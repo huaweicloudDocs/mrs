@@ -1,4 +1,4 @@
-# ALM-12043 DNS解析时长超过阈值<a name="ZH-CN_TOPIC_0191883137"></a>
+# ALM-12043 DNS解析时长超过阈值<a name="alm_12043"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813958_zh-cn_topic_0087039385_section19482731"></a>
 
@@ -72,10 +72,6 @@
 **检查是否配置了DNS客户端。**
 
 1.  登录MRS集群详情页面，选择“告警管理”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
 2.  查看该告警的详细信息，查看定位信息中对应的“HostName”字段值，获取该告警产生的主机名。
 3.  使用PuTTY工具，以**root**用户登录告警所在节点。
 4.  执行**cat /etc/resolv.conf**命令，查看是否安装DNS客户端。
