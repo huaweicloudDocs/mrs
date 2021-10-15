@@ -1,4 +1,4 @@
-# ALM-14004 损坏的HDFS块数量超过阈值<a name="ZH-CN_TOPIC_0191883094"></a>
+# ALM-14004 损坏的HDFS块数量超过阈值<a name="alm_14004"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813949_section31497787"></a>
 

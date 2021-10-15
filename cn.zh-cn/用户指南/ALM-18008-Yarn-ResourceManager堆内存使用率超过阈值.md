@@ -1,4 +1,4 @@
-# ALM-18008 Yarn ResourceManager堆内存使用率超过阈值<a name="ZH-CN_TOPIC_0191883149"></a>
+# ALM-18008 Yarn ResourceManager堆内存使用率超过阈值<a name="alm_18008"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813919_zh-cn_topic_0087039423_section1335609"></a>
 
@@ -71,17 +71,13 @@ Yarn ResourceManager堆内存使用率过高，会影响Yarn任务提交和运�
 
 1.  检查堆内存使用率。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  选中“告警ID”为“18008”的告警，查看“定位信息”中的实例的IP地址及角色名。
     3.  单击“组件管理 \> Yarn \> 实例 \> ResourceManager（对应上报告警实例IP地址） \> 定制 \> ResourceManager堆内存使用百分比统计“。查看堆内存使用情况。
     4.  查看ResourceManager使用的堆内存是否已达到ResourceManager进程设定的最大堆内存的80%。
         -   是，执行[1.e](#zh-cn_topic_0191813919_li1011493181634)。
         -   否，执行[2](#zh-cn_topic_0191813919_li572522141314)。
 
-    5.  <a name="zh-cn_topic_0191813919_li1011493181634"></a>单击“组件管理 \> Yarn \> 服务配置 \> 全部配置 \> ResourceManager \> 系统“。将GC\_OPTS参数中-Xmx的值根据实际情况调大，并单击“保存配置”，勾选“重新启动角色实例。”，单击“确定”进行重启。
+    5.  <a name="zh-cn_topic_0191813919_li1011493181634"></a>单击“组件管理 \> Yarn \> 服务配置 \> 全部配置 \> ResourceManager \> 系统“。将GC\_OPTS参数中-Xmx和-Xms的值根据实际情况调整，保证最小堆内存-Xms的值小于最大堆内存-Xmx的值，并单击“保存配置”，勾选“重新启动角色实例。”，单击“确定”进行重启。
     6.  观察界面告警是否清除。
         -   是，处理完毕。
         -   否，执行[2](#zh-cn_topic_0191813919_li572522141314)。

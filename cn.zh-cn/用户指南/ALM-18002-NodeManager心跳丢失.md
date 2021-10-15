@@ -1,4 +1,4 @@
-# ALM-18002 NodeManager心跳丢失<a name="ZH-CN_TOPIC_0191883107"></a>
+# ALM-18002 NodeManager心跳丢失<a name="alm_18002"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813948_section65004788"></a>
 

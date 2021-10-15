@@ -1,4 +1,4 @@
-# ALM-14008 HDFS DataNode内存使用率超过阈值<a name="ZH-CN_TOPIC_0191883097"></a>
+# ALM-14008 HDFS DataNode内存使用率超过阈值<a name="alm_14008"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813907_section27139175"></a>
 

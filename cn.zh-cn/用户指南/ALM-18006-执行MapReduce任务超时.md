@@ -1,4 +1,4 @@
-# ALM-18006 执行MapReduce任务超时<a name="ZH-CN_TOPIC_0191883109"></a>
+# ALM-18006 执行MapReduce任务超时<a name="alm_18006"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813946_section6587942"></a>
 
@@ -78,15 +78,11 @@
 
 2.  检查Yarn服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  <a name="zh-cn_topic_0191813946_substep_03d21a89"></a>在告警列表中，查看是否有“ALM-18000 Yarn服务不可用”产生。
         -   是，执行[2.c](#zh-cn_topic_0191813946_substep_03d82569)。
         -   否，执行[3](#zh-cn_topic_0191813946_li12092809151957)。
 
-    3.  <a name="zh-cn_topic_0191813946_substep_03d82569"></a>参考[ALM-18000 Yarn服务不可用](ALM-18000-Yarn服务不可用.md#ZH-CN_TOPIC_0191883106)的处理步骤处理该故障。
+    3.  <a name="zh-cn_topic_0191813946_substep_03d82569"></a>参考[ALM-18000 Yarn服务不可用](ALM-18000-Yarn服务不可用.md)的处理步骤处理该故障。
     4.  再次执行MapReduce任务命令，查看MapReduce任务是否能成功执行。
         -   是，执行[2.e](#zh-cn_topic_0191813946_clean)。
         -   否，执行[4](#zh-cn_topic_0191813946_li572522141314)。

@@ -1,4 +1,4 @@
-# ALM-14012 HDFS Journalnode数据不同步<a name="ZH-CN_TOPIC_0191883101"></a>
+# ALM-14012 HDFS Journalnode数据不同步<a name="alm_14012"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813911_section18191719"></a>
 
@@ -68,10 +68,6 @@
 
 1.  查看JournalNode实例是否启动。
     1.  登录MRS集群详情页面，单击“告警管理”，在告警列表中单击此告警。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面操作。  
-
     2.  在“告警详情”区域，查看“定位信息”，获取告警产生的JournalNode节点IP地址。
     3.  单击“组件管理 \> HDFS \> 实例”，在实例列表中单击告警节点上的JournalNode实例，查看其“操作状态”是否为“已启动”。
         -   是，执行[2.a](#zh-cn_topic_0191813911_alm14012_mmccppss_s6)。

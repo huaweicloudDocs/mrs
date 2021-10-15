@@ -1,4 +1,4 @@
-# ALM-18012 上个周期被终止的Yarn任务数超过阈值<a name="ZH-CN_TOPIC_0226470316"></a>
+# ALM-18012 上个周期被终止的Yarn任务数超过阈值<a name="alm_18012"></a>
 
 ## 告警解释<a name="zh-cn_topic_0225487450_zh-cn_topic_0087039425_section43920869"></a>
 

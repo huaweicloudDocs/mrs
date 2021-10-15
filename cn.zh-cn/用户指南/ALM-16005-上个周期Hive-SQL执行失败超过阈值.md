@@ -1,4 +1,4 @@
-# ALM-16005 上个周期Hive SQL执行失败超过阈值<a name="ZH-CN_TOPIC_0226470318"></a>
+# ALM-16005 上个周期Hive SQL执行失败超过阈值<a name="alm_16005"></a>
 
 ## 告警解释<a name="zh-cn_topic_0225531116_zh-cn_topic_0087039425_section43920869"></a>
 

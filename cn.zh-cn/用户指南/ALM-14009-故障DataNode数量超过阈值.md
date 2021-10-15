@@ -1,4 +1,4 @@
-# ALM-14009 故障DataNode数量超过阈值<a name="ZH-CN_TOPIC_0191883098"></a>
+# ALM-14009 故障DataNode数量超过阈值<a name="alm_14009"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813881_section4477025"></a>
 
@@ -77,10 +77,6 @@
         -   否，执行[2.a](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step6)。
 
     2.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step4"></a>在MRS集群详情页面，单击“组件管理 \> HDFS \> 实例”，检查对应DataNode是否处于停止状态。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS \> 实例”。  
-
         -   是，执行[1.c](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step5)。
         -   否，执行[2.a](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step6)。
 
@@ -99,14 +95,10 @@
 
 3.  查看DataNode是否负荷过高。
     1.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step8"></a>在MRS集群详情页面单击“告警管理”，查看否存在“ALM-14008 HDFS DataNode内存使用率超过阈值”的告警。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
-
         -   是，执行[3.b](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step13)。
         -   否，执行[4.a](#zh-cn_topic_0191813881_step9)。
 
-    2.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step13"></a>参考[ALM-14008 HDFS DataNode内存使用率超过阈值](ALM-14008-HDFS-DataNode内存使用率超过阈值.md#ZH-CN_TOPIC_0191883097)的处理步骤，对该异常告警进行处理，查看是否消除该告警。
+    2.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step13"></a>参考[ALM-14008 HDFS DataNode内存使用率超过阈值](ALM-14008-HDFS-DataNode内存使用率超过阈值.md)的处理步骤，对该异常告警进行处理，查看是否消除该告警。
         -   是，执行[3.c](#zh-cn_topic_0191813881_ss10)。
         -   否，执行[4.a](#zh-cn_topic_0191813881_step9)。
 
@@ -116,14 +108,10 @@
 
 4.  查看NameNode是否负荷过高。
     1.  <a name="zh-cn_topic_0191813881_step9"></a>在MRS集群详情页面单击“告警管理”，查看是否存在“ALM-14007 HDFS NameNode内存使用率超过阈值”的告警。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
-
         -   是，执行[4.b](#zh-cn_topic_0191813881_alm14007_3_mmccppss_step14)。
         -   否，执行[5](#zh-cn_topic_0191813881_li572522141314)。
 
-    2.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step14"></a>参考[ALM-14007 HDFS NameNode内存使用率超过阈值](ALM-14007-HDFS-NameNode内存使用率超过阈值.md#ZH-CN_TOPIC_0191883096)的处理步骤，对该异常告警进行处理，查看是否消除告警。
+    2.  <a name="zh-cn_topic_0191813881_alm14007_3_mmccppss_step14"></a>参考[ALM-14007 HDFS NameNode内存使用率超过阈值](ALM-14007-HDFS-NameNode内存使用率超过阈值.md)的处理步骤，对该异常告警进行处理，查看是否消除告警。
         -   是，执行[4.c](#zh-cn_topic_0191813881_ss13)。
         -   否，执行[5](#zh-cn_topic_0191813881_li572522141314)。
 

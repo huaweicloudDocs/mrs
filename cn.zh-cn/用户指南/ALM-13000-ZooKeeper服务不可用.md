@@ -1,4 +1,4 @@
-# ALM-13000 ZooKeeper服务不可用<a name="ZH-CN_TOPIC_0191883087"></a>
+# ALM-13000 ZooKeeper服务不可用<a name="alm_13000"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813962_section30661937"></a>
 
@@ -70,10 +70,6 @@ ZooKeeper无法为上层组件提供协调服务，依赖ZooKeeper的组件可�
 **检查ZooKeeper服务实例状态。**
 
 1.  在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> quorumpeer”。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> ZooKeeper \> quorumpeer”。  
-
 2.  查看ZooKeeper各实例是否正常。
     -   是，执行[6](#zh-cn_topic_0191813962_li40423354145525)。
     -   否，执行[3](#zh-cn_topic_0191813962_li43049911145525)。
@@ -91,20 +87,12 @@ ZooKeeper无法为上层组件提供协调服务，依赖ZooKeeper的组件可�
     **检查磁盘状态。**
 
 6.  <a name="zh-cn_topic_0191813962_li40423354145525"></a>在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> quorumpeer”查看ZooKeeper实例所在的各节点主机信息。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> ZooKeeper \> quorumpeer”查看ZooKeeper实例所在的各节点主机信息。  
-
 7.  在MRS集群详情页面，单击“节点管理”并展开节点组信息。
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“主机管理 。  
-
 8.  在“磁盘使用率”列，检查ZooKeeper实例所在的各节点磁盘空间是否不足（使用率超过百分之80）。
     -   是，执行[9](#zh-cn_topic_0191813962_li66786352145525)。
     -   否，执行[11](#zh-cn_topic_0191813962_li835031145525)。
 
-9.  <a name="zh-cn_topic_0191813962_li66786352145525"></a>参考[ALM-12017 磁盘容量不足](ALM-12017-磁盘容量不足.md#ZH-CN_TOPIC_0191883074)进行处理，对磁盘进行扩容。
+9.  <a name="zh-cn_topic_0191813962_li66786352145525"></a>参考[ALM-12017 磁盘容量不足](ALM-12017-磁盘容量不足.md)进行处理，对磁盘进行扩容。
 10. 在“告警管理”页签，查看该告警是否恢复。
 
     -   是，处理完毕。

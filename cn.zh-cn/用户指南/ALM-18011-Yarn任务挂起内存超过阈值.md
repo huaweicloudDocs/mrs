@@ -1,4 +1,4 @@
-# ALM-18011 Yarn任务挂起内存超过阈值<a name="ZH-CN_TOPIC_0227337988"></a>
+# ALM-18011 Yarn任务挂起内存超过阈值<a name="alm_18011"></a>
 
 ## 告警解释<a name="zh-cn_topic_0227101910_zh-cn_topic_0087039425_section43920869"></a>
 
@@ -53,9 +53,9 @@
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0227101910_zh-cn_topic_0087039425_p49293152"><a name="zh-cn_topic_0227101910_zh-cn_topic_0087039425_p49293152"></a><a name="zh-cn_topic_0227101910_zh-cn_topic_0087039425_p49293152"></a>产生告警的主机名。</p>
 </td>
 </tr>
-<tr id="zh-cn_topic_0227101910_row1987111012143"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0227101910_p189541711101411"><a name="zh-cn_topic_0227101910_p189541711101411"></a><a name="zh-cn_topic_0227101910_p189541711101411"></a><span>Trigger Condition</span></p>
+<tr id="zh-cn_topic_0227101910_row1987111012143"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0227101910_p189541711101411"><a name="zh-cn_topic_0227101910_p189541711101411"></a><a name="zh-cn_topic_0227101910_p189541711101411"></a>Trigger Condition</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0227101910_p995431113148"><a name="zh-cn_topic_0227101910_p995431113148"></a><a name="zh-cn_topic_0227101910_p995431113148"></a><span>系统当前指标取值满足自定义的告警设置条件。</span></p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0227101910_p995431113148"><a name="zh-cn_topic_0227101910_p995431113148"></a><a name="zh-cn_topic_0227101910_p995431113148"></a>系统当前指标取值满足自定义的告警设置条件。</p>
 </td>
 </tr>
 </tbody>

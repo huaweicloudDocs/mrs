@@ -1,4 +1,4 @@
-# ALM-14003 丢失的HDFS块数量超过阈值<a name="ZH-CN_TOPIC_0191883093"></a>
+# ALM-14003 丢失的HDFS块数量超过阈值<a name="alm_14003"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813959_section59880657"></a>
 
@@ -77,10 +77,6 @@ HDFS存储数据丢失，HDFS可能会进入安全模式，无法提供写服务
 
 1.  检查DataNode实例。
     1.  在MRS集群详情页面，单击“组件管理 \> HDFS \> 实例”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS \> 实例”。  
-
     2.  查看所有DataNode实例的状态是否为“良好”。
         -   是，执行[3](#zh-cn_topic_0191813959_li572522141314)。
         -   否，执行[1.c](#zh-cn_topic_0191813959_li2677020115402)。

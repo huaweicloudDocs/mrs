@@ -1,4 +1,4 @@
-# ALM-18000 Yarn服务不可用<a name="ZH-CN_TOPIC_0191883106"></a>
+# ALM-18000 Yarn服务不可用<a name="alm_18000"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813947_section66621782"></a>
 
@@ -69,24 +69,16 @@ Yarn服务恢复时，告警恢复。
 
 1.  检查ZooKeeper服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，查看是否有“ALM-13000 ZooKeeper服务不可用”产生。
         -   是，执行[1.c](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss2)。
         -   否，执行[2.b](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss3)。
 
-    3.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_ss2"></a>参考[ALM-13000 ZooKeeper服务不可用](ALM-13000-ZooKeeper服务不可用.md#ZH-CN_TOPIC_0191883087)的处理步骤处理故障后，检查本告警是否恢复。
+    3.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_ss2"></a>参考[ALM-13000 ZooKeeper服务不可用](ALM-13000-ZooKeeper服务不可用.md)的处理步骤处理故障后，检查本告警是否恢复。
         -   是，处理完毕。
         -   否，执行[2.b](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss3)。
 
 2.  检查HDFS服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_ss3"></a>在告警列表中，查看是否有HDFS相关告警产生。
         -   是，执行[2.c](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss4)。
         -   否，执行[3.b](#zh-cn_topic_0191813947_aalm-18000_mmccppss_ss5)。
@@ -97,10 +89,6 @@ Yarn服务恢复时，告警恢复。
 
 3.  检查Yarn集群中的ResourceManager状态。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_ss5"></a>单击“Yarn”。
     3.  在“Yarn 概述”中，检查Yarn集群中是否存在主ResourceManager节点。
         -   是，执行[4.b](#zh-cn_topic_0191813947_step_5)。
@@ -108,16 +96,12 @@ Yarn服务恢复时，告警恢复。
 
 4.  检查Yarn集群中的NodeManager节点状态。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  <a name="zh-cn_topic_0191813947_step_5"></a>单击“Yarn \> 实例”。
     3.  查看NodeManager的“健康状态”，检查是否有处于非健康状态的节点。
         -   是，执行[4.d](#zh-cn_topic_0191813947_aalm-18000_mmccppss_step_7)。
         -   否，执行[5](#zh-cn_topic_0191813947_li572522141314)。
 
-    4.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_step_7"></a>按[ALM-18002 NodeManager心跳丢失](ALM-18002-NodeManager心跳丢失.md#ZH-CN_TOPIC_0191883107)或[ALM-18003 NodeManager不健康](ALM-18003-NodeManager不健康.md#ZH-CN_TOPIC_0191883108)提供的步骤处理该故障，故障修复后检查本告警是否恢复。
+    4.  <a name="zh-cn_topic_0191813947_aalm-18000_mmccppss_step_7"></a>按[ALM-18002 NodeManager心跳丢失](ALM-18002-NodeManager心跳丢失.md)或[ALM-18003 NodeManager不健康](ALM-18003-NodeManager不健康.md)提供的步骤处理该故障，故障修复后检查本告警是否恢复。
         -   是，处理完毕。
         -   否，执行[5](#zh-cn_topic_0191813947_li572522141314)。
 

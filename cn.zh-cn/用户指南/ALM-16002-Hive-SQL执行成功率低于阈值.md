@@ -1,4 +1,4 @@
-# ALM-16002 Hive SQL执行成功率低于阈值<a name="ZH-CN_TOPIC_0191883104"></a>
+# ALM-16002 Hive SQL执行成功率低于阈值<a name="alm_16002"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813927_section22593558"></a>
 
@@ -77,8 +77,8 @@
         -   是，执行[2.a](#zh-cn_topic_0191813927_step11)。
         -   否，执行[1.b](#zh-cn_topic_0191813927_aalm-16002_mmccppss_step2)。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >若想查看执行错误语句的用户，可下载产生该告警的HiveServer节点的HiveServerAudit日志，下载的“开始时间”和“结束时间”分别为告警产生时间的前后10分钟。打开日志文件查找“Result=FAIL”关键字筛选执行错误语句的日志信息，再根据日志信息中的“UserName”查看执行错误语句的用户。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >若想查看执行错误语句的用户，可下载产生该告警的HiveServer节点的HiveServerAudit日志，下载的“开始时间”和“结束时间”分别为告警产生时间的前后10分钟。打开日志文件查找“Result=FAIL”关键字筛选执行错误语句的日志信息，再根据日志信息中的“UserName”查看执行错误语句的用户。
 
     2.  <a name="zh-cn_topic_0191813927_aalm-16002_mmccppss_step2"></a>输入正确的HiveQL语句，观察命令是否正确执行。
         -   是，执行[4.e](#zh-cn_topic_0191813927_step_6)。
@@ -87,19 +87,19 @@
 2.  检查HBase服务是否异常。
     1.  <a name="zh-cn_topic_0191813927_step11"></a>检查是否执行Hive on HBase任务。
         -   是，执行[2.b](#zh-cn_topic_0191813927_aalm-16002_mmccppss_step12)。
-        -   否，执行[3.a](ALM-16002-Hive-SQL执行成功率低于阈值.md#zh-cn_topic_0191813927_step22)。
+        -   否，执行[3.a](#zh-cn_topic_0191813927_step22)。
 
     2.  <a name="zh-cn_topic_0191813927_aalm-16002_mmccppss_step12"></a>在服务列表查看HBase服务是否正常。
-        -   是，执行[3.a](ALM-16002-Hive-SQL执行成功率低于阈值.md#zh-cn_topic_0191813927_step22)。
+        -   是，执行[3.a](#zh-cn_topic_0191813927_step22)。
         -   否，执行[2.c](#zh-cn_topic_0191813927_aalm-16002_mmccppss_step_15)。
 
     3.  <a name="zh-cn_topic_0191813927_aalm-16002_mmccppss_step_15"></a>查看告警界面的相关告警，参照对应告警帮助进行处理。
     4.  输入正确的HiveQL语句，观察命令是否正确执行。
         -   是，执行[4.e](#zh-cn_topic_0191813927_step_6)。
-        -   否，执行[3.a](ALM-16002-Hive-SQL执行成功率低于阈值.md#zh-cn_topic_0191813927_step22)。
+        -   否，执行[3.a](#zh-cn_topic_0191813927_step22)。
 
 3.  检查Spark服务是否异常。
-    1.  在服务列表查看Spark服务是否正常。
+    1.  <a name="zh-cn_topic_0191813927_step22"></a>在服务列表查看Spark服务是否正常。
         -   是，执行[4.a](#zh-cn_topic_0191813927_li51692872)。
         -   否，执行[3.b](#zh-cn_topic_0191813927_step_25)。
 
@@ -110,10 +110,6 @@
 
 4.  检查HDFS、Yarn、ZooKeeper等是否正常。
     1.  <a name="zh-cn_topic_0191813927_li51692872"></a>登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  在服务列表查看HDFS、Yarn、ZooKeeper等服务是否正常。
         -   是，执行[4.e](#zh-cn_topic_0191813927_step_6)。
         -   否，执行[4.c](#zh-cn_topic_0191813927_aalm-16002_mmccppss_step_5)。

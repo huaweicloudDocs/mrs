@@ -1,4 +1,4 @@
-# ALM-16004 Hive服务不可用<a name="ZH-CN_TOPIC_0191883105"></a>
+# ALM-16004 Hive服务不可用<a name="alm_16004"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813910_section28799665"></a>
 
@@ -73,10 +73,6 @@
 
 1.  检查HiveServer/MetaStore进程状态。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  单击“Hive \> 实例”，在Hive实例列表中，查看所有HiveSserver/MetaStore实例状态是否都呈现未知状态。
         -   是，执行[1.c](#zh-cn_topic_0191813910_li15736882153452)。
         -   否，执行[2](#zh-cn_topic_0191813910_li63276134153458)。
@@ -88,10 +84,6 @@
 
 2.  <a name="zh-cn_topic_0191813910_li63276134153458"></a>检查ZooKeeper服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，查看是否有ALM-12007 进程故障产生。
         -   是，执行[2.c](#zh-cn_topic_0191813910_li17867059153452)。
         -   否，执行[3](#zh-cn_topic_0191813910_li315441715352)。
@@ -107,10 +99,6 @@
 
 3.  <a name="zh-cn_topic_0191813910_li315441715352"></a>检查HDFS服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，查看是否有ALM-14000 HDFS服务不可用产生。
         -   是，执行[3.c](#zh-cn_topic_0191813910_li2196200153452)。
         -   否，执行[4](#zh-cn_topic_0191813910_li3789476315357)。
@@ -122,10 +110,6 @@
 
 4.  <a name="zh-cn_topic_0191813910_li3789476315357"></a>检查Yarn服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，查看是否有ALM-18000 Yarn服务不可用产生。
         -   是，执行[4.c](#zh-cn_topic_0191813910_li64260695153452)。
         -   否，执行[4](#zh-cn_topic_0191813910_li3789476315357)。
@@ -137,25 +121,17 @@
 
 5.  检查DBService服务状态。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  在告警列表中，查看是否有“ALM-27001 DBService服务不可用”产生。
         -   是，执行[5.c](#zh-cn_topic_0191813910_li19704975153452)。
         -   否，执行[6](#zh-cn_topic_0191813910_li23165657153517)。
 
-    3.  <a name="zh-cn_topic_0191813910_li19704975153452"></a>参考[ALM-27001 DBService服务不可用](ALM-27001-DBService服务不可用.md#ZH-CN_TOPIC_0191883115)的处理步骤处理该故障。
+    3.  <a name="zh-cn_topic_0191813910_li19704975153452"></a>参考[ALM-27001 DBService服务不可用](ALM-27001-DBService服务不可用.md)的处理步骤处理该故障。
     4.  在告警列表中，查看“ALM-16004 Hive服务不可用”告警是否清除。
         -   是，处理完毕。
         -   否，执行[6](#zh-cn_topic_0191813910_li23165657153517)。
 
 6.  <a name="zh-cn_topic_0191813910_li23165657153517"></a>检查Hive与ZooKeeper、HDFS、Yarn和DBService之间的网络连接。
     1.  登录MRS集群详情页面，选择“组件管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“服务管理”。  
-
     2.  单击“Hive”。
     3.  单击“实例”。
 

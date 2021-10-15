@@ -1,4 +1,4 @@
-# ALM-16001 Hive数据仓库空间使用率超过阈值<a name="ZH-CN_TOPIC_0191883103"></a>
+# ALM-16001 Hive数据仓库空间使用率超过阈值<a name="alm_16001"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813901_section23562876"></a>
 
@@ -76,9 +76,6 @@
 
         登录MRS集群详情页面，单击“组件管理 \> Hive \> 服务配置”，“将“基础配置”切换为“全部配置”，然后查找“hive.metastore.warehouse.size.percent”，调大该配置项。设配置项的值为A，HDFS总存储空间为B，阈值为C，Hive已经使用HDFS的空间大小为D。调整策略为A x B x C \> D ，HDFS总存储空间可在HDFS监控界面查看，Hive已经使用HDFS的空间大小可在Hive的监控界面查看。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，单击“组件管理 \> Hive \> 服务配置”进行配置。  
-
     2.  检查该告警是否恢复。
         -   是，操作结束。
         -   否，执行[2.a](#zh-cn_topic_0191813901_s332)
@@ -91,10 +88,6 @@
 
 3.  检查数据节点是否正常。
     1.  <a name="zh-cn_topic_0191813901_li51692872"></a>登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  查看是否有“ALM-12006 节点故障”、“ALM-12007 进程故障”、“ALM-14002 DataNode磁盘空间使用率超过阈值”告警。
         -   是，执行[3.c](#zh-cn_topic_0191813901_aalm-16001_mmccppss_step5)。
         -   否，执行[4](#zh-cn_topic_0191813901_li572522141314)。

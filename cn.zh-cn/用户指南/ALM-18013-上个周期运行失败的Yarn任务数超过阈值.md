@@ -1,4 +1,4 @@
-# ALM-18013 上个周期运行失败的Yarn任务数超过阈值<a name="ZH-CN_TOPIC_0226470317"></a>
+# ALM-18013 上个周期运行失败的Yarn任务数超过阈值<a name="alm_18013"></a>
 
 ## 告警解释<a name="zh-cn_topic_0225487451_zh-cn_topic_0087039425_section43920869"></a>
 

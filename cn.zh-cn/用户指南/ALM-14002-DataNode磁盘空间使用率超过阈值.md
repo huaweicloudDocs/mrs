@@ -1,4 +1,4 @@
-# ALM-14002 DataNode磁盘空间使用率超过阈值<a name="ZH-CN_TOPIC_0191883092"></a>
+# ALM-14002 DataNode磁盘空间使用率超过阈值<a name="alm_14002"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813920_section20869327"></a>
 
@@ -72,10 +72,6 @@ DataNode容量不足，会影响到HDFS的数据写入。
 
 1.  检查集群磁盘容量是否已满。
     1.  登录MRS集群详情页面，在“告警管理”页面查看是否存在“ALM-14001 HDFS磁盘空间使用率超过阈值”告警。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面查看告警信息。  
-
         -   是，执行[1.b](#zh-cn_topic_0191813920_yt2)。
         -   否，执行[2.a](#zh-cn_topic_0191813920_li64268160)。
 

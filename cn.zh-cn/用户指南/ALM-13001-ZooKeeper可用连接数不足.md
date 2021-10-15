@@ -1,4 +1,4 @@
-# ALM-13001 ZooKeeper可用连接数不足<a name="ZH-CN_TOPIC_0191883088"></a>
+# ALM-13001 ZooKeeper可用连接数不足<a name="alm_13001"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813882_section54545236"></a>
 
@@ -71,10 +71,6 @@ ZooKeeper可用连接数不足，当连接率超过百分之百时无法处理�
 
 1.  检查连接状态。
     1.  在MRS集群详情页，单击“告警管理 \> 13001连接数不足 \> 定位信息”。查看告警上报的节点IP地址。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
-
     2.  获取ZooKeeper进程pid。登录到告警上报的节点，执行命令：**pgrep -f proc\_zookeeper**。
     3.  是否正常获取pid。
         -   是，执行[1.d](#zh-cn_topic_0191813882_cn_58_42_000001_2_mmccppss_stepb2)。
@@ -104,10 +100,6 @@ ZooKeeper可用连接数不足，当连接率超过百分之百时无法处理�
         -   否，执行[1.l](#zh-cn_topic_0191813882_stepb8)。
 
     12. <a name="zh-cn_topic_0191813882_stepb8"></a>在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> 服务配置 \> 全部配置 \> quorumpeer \> Performance”中，将“maxCnxns”调整到20000或更多。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> ZooKeeper \> 服务配置 \> 全部配置 \> quorumpeer \> Performance”中，将“maxCnxns”调整到20000或更多。  
-
     13. 界面上告警是否消除？
         -   是，处理完毕。
         -   否，执行[2](#zh-cn_topic_0191813882_li572522141314)。

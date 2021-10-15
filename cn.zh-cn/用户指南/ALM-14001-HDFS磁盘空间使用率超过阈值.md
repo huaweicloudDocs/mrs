@@ -1,4 +1,4 @@
-# ALM-14001 HDFS磁盘空间使用率超过阈值<a name="ZH-CN_TOPIC_0191883091"></a>
+# ALM-14001 HDFS磁盘空间使用率超过阈值<a name="alm_14001"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813969_section6883221"></a>
 
@@ -76,10 +76,6 @@ HDFS集群配置的磁盘空间不足。
 
 1.  查看磁盘容量，清除无用文件。
     1.  在MRS集群详情页面，单击“组件管理 \> HDFS”，弹出“服务状态”页面。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> HDFS”。  
-
     2.  在“图表”区域中，通过监控项“Percentage of HDFS Capacity”查看HDFS磁盘使用率是否超过阈值（默认为80%）。
         -   是，执行[1.c](#zh-cn_topic_0191813969_cn_58_42_000001_5_mmccppss_step5)。
         -   否，执行[3](#zh-cn_topic_0191813969_li572522141314)。

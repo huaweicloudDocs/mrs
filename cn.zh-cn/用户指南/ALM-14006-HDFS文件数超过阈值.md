@@ -1,4 +1,4 @@
-# ALM-14006 HDFS文件数超过阈值<a name="ZH-CN_TOPIC_0191883095"></a>
+# ALM-14006 HDFS文件数超过阈值<a name="alm_14006"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813952_section38788755"></a>
 

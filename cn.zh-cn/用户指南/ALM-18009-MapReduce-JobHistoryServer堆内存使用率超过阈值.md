@@ -1,4 +1,4 @@
-# ALM-18009 MapReduce JobHistoryServer堆内存使用率超过阈值<a name="ZH-CN_TOPIC_0191883150"></a>
+# ALM-18009 MapReduce JobHistoryServer堆内存使用率超过阈值<a name="alm_18009"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813867_zh-cn_topic_0087039367_section46467513"></a>
 
@@ -71,10 +71,6 @@ Mapreduce JobHistoryServer堆内存使用率过高，会影响Mapreduce 服务�
 
 1.  检查堆内存使用率。
     1.  登录MRS集群详情页面，选择“告警管理”。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请登录MRS Manager页面，选择“告警管理”。  
-
     2.  选中“告警ID”为“18009”的告警，查看“定位信息”中的实例的IP地址及角色名。
     3.  单击“组件管理 \> MapReduce \> 实例 \> JobHistoryServer（对应上报告警实例IP地址） \> 定制 \> JobHistoryServer堆内存使用百分比统计“。查看堆内存使用情况。
     4.  查看JobHistoryServer使用的堆内存是否已达到JobHistoryServer设定的最大堆内存的80%。

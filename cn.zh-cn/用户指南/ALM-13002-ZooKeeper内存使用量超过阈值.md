@@ -1,4 +1,4 @@
-# ALM-13002 ZooKeeper内存使用量超过阈值<a name="ZH-CN_TOPIC_0191883089"></a>
+# ALM-13002 ZooKeeper内存使用量超过阈值<a name="alm_13002"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813895_section46652504"></a>
 
@@ -71,15 +71,7 @@ ZooKeeper可用内存不足，可能会造成内存溢出导致服务崩溃。
 
 1.  检查内存使用量。
     1.  在MRS集群详情页面，单击“告警管理 \> 13002连接数不足 \> 定位信息”。查看告警上报的实例的ip。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面查看告警信息。  
-
-    2.  在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> 实例 \> quorumpeer（对应上报告警实例ip） \> 定制  \> ZooKeeper Heap And Direct Buffer Resoure ”。查看堆内存使用情况。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> ZooKeeper \> 实例 \> quorumpeer（对应上报告警实例ip） \> 定制  \> ZooKeeper Heap And Direct Buffer Resoure ”。查看堆内存使用情况。  
-
+    2.  在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> 实例 \> quorumpeer（对应上报告警实例ip） \> 定制  \> ZooKeeper堆内存与直接内存资源状况”。查看堆内存使用情况。
     3.  查看ZooKeeper使用的堆内存是否已达到ZooKeeper设定的最大堆内存的百分之80？
         -   是，执行[1.d](#zh-cn_topic_0191813895_cn_58_42_000001_3_mmccppss_stepb2)。
         -   否，执行[1.f](#zh-cn_topic_0191813895_cn_58_42_000001_3_mmccppss_stepb4)。
@@ -90,10 +82,6 @@ ZooKeeper可用内存不足，可能会造成内存溢出导致服务崩溃。
         -   否，执行[1.f](#zh-cn_topic_0191813895_cn_58_42_000001_3_mmccppss_stepb4)。
 
     6.  <a name="zh-cn_topic_0191813895_cn_58_42_000001_3_mmccppss_stepb4"></a>在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> 实例 \> quorumpeer（对应上报告警实例ip） \> 定制 \> ZooKeeper堆内存与直接内存资源情况 ”。查看直接内存的使用情况。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> ZooKeeper \> 实例 \> quorumpeer（对应上报告警实例ip） \> 定制  \> ZooKeeper堆内存与直接内存资源情况 ”。查看直接内存的使用情况。  
-
     7.  查看ZooKeeper使用的直接内存是否已达到ZooKeeper设定的最大直接内存的百分之80？
         -   是，执行[1.h](#zh-cn_topic_0191813895_li49457583153150)。
         -   否，执行[2](#zh-cn_topic_0191813895_li572522141314)。
@@ -101,9 +89,6 @@ ZooKeeper可用内存不足，可能会造成内存溢出导致服务崩溃。
     8.  <a name="zh-cn_topic_0191813895_li49457583153150"></a>在MRS集群详情页面，单击“组件管理 \> ZooKeeper \> 服务配置 \> 全部配置 \> quorumpeer \> 系统”。
 
         将GC\_OPTS参数中-XX:MaxDirectMemorySize的值根据实际情况调大。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“服务管理 \> ZooKeeper \> 服务配置 \> 全部配置 \> quorumpeer \> 系统”配置。  
 
     9.  观察界面告警是否清除？
         -   是，处理完毕。

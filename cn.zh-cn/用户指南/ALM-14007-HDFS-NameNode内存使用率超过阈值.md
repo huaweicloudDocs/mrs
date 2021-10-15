@@ -1,4 +1,4 @@
-# ALM-14007 HDFS NameNode内存使用率超过阈值<a name="ZH-CN_TOPIC_0191883096"></a>
+# ALM-14007 HDFS NameNode内存使用率超过阈值<a name="alm_14007"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813906_section439002"></a>
 

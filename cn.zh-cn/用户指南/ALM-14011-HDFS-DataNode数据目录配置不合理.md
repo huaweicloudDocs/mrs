@@ -1,4 +1,4 @@
-# ALM-14011 HDFS DataNode数据目录配置不合理<a name="ZH-CN_TOPIC_0191883100"></a>
+# ALM-14011 HDFS DataNode数据目录配置不合理<a name="alm_14011"></a>
 
 ## 告警解释<a name="zh-cn_topic_0191813967_zh-cn_topic_0035998730_section63081244"></a>
 
@@ -70,10 +70,6 @@ DataNode的配置参数“dfs.datanode.data.dir”指定了DataNode的数据目�
 
 1.  查看告警原因和产生告警的DataNode节点信息。
     1.  在MRS集群详情页面，单击“告警管理”，在告警列表中单击此告警。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >针对MRS 1.8.10及之前版本，请打开MRS Manager页面，单击“告警管理”。  
-
     2.  在“告警详情”区域，查看“告警原因”，可知产生该告警的原因。 通过“定位信息”的“HostName”，获取告警产生的DataNode节点的主机名。
 
 2.  删除DataNode数据目录中与磁盘规划不符的目录。
@@ -113,7 +109,7 @@ DataNode的配置参数“dfs.datanode.data.dir”指定了DataNode的数据目�
         -   是，执行[3.e](#zh-cn_topic_0191813967_zh-cn_topic_0035998730_s154)。
         -   否，执行[3.f](#zh-cn_topic_0191813967_zh-cn_topic_0035998730_alm14011_mmccppss_s13)。
 
-    5.  <a name="zh-cn_topic_0191813967_zh-cn_topic_0035998730_s154"></a>参考[ALM-12017 磁盘容量不足](ALM-12017-磁盘容量不足.md#ZH-CN_TOPIC_0191883074)对磁盘容量问题进行处理，查看“ALM-12017 磁盘容量不足”告警是否消除。
+    5.  <a name="zh-cn_topic_0191813967_zh-cn_topic_0035998730_s154"></a>参考[ALM-12017 磁盘容量不足](ALM-12017-磁盘容量不足.md)对磁盘容量问题进行处理，查看“ALM-12017 磁盘容量不足”告警是否消除。
         -   是，执行[3.c](#zh-cn_topic_0191813967_zh-cn_topic_0035998730_alm14011_mmccppss_s12)。
         -   否，执行[7](#zh-cn_topic_0191813967_li572522141314)。
 
